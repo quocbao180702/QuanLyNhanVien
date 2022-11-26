@@ -94,6 +94,9 @@
     <EmbeddedResource Include="FromTaoTaiKhoan.resx">
       <DependentUpon>FromTaoTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FromThongTinNhanVien.resx">
+      <DependentUpon>FromThongTinNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
