@@ -37,6 +37,8 @@ namespace QuanLyNhanVien
             {
                 MessageBox.Show("Nhap Lai Mat Khau");
             }
+            MessageBox.Show("Đăng kí thành công");
+
             
         }
 
