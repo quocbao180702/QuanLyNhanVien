@@ -16,5 +16,21 @@ namespace QuanLyNhanVien
         {
             InitializeComponent();
         }
+
+        private void btnDangKi_Click(object sender, EventArgs e)
+        {
+            string hoten = txtTenKH.Text;
+            string sdt=txtSDT.Text;
+            string ngay=datNgay.Value.ToString();
+            MessageBox.Show("Đăng kí thành công");
+
+
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+        }
     }
 }

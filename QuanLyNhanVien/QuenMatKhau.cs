@@ -29,6 +29,20 @@ namespace QuanLyNhanVien
 
         private void btnThayDoi_Click(object sender, EventArgs e)
         {
+            string thongbao;
+            thongbao = "Ten Dang Nhap La";
+            thongbao += this.txtTenDangNhap.Text;
+
+            if(txtMatKhau.Text != txtNhapLaiMK.Text)
+            {
+                MessageBox.Show("Nhap Lai Mat Khau");
+            }
+            
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
 
         }
     }
