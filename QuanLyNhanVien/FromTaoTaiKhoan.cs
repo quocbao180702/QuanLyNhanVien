@@ -16,5 +16,20 @@ namespace QuanLyNhanVien
         {
             InitializeComponent();
         }
+
+        private void btnTaoTK_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtMaNV.Text) && string.IsNullOrEmpty(txtTen.Text) && string.IsNullOrEmpty(txtHoLot.Text))
+            {
+                MessageBox.Show("Vui lòng điền đủ thông tin", "Thông báo");
+            }
+            else
+            {
+                
+
+                txtDiaChi.Clear();
+                txtMaNV.Focus();
+            }
+        }
     }
 }

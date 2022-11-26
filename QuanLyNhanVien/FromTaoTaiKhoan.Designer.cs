@@ -203,6 +203,7 @@
             this.btnTaoTK.TabIndex = 6;
             this.btnTaoTK.Text = "Tạo Tài Khoản";
             this.btnTaoTK.UseVisualStyleBackColor = true;
+            this.btnTaoTK.Click += new System.EventHandler(this.btnTaoTK_Click);
             // 
             // lblGioiTinh
             // 
