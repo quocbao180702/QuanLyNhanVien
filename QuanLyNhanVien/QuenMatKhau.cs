@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QuanLyNhanVien
 {
-    public partial class QuenMatKhau : Form
+    public partial class FromQuenMatKhau : Form
     {
-        public QuenMatKhau()
+        public FromQuenMatKhau()
         {
             InitializeComponent();
         }

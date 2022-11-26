@@ -1,6 +1,6 @@
 ﻿namespace QuanLyNhanVien
 {
-    partial class TaoTheThanhVien
+    partial class FormTheThanhVien
     {
         /// <summary>
         /// Required designer variable.
