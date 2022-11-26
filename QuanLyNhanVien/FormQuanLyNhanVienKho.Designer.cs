@@ -121,6 +121,10 @@
             // 
             this.cmbChucVu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbChucVu.FormattingEnabled = true;
+            this.cmbChucVu.Items.AddRange(new object[] {
+            "Trưởng Kho",
+            "Phó Kho",
+            "Nhân viên Kho"});
             this.cmbChucVu.Location = new System.Drawing.Point(485, 253);
             this.cmbChucVu.Name = "cmbChucVu";
             this.cmbChucVu.Size = new System.Drawing.Size(200, 30);
@@ -130,6 +134,70 @@
             // 
             this.cmbTinh.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbTinh.FormattingEnabled = true;
+            this.cmbTinh.Items.AddRange(new object[] {
+            "1\tAn Giang",
+            "2\tBà rịa – Vũng tàu",
+            "3\tBắc Giang",
+            "4\tBắc Kạn",
+            "5\tBạc Liêu",
+            "6\tBắc Ninh",
+            "7\tBến Tre",
+            "8\tBình Định",
+            "9\tBình Dương",
+            "10\tBình Phước",
+            "11\tBình Thuận",
+            "12\tCà Mau",
+            "13\tCần Thơ",
+            "14\tCao Bằng ",
+            "15\tĐà Nẵng",
+            "16\tĐắk Lắk",
+            "17\tĐắk Nông",
+            "18\tĐiện Biên",
+            "19\tĐồng Nai",
+            "20\tĐồng Tháp",
+            "21\tGia Lai",
+            "22\tHà Giang",
+            "23\tHà Nam",
+            "24\tHà Nội ",
+            "25\tHà Tĩnh",
+            "26\tHải Dương",
+            "27\tHải Phòng",
+            "28\tHậu Giang",
+            "29\tHòa Bình",
+            "30\tHưng Yên",
+            "31\tKhánh Hòa",
+            "32\tKiên Giang",
+            "33\tKon Tum",
+            "34\tLai Châu",
+            "35\tLâm Đồng",
+            "36\tLạng Sơn",
+            "37\tLào Cai",
+            "38\tLong An",
+            "39\tNam Định",
+            "40\tNghệ An",
+            "41\tNinh Bình",
+            "42\tNinh Thuận",
+            "43\tPhú Thọ",
+            "44\tPhú Yên",
+            "45\tQuảng Bình",
+            "46\tQuảng Nam",
+            "47\tQuảng Ngãi",
+            "48\tQuảng Ninh",
+            "49\tQuảng Trị",
+            "50\tSóc Trăng",
+            "51\tSơn La",
+            "52\tTây Ninh",
+            "53\tThái Bình",
+            "54\tThái Nguyên",
+            "55\tThanh Hóa",
+            "56\tThừa Thiên Huế",
+            "57\tTiền Giang",
+            "58\tThành phố Hồ Chí Minh",
+            "59\tTrà Vinh",
+            "60\tTuyên Quang",
+            "61\tVĩnh Long",
+            "62\tVĩnh Phúc",
+            "63\tYên Bái"});
             this.cmbTinh.Location = new System.Drawing.Point(489, 153);
             this.cmbTinh.Name = "cmbTinh";
             this.cmbTinh.Size = new System.Drawing.Size(196, 30);
@@ -138,6 +206,7 @@
             // dtpNgaySinh
             // 
             this.dtpNgaySinh.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpNgaySinh.Location = new System.Drawing.Point(455, 51);
             this.dtpNgaySinh.Name = "dtpNgaySinh";
             this.dtpNgaySinh.Size = new System.Drawing.Size(230, 30);
