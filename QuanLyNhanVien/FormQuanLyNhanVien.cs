@@ -16,5 +16,31 @@ namespace QuanLyNhanVien
         {
             InitializeComponent();
         }
+
+        private void btnQuanLy_Click(object sender, EventArgs e)
+        {
+            if(radQuanLyKho.Checked==true)
+            {
+                this.Hide();
+                FormQuanLyNhanVienKho frmKho = new FormQuanLyNhanVienKho();
+                frmKho.ShowDialog();
+            }
+            else
+            {
+
+            }
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnQuayLai_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmDangNhap frmDN = new frmDangNhap();
+            frmDN.ShowDialog();
+        }
     }
 }

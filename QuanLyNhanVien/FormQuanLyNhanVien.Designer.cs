@@ -30,12 +30,11 @@
         {
             this.lblTitle = new System.Windows.Forms.Label();
             this.btnQuanLy = new System.Windows.Forms.Button();
-            this.btnHuy = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnQuayLai = new System.Windows.Forms.Button();
             this.grbLuaChon = new System.Windows.Forms.GroupBox();
-            this.radQuanLyKho = new System.Windows.Forms.RadioButton();
             this.radBanHang = new System.Windows.Forms.RadioButton();
+            this.radQuanLyKho = new System.Windows.Forms.RadioButton();
             this.grbLuaChon.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,42 +52,35 @@
             // btnQuanLy
             // 
             this.btnQuanLy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuanLy.Location = new System.Drawing.Point(57, 422);
+            this.btnQuanLy.Location = new System.Drawing.Point(108, 422);
             this.btnQuanLy.Name = "btnQuanLy";
-            this.btnQuanLy.Size = new System.Drawing.Size(129, 61);
+            this.btnQuanLy.Size = new System.Drawing.Size(179, 61);
             this.btnQuanLy.TabIndex = 3;
             this.btnQuanLy.Text = "Quản Lý";
             this.btnQuanLy.UseVisualStyleBackColor = true;
-            // 
-            // btnHuy
-            // 
-            this.btnHuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHuy.Location = new System.Drawing.Point(257, 422);
-            this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(129, 61);
-            this.btnHuy.TabIndex = 3;
-            this.btnHuy.Text = "Hủy Chọn";
-            this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnQuanLy.Click += new System.EventHandler(this.btnQuanLy_Click);
             // 
             // btnThoat
             // 
             this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThoat.Location = new System.Drawing.Point(474, 422);
+            this.btnThoat.Location = new System.Drawing.Point(337, 422);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(129, 61);
+            this.btnThoat.Size = new System.Drawing.Size(195, 61);
             this.btnThoat.TabIndex = 3;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // btnQuayLai
             // 
             this.btnQuayLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuayLai.Location = new System.Drawing.Point(687, 422);
+            this.btnQuayLai.Location = new System.Drawing.Point(589, 422);
             this.btnQuayLai.Name = "btnQuayLai";
-            this.btnQuayLai.Size = new System.Drawing.Size(129, 61);
+            this.btnQuayLai.Size = new System.Drawing.Size(200, 61);
             this.btnQuayLai.TabIndex = 3;
             this.btnQuayLai.Text = "Quay Lại";
             this.btnQuayLai.UseVisualStyleBackColor = true;
+            this.btnQuayLai.Click += new System.EventHandler(this.btnQuayLai_Click);
             // 
             // grbLuaChon
             // 
@@ -102,18 +94,6 @@
             this.grbLuaChon.TabStop = false;
             this.grbLuaChon.Text = "Lựa chọn";
             // 
-            // radQuanLyKho
-            // 
-            this.radQuanLyKho.AutoSize = true;
-            this.radQuanLyKho.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radQuanLyKho.Location = new System.Drawing.Point(64, 69);
-            this.radQuanLyKho.Name = "radQuanLyKho";
-            this.radQuanLyKho.Size = new System.Drawing.Size(312, 37);
-            this.radQuanLyKho.TabIndex = 0;
-            this.radQuanLyKho.TabStop = true;
-            this.radQuanLyKho.Text = "Quản Lý Nhân Viên Kho";
-            this.radQuanLyKho.UseVisualStyleBackColor = true;
-            // 
             // radBanHang
             // 
             this.radBanHang.AutoSize = true;
@@ -126,6 +106,18 @@
             this.radBanHang.Text = "Quản Lý Nhân Viên Bán Hàng";
             this.radBanHang.UseVisualStyleBackColor = true;
             // 
+            // radQuanLyKho
+            // 
+            this.radQuanLyKho.AutoSize = true;
+            this.radQuanLyKho.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radQuanLyKho.Location = new System.Drawing.Point(64, 69);
+            this.radQuanLyKho.Name = "radQuanLyKho";
+            this.radQuanLyKho.Size = new System.Drawing.Size(312, 37);
+            this.radQuanLyKho.TabIndex = 0;
+            this.radQuanLyKho.TabStop = true;
+            this.radQuanLyKho.Text = "Quản Lý Nhân Viên Kho";
+            this.radQuanLyKho.UseVisualStyleBackColor = true;
+            // 
             // FormQuanLyNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -134,7 +126,6 @@
             this.Controls.Add(this.grbLuaChon);
             this.Controls.Add(this.btnQuayLai);
             this.Controls.Add(this.btnThoat);
-            this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnQuanLy);
             this.Controls.Add(this.lblTitle);
             this.Name = "FormQuanLyNhanVien";
@@ -150,7 +141,6 @@
 
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Button btnQuanLy;
-        private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Button btnQuayLai;
         private System.Windows.Forms.GroupBox grbLuaChon;
