@@ -34,7 +34,6 @@
             this.txtMaSp = new System.Windows.Forms.TextBox();
             this.lblTenSp = new System.Windows.Forms.Label();
             this.txtTenSp = new System.Windows.Forms.TextBox();
-            this.numSoLuong = new System.Windows.Forms.NumericUpDown();
             this.LblSoLuong = new System.Windows.Forms.Label();
             this.lblGiaTien = new System.Windows.Forms.Label();
             this.txtGiaTien = new System.Windows.Forms.TextBox();
@@ -45,8 +44,8 @@
             this.txtTimSp = new System.Windows.Forms.TextBox();
             this.lblTimSp = new System.Windows.Forms.Label();
             this.btnThoat = new System.Windows.Forms.Button();
+            this.txtSoLuong = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.datSp)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numSoLuong)).BeginInit();
             this.SuspendLayout();
             // 
             // lblQuanLySanPham
@@ -102,13 +101,6 @@
             this.txtTenSp.Size = new System.Drawing.Size(272, 30);
             this.txtTenSp.TabIndex = 3;
             // 
-            // numSoLuong
-            // 
-            this.numSoLuong.Location = new System.Drawing.Point(177, 230);
-            this.numSoLuong.Name = "numSoLuong";
-            this.numSoLuong.Size = new System.Drawing.Size(272, 30);
-            this.numSoLuong.TabIndex = 4;
-            // 
             // LblSoLuong
             // 
             this.LblSoLuong.AutoSize = true;
@@ -142,6 +134,7 @@
             this.btnThem.TabIndex = 5;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnSua
             // 
@@ -151,6 +144,7 @@
             this.btnSua.TabIndex = 5;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
@@ -195,6 +189,13 @@
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
             // 
+            // txtSoLuong
+            // 
+            this.txtSoLuong.Location = new System.Drawing.Point(177, 229);
+            this.txtSoLuong.Name = "txtSoLuong";
+            this.txtSoLuong.Size = new System.Drawing.Size(272, 30);
+            this.txtSoLuong.TabIndex = 3;
+            // 
             // FormQuanLySanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
@@ -205,7 +206,7 @@
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnThem);
-            this.Controls.Add(this.numSoLuong);
+            this.Controls.Add(this.txtSoLuong);
             this.Controls.Add(this.txtGiaTien);
             this.Controls.Add(this.txtTenSp);
             this.Controls.Add(this.lblGiaTien);
@@ -222,7 +223,6 @@
             this.Name = "FormQuanLySanPham";
             this.Text = "Quản Lý Sản Phẩm";
             ((System.ComponentModel.ISupportInitialize)(this.datSp)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numSoLuong)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -236,7 +236,6 @@
         private System.Windows.Forms.TextBox txtMaSp;
         private System.Windows.Forms.Label lblTenSp;
         private System.Windows.Forms.TextBox txtTenSp;
-        private System.Windows.Forms.NumericUpDown numSoLuong;
         private System.Windows.Forms.Label LblSoLuong;
         private System.Windows.Forms.Label lblGiaTien;
         private System.Windows.Forms.TextBox txtGiaTien;
@@ -247,5 +246,6 @@
         private System.Windows.Forms.TextBox txtTimSp;
         private System.Windows.Forms.Label lblTimSp;
         private System.Windows.Forms.Button btnThoat;
+        private System.Windows.Forms.TextBox txtSoLuong;
     }
 }
