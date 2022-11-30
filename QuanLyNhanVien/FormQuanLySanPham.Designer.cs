@@ -44,9 +44,8 @@
             this.txtTimSp = new System.Windows.Forms.TextBox();
             this.lblTimSp = new System.Windows.Forms.Label();
             this.btnThoat = new System.Windows.Forms.Button();
-            this.numSoLuong = new System.Windows.Forms.NumericUpDown();
+            this.txtSoLuong = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.datSp)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numSoLuong)).BeginInit();
             this.SuspendLayout();
             // 
             // lblQuanLySanPham
@@ -164,7 +163,6 @@
             this.btnTim.TabIndex = 5;
             this.btnTim.Text = "Tìm";
             this.btnTim.UseVisualStyleBackColor = true;
-            this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
             // 
             // txtTimSp
             // 
@@ -191,24 +189,24 @@
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
             // 
-            // numSoLuong
+            // txtSoLuong
             // 
-            this.numSoLuong.Location = new System.Drawing.Point(177, 232);
-            this.numSoLuong.Name = "numSoLuong";
-            this.numSoLuong.Size = new System.Drawing.Size(272, 30);
-            this.numSoLuong.TabIndex = 6;
+            this.txtSoLuong.Location = new System.Drawing.Point(177, 229);
+            this.txtSoLuong.Name = "txtSoLuong";
+            this.txtSoLuong.Size = new System.Drawing.Size(272, 30);
+            this.txtSoLuong.TabIndex = 3;
             // 
             // FormQuanLySanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1100, 602);
-            this.Controls.Add(this.numSoLuong);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnTim);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnThem);
+            this.Controls.Add(this.txtSoLuong);
             this.Controls.Add(this.txtGiaTien);
             this.Controls.Add(this.txtTenSp);
             this.Controls.Add(this.lblGiaTien);
@@ -225,7 +223,6 @@
             this.Name = "FormQuanLySanPham";
             this.Text = "Quản Lý Sản Phẩm";
             ((System.ComponentModel.ISupportInitialize)(this.datSp)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numSoLuong)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -249,6 +246,6 @@
         private System.Windows.Forms.TextBox txtTimSp;
         private System.Windows.Forms.Label lblTimSp;
         private System.Windows.Forms.Button btnThoat;
-        private System.Windows.Forms.NumericUpDown numSoLuong;
+        private System.Windows.Forms.TextBox txtSoLuong;
     }
 }
