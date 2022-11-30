@@ -25,15 +25,10 @@ namespace QuanLyNhanVien
             row["masp"] = txtMaSp.Text;
             row["tensp"] = txtTenSp.Text;
             row["giatien"] = txtGiaTien.Text;
-            row["soluong"] = numSoLuong.Value;
+            row["soluong"] = txtSoLuong.Text;
         }
 
         private void btnSua_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnTim_Click(object sender, EventArgs e)
         {
 
         }
