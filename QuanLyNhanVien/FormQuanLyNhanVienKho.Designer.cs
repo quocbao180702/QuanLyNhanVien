@@ -52,7 +52,6 @@
             this.lblNgaySinh = new System.Windows.Forms.Label();
             this.lblMa = new System.Windows.Forms.Label();
             this.grbChucVu = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnQuayLai = new System.Windows.Forms.Button();
@@ -61,6 +60,7 @@
             this.btnThem = new System.Windows.Forms.Button();
             this.btnTim = new System.Windows.Forms.Button();
             this.txtTim = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgQLNhanVien)).BeginInit();
             this.grbThongTin.SuspendLayout();
             this.grbChucVu.SuspendLayout();
@@ -385,16 +385,7 @@
             this.grbChucVu.Size = new System.Drawing.Size(348, 320);
             this.grbChucVu.TabIndex = 10;
             this.grbChucVu.TabStop = false;
-            this.grbChucVu.Text = "Chức Năng";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(28, 42);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(188, 22);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "Nhập Mã Số Cần Tìm:";
+            this.grbChucVu.Text = "Chức Vụ";
             // 
             // btnThoat
             // 
@@ -473,6 +464,15 @@
             this.txtTim.Name = "txtTim";
             this.txtTim.Size = new System.Drawing.Size(205, 30);
             this.txtTim.TabIndex = 9;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(28, 42);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(188, 22);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "Nhập Mã Số Cần Tìm:";
             // 
             // FormQuanLyNhanVienKho
             // 
