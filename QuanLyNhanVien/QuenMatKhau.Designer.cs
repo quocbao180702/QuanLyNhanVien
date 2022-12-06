@@ -47,9 +47,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(88, 128);
+            this.label1.Location = new System.Drawing.Point(101, 131);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 19);
+            this.label1.Size = new System.Drawing.Size(93, 22);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mật Khẩu:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -58,9 +59,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(88, 93);
+            this.label2.Location = new System.Drawing.Point(101, 92);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(109, 19);
+            this.label2.Size = new System.Drawing.Size(139, 22);
             this.label2.TabIndex = 0;
             this.label2.Text = "Tên Đăng Nhập:";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -69,42 +71,50 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(88, 203);
+            this.label3.Location = new System.Drawing.Point(101, 209);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(103, 19);
+            this.label3.Size = new System.Drawing.Size(132, 22);
             this.label3.TabIndex = 0;
             this.label3.Text = "Mật Khẩu Mới:\r\n";
             this.label3.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtTenDangNhap
             // 
-            this.txtTenDangNhap.Location = new System.Drawing.Point(253, 94);
+            this.txtTenDangNhap.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenDangNhap.Location = new System.Drawing.Point(321, 94);
+            this.txtTenDangNhap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTenDangNhap.Name = "txtTenDangNhap";
-            this.txtTenDangNhap.Size = new System.Drawing.Size(272, 20);
+            this.txtTenDangNhap.Size = new System.Drawing.Size(361, 30);
             this.txtTenDangNhap.TabIndex = 1;
             // 
             // txtMatKhau
             // 
-            this.txtMatKhau.Location = new System.Drawing.Point(253, 129);
+            this.txtMatKhau.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMatKhau.Location = new System.Drawing.Point(321, 132);
+            this.txtMatKhau.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.PasswordChar = '*';
-            this.txtMatKhau.Size = new System.Drawing.Size(272, 20);
+            this.txtMatKhau.Size = new System.Drawing.Size(361, 30);
             this.txtMatKhau.TabIndex = 1;
             // 
             // txtNhapLaiMK
             // 
-            this.txtNhapLaiMK.Location = new System.Drawing.Point(253, 202);
+            this.txtNhapLaiMK.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNhapLaiMK.Location = new System.Drawing.Point(321, 208);
+            this.txtNhapLaiMK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNhapLaiMK.Name = "txtNhapLaiMK";
             this.txtNhapLaiMK.PasswordChar = '*';
-            this.txtNhapLaiMK.Size = new System.Drawing.Size(272, 20);
+            this.txtNhapLaiMK.Size = new System.Drawing.Size(361, 30);
             this.txtNhapLaiMK.TabIndex = 1;
             // 
             // btnThayDoi
             // 
             this.btnThayDoi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThayDoi.Location = new System.Drawing.Point(351, 283);
+            this.btnThayDoi.Location = new System.Drawing.Point(452, 305);
+            this.btnThayDoi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnThayDoi.Name = "btnThayDoi";
-            this.btnThayDoi.Size = new System.Drawing.Size(84, 34);
+            this.btnThayDoi.Size = new System.Drawing.Size(112, 42);
             this.btnThayDoi.TabIndex = 2;
             this.btnThayDoi.Text = "Cập Nhật";
             this.btnThayDoi.UseVisualStyleBackColor = true;
@@ -113,9 +123,10 @@
             // btnThoat
             // 
             this.btnThoat.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThoat.Location = new System.Drawing.Point(441, 283);
+            this.btnThoat.Location = new System.Drawing.Point(572, 305);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(84, 34);
+            this.btnThoat.Size = new System.Drawing.Size(112, 42);
             this.btnThoat.TabIndex = 2;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
@@ -125,18 +136,21 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(88, 166);
+            this.label4.Location = new System.Drawing.Point(101, 168);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(45, 19);
+            this.label4.Size = new System.Drawing.Size(63, 22);
             this.label4.TabIndex = 0;
             this.label4.Text = "Email:";
             this.label4.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(253, 167);
+            this.txtEmail.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(321, 170);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(272, 20);
+            this.txtEmail.Size = new System.Drawing.Size(361, 30);
             this.txtEmail.TabIndex = 1;
             // 
             // lblTieuDe
@@ -144,10 +158,9 @@
             this.lblTieuDe.AutoSize = true;
             this.lblTieuDe.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTieuDe.ForeColor = System.Drawing.Color.Blue;
-            this.lblTieuDe.Location = new System.Drawing.Point(184, 7);
-            this.lblTieuDe.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTieuDe.Location = new System.Drawing.Point(230, 9);
             this.lblTieuDe.Name = "lblTieuDe";
-            this.lblTieuDe.Size = new System.Drawing.Size(321, 40);
+            this.lblTieuDe.Size = new System.Drawing.Size(398, 49);
             this.lblTieuDe.TabIndex = 3;
             this.lblTieuDe.Text = "QUÊN MẬT KHẨU";
             // 
@@ -155,26 +168,29 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(88, 236);
+            this.label5.Location = new System.Drawing.Point(101, 247);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(135, 19);
+            this.label5.Size = new System.Drawing.Size(171, 22);
             this.label5.TabIndex = 0;
             this.label5.Text = "Nhập Lại Mật Khẩu:";
             this.label5.Click += new System.EventHandler(this.label1_Click);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(253, 235);
+            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(321, 246);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Name = "textBox1";
             this.textBox1.PasswordChar = '*';
-            this.textBox1.Size = new System.Drawing.Size(272, 20);
+            this.textBox1.Size = new System.Drawing.Size(361, 30);
             this.textBox1.TabIndex = 1;
             // 
             // FromQuenMatKhau
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(638, 352);
+            this.ClientSize = new System.Drawing.Size(775, 371);
             this.Controls.Add(this.lblTieuDe);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnThayDoi);
@@ -188,6 +204,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FromQuenMatKhau";
             this.Text = "QuenMatKhau";
             this.ResumeLayout(false);
