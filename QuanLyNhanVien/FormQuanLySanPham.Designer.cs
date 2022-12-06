@@ -182,7 +182,7 @@
             // 
             // btnThoat
             // 
-            this.btnThoat.Location = new System.Drawing.Point(958, 232);
+            this.btnThoat.Location = new System.Drawing.Point(824, 200);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(130, 38);
             this.btnThoat.TabIndex = 5;

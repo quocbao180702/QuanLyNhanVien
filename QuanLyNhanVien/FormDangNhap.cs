@@ -17,48 +17,43 @@ namespace QuanLyNhanVien
             InitializeComponent();
         }
 
-        private void btnHuy_Click(object sender, EventArgs e)
+        private void ckbShow_CheckedChanged(object sender, EventArgs e)
         {
-            txtTaiKhoan.Clear();
-            txtMatKhau.Clear();
+            if(ckbShow.Checked==true)
+            {
+                txtPassword.PasswordChar = '\0';
+            }
+            else
+            {
+                txtPassword.PasswordChar = '*';
+            }
         }
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-
-            string ten = txtTaiKhoan.Text.Substring(0, 2);
-            if(ten=="NQ"&& txtTaiKhoan.Text == "NQ001")
+            if(txtUsername.Text=="NQ001" && txtPassword.Text=="123")
             {
                 this.Hide();
-                FormQuanLyNhanVien frmQLNV = new FormQuanLyNhanVien();
-                frmQLNV.ShowDialog();
+                FormQuanLyNhanVien frmnv = new FormQuanLyNhanVien();
+                frmnv.ShowDialog();
             }
-            else if(ten=="NK" && txtTaiKhoan.Text == "NK001")
+            else if(txtUsername.Text == "NK001" && txtPassword.Text=="123")
             {
-                
-            }
-            else if(ten=="NB" && txtTaiKhoan.Text == "NB001")
-            {
-
+                this.Hide();
+                FormQuanLyNhanVien frmnv = new FormQuanLyNhanVien();
+                frmnv.ShowDialog();
             }
             else
             {
-                MessageBox.Show("Tài Khoản hoặc Mặt Khẩu Không Đúng");
-                btnHuy_Click(sender, e);
+                MessageBox.Show("đăng nhập thất bại");
             }
         }
 
-        private void btnQuenMatKhau_Click(object sender, EventArgs e)
+        private void btnQuenMK_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FromQuenMatKhau frmQuenMK = new FromQuenMatKhau();
-            frmQuenMK.ShowDialog();
+            FromQuenMatKhau frmQMK = new FromQuenMatKhau();
+            frmQMK.ShowDialog();
         }
-
-        private void frmDangNhap_Load(object sender, EventArgs e)
-        {
-            
-        }
-        
     }
 }
