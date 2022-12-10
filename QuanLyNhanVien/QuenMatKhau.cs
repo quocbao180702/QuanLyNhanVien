@@ -17,23 +17,13 @@ namespace QuanLyNhanVien
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnThayDoi_Click(object sender, EventArgs e)
         {
             string thongbao;
             thongbao = "Ten Dang Nhap La";
             thongbao += this.txtTenDangNhap.Text;
 
-            if(txtMatKhau.Text != txtNhapLaiMK.Text)
+            if (txtMatKhau.Text != txtNhapLaiMK.Text)
             {
                 MessageBox.Show("Nhap Lai Mat Khau");
             }
@@ -41,15 +31,21 @@ namespace QuanLyNhanVien
             {
                 MessageBox.Show("dang ki thanh cong");
             }
-           
 
-            
+
+
         }
-
         private void btnThoat_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
 
+        }
+
+        private void btnQuayLai_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmDangNhap frmDangNhap = new frmDangNhap();
+            frmDangNhap.ShowDialog();
         }
     }
 }

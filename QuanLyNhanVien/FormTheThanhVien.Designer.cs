@@ -36,7 +36,7 @@
             this.txtTenKH = new System.Windows.Forms.TextBox();
             this.txtSDT = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpNgayLamThe = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // lbTenKhachHang
@@ -76,7 +76,7 @@
             // 
             this.btnDangKi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangKi.Location = new System.Drawing.Point(185, 338);
-            this.btnDangKi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDangKi.Margin = new System.Windows.Forms.Padding(4);
             this.btnDangKi.Name = "btnDangKi";
             this.btnDangKi.Size = new System.Drawing.Size(125, 43);
             this.btnDangKi.TabIndex = 2;
@@ -88,7 +88,7 @@
             // 
             this.btnThoat.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.Location = new System.Drawing.Point(502, 338);
-            this.btnThoat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(4);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(125, 43);
             this.btnThoat.TabIndex = 2;
@@ -100,7 +100,7 @@
             // 
             this.txtTenKH.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenKH.Location = new System.Drawing.Point(314, 144);
-            this.txtTenKH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTenKH.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenKH.Name = "txtTenKH";
             this.txtTenKH.Size = new System.Drawing.Size(361, 30);
             this.txtTenKH.TabIndex = 3;
@@ -109,7 +109,7 @@
             // 
             this.txtSDT.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSDT.Location = new System.Drawing.Point(314, 199);
-            this.txtSDT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSDT.Margin = new System.Windows.Forms.Padding(4);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(361, 30);
             this.txtSDT.TabIndex = 3;
@@ -126,21 +126,21 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Thẻ Thành Viên";
             // 
-            // dateTimePicker1
+            // dtpNgayLamThe
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(314, 251);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(361, 30);
-            this.dateTimePicker1.TabIndex = 5;
+            this.dtpNgayLamThe.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpNgayLamThe.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpNgayLamThe.Location = new System.Drawing.Point(314, 251);
+            this.dtpNgayLamThe.Name = "dtpNgayLamThe";
+            this.dtpNgayLamThe.Size = new System.Drawing.Size(361, 30);
+            this.dtpNgayLamThe.TabIndex = 5;
             // 
             // FormTheThanhVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(789, 437);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtpNgayLamThe);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtSDT);
             this.Controls.Add(this.txtTenKH);
@@ -149,7 +149,7 @@
             this.Controls.Add(this.lbDate);
             this.Controls.Add(this.lbSDT);
             this.Controls.Add(this.lbTenKhachHang);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormTheThanhVien";
             this.Text = "TaoTheThanhVien";
             this.ResumeLayout(false);
@@ -167,6 +167,6 @@
         private System.Windows.Forms.TextBox txtTenKH;
         private System.Windows.Forms.TextBox txtSDT;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpNgayLamThe;
     }
 }

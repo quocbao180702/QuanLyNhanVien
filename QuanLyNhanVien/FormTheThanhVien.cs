@@ -21,7 +21,7 @@ namespace QuanLyNhanVien
         {
             string hoten = txtTenKH.Text;
             string sdt=txtSDT.Text;
-            string ngay=datNgay.Value.ToString();
+            string ngay= dtpNgayLamThe.Value.ToString();
             MessageBox.Show("Đăng kí thành công");
 
 

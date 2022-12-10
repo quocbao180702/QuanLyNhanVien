@@ -41,6 +41,7 @@
             this.lblTieuDe = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnQuayLai = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -53,7 +54,6 @@
             this.label1.Size = new System.Drawing.Size(93, 22);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mật Khẩu:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -65,7 +65,6 @@
             this.label2.Size = new System.Drawing.Size(139, 22);
             this.label2.TabIndex = 0;
             this.label2.Text = "Tên Đăng Nhập:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -77,13 +76,12 @@
             this.label3.Size = new System.Drawing.Size(132, 22);
             this.label3.TabIndex = 0;
             this.label3.Text = "Mật Khẩu Mới:\r\n";
-            this.label3.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtTenDangNhap
             // 
             this.txtTenDangNhap.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenDangNhap.Location = new System.Drawing.Point(321, 94);
-            this.txtTenDangNhap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTenDangNhap.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenDangNhap.Name = "txtTenDangNhap";
             this.txtTenDangNhap.Size = new System.Drawing.Size(361, 30);
             this.txtTenDangNhap.TabIndex = 1;
@@ -92,7 +90,7 @@
             // 
             this.txtMatKhau.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMatKhau.Location = new System.Drawing.Point(321, 132);
-            this.txtMatKhau.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMatKhau.Margin = new System.Windows.Forms.Padding(4);
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.PasswordChar = '*';
             this.txtMatKhau.Size = new System.Drawing.Size(361, 30);
@@ -102,7 +100,7 @@
             // 
             this.txtNhapLaiMK.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNhapLaiMK.Location = new System.Drawing.Point(321, 208);
-            this.txtNhapLaiMK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNhapLaiMK.Margin = new System.Windows.Forms.Padding(4);
             this.txtNhapLaiMK.Name = "txtNhapLaiMK";
             this.txtNhapLaiMK.PasswordChar = '*';
             this.txtNhapLaiMK.Size = new System.Drawing.Size(361, 30);
@@ -112,7 +110,7 @@
             // 
             this.btnThayDoi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThayDoi.Location = new System.Drawing.Point(452, 305);
-            this.btnThayDoi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnThayDoi.Margin = new System.Windows.Forms.Padding(4);
             this.btnThayDoi.Name = "btnThayDoi";
             this.btnThayDoi.Size = new System.Drawing.Size(112, 42);
             this.btnThayDoi.TabIndex = 2;
@@ -124,7 +122,7 @@
             // 
             this.btnThoat.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.Location = new System.Drawing.Point(572, 305);
-            this.btnThoat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(4);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(112, 42);
             this.btnThoat.TabIndex = 2;
@@ -142,13 +140,12 @@
             this.label4.Size = new System.Drawing.Size(63, 22);
             this.label4.TabIndex = 0;
             this.label4.Text = "Email:";
-            this.label4.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtEmail
             // 
             this.txtEmail.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(321, 170);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(361, 30);
             this.txtEmail.TabIndex = 1;
@@ -174,17 +171,28 @@
             this.label5.Size = new System.Drawing.Size(171, 22);
             this.label5.TabIndex = 0;
             this.label5.Text = "Nhập Lại Mật Khẩu:";
-            this.label5.Click += new System.EventHandler(this.label1_Click);
             // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(321, 246);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.PasswordChar = '*';
             this.textBox1.Size = new System.Drawing.Size(361, 30);
             this.textBox1.TabIndex = 1;
+            // 
+            // btnQuayLai
+            // 
+            this.btnQuayLai.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuayLai.Location = new System.Drawing.Point(105, 305);
+            this.btnQuayLai.Margin = new System.Windows.Forms.Padding(4);
+            this.btnQuayLai.Name = "btnQuayLai";
+            this.btnQuayLai.Size = new System.Drawing.Size(112, 42);
+            this.btnQuayLai.TabIndex = 2;
+            this.btnQuayLai.Text = "Quay Lại";
+            this.btnQuayLai.UseVisualStyleBackColor = true;
+            this.btnQuayLai.Click += new System.EventHandler(this.btnQuayLai_Click);
             // 
             // FromQuenMatKhau
             // 
@@ -193,6 +201,7 @@
             this.ClientSize = new System.Drawing.Size(775, 371);
             this.Controls.Add(this.lblTieuDe);
             this.Controls.Add(this.btnThoat);
+            this.Controls.Add(this.btnQuayLai);
             this.Controls.Add(this.btnThayDoi);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.txtNhapLaiMK);
@@ -204,7 +213,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FromQuenMatKhau";
             this.Text = "QuenMatKhau";
             this.ResumeLayout(false);
@@ -227,5 +236,6 @@
         private System.Windows.Forms.Label lblTieuDe;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnQuayLai;
     }
 }
