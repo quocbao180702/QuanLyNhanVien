@@ -39,49 +39,56 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(177, 15);
+            this.label1.Location = new System.Drawing.Point(236, 18);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 19);
+            this.label1.Size = new System.Drawing.Size(93, 22);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nhập Tên:";
             // 
             // dgBaoCao
             // 
             this.dgBaoCao.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgBaoCao.Location = new System.Drawing.Point(-2, 62);
+            this.dgBaoCao.Location = new System.Drawing.Point(-3, 76);
+            this.dgBaoCao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgBaoCao.Name = "dgBaoCao";
-            this.dgBaoCao.Size = new System.Drawing.Size(803, 387);
+            this.dgBaoCao.RowHeadersWidth = 51;
+            this.dgBaoCao.Size = new System.Drawing.Size(1071, 476);
             this.dgBaoCao.TabIndex = 1;
             // 
             // txtBaoCao
             // 
             this.txtBaoCao.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBaoCao.Location = new System.Drawing.Point(256, 15);
+            this.txtBaoCao.Location = new System.Drawing.Point(341, 18);
+            this.txtBaoCao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBaoCao.Name = "txtBaoCao";
-            this.txtBaoCao.Size = new System.Drawing.Size(255, 26);
+            this.txtBaoCao.Size = new System.Drawing.Size(339, 30);
             this.txtBaoCao.TabIndex = 2;
             // 
             // btnBaoCao
             // 
             this.btnBaoCao.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBaoCao.Location = new System.Drawing.Point(537, 6);
+            this.btnBaoCao.Location = new System.Drawing.Point(716, 7);
+            this.btnBaoCao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBaoCao.Name = "btnBaoCao";
-            this.btnBaoCao.Size = new System.Drawing.Size(163, 43);
+            this.btnBaoCao.Size = new System.Drawing.Size(217, 53);
             this.btnBaoCao.TabIndex = 3;
             this.btnBaoCao.Text = "Xem Báo Cáo";
             this.btnBaoCao.UseVisualStyleBackColor = true;
             // 
             // FormBaoCao
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.btnBaoCao);
             this.Controls.Add(this.txtBaoCao);
             this.Controls.Add(this.dgBaoCao);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormBaoCao";
             this.Text = "BaoCao";
+            this.Load += new System.EventHandler(this.FormBaoCao_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgBaoCao)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

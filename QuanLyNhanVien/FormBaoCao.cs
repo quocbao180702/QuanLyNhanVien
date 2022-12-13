@@ -16,5 +16,10 @@ namespace QuanLyNhanVien
         {
             InitializeComponent();
         }
+
+        private void FormBaoCao_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
