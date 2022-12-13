@@ -163,5 +163,8 @@
   <ItemGroup>
     <None Include="Resources\240_F_417777825_v7o8RvkQhxpZkE0ZBD4xwzri5hGFHkO3.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-menu-rounded-30.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

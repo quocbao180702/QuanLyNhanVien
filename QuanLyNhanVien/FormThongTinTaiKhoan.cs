@@ -19,18 +19,7 @@ namespace QuanLyNhanVien
 
         private void btnQuanLy_Click(object sender, EventArgs e)
         {
-            if(radQuanLyKho.Checked==true)
-            {
-                this.Hide();
-                FormQuanLyNhanVienKho frmKho = new FormQuanLyNhanVienKho();
-                frmKho.ShowDialog();
-            }
-            else
-            {
-                this.Hide();
-                FormQuanLyNhanVienBanHang frmbanhang = new FormQuanLyNhanVienBanHang();
-                frmbanhang.ShowDialog();
-            }
+            
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
@@ -43,6 +32,11 @@ namespace QuanLyNhanVien
             this.Hide();
             frmDangNhap frmDN = new frmDangNhap();
             frmDN.ShowDialog();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
