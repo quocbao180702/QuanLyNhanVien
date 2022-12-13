@@ -17,39 +17,32 @@ namespace QuanLyNhanVien
             InitializeComponent();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void btnQuanLy_Click(object sender, EventArgs e)
         {
-
+            if(radQuanLyKho.Checked==true)
+            {
+                this.Hide();
+                FormQuanLyNhanVienKho frmKho = new FormQuanLyNhanVienKho();
+                frmKho.ShowDialog();
+            }
+            else
+            {
+                this.Hide();
+                FormQuanLyNhanVienBanHang frmbanhang = new FormQuanLyNhanVienBanHang();
+                frmbanhang.ShowDialog();
+            }
         }
 
-        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
+        private void btnThoat_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
-        private void textBox4_TextChanged(object sender, EventArgs e)
+        private void btnQuayLai_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void textBox7_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void FormThongTinTaiKhoan_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
+            this.Hide();
+            frmDangNhap frmDN = new frmDangNhap();
+            frmDN.ShowDialog();
         }
     }
 }

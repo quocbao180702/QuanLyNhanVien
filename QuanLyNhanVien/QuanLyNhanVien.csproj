@@ -72,11 +72,11 @@
     <Compile Include="FormInHoaDon.Designer.cs">
       <DependentUpon>FormInHoaDon.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormThongTinNhanVien.cs">
+    <Compile Include="FormThongTinTaiKhoan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormThongTinNhanVien.Designer.cs">
-      <DependentUpon>FormThongTinNhanVien.cs</DependentUpon>
+    <Compile Include="FormThongTinTaiKhoan.Designer.cs">
+      <DependentUpon>FormThongTinTaiKhoan.cs</DependentUpon>
     </Compile>
     <Compile Include="FormQuanLyNhanVienBanHang.cs">
       <SubType>Form</SubType>
@@ -95,12 +95,6 @@
     </Compile>
     <Compile Include="FormQuanLySanPham.Designer.cs">
       <DependentUpon>FormQuanLySanPham.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormThongTinTaiKhoan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormThongTinTaiKhoan.Designer.cs">
-      <DependentUpon>FormThongTinTaiKhoan.cs</DependentUpon>
     </Compile>
     <Compile Include="FromTaoTaiKhoan.cs">
       <SubType>Form</SubType>
@@ -125,8 +119,8 @@
     <EmbeddedResource Include="FormInHoaDon.resx">
       <DependentUpon>FormInHoaDon.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormThongTinNhanVien.resx">
-      <DependentUpon>FormThongTinNhanVien.cs</DependentUpon>
+    <EmbeddedResource Include="FormThongTinTaiKhoan.resx">
+      <DependentUpon>FormThongTinTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormQuanLyNhanVienBanHang.resx">
       <DependentUpon>FormQuanLyNhanVienBanHang.cs</DependentUpon>
@@ -136,9 +130,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormQuanLySanPham.resx">
       <DependentUpon>FormQuanLySanPham.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormThongTinTaiKhoan.resx">
-      <DependentUpon>FormThongTinTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FromTaoTaiKhoan.resx">
       <DependentUpon>FromTaoTaiKhoan.cs</DependentUpon>
