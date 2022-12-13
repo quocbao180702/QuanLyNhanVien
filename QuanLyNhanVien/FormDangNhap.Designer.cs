@@ -122,6 +122,7 @@
             this.panelBar.Name = "panelBar";
             this.panelBar.Size = new System.Drawing.Size(462, 40);
             this.panelBar.TabIndex = 14;
+            this.panelBar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelBar_MouseMove);
             // 
             // lblThoat
             // 

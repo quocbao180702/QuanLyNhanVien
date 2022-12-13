@@ -16,5 +16,17 @@ namespace QuanLyNhanVien
         {
             InitializeComponent();
         }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnQuayLai_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormQuanLyNhanVien  frmquanly = new FormQuanLyNhanVien();
+            frmquanly.ShowDialog();
+        }
     }
 }

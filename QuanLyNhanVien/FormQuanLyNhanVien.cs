@@ -27,7 +27,9 @@ namespace QuanLyNhanVien
             }
             else
             {
-
+                this.Hide();
+                FormQuanLyNhanVienBanHang frmbanhang = new FormQuanLyNhanVienBanHang();
+                frmbanhang.ShowDialog();
             }
         }
 

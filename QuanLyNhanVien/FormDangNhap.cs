@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,6 +14,15 @@ namespace QuanLyNhanVien
 {
     public partial class frmDangNhap : Form
     {
+        public const int WM_NCLBUTTONDOWN = 0xA1;
+        public const int HT_CAPTION = 0x2;
+
+        [DllImportAttribute("user32.dll")]
+        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+
+        [DllImportAttribute("user32.dll")]
+        public static extern bool ReleaseCapture();
+
         public frmDangNhap()
         {
             InitializeComponent();
@@ -21,6 +31,7 @@ namespace QuanLyNhanVien
 
         SqlConnection conn;
         SqlCommand cmd;
+        public int quyen = 0;
 
         private void frmDangNhap_Load(object sender, EventArgs e)
         {
@@ -46,10 +57,21 @@ namespace QuanLyNhanVien
             SqlDataReader dr =  cmd.ExecuteReader();
             if (dr.Read())
             {
-                dr.Close();
-                this.Hide();
-                FormQuanLyNhanVien fquanly = new FormQuanLyNhanVien();
-                fquanly.ShowDialog();
+                quyen = int.Parse(dr.GetValue(2).ToString());
+                if (quyen == 1)
+                {
+                    dr.Close();
+                    this.Hide();
+                    FormQuanLyNhanVien fquanly = new FormQuanLyNhanVien();
+                    fquanly.ShowDialog();
+                }
+                else if(quyen == 2)
+                {
+                    dr.Close();
+                    this.Hide();
+                    FormQuanLyNhanVienKho fquanlykho = new FormQuanLyNhanVienKho();
+                    fquanlykho.ShowDialog();
+                }
             }
             else
             {
@@ -88,10 +110,25 @@ namespace QuanLyNhanVien
             frmQMK.ShowDialog();
         }
 
+        // thoat
         private void lblThoat_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
+        //Duy chuyển form 
+        public void Move_Form(IntPtr Handle, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+            }
+        }
+
+        private void panelBar_MouseMove(object sender, MouseEventArgs e)
+        {
+            Move_Form(Handle, e);
+        }
     }
 }
