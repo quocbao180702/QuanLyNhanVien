@@ -16,5 +16,15 @@ namespace QuanLyNhanVien
         {
             InitializeComponent();
         }
+
+        private void txtLuongCoBan_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtEmail_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
