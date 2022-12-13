@@ -72,6 +72,12 @@
     <Compile Include="FormInHoaDon.Designer.cs">
       <DependentUpon>FormInHoaDon.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormQuanLy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuanLy.Designer.cs">
+      <DependentUpon>FormQuanLy.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormThongTinTaiKhoan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +124,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormInHoaDon.resx">
       <DependentUpon>FormInHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuanLy.resx">
+      <DependentUpon>FormQuanLy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormThongTinTaiKhoan.resx">
       <DependentUpon>FormThongTinTaiKhoan.cs</DependentUpon>
