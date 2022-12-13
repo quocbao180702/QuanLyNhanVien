@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace QuanLyNhanVien
 {
-    public partial class FromTinhtien : Form
+    public partial class FormBaoCao : Form
     {
-        public FromTinhtien()
+        public FormBaoCao()
         {
             InitializeComponent();
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

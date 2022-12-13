@@ -48,6 +48,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormBaoCao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBaoCao.Designer.cs">
+      <DependentUpon>FormBaoCao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBangLuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBangLuong.Designer.cs">
+      <DependentUpon>FormBangLuong.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,11 +72,11 @@
     <Compile Include="FormInHoaDon.Designer.cs">
       <DependentUpon>FormInHoaDon.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormQuanLyNhanVien.cs">
+    <Compile Include="FormThongTinNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormQuanLyNhanVien.Designer.cs">
-      <DependentUpon>FormQuanLyNhanVien.cs</DependentUpon>
+    <Compile Include="FormThongTinNhanVien.Designer.cs">
+      <DependentUpon>FormThongTinNhanVien.cs</DependentUpon>
     </Compile>
     <Compile Include="FormQuanLyNhanVienBanHang.cs">
       <SubType>Form</SubType>
@@ -96,40 +108,25 @@
     <Compile Include="FromTaoTaiKhoan.Designer.cs">
       <DependentUpon>FromTaoTaiKhoan.cs</DependentUpon>
     </Compile>
-    <Compile Include="FromThongTinNhanVien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FromThongTinNhanVien.Designer.cs">
-      <DependentUpon>FromThongTinNhanVien.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FromTinhtien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FromTinhtien.Designer.cs">
-      <DependentUpon>FromTinhtien.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QuenMatKhau.cs">
+    <Compile Include="FormQuenMatKhau.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="QuenMatKhau.Designer.cs">
-      <DependentUpon>QuenMatKhau.cs</DependentUpon>
+    <Compile Include="FormQuenMatKhau.Designer.cs">
+      <DependentUpon>FormQuenMatKhau.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormTheThanhVien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormTheThanhVien.Designer.cs">
-      <DependentUpon>FormTheThanhVien.cs</DependentUpon>
-    </Compile>
+    <EmbeddedResource Include="FormBangLuong.resx">
+      <DependentUpon>FormBangLuong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormDangNhap.resx">
       <DependentUpon>FormDangNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormInHoaDon.resx">
       <DependentUpon>FormInHoaDon.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormQuanLyNhanVien.resx">
-      <DependentUpon>FormQuanLyNhanVien.cs</DependentUpon>
+    <EmbeddedResource Include="FormThongTinNhanVien.resx">
+      <DependentUpon>FormThongTinNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormQuanLyNhanVienBanHang.resx">
       <DependentUpon>FormQuanLyNhanVienBanHang.cs</DependentUpon>
@@ -146,12 +143,6 @@
     <EmbeddedResource Include="FromTaoTaiKhoan.resx">
       <DependentUpon>FromTaoTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FromThongTinNhanVien.resx">
-      <DependentUpon>FromThongTinNhanVien.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FromTinhtien.resx">
-      <DependentUpon>FromTinhtien.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -162,11 +153,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="QuenMatKhau.resx">
-      <DependentUpon>QuenMatKhau.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormTheThanhVien.resx">
-      <DependentUpon>FormTheThanhVien.cs</DependentUpon>
+    <EmbeddedResource Include="FormQuenMatKhau.resx">
+      <DependentUpon>FormQuenMatKhau.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

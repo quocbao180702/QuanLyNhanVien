@@ -25,7 +25,7 @@ namespace QuanLyNhanVien
         private void btnQuayLai_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormQuanLyNhanVien  frmquanly = new FormQuanLyNhanVien();
+            FormThongTinNhanVien  frmquanly = new FormThongTinNhanVien();
             frmquanly.ShowDialog();
         }
     }

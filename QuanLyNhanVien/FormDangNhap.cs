@@ -62,7 +62,7 @@ namespace QuanLyNhanVien
                 {
                     dr.Close();
                     this.Hide();
-                    FormQuanLyNhanVien fquanly = new FormQuanLyNhanVien();
+                    FormThongTinNhanVien fquanly = new FormThongTinNhanVien();
                     fquanly.ShowDialog();
                 }
                 else if(quyen == 2)
