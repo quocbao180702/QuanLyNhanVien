@@ -67,6 +67,8 @@
             this.hệThốngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tínhLươngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thoátToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnLamMoi = new System.Windows.Forms.Button();
+            this.làmMớiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grbThongTin.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -411,6 +413,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnLamMoi);
             this.groupBox1.Controls.Add(this.btnTinhLuong);
             this.groupBox1.Controls.Add(this.txtLuong);
             this.groupBox1.Controls.Add(this.txtSoNgayNghi);
@@ -430,7 +433,7 @@
             this.txtSoNgayLam.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSoNgayLam.Location = new System.Drawing.Point(146, 45);
             this.txtSoNgayLam.Name = "txtSoNgayLam";
-            this.txtSoNgayLam.Size = new System.Drawing.Size(178, 30);
+            this.txtSoNgayLam.Size = new System.Drawing.Size(165, 30);
             this.txtSoNgayLam.TabIndex = 18;
             // 
             // label3
@@ -447,7 +450,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(337, 48);
+            this.label4.Location = new System.Drawing.Point(317, 48);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(120, 22);
             this.label4.TabIndex = 17;
@@ -456,7 +459,7 @@
             // txtSoNgayNghi
             // 
             this.txtSoNgayNghi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSoNgayNghi.Location = new System.Drawing.Point(463, 45);
+            this.txtSoNgayNghi.Location = new System.Drawing.Point(443, 45);
             this.txtSoNgayNghi.Name = "txtSoNgayNghi";
             this.txtSoNgayNghi.Size = new System.Drawing.Size(178, 30);
             this.txtSoNgayNghi.TabIndex = 18;
@@ -465,7 +468,7 @@
             // 
             this.btnTinhLuong.BackColor = System.Drawing.Color.Yellow;
             this.btnTinhLuong.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTinhLuong.Location = new System.Drawing.Point(656, 36);
+            this.btnTinhLuong.Location = new System.Drawing.Point(627, 36);
             this.btnTinhLuong.Name = "btnTinhLuong";
             this.btnTinhLuong.Size = new System.Drawing.Size(113, 46);
             this.btnTinhLuong.TabIndex = 17;
@@ -476,7 +479,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(793, 48);
+            this.label5.Location = new System.Drawing.Point(746, 48);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(66, 22);
             this.label5.TabIndex = 17;
@@ -485,9 +488,9 @@
             // txtLuong
             // 
             this.txtLuong.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLuong.Location = new System.Drawing.Point(865, 45);
+            this.txtLuong.Location = new System.Drawing.Point(818, 45);
             this.txtLuong.Name = "txtLuong";
-            this.txtLuong.Size = new System.Drawing.Size(356, 30);
+            this.txtLuong.Size = new System.Drawing.Size(276, 30);
             this.txtLuong.TabIndex = 18;
             // 
             // dgvLuong
@@ -515,7 +518,8 @@
             // hệThốngToolStripMenuItem
             // 
             this.hệThốngToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tínhLươngToolStripMenuItem});
+            this.tínhLươngToolStripMenuItem,
+            this.làmMớiToolStripMenuItem});
             this.hệThốngToolStripMenuItem.Name = "hệThốngToolStripMenuItem";
             this.hệThốngToolStripMenuItem.Size = new System.Drawing.Size(88, 24);
             this.hệThốngToolStripMenuItem.Text = "Hệ Thống";
@@ -531,6 +535,23 @@
             this.thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
             this.thoátToolStripMenuItem.Size = new System.Drawing.Size(61, 24);
             this.thoátToolStripMenuItem.Text = "Thoát";
+            // 
+            // btnLamMoi
+            // 
+            this.btnLamMoi.BackColor = System.Drawing.Color.Yellow;
+            this.btnLamMoi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLamMoi.Location = new System.Drawing.Point(1108, 36);
+            this.btnLamMoi.Name = "btnLamMoi";
+            this.btnLamMoi.Size = new System.Drawing.Size(113, 46);
+            this.btnLamMoi.TabIndex = 17;
+            this.btnLamMoi.Text = "Làm mới";
+            this.btnLamMoi.UseVisualStyleBackColor = false;
+            // 
+            // làmMớiToolStripMenuItem
+            // 
+            this.làmMớiToolStripMenuItem.Name = "làmMớiToolStripMenuItem";
+            this.làmMớiToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.làmMớiToolStripMenuItem.Text = "Làm Mới";
             // 
             // FormBangLuong
             // 
@@ -602,5 +623,7 @@
         private System.Windows.Forms.ToolStripMenuItem hệThốngToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tínhLươngToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thoátToolStripMenuItem;
+        private System.Windows.Forms.Button btnLamMoi;
+        private System.Windows.Forms.ToolStripMenuItem làmMớiToolStripMenuItem;
     }
 }
