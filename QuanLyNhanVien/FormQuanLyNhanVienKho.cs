@@ -178,6 +178,11 @@ namespace QuanLyNhanVien
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
+            this.txtMa.ResetText();
+            this.txtHo.ResetText();
+            this.txtTen.ResetText();
+            this.radNam.Checked = false;
+            this.radNu.Checked = false;
 
         }
     }

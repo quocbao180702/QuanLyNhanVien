@@ -112,11 +112,11 @@ namespace QuanLyNhanVien
             dr.Cells["tennv"].Value = txtTen.Text;
             if (radNu.Checked == true)
             {
-                dr.Cells["gioitinh"].Value = "Nữ";
+                dr.Cells["gioitinh"].Value = "nu";
             }
             else
             {
-                dr.Cells["gioitinh"].Value = "Nam";
+                dr.Cells["gioitinh"].Value = "nam";
             }
             dr.Cells["ngaysinh"].Value = dtpNgaySinh.Text;
             dr.Cells["sdt"].Value = txtSDT.Text;
