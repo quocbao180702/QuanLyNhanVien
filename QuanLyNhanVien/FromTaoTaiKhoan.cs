@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -10,26 +11,60 @@ using System.Windows.Forms;
 
 namespace QuanLyNhanVien
 {
-    public partial class FromTaoTaiKhoan : Form
+    public partial class FormTaoTaiKhoan : Form
     {
-        public FromTaoTaiKhoan()
+        public FormTaoTaiKhoan()
         {
             InitializeComponent();
         }
 
-        private void btnTaoTK_Click(object sender, EventArgs e)
+        SqlConnection conn;
+        SqlCommand cmd;
+        SqlDataReader dr;
+        private void FromTaoTaiKhoan_Load(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtMaNV.Text) && string.IsNullOrEmpty(txtTen.Text) && string.IsNullOrEmpty(txtHoLot.Text))
+            conn = new SqlConnection(@"Data Source=BAODANG;Initial Catalog=QLNV;Integrated Security=True");
+            conn.Open();
+        }
+        public void TaoTaiKhoan()
+        {
+            if (txtMaNV.Text != string.Empty || txtMatKhau.Text != string.Empty || txtNhapLaiMatKhau.Text != string.Empty ||cboQuyen.Text!= string.Empty)
             {
-                MessageBox.Show("Vui lòng điền đủ thông tin", "Thông báo");
+                if (txtMatKhau.Text ==txtNhapLaiMatKhau.Text)
+                {
+                    cmd = new SqlCommand("select * from dangnhap where username='" + txtMaNV.Text + "'", conn);
+                    dr = cmd.ExecuteReader();
+                    if (dr.Read())
+                    {
+                        dr.Close();
+                        MessageBox.Show("Username Already exist please try another ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        dr.Close();
+                        cmd = new SqlCommand("insert into dangnhap values(@username, @pass, @quyen)", conn);
+                        cmd.Parameters.AddWithValue("username", txtMaNV.Text);
+                        cmd.Parameters.AddWithValue("pass", txtMatKhau.Text);
+                        cmd.Parameters.AddWithValue("quyen", cboQuyen.SelectedItem.ToString());
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Your Account is created . Please login now.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Please enter both password same ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {
-                
-
-                txtDiaChi.Clear();
-                txtMaNV.Focus();
+                MessageBox.Show("Please enter value in all field.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnTaoTK_Click(object sender, EventArgs e)
+        {
+            TaoTaiKhoan();
+            conn.Close();
         }
     }
 }
