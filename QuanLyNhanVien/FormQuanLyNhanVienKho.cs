@@ -20,7 +20,7 @@ namespace QuanLyNhanVien
         {
             InitializeComponent();
         }
-        SqlConnection conn = new SqlConnection(@"Data Source=BAODANG;Initial Catalog=QLNV;Integrated Security=True");
+        SqlConnection conn = new SqlConnection(@"Data Source=GeeKay;Initial Catalog=QLNV;Integrated Security=True");
         DataSet ds = new DataSet("dsQLNV");
         SqlDataAdapter dachucvu;
         SqlDataAdapter daNhanVien;
@@ -28,7 +28,7 @@ namespace QuanLyNhanVien
         private void LoadDataGridView()
         {
             SqlConnection conn = new SqlConnection();
-            conn.ConnectionString = @"Data Source=BAODANG;Initial Catalog=QLNV;Integrated Security=True";
+            conn.ConnectionString = @"Data Source=GeeKay;Initial Catalog=QLNV;Integrated Security=True";
             string sQueryNhanVien = @"select n.*, c.tencv from nhanvien n, chucvu c where n.macv=c.macv";
             daNhanVien = new SqlDataAdapter(sQueryNhanVien, conn);
             daNhanVien.Fill(ds, "tblDSNhanVien");
@@ -64,10 +64,7 @@ namespace QuanLyNhanVien
             LoadDataGridView();
             Them();
         }
-<<<<<<< HEAD
-=======
 
->>>>>>> 0efad31011f47fb4a129a226e2e492772c8ef493
         private void dgQLNhanVien_Click(object sender, EventArgs e)
         {
             DataGridViewRow dr = dgQLNhanVien.SelectedRows[0];
@@ -93,7 +90,6 @@ namespace QuanLyNhanVien
 
         private void btnQuayLai_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
             this.Hide();
             FormThongTinTaiKhoan frmquanly = new FormThongTinTaiKhoan();
             frmquanly.ShowDialog();
@@ -102,9 +98,7 @@ namespace QuanLyNhanVien
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
-=======
 
->>>>>>> 0efad31011f47fb4a129a226e2e492772c8ef493
         }
 
         private void btnThem_Click(object sender, EventArgs e)

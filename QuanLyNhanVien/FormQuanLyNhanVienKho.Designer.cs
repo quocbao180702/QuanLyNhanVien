@@ -33,11 +33,7 @@
             this.grbChucVu = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnThoat = new System.Windows.Forms.Button();
-<<<<<<< HEAD
-            this.btnLưu = new System.Windows.Forms.Button();
-=======
             this.btnLuu = new System.Windows.Forms.Button();
->>>>>>> 0efad31011f47fb4a129a226e2e492772c8ef493
             this.btnQuayLai = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
@@ -102,11 +98,7 @@
             // 
             this.grbChucVu.Controls.Add(this.label1);
             this.grbChucVu.Controls.Add(this.btnThoat);
-<<<<<<< HEAD
-            this.grbChucVu.Controls.Add(this.btnLưu);
-=======
             this.grbChucVu.Controls.Add(this.btnLuu);
->>>>>>> 0efad31011f47fb4a129a226e2e492772c8ef493
             this.grbChucVu.Controls.Add(this.btnQuayLai);
             this.grbChucVu.Controls.Add(this.btnSua);
             this.grbChucVu.Controls.Add(this.btnXoa);
@@ -141,17 +133,6 @@
             this.btnThoat.UseVisualStyleBackColor = true;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
-<<<<<<< HEAD
-            // btnLưu
-            // 
-            this.btnLưu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLưu.Location = new System.Drawing.Point(195, 194);
-            this.btnLưu.Name = "btnLưu";
-            this.btnLưu.Size = new System.Drawing.Size(124, 46);
-            this.btnLưu.TabIndex = 11;
-            this.btnLưu.Text = "Lưu";
-            this.btnLưu.UseVisualStyleBackColor = true;
-=======
             // btnLuu
             // 
             this.btnLuu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -161,7 +142,6 @@
             this.btnLuu.TabIndex = 11;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
->>>>>>> 0efad31011f47fb4a129a226e2e492772c8ef493
             // 
             // btnQuayLai
             // 
@@ -578,11 +558,8 @@
         private System.Windows.Forms.GroupBox grbChucVu;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnThoat;
-<<<<<<< HEAD
-        private System.Windows.Forms.Button btnLưu;
-=======
         private System.Windows.Forms.Button btnLuu;
->>>>>>> 0efad31011f47fb4a129a226e2e492772c8ef493
+
         private System.Windows.Forms.Button btnQuayLai;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnXoa;
