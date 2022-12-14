@@ -86,7 +86,8 @@ namespace QuanLyNhanVien
 
         private void MenuItemXem_Click(object sender, EventArgs e)
         {
-            if(quyen==1)
+            if(quyen == 
+                1)
             {
                 this.Close();
                 FormQuanLy fquanly = new FormQuanLy();

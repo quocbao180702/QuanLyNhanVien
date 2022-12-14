@@ -33,7 +33,11 @@
             this.grbChucVu = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnThoat = new System.Windows.Forms.Button();
+<<<<<<< HEAD
             this.btnLưu = new System.Windows.Forms.Button();
+=======
+            this.btnLuu = new System.Windows.Forms.Button();
+>>>>>>> 0efad31011f47fb4a129a226e2e492772c8ef493
             this.btnQuayLai = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
@@ -98,7 +102,11 @@
             // 
             this.grbChucVu.Controls.Add(this.label1);
             this.grbChucVu.Controls.Add(this.btnThoat);
+<<<<<<< HEAD
             this.grbChucVu.Controls.Add(this.btnLưu);
+=======
+            this.grbChucVu.Controls.Add(this.btnLuu);
+>>>>>>> 0efad31011f47fb4a129a226e2e492772c8ef493
             this.grbChucVu.Controls.Add(this.btnQuayLai);
             this.grbChucVu.Controls.Add(this.btnSua);
             this.grbChucVu.Controls.Add(this.btnXoa);
@@ -133,6 +141,7 @@
             this.btnThoat.UseVisualStyleBackColor = true;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
+<<<<<<< HEAD
             // btnLưu
             // 
             this.btnLưu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -142,6 +151,17 @@
             this.btnLưu.TabIndex = 11;
             this.btnLưu.Text = "Lưu";
             this.btnLưu.UseVisualStyleBackColor = true;
+=======
+            // btnLuu
+            // 
+            this.btnLuu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLuu.Location = new System.Drawing.Point(195, 194);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(124, 46);
+            this.btnLuu.TabIndex = 11;
+            this.btnLuu.Text = "Lưu";
+            this.btnLuu.UseVisualStyleBackColor = true;
+>>>>>>> 0efad31011f47fb4a129a226e2e492772c8ef493
             // 
             // btnQuayLai
             // 
@@ -183,6 +203,7 @@
             this.btnThem.TabIndex = 15;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnTim
             // 
@@ -293,69 +314,69 @@
             this.cboTinh.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboTinh.FormattingEnabled = true;
             this.cboTinh.Items.AddRange(new object[] {
-            "1\tAn Giang",
-            "2\tBà rịa – Vũng tàu",
-            "3\tBắc Giang",
-            "4\tBắc Kạn",
-            "5\tBạc Liêu",
-            "6\tBắc Ninh",
-            "7\tBến Tre",
-            "8\tBình Định",
-            "9\tBình Dương",
-            "10\tBình Phước",
-            "11\tBình Thuận",
-            "12\tCà Mau",
-            "13\tCần Thơ",
-            "14\tCao Bằng ",
-            "15\tĐà Nẵng",
-            "16\tĐắk Lắk",
-            "17\tĐắk Nông",
-            "18\tĐiện Biên",
-            "19\tĐồng Nai",
-            "20\tĐồng Tháp",
-            "21\tGia Lai",
-            "22\tHà Giang",
-            "23\tHà Nam",
-            "24\tHà Nội ",
-            "25\tHà Tĩnh",
-            "26\tHải Dương",
-            "27\tHải Phòng",
-            "28\tHậu Giang",
-            "29\tHòa Bình",
-            "30\tHưng Yên",
-            "31\tKhánh Hòa",
-            "32\tKiên Giang",
-            "33\tKon Tum",
-            "34\tLai Châu",
-            "35\tLâm Đồng",
-            "36\tLạng Sơn",
-            "37\tLào Cai",
-            "38\tLong An",
-            "39\tNam Định",
-            "40\tNghệ An",
-            "41\tNinh Bình",
-            "42\tNinh Thuận",
-            "43\tPhú Thọ",
-            "44\tPhú Yên",
-            "45\tQuảng Bình",
-            "46\tQuảng Nam",
-            "47\tQuảng Ngãi",
-            "48\tQuảng Ninh",
-            "49\tQuảng Trị",
-            "50\tSóc Trăng",
-            "51\tSơn La",
-            "52\tTây Ninh",
-            "53\tThái Bình",
-            "54\tThái Nguyên",
-            "55\tThanh Hóa",
-            "56\tThừa Thiên Huế",
-            "57\tTiền Giang",
-            "58\tThành phố Hồ Chí Minh",
-            "59\tTrà Vinh",
-            "60\tTuyên Quang",
-            "61\tVĩnh Long",
-            "62\tVĩnh Phúc",
-            "63\tYên Bái"});
+            "An Giang",
+            "Bà rịa – Vũng tàu",
+            "Bắc Giang",
+            "Bắc Kạn",
+            "Bạc Liêu",
+            "Bắc Ninh",
+            "Bến Tre",
+            "Bình Định",
+            "Bình Dương",
+            "Bình Phước",
+            "Bình Thuận",
+            "Cà Mau",
+            "Cần Thơ",
+            "Cao Bằng ",
+            "Đà Nẵng",
+            "Đắk Lắk",
+            "Đắk Nông",
+            "Điện Biên",
+            "Đồng Nai",
+            "Đồng Tháp",
+            "Gia Lai",
+            "Hà Giang",
+            "Hà Nam",
+            "Hà Nội ",
+            "Hà Tĩnh",
+            "Hải Dương",
+            "Hải Phòng",
+            "Hậu Giang",
+            "Hòa Bình",
+            "Hưng Yên",
+            "Khánh Hòa",
+            "Kiên Giang",
+            "Kon Tum",
+            "Lai Châu",
+            "Lâm Đồng",
+            "Lạng Sơn",
+            "Lào Cai",
+            "Long An",
+            "Nam Định",
+            "Nghệ An",
+            "Ninh Bình",
+            "Ninh Thuận",
+            "Phú Thọ",
+            "Phú Yên",
+            "Quảng Bình",
+            "Quảng Nam",
+            "Quảng Ngãi",
+            "Quảng Ninh",
+            "Quảng Trị",
+            "Sóc Trăng",
+            "Sơn La",
+            "Tây Ninh",
+            "Thái Bình",
+            "Thái Nguyên",
+            "Thanh Hóa",
+            "Thừa Thiên Huế",
+            "Tiền Giang",
+            "Thành phố Hồ Chí Minh",
+            "Trà Vinh",
+            "Tuyên Quang",
+            "Vĩnh Long",
+            "Vĩnh Phúc",
+            "Yên Bái"});
             this.cboTinh.Location = new System.Drawing.Point(486, 249);
             this.cboTinh.Name = "cboTinh";
             this.cboTinh.Size = new System.Drawing.Size(196, 30);
@@ -557,7 +578,11 @@
         private System.Windows.Forms.GroupBox grbChucVu;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnThoat;
+<<<<<<< HEAD
         private System.Windows.Forms.Button btnLưu;
+=======
+        private System.Windows.Forms.Button btnLuu;
+>>>>>>> 0efad31011f47fb4a129a226e2e492772c8ef493
         private System.Windows.Forms.Button btnQuayLai;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnXoa;
