@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace QuanLyNhanVien
 {
@@ -17,7 +18,7 @@ namespace QuanLyNhanVien
         {
             InitializeComponent();
         }
-        SqlConnection conn = new SqlConnection(@"Data Source=GEEKAY;Initial Catalog=QLNV;Integrated Security=True");
+        SqlConnection conn = new SqlConnection(@"Data Source=BAODANG;Initial Catalog=QLNV;Integrated Security=True");
         DataSet ds = new DataSet("dsQLNV");
         SqlDataAdapter dachucvu;
         SqlDataAdapter daNhanVien;
@@ -25,7 +26,7 @@ namespace QuanLyNhanVien
         private void LoadDataGridView()
         {
             SqlConnection conn = new SqlConnection();
-            conn.ConnectionString = @"Data Source=GeeKay;Initial Catalog=QLNV;Integrated Security=True";
+            conn.ConnectionString = @"Data Source=BAODANG;Initial Catalog=QLNV;Integrated Security=True";
             string sQueryNhanVien = @"select n.*, c.tencv from nhanvien n, chucvu c where n.macv=c.macv";
             daNhanVien = new SqlDataAdapter(sQueryNhanVien, conn);
             daNhanVien.Fill(ds, "tblDSNhanVien");
@@ -170,6 +171,41 @@ namespace QuanLyNhanVien
             row["diachi"] = txtDiaChi.Text;
             row["macv"] = cmbChucVu.SelectedValue;
             ds.Tables["tblDSNhanVien"].Rows.Add(row);
+        }
+
+        private void btnTim_Click(object sender, EventArgs e)
+        {
+            conn.Open();
+            string selectquery = "select * from nhanvien where manv = '" + txtTim.Text + "'";
+            SqlCommand cmd = new SqlCommand(selectquery, conn);
+            SqlDataReader dr;
+            dr = cmd.ExecuteReader();
+            if (dr.Read())
+            {
+                txtMa.Text = dr.GetValue(0).ToString(); ;
+                txtHo.Text = dr.GetValue(1).ToString();
+                txtTen.Text = dr.GetValue(2).ToString();
+                if (dr.GetValue(3).ToString() == "nam")
+                {
+                    radNam.Checked = true;
+                }
+                else
+                {
+                    radNu.Checked = true;
+                }
+                txtSDT.Text = dr.GetValue(5).ToString();
+                dtpNgaySinh.Text = dr.GetValue(4).ToString();
+                txtEmail.Text = dr.GetValue(6).ToString();
+                txtLuongCoBan.Text = dr.GetValue(7).ToString();
+                cboTinh.Text = dr.GetValue(8).ToString();
+                txtDiaChi.Text = dr.GetValue(9).ToString();
+                cmbChucVu.Text = dr.GetValue(10).ToString();
+            }
+            else
+            {
+                MessageBox.Show("NO DATA FOUND");
+            }
+            conn.Close();
         }
     }
 }

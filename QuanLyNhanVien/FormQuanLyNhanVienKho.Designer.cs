@@ -31,6 +31,7 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.dgQLNhanVien = new System.Windows.Forms.DataGridView();
             this.grbChucVu = new System.Windows.Forms.GroupBox();
+            this.btnHuy = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
@@ -65,7 +66,6 @@
             this.lblTen = new System.Windows.Forms.Label();
             this.lblNgaySinh = new System.Windows.Forms.Label();
             this.lblMa = new System.Windows.Forms.Label();
-            this.btnHuy = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgQLNhanVien)).BeginInit();
             this.grbChucVu.SuspendLayout();
             this.grbThongTin.SuspendLayout();
@@ -114,6 +114,16 @@
             this.grbChucVu.TabIndex = 10;
             this.grbChucVu.TabStop = false;
             this.grbChucVu.Text = "Chức Vụ";
+            // 
+            // btnHuy
+            // 
+            this.btnHuy.Location = new System.Drawing.Point(32, 250);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(124, 44);
+            this.btnHuy.TabIndex = 18;
+            this.btnHuy.Text = "Hủy";
+            this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // label1
             // 
@@ -198,6 +208,7 @@
             this.btnTim.TabIndex = 16;
             this.btnTim.Text = "Tìm";
             this.btnTim.UseVisualStyleBackColor = true;
+            this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
             // 
             // txtTim
             // 
@@ -530,16 +541,6 @@
             this.lblMa.Size = new System.Drawing.Size(123, 22);
             this.lblMa.TabIndex = 6;
             this.lblMa.Text = "Mã Nhân Viên";
-            // 
-            // btnHuy
-            // 
-            this.btnHuy.Location = new System.Drawing.Point(32, 250);
-            this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(124, 44);
-            this.btnHuy.TabIndex = 18;
-            this.btnHuy.Text = "Hủy";
-            this.btnHuy.UseVisualStyleBackColor = true;
-            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // FormQuanLyNhanVienKho
             // 
