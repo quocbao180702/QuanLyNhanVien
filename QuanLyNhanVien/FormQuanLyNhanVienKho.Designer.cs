@@ -65,7 +65,6 @@
             this.lblTen = new System.Windows.Forms.Label();
             this.lblNgaySinh = new System.Windows.Forms.Label();
             this.lblMa = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgQLNhanVien)).BeginInit();
             this.grbChucVu.SuspendLayout();
             this.grbThongTin.SuspendLayout();
@@ -526,21 +525,11 @@
             this.lblMa.TabIndex = 6;
             this.lblMa.Text = "Mã Nhân Viên";
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(892, 30);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(189, 24);
-            this.comboBox1.TabIndex = 15;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
             // FormQuanLyNhanVienKho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1170, 750);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.grbThongTin);
             this.Controls.Add(this.grbChucVu);
             this.Controls.Add(this.dgQLNhanVien);
@@ -599,6 +588,5 @@
         private System.Windows.Forms.Label lblTen;
         private System.Windows.Forms.Label lblNgaySinh;
         private System.Windows.Forms.Label lblMa;
-        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
