@@ -31,8 +31,6 @@ namespace QuanLyNhanVien
 
         SqlConnection conn;
         SqlCommand cmd;
-        public int quyen = 0;
-
         private void frmDangNhap_Load(object sender, EventArgs e)
         {
             conn = new SqlConnection(@"Data Source=BAODANG;Initial Catalog=QLNV;Integrated Security=True");
@@ -57,20 +55,22 @@ namespace QuanLyNhanVien
             SqlDataReader dr =  cmd.ExecuteReader();
             if (dr.Read())
             {
-                quyen = int.Parse(dr.GetValue(2).ToString());
-                if (quyen == 1)
+                string id = txtUsername.Text;
+                int quyen = int.Parse(dr.GetValue(2).ToString());
+         
+               if (int.Parse(dr.GetValue(2).ToString()) == 1)
                 {
                     dr.Close();
                     this.Hide();
-                    FormThongTinTaiKhoan fquanly = new FormThongTinTaiKhoan();
+                    FormThongTinTaiKhoan fquanly = new FormThongTinTaiKhoan(id, quyen);
                     fquanly.ShowDialog();
                 }
-                else if(quyen == 2)
+                else if(int.Parse(dr.GetValue(2).ToString()) == 2)
                 {
                     dr.Close();
                     this.Hide();
-                    FormQuanLyNhanVienKho fquanlykho = new FormQuanLyNhanVienKho();
-                    fquanlykho.ShowDialog();
+                    FormThongTinTaiKhoan fquanly = new FormThongTinTaiKhoan(id, quyen);
+                    fquanly.ShowDialog();
                 }
             }
             else
