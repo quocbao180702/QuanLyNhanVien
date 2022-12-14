@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.grbChucVu = new System.Windows.Forms.GroupBox();
+            this.btnLuu = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnHuy = new System.Windows.Forms.Button();
@@ -65,7 +66,6 @@
             this.lblMa = new System.Windows.Forms.Label();
             this.dgQLNhanVien = new System.Windows.Forms.DataGridView();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.btnLuu = new System.Windows.Forms.Button();
             this.grbChucVu.SuspendLayout();
             this.grbThongTin.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -91,6 +91,15 @@
             this.grbChucVu.TabIndex = 14;
             this.grbChucVu.TabStop = false;
             this.grbChucVu.Text = "Chức Vụ";
+            // 
+            // btnLuu
+            // 
+            this.btnLuu.Location = new System.Drawing.Point(195, 241);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(114, 45);
+            this.btnLuu.TabIndex = 18;
+            this.btnLuu.Text = "Lưu";
+            this.btnLuu.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -164,6 +173,7 @@
             this.btnThem.TabIndex = 15;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnTim
             // 
@@ -529,15 +539,6 @@
             this.lblTitle.Size = new System.Drawing.Size(667, 45);
             this.lblTitle.TabIndex = 11;
             this.lblTitle.Text = "QUẢN LÝ NHÂN VIÊN BÁN HÀNG";
-            // 
-            // btnLuu
-            // 
-            this.btnLuu.Location = new System.Drawing.Point(195, 241);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(114, 45);
-            this.btnLuu.TabIndex = 18;
-            this.btnLuu.Text = "Lưu";
-            this.btnLuu.UseVisualStyleBackColor = true;
             // 
             // FormQuanLyNhanVienBanHang
             // 

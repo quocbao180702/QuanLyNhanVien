@@ -17,7 +17,7 @@ namespace QuanLyNhanVien
         {
             InitializeComponent();
         }
-        SqlConnection conn = new SqlConnection(@"Data Source=GEEKAY;Initial Catalog=QLNV;Integrated Security=True");
+        SqlConnection conn = new SqlConnection(@"Data Source=BAODANG;Initial Catalog=QLNV;Integrated Security=True");
         DataSet ds = new DataSet("dsQLNV");
         SqlDataAdapter dachucvu;
         SqlDataAdapter daNhanVien;
@@ -25,7 +25,7 @@ namespace QuanLyNhanVien
         private void LoadDataGridView()
         {
             SqlConnection conn = new SqlConnection();
-            conn.ConnectionString = @"Data Source=GeeKay;Initial Catalog=QLNV;Integrated Security=True";
+            conn.ConnectionString = @"Data Source=BAODANG;Initial Catalog=QLNV;Integrated Security=True";
             string sQueryNhanVien = @"select n.*, c.tencv from nhanvien n, chucvu c where n.macv=c.macv";
             daNhanVien = new SqlDataAdapter(sQueryNhanVien, conn);
             daNhanVien.Fill(ds, "tblDSNhanVien");
@@ -71,6 +71,7 @@ namespace QuanLyNhanVien
         private void FormQuanLyNhanVienBanHang_Load(object sender, EventArgs e)
         {
             LoadDataGridView();
+            Them();
         }
 
         private void dgQLNhanVien_Click(object sender, EventArgs e)
@@ -127,6 +128,48 @@ namespace QuanLyNhanVien
             ds.Tables["tblDSNhanVien"].Rows.Add(dr);
             dr.Cells["macv"].Value = cmbChucVu.SelectedValue;
             dr.Cells["tencv"].Value = cmbChucVu.Text;
+        }
+        public void Them()
+        {
+            string sThemNV = @"insert into nhanvien values(@MaNV, @HoLot, @TenNV, @Phai, @NgaySinh, @SDT, @Email, @LuongCB, @Tinh, @DiaChi, @MaCV)";
+            SqlCommand cmThemNV = new SqlCommand(sThemNV, conn);
+            cmThemNV.Parameters.Add("@MaNV", SqlDbType.Char, 5, "manv");
+            cmThemNV.Parameters.Add("@HoLot", SqlDbType.NVarChar, 50, "holot");
+            cmThemNV.Parameters.Add("@TenNV", SqlDbType.NVarChar, 10, "tennv");
+            cmThemNV.Parameters.Add("@Phai", SqlDbType.NVarChar, 3, "gioitinh");
+            cmThemNV.Parameters.Add("@NgaySinh", SqlDbType.SmallDateTime, 10, "ngaysinh");
+            cmThemNV.Parameters.Add("@SDT", SqlDbType.NVarChar, 10, "sdt");
+            cmThemNV.Parameters.Add("@Email", SqlDbType.VarChar, 30, "email");
+            cmThemNV.Parameters.Add("@LuongCB", SqlDbType.Float, 6, "luongcb");
+            cmThemNV.Parameters.Add("@Tinh", SqlDbType.NVarChar, 15, "tinh");
+            cmThemNV.Parameters.Add("@DiaChi", SqlDbType.NVarChar, 50, "diachi");
+
+            cmThemNV.Parameters.Add("@MaCV", SqlDbType.NVarChar, 5, "macv");
+            daNhanVien.InsertCommand = cmThemNV;
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            DataRow row = ds.Tables["tblDSNhanVien"].NewRow();
+            row["manv"] = txtMa.Text;
+            row["holot"] = txtHo.Text;
+            row["tennv"] = txtTen.Text;
+            if (radNu.Checked == true)
+            {
+                row["gioitinh"] = "nu";
+            }
+            else
+            {
+                row["gioitinh"] = "nam";
+            }
+            row["ngaysinh"] = dtpNgaySinh.Text;
+            row["sdt"] = txtSDT.Text;
+            row["email"] = txtEmail.Text;
+            row["luongcb"] = txtLuongCoBan.Text;
+            row["tinh"] = cboTinh.SelectedValue;
+            row["diachi"] = txtDiaChi.Text;
+            row["macv"] = cmbChucVu.SelectedValue;
+            ds.Tables["tblDSNhanVien"].Rows.Add(row);
         }
     }
 }
