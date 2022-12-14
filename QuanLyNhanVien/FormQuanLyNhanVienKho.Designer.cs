@@ -46,7 +46,7 @@
             this.radNam = new System.Windows.Forms.RadioButton();
             this.lblPhai = new System.Windows.Forms.Label();
             this.cmbChucVu = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cboTinh = new System.Windows.Forms.ComboBox();
             this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.txtLuongCoBan = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
@@ -54,7 +54,7 @@
             this.lblLuongCoBan = new System.Windows.Forms.Label();
             this.txtHo = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtSDT = new System.Windows.Forms.TextBox();
             this.txtTen = new System.Windows.Forms.TextBox();
             this.lblDiaChi = new System.Windows.Forms.Label();
             this.txtMa = new System.Windows.Forms.TextBox();
@@ -65,6 +65,7 @@
             this.lblTen = new System.Windows.Forms.Label();
             this.lblNgaySinh = new System.Windows.Forms.Label();
             this.lblMa = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgQLNhanVien)).BeginInit();
             this.grbChucVu.SuspendLayout();
             this.grbThongTin.SuspendLayout();
@@ -85,12 +86,14 @@
             // dgQLNhanVien
             // 
             this.dgQLNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgQLNhanVien.Location = new System.Drawing.Point(50, 459);
+            this.dgQLNhanVien.Location = new System.Drawing.Point(56, 459);
             this.dgQLNhanVien.Name = "dgQLNhanVien";
             this.dgQLNhanVien.RowHeadersWidth = 51;
             this.dgQLNhanVien.RowTemplate.Height = 24;
+            this.dgQLNhanVien.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgQLNhanVien.Size = new System.Drawing.Size(1102, 279);
             this.dgQLNhanVien.TabIndex = 6;
+            this.dgQLNhanVien.Click += new System.EventHandler(this.dgQLNhanVien_Click);
             // 
             // grbChucVu
             // 
@@ -203,7 +206,7 @@
             this.grbThongTin.Controls.Add(this.panel1);
             this.grbThongTin.Controls.Add(this.lblPhai);
             this.grbThongTin.Controls.Add(this.cmbChucVu);
-            this.grbThongTin.Controls.Add(this.comboBox1);
+            this.grbThongTin.Controls.Add(this.cboTinh);
             this.grbThongTin.Controls.Add(this.dtpNgaySinh);
             this.grbThongTin.Controls.Add(this.txtLuongCoBan);
             this.grbThongTin.Controls.Add(this.txtEmail);
@@ -211,7 +214,7 @@
             this.grbThongTin.Controls.Add(this.lblLuongCoBan);
             this.grbThongTin.Controls.Add(this.txtHo);
             this.grbThongTin.Controls.Add(this.lblEmail);
-            this.grbThongTin.Controls.Add(this.textBox1);
+            this.grbThongTin.Controls.Add(this.txtSDT);
             this.grbThongTin.Controls.Add(this.txtTen);
             this.grbThongTin.Controls.Add(this.lblDiaChi);
             this.grbThongTin.Controls.Add(this.txtMa);
@@ -244,10 +247,10 @@
             this.radNu.AutoSize = true;
             this.radNu.Location = new System.Drawing.Point(137, 5);
             this.radNu.Name = "radNu";
-            this.radNu.Size = new System.Drawing.Size(54, 26);
+            this.radNu.Size = new System.Drawing.Size(56, 26);
             this.radNu.TabIndex = 0;
             this.radNu.TabStop = true;
-            this.radNu.Text = "Nu";
+            this.radNu.Text = "Nữ";
             this.radNu.UseVisualStyleBackColor = true;
             // 
             // radNam
@@ -269,7 +272,7 @@
             this.lblPhai.Name = "lblPhai";
             this.lblPhai.Size = new System.Drawing.Size(45, 22);
             this.lblPhai.TabIndex = 27;
-            this.lblPhai.Text = "Phai";
+            this.lblPhai.Text = "Phái";
             // 
             // cmbChucVu
             // 
@@ -284,11 +287,11 @@
             this.cmbChucVu.Size = new System.Drawing.Size(200, 30);
             this.cmbChucVu.TabIndex = 25;
             // 
-            // comboBox1
+            // cboTinh
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cboTinh.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboTinh.FormattingEnabled = true;
+            this.cboTinh.Items.AddRange(new object[] {
             "1\tAn Giang",
             "2\tBà rịa – Vũng tàu",
             "3\tBắc Giang",
@@ -352,10 +355,10 @@
             "61\tVĩnh Long",
             "62\tVĩnh Phúc",
             "63\tYên Bái"});
-            this.comboBox1.Location = new System.Drawing.Point(486, 249);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(196, 30);
-            this.comboBox1.TabIndex = 24;
+            this.cboTinh.Location = new System.Drawing.Point(486, 249);
+            this.cboTinh.Name = "cboTinh";
+            this.cboTinh.Size = new System.Drawing.Size(196, 30);
+            this.cboTinh.TabIndex = 24;
             // 
             // dtpNgaySinh
             // 
@@ -418,13 +421,13 @@
             this.lblEmail.TabIndex = 13;
             this.lblEmail.Text = "Email";
             // 
-            // textBox1
+            // txtSDT
             // 
-            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(466, 148);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(216, 30);
-            this.textBox1.TabIndex = 17;
+            this.txtSDT.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSDT.Location = new System.Drawing.Point(466, 148);
+            this.txtSDT.Name = "txtSDT";
+            this.txtSDT.Size = new System.Drawing.Size(216, 30);
+            this.txtSDT.TabIndex = 17;
             // 
             // txtTen
             // 
@@ -522,17 +525,28 @@
             this.lblMa.TabIndex = 6;
             this.lblMa.Text = "Mã Nhân Viên";
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(892, 30);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(189, 24);
+            this.comboBox1.TabIndex = 15;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // FormQuanLyNhanVienKho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1170, 750);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.grbThongTin);
             this.Controls.Add(this.grbChucVu);
             this.Controls.Add(this.dgQLNhanVien);
             this.Controls.Add(this.lblTitle);
             this.Name = "FormQuanLyNhanVienKho";
             this.Text = "FormQuanLyNhanVienKho";
+            this.Load += new System.EventHandler(this.FormQuanLyNhanVienKho_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgQLNhanVien)).EndInit();
             this.grbChucVu.ResumeLayout(false);
             this.grbChucVu.PerformLayout();
@@ -565,7 +579,7 @@
         private System.Windows.Forms.RadioButton radNam;
         private System.Windows.Forms.Label lblPhai;
         private System.Windows.Forms.ComboBox cmbChucVu;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cboTinh;
         private System.Windows.Forms.DateTimePicker dtpNgaySinh;
         private System.Windows.Forms.TextBox txtLuongCoBan;
         private System.Windows.Forms.TextBox txtEmail;
@@ -573,7 +587,7 @@
         private System.Windows.Forms.Label lblLuongCoBan;
         private System.Windows.Forms.TextBox txtHo;
         private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtSDT;
         private System.Windows.Forms.TextBox txtTen;
         private System.Windows.Forms.Label lblDiaChi;
         private System.Windows.Forms.TextBox txtMa;
@@ -584,5 +598,6 @@
         private System.Windows.Forms.Label lblTen;
         private System.Windows.Forms.Label lblNgaySinh;
         private System.Windows.Forms.Label lblMa;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
