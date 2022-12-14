@@ -65,6 +65,7 @@
             this.lblMa = new System.Windows.Forms.Label();
             this.dgQLNhanVien = new System.Windows.Forms.DataGridView();
             this.lblTitle = new System.Windows.Forms.Label();
+            this.btnLuu = new System.Windows.Forms.Button();
             this.grbChucVu.SuspendLayout();
             this.grbThongTin.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -73,6 +74,7 @@
             // 
             // grbChucVu
             // 
+            this.grbChucVu.Controls.Add(this.btnLuu);
             this.grbChucVu.Controls.Add(this.label1);
             this.grbChucVu.Controls.Add(this.btnThoat);
             this.grbChucVu.Controls.Add(this.btnHuy);
@@ -85,7 +87,7 @@
             this.grbChucVu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbChucVu.Location = new System.Drawing.Point(817, 77);
             this.grbChucVu.Name = "grbChucVu";
-            this.grbChucVu.Size = new System.Drawing.Size(348, 320);
+            this.grbChucVu.Size = new System.Drawing.Size(348, 349);
             this.grbChucVu.TabIndex = 14;
             this.grbChucVu.TabStop = false;
             this.grbChucVu.Text = "Chức Vụ";
@@ -102,7 +104,7 @@
             // btnThoat
             // 
             this.btnThoat.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThoat.Location = new System.Drawing.Point(195, 259);
+            this.btnThoat.Location = new System.Drawing.Point(195, 295);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(124, 46);
             this.btnThoat.TabIndex = 10;
@@ -113,7 +115,7 @@
             // btnHuy
             // 
             this.btnHuy.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHuy.Location = new System.Drawing.Point(195, 194);
+            this.btnHuy.Location = new System.Drawing.Point(31, 243);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(124, 46);
             this.btnHuy.TabIndex = 11;
@@ -123,7 +125,7 @@
             // btnQuayLai
             // 
             this.btnQuayLai.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuayLai.Location = new System.Drawing.Point(31, 259);
+            this.btnQuayLai.Location = new System.Drawing.Point(31, 295);
             this.btnQuayLai.Name = "btnQuayLai";
             this.btnQuayLai.Size = new System.Drawing.Size(124, 46);
             this.btnQuayLai.TabIndex = 12;
@@ -134,7 +136,7 @@
             // btnSua
             // 
             this.btnSua.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSua.Location = new System.Drawing.Point(31, 194);
+            this.btnSua.Location = new System.Drawing.Point(31, 185);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(124, 46);
             this.btnSua.TabIndex = 13;
@@ -145,7 +147,7 @@
             // btnXoa
             // 
             this.btnXoa.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.Location = new System.Drawing.Point(195, 129);
+            this.btnXoa.Location = new System.Drawing.Point(195, 185);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(124, 46);
             this.btnXoa.TabIndex = 14;
@@ -166,9 +168,9 @@
             // btnTim
             // 
             this.btnTim.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTim.Location = new System.Drawing.Point(254, 76);
+            this.btnTim.Location = new System.Drawing.Point(195, 129);
             this.btnTim.Name = "btnTim";
-            this.btnTim.Size = new System.Drawing.Size(88, 32);
+            this.btnTim.Size = new System.Drawing.Size(124, 44);
             this.btnTim.TabIndex = 16;
             this.btnTim.Text = "Tìm";
             this.btnTim.UseVisualStyleBackColor = true;
@@ -528,6 +530,15 @@
             this.lblTitle.TabIndex = 11;
             this.lblTitle.Text = "QUẢN LÝ NHÂN VIÊN BÁN HÀNG";
             // 
+            // btnLuu
+            // 
+            this.btnLuu.Location = new System.Drawing.Point(195, 241);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(114, 45);
+            this.btnLuu.TabIndex = 18;
+            this.btnLuu.Text = "Lưu";
+            this.btnLuu.UseVisualStyleBackColor = true;
+            // 
             // FormQuanLyNhanVienBanHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -591,5 +602,6 @@
         private System.Windows.Forms.ComboBox cboTinh;
         private System.Windows.Forms.TextBox txtSDT;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnLuu;
     }
 }

@@ -143,6 +143,43 @@ namespace QuanLyNhanVien
             daNhanVien.InsertCommand = cmThemNV;
         }
 
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow item in this.dgQLNhanVien.SelectedRows)
+            {
+                dgQLNhanVien.Rows.RemoveAt(item.Index);
+            }
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow dr = dgQLNhanVien.SelectedRows[0];
+            dr.Cells["manv"].Value = txtMa.Text;
+            dr.Cells["holot"].Value = txtHo.Text;
+            dr.Cells["tennv"].Value = txtTen.Text;
+            if (radNu.Checked == true)
+            {
+                dr.Cells["gioitinh"].Value = "Nữ";
+            }
+            else
+            {
+                dr.Cells["gioitinh"].Value = "Nam";
+            }
+            dr.Cells["ngaysinh"].Value = dtpNgaySinh.Text;
+            dr.Cells["sdt"].Value = txtSDT.Text;
+            dr.Cells["email"].Value = txtEmail.Text;
+            dr.Cells["luongcb"].Value = txtLuongCoBan.Text;
+            dr.Cells["diachi"].Value = txtDiaChi.Text;
+            dr.Cells["tinh"].Value = cboTinh.Text;
+            ds.Tables["tblDSNhanVien"].Rows.Add(dr);
+            dr.Cells["macv"].Value = cmbChucVu.SelectedValue;
+            dr.Cells["tencv"].Value = cmbChucVu.Text;
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
