@@ -20,7 +20,7 @@ namespace QuanLyNhanVien
         {
             InitializeComponent();
         }
-        SqlConnection conn = new SqlConnection(@"Data Source=BAODANG;Initial Catalog=QLNV;Integrated Security=True");
+        SqlConnection conn = new SqlConnection(@"Data Source=GeeKay;Initial Catalog=QLNV;Integrated Security=True");
         DataSet ds = new DataSet("dsQLNV");
         SqlDataAdapter dachucvu;
         SqlDataAdapter daNhanVien;
@@ -28,7 +28,7 @@ namespace QuanLyNhanVien
         private void LoadDataGridView()
         {
             SqlConnection conn = new SqlConnection();
-            conn.ConnectionString = @"Data Source=BAODANG;Initial Catalog=QLNV;Integrated Security=True";
+            conn.ConnectionString = @"Data Source=GeeKay;Initial Catalog=QLNV;Integrated Security=True";
             string sQueryNhanVien = @"select n.*, c.tencv from nhanvien n, chucvu c where n.macv=c.macv";
             daNhanVien = new SqlDataAdapter(sQueryNhanVien, conn);
             daNhanVien.Fill(ds, "tblDSNhanVien");
@@ -183,7 +183,13 @@ namespace QuanLyNhanVien
             this.txtTen.ResetText();
             this.radNam.Checked = false;
             this.radNu.Checked = false;
-
+            this.dtpNgaySinh.ResetText();
+            this.txtSDT.ResetText();
+            this.txtEmail.ResetText();
+            this.txtLuongCoBan.ResetText();
+            this.txtDiaChi.ResetText();
+            this.cboTinh.ResetText();
+            this.cmbChucVu.ResetText();
         }
 
         private void btnTim_Click(object sender, EventArgs e)
