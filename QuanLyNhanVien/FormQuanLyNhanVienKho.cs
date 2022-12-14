@@ -59,18 +59,7 @@ namespace QuanLyNhanVien
 
         private void FormQuanLyNhanVienKho_Load(object sender, EventArgs e)
         {
-            loadcomboTim();
             LoadDataGridView();
-        }
-        private void loadcomboTim()
-        {
-            daNhanVien = new SqlDataAdapter("Select * from NhanVien", conn);
-            DataTable dt = new DataTable();
-            daNhanVien.Fill(dt);
-            daNhanVien.Dispose();
-            comboBox1.DataSource = dt;
-            comboBox1.DisplayMember = dt.Columns["manv"].ToString();
-            comboBox1.ValueMember = dt.Columns["manv"].ToString();
         }
         private void dgQLNhanVien_Click(object sender, EventArgs e)
         {
@@ -92,18 +81,19 @@ namespace QuanLyNhanVien
             txtLuongCoBan.Text = dr.Cells["luongcb"].Value.ToString();
             txtDiaChi.Text = dr.Cells["diachi"].Value.ToString();
             cboTinh.Text = dr.Cells["tinh"].Value.ToString();
-            cmbChucVu.Text = dr.Cells["macv"].Value.ToString();
+            cmbChucVu.Text = dr.Cells["tencv"].Value.ToString();
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void btnQuayLai_Click(object sender, EventArgs e)
         {
-            string sql = "select * from NhanVien," + comboBox1.Text;
-            SqlDataAdapter da = new SqlDataAdapter(sql, conn);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            da.Dispose();
-            comboBox1.DataSource = dt;
-            LoadDataGridView();
+            this.Hide();
+            FormThongTinTaiKhoan frmquanly = new FormThongTinTaiKhoan();
+            frmquanly.ShowDialog();
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

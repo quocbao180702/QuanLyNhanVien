@@ -33,7 +33,7 @@
             this.grbChucVu = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnThoat = new System.Windows.Forms.Button();
-            this.btnHuy = new System.Windows.Forms.Button();
+            this.btnLưu = new System.Windows.Forms.Button();
             this.btnQuayLai = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
@@ -65,7 +65,6 @@
             this.lblTen = new System.Windows.Forms.Label();
             this.lblNgaySinh = new System.Windows.Forms.Label();
             this.lblMa = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgQLNhanVien)).BeginInit();
             this.grbChucVu.SuspendLayout();
             this.grbThongTin.SuspendLayout();
@@ -99,7 +98,7 @@
             // 
             this.grbChucVu.Controls.Add(this.label1);
             this.grbChucVu.Controls.Add(this.btnThoat);
-            this.grbChucVu.Controls.Add(this.btnHuy);
+            this.grbChucVu.Controls.Add(this.btnLưu);
             this.grbChucVu.Controls.Add(this.btnQuayLai);
             this.grbChucVu.Controls.Add(this.btnSua);
             this.grbChucVu.Controls.Add(this.btnXoa);
@@ -132,16 +131,17 @@
             this.btnThoat.TabIndex = 10;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
-            // btnHuy
+            // btnLưu
             // 
-            this.btnHuy.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHuy.Location = new System.Drawing.Point(195, 194);
-            this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(124, 46);
-            this.btnHuy.TabIndex = 11;
-            this.btnHuy.Text = "Hủy";
-            this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnLưu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLưu.Location = new System.Drawing.Point(195, 194);
+            this.btnLưu.Name = "btnLưu";
+            this.btnLưu.Size = new System.Drawing.Size(124, 46);
+            this.btnLưu.TabIndex = 11;
+            this.btnLưu.Text = "Lưu";
+            this.btnLưu.UseVisualStyleBackColor = true;
             // 
             // btnQuayLai
             // 
@@ -152,6 +152,7 @@
             this.btnQuayLai.TabIndex = 12;
             this.btnQuayLai.Text = "Quay Lại";
             this.btnQuayLai.UseVisualStyleBackColor = true;
+            this.btnQuayLai.Click += new System.EventHandler(this.btnQuayLai_Click);
             // 
             // btnSua
             // 
@@ -525,21 +526,11 @@
             this.lblMa.TabIndex = 6;
             this.lblMa.Text = "Mã Nhân Viên";
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(892, 30);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(189, 24);
-            this.comboBox1.TabIndex = 15;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
             // FormQuanLyNhanVienKho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1170, 750);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.grbThongTin);
             this.Controls.Add(this.grbChucVu);
             this.Controls.Add(this.dgQLNhanVien);
@@ -566,7 +557,7 @@
         private System.Windows.Forms.GroupBox grbChucVu;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnThoat;
-        private System.Windows.Forms.Button btnHuy;
+        private System.Windows.Forms.Button btnLưu;
         private System.Windows.Forms.Button btnQuayLai;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnXoa;
@@ -598,6 +589,5 @@
         private System.Windows.Forms.Label lblTen;
         private System.Windows.Forms.Label lblNgaySinh;
         private System.Windows.Forms.Label lblMa;
-        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

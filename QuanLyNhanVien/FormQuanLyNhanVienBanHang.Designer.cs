@@ -44,7 +44,7 @@
             this.radNam = new System.Windows.Forms.RadioButton();
             this.lblPhai = new System.Windows.Forms.Label();
             this.cmbChucVu = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cboTinh = new System.Windows.Forms.ComboBox();
             this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.txtLuongCoBan = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
@@ -52,7 +52,7 @@
             this.lblLuongCoBan = new System.Windows.Forms.Label();
             this.txtHo = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtSDT = new System.Windows.Forms.TextBox();
             this.txtTen = new System.Windows.Forms.TextBox();
             this.lblDiaChi = new System.Windows.Forms.Label();
             this.txtMa = new System.Windows.Forms.TextBox();
@@ -140,6 +140,7 @@
             this.btnSua.TabIndex = 13;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
@@ -150,6 +151,7 @@
             this.btnXoa.TabIndex = 14;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnThem
             // 
@@ -184,7 +186,7 @@
             this.grbThongTin.Controls.Add(this.panel1);
             this.grbThongTin.Controls.Add(this.lblPhai);
             this.grbThongTin.Controls.Add(this.cmbChucVu);
-            this.grbThongTin.Controls.Add(this.comboBox1);
+            this.grbThongTin.Controls.Add(this.cboTinh);
             this.grbThongTin.Controls.Add(this.dtpNgaySinh);
             this.grbThongTin.Controls.Add(this.txtLuongCoBan);
             this.grbThongTin.Controls.Add(this.txtEmail);
@@ -192,7 +194,7 @@
             this.grbThongTin.Controls.Add(this.lblLuongCoBan);
             this.grbThongTin.Controls.Add(this.txtHo);
             this.grbThongTin.Controls.Add(this.lblEmail);
-            this.grbThongTin.Controls.Add(this.textBox1);
+            this.grbThongTin.Controls.Add(this.txtSDT);
             this.grbThongTin.Controls.Add(this.txtTen);
             this.grbThongTin.Controls.Add(this.lblDiaChi);
             this.grbThongTin.Controls.Add(this.txtMa);
@@ -265,78 +267,78 @@
             this.cmbChucVu.Size = new System.Drawing.Size(200, 30);
             this.cmbChucVu.TabIndex = 25;
             // 
-            // comboBox1
+            // cboTinh
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "1\tAn Giang",
-            "2\tBà rịa – Vũng tàu",
-            "3\tBắc Giang",
-            "4\tBắc Kạn",
-            "5\tBạc Liêu",
-            "6\tBắc Ninh",
-            "7\tBến Tre",
-            "8\tBình Định",
-            "9\tBình Dương",
-            "10\tBình Phước",
-            "11\tBình Thuận",
-            "12\tCà Mau",
-            "13\tCần Thơ",
-            "14\tCao Bằng ",
-            "15\tĐà Nẵng",
-            "16\tĐắk Lắk",
-            "17\tĐắk Nông",
-            "18\tĐiện Biên",
-            "19\tĐồng Nai",
-            "20\tĐồng Tháp",
-            "21\tGia Lai",
-            "22\tHà Giang",
-            "23\tHà Nam",
-            "24\tHà Nội ",
-            "25\tHà Tĩnh",
-            "26\tHải Dương",
-            "27\tHải Phòng",
-            "28\tHậu Giang",
-            "29\tHòa Bình",
-            "30\tHưng Yên",
-            "31\tKhánh Hòa",
-            "32\tKiên Giang",
-            "33\tKon Tum",
-            "34\tLai Châu",
-            "35\tLâm Đồng",
-            "36\tLạng Sơn",
-            "37\tLào Cai",
-            "38\tLong An",
-            "39\tNam Định",
-            "40\tNghệ An",
-            "41\tNinh Bình",
-            "42\tNinh Thuận",
-            "43\tPhú Thọ",
-            "44\tPhú Yên",
-            "45\tQuảng Bình",
-            "46\tQuảng Nam",
-            "47\tQuảng Ngãi",
-            "48\tQuảng Ninh",
-            "49\tQuảng Trị",
-            "50\tSóc Trăng",
-            "51\tSơn La",
-            "52\tTây Ninh",
-            "53\tThái Bình",
-            "54\tThái Nguyên",
-            "55\tThanh Hóa",
-            "56\tThừa Thiên Huế",
-            "57\tTiền Giang",
-            "58\tThành phố Hồ Chí Minh",
-            "59\tTrà Vinh",
-            "60\tTuyên Quang",
-            "61\tVĩnh Long",
-            "62\tVĩnh Phúc",
-            "63\tYên Bái"});
-            this.comboBox1.Location = new System.Drawing.Point(486, 249);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(196, 30);
-            this.comboBox1.TabIndex = 24;
+            this.cboTinh.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboTinh.FormattingEnabled = true;
+            this.cboTinh.Items.AddRange(new object[] {
+            "An Giang",
+            "Bà rịa – Vũng tàu",
+            "Bắc Giang",
+            "Bắc Kạn",
+            "Bạc Liêu",
+            "Bắc Ninh",
+            "Bến Tre",
+            "Bình Định",
+            "Bình Dương",
+            "Bình Phước",
+            "Bình Thuận",
+            "Cà Mau",
+            "Cần Thơ",
+            "Cao Bằng ",
+            "Đà Nẵng",
+            "Đắk Lắk",
+            "Đắk Nông",
+            "Điện Biên",
+            "Đồng Nai",
+            "Đồng Tháp",
+            "Gia Lai",
+            "Hà Giang",
+            "Hà Nam",
+            "Hà Nội ",
+            "Hà Tĩnh",
+            "Hải Dương",
+            "Hải Phòng",
+            "Hậu Giang",
+            "Hòa Bình",
+            "Hưng Yên",
+            "Khánh Hòa",
+            "Kiên Giang",
+            "Kon Tum",
+            "Lai Châu",
+            "Lâm Đồng",
+            "Lạng Sơn",
+            "Lào Cai",
+            "Long An",
+            "Nam Định",
+            "Nghệ An",
+            "Ninh Bình",
+            "Ninh Thuận",
+            "Phú Thọ",
+            "Phú Yên",
+            "Quảng Bình",
+            "Quảng Nam",
+            "Quảng Ngãi",
+            "Quảng Ninh",
+            "Quảng Trị",
+            "Sóc Trăng",
+            "Sơn La",
+            "Tây Ninh",
+            "Thái Bình",
+            "Thái Nguyên",
+            "Thanh Hóa",
+            "Thừa Thiên Huế",
+            "Tiền Giang",
+            "Thành phố Hồ Chí Minh",
+            "Trà Vinh",
+            "Tuyên Quang",
+            "Vĩnh Long",
+            "Vĩnh Phúc",
+            "Yên Bái"});
+            this.cboTinh.Location = new System.Drawing.Point(486, 249);
+            this.cboTinh.Name = "cboTinh";
+            this.cboTinh.Size = new System.Drawing.Size(196, 30);
+            this.cboTinh.TabIndex = 24;
             // 
             // dtpNgaySinh
             // 
@@ -399,13 +401,13 @@
             this.lblEmail.TabIndex = 13;
             this.lblEmail.Text = "Email";
             // 
-            // textBox1
+            // txtSDT
             // 
-            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(466, 148);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(216, 30);
-            this.textBox1.TabIndex = 17;
+            this.txtSDT.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSDT.Location = new System.Drawing.Point(466, 148);
+            this.txtSDT.Name = "txtSDT";
+            this.txtSDT.Size = new System.Drawing.Size(216, 30);
+            this.txtSDT.TabIndex = 17;
             // 
             // txtTen
             // 
@@ -510,8 +512,10 @@
             this.dgQLNhanVien.Name = "dgQLNhanVien";
             this.dgQLNhanVien.RowHeadersWidth = 51;
             this.dgQLNhanVien.RowTemplate.Height = 24;
+            this.dgQLNhanVien.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgQLNhanVien.Size = new System.Drawing.Size(1102, 298);
             this.dgQLNhanVien.TabIndex = 12;
+            this.dgQLNhanVien.Click += new System.EventHandler(this.dgQLNhanVien_Click);
             // 
             // lblTitle
             // 
@@ -535,6 +539,7 @@
             this.Controls.Add(this.lblTitle);
             this.Name = "FormQuanLyNhanVienBanHang";
             this.Text = "FormQuanLyNhanVienBanHang";
+            this.Load += new System.EventHandler(this.FormQuanLyNhanVienBanHang_Load);
             this.grbChucVu.ResumeLayout(false);
             this.grbChucVu.PerformLayout();
             this.grbThongTin.ResumeLayout(false);
@@ -583,8 +588,8 @@
         private System.Windows.Forms.RadioButton radNu;
         private System.Windows.Forms.RadioButton radNam;
         private System.Windows.Forms.Label lblPhai;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox cboTinh;
+        private System.Windows.Forms.TextBox txtSDT;
         private System.Windows.Forms.Label label2;
     }
 }
