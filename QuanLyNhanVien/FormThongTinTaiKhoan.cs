@@ -42,7 +42,7 @@ namespace QuanLyNhanVien
             {
                 MenuItemQuanLy.Visible = false;
             }
-            conn = new SqlConnection(@"Data Source=BAODANG;Initial Catalog=QLNV;Integrated Security=True");
+            conn = new SqlConnection(@"Data Source=GeeKay;Initial Catalog=QLNV;Integrated Security=True");
             conn.Open();
 
             cmd = new SqlCommand("select n.*, c.tencv from nhanvien n, chucvu c where n.macv=c.macv and manv = '" + id + "'", conn);

@@ -64,7 +64,10 @@ namespace QuanLyNhanVien
             LoadDataGridView();
             Them();
         }
+<<<<<<< HEAD
+=======
 
+>>>>>>> 0efad31011f47fb4a129a226e2e492772c8ef493
         private void dgQLNhanVien_Click(object sender, EventArgs e)
         {
             DataGridViewRow dr = dgQLNhanVien.SelectedRows[0];
@@ -85,12 +88,23 @@ namespace QuanLyNhanVien
             txtLuongCoBan.Text = dr.Cells["luongcb"].Value.ToString();
             txtDiaChi.Text = dr.Cells["diachi"].Value.ToString();
             cboTinh.Text = dr.Cells["tinh"].Value.ToString();
-            cmbChucVu.Text = dr.Cells["macv"].Value.ToString();
+            cmbChucVu.Text = dr.Cells["tencv"].Value.ToString();
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void btnQuayLai_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
+            this.Hide();
+            FormThongTinTaiKhoan frmquanly = new FormThongTinTaiKhoan();
+            frmquanly.ShowDialog();
+        }
 
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+=======
+
+>>>>>>> 0efad31011f47fb4a129a226e2e492772c8ef493
         }
 
         private void btnThem_Click(object sender, EventArgs e)
