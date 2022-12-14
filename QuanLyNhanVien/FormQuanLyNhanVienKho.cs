@@ -61,20 +61,10 @@ namespace QuanLyNhanVien
 
         private void FormQuanLyNhanVienKho_Load(object sender, EventArgs e)
         {
-           // loadcomboTim();
             LoadDataGridView();
             Them();
         }
-        private void loadcomboTim()
-        {
-           /* daNhanVien = new SqlDataAdapter("Select * from NhanVien", conn);
-            DataTable dt = new DataTable();
-            daNhanVien.Fill(dt);
-            daNhanVien.Dispose();
-            comboBox1.DataSource = dt;
-            comboBox1.DisplayMember = dt.Columns["manv"].ToString();
-            comboBox1.ValueMember = dt.Columns["manv"].ToString();*/
-        }
+
         private void dgQLNhanVien_Click(object sender, EventArgs e)
         {
             DataGridViewRow dr = dgQLNhanVien.SelectedRows[0];
@@ -100,13 +90,7 @@ namespace QuanLyNhanVien
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-           /* string sql = "select * from NhanVien," + comboBox1.Text;
-            SqlDataAdapter da = new SqlDataAdapter(sql, conn);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            da.Dispose();
-            comboBox1.DataSource = dt;
-            LoadDataGridView();*/
+
         }
 
         private void btnThem_Click(object sender, EventArgs e)
