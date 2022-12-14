@@ -85,7 +85,7 @@
             this.grbChucVu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbChucVu.Location = new System.Drawing.Point(817, 77);
             this.grbChucVu.Name = "grbChucVu";
-            this.grbChucVu.Size = new System.Drawing.Size(348, 320);
+            this.grbChucVu.Size = new System.Drawing.Size(348, 349);
             this.grbChucVu.TabIndex = 14;
             this.grbChucVu.TabStop = false;
             this.grbChucVu.Text = "Chức Vụ";
@@ -532,6 +532,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(1208, 739);
             this.Controls.Add(this.grbChucVu);
             this.Controls.Add(this.grbThongTin);
