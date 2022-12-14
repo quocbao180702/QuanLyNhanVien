@@ -96,7 +96,7 @@
             // 
             this.btnLuu.Location = new System.Drawing.Point(195, 241);
             this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(114, 45);
+            this.btnLuu.Size = new System.Drawing.Size(124, 45);
             this.btnLuu.TabIndex = 18;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
@@ -173,7 +173,6 @@
             this.btnThem.TabIndex = 15;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnTim
             // 
@@ -190,7 +189,7 @@
             this.txtTim.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTim.Location = new System.Drawing.Point(31, 76);
             this.txtTim.Name = "txtTim";
-            this.txtTim.Size = new System.Drawing.Size(205, 30);
+            this.txtTim.Size = new System.Drawing.Size(288, 30);
             this.txtTim.TabIndex = 9;
             // 
             // grbThongTin
