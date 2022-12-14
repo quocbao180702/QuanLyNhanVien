@@ -67,7 +67,7 @@ namespace QuanLyNhanVien
             FormThongTinTaiKhoan  frmquanly = new FormThongTinTaiKhoan();
             frmquanly.ShowDialog();
         }
-
+       
         private void FormQuanLyNhanVienBanHang_Load(object sender, EventArgs e)
         {
             LoadDataGridView();
@@ -129,6 +129,7 @@ namespace QuanLyNhanVien
             dr.Cells["macv"].Value = cmbChucVu.SelectedValue;
             dr.Cells["tencv"].Value = cmbChucVu.Text;
         }
+        //them
         public void Them()
         {
             string sThemNV = @"insert into nhanvien values(@MaNV, @HoLot, @TenNV, @Phai, @NgaySinh, @SDT, @Email, @LuongCB, @Tinh, @DiaChi, @MaCV)";
