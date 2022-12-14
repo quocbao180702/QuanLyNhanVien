@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.grbLuaChon = new System.Windows.Forms.GroupBox();
-            this.radQuanLyKho = new System.Windows.Forms.RadioButton();
             this.radQuanLyBanaHang = new System.Windows.Forms.RadioButton();
+            this.radQuanLyKho = new System.Windows.Forms.RadioButton();
             this.btnQuayLai = new System.Windows.Forms.Button();
             this.btnChon = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
@@ -49,17 +49,6 @@
             this.grbLuaChon.TabStop = false;
             this.grbLuaChon.Text = "Chọn";
             // 
-            // radQuanLyKho
-            // 
-            this.radQuanLyKho.AutoSize = true;
-            this.radQuanLyKho.Location = new System.Drawing.Point(54, 71);
-            this.radQuanLyKho.Name = "radQuanLyKho";
-            this.radQuanLyKho.Size = new System.Drawing.Size(223, 26);
-            this.radQuanLyKho.TabIndex = 0;
-            this.radQuanLyKho.TabStop = true;
-            this.radQuanLyKho.Text = "Quản Lý Nhân Viên Kho";
-            this.radQuanLyKho.UseVisualStyleBackColor = true;
-            // 
             // radQuanLyBanaHang
             // 
             this.radQuanLyBanaHang.AutoSize = true;
@@ -71,6 +60,18 @@
             this.radQuanLyBanaHang.Text = "Quản Lý Nhân Bán Hàng";
             this.radQuanLyBanaHang.UseVisualStyleBackColor = true;
             // 
+            // radQuanLyKho
+            // 
+            this.radQuanLyKho.AutoSize = true;
+            this.radQuanLyKho.Checked = true;
+            this.radQuanLyKho.Location = new System.Drawing.Point(54, 71);
+            this.radQuanLyKho.Name = "radQuanLyKho";
+            this.radQuanLyKho.Size = new System.Drawing.Size(223, 26);
+            this.radQuanLyKho.TabIndex = 0;
+            this.radQuanLyKho.TabStop = true;
+            this.radQuanLyKho.Text = "Quản Lý Nhân Viên Kho";
+            this.radQuanLyKho.UseVisualStyleBackColor = true;
+            // 
             // btnQuayLai
             // 
             this.btnQuayLai.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -80,6 +81,7 @@
             this.btnQuayLai.TabIndex = 1;
             this.btnQuayLai.Text = "Quay Lại";
             this.btnQuayLai.UseVisualStyleBackColor = true;
+            this.btnQuayLai.Click += new System.EventHandler(this.btnQuayLai_Click);
             // 
             // btnChon
             // 
@@ -90,6 +92,7 @@
             this.btnChon.TabIndex = 1;
             this.btnChon.Text = "Chọn";
             this.btnChon.UseVisualStyleBackColor = true;
+            this.btnChon.Click += new System.EventHandler(this.btnChon_Click);
             // 
             // btnThoat
             // 
@@ -100,12 +103,13 @@
             this.btnThoat.TabIndex = 1;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // FormQuanLy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.GhostWhite;
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(674, 385);
             this.Controls.Add(this.btnChon);
             this.Controls.Add(this.btnThoat);
