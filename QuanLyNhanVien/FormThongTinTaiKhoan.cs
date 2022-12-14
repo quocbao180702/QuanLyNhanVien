@@ -35,6 +35,7 @@ namespace QuanLyNhanVien
             Application.Exit();
         }
 
+        
         private void FormThongTinTaiKhoan_Load(object sender, EventArgs e)
         {
             if (quyen == 2)
@@ -43,7 +44,8 @@ namespace QuanLyNhanVien
             }
             conn = new SqlConnection(@"Data Source=BAODANG;Initial Catalog=QLNV;Integrated Security=True");
             conn.Open();
-            cmd = new SqlCommand("select * from NhanVien where manv='" + id + "'", conn);
+
+            cmd = new SqlCommand("select n.*, c.tencv from nhanvien n, chucvu c where n.macv=c.macv and manv = '" + id + "'", conn);
             SqlDataReader dr;
             dr = cmd.ExecuteReader();
             if (dr.Read())
@@ -65,7 +67,7 @@ namespace QuanLyNhanVien
                 txtLuongCB.Text = dr.GetValue(7).ToString();
                 cmbTinh.Text = dr.GetValue(8).ToString();
                 txtDiaChi.Text = dr.GetValue(9).ToString();
-                cmbChucVu.Text = dr.GetValue(10).ToString();
+                cmbChucVu.Text = dr.GetValue(11).ToString();
             }
             conn.Close();
         }
