@@ -25,12 +25,6 @@ namespace QuanLyNhanVien
                 FormQuanLyNhanVienBanHang fquanlybh = new FormQuanLyNhanVienBanHang();
                 fquanlybh.ShowDialog();
             }
-            else
-            {
-                this.Hide();
-                FormQuanLyNhanVienKho fquanlykho = new FormQuanLyNhanVienKho();
-                fquanlykho.ShowDialog();
-            }
         }
 
         private void btnThoat_Click(object sender, EventArgs e)

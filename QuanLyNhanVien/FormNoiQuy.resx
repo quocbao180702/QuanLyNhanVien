@@ -117,20 +117,33 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="240_F_417777825_v7o8RvkQhxpZkE0ZBD4xwzri5hGFHkO3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\240_F_417777825_v7o8RvkQhxpZkE0ZBD4xwzri5hGFHkO3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="lblNq1.Text" xml:space="preserve">
+    <value>1. Thời gian làm việc 
+Mỗi ca sẽ được nghỉ ăn trưa 30p/ca. Giờ cụ thể thì do quản lý quy định cụ thể từng người. Không thể cùng một lúc tất cả nhân viên đều nghỉ ăn trưa mà không có ai trực và phục vụ khách hàng được. 
+Trong trường hợp nhân viên ốm đau cần báo cho quản lý hoặc Trưởng ca ít nhất 3 tiếng để quản lý điều phối nhân viên thay thế.</value>
   </data>
-  <data name="icons8-menu-rounded-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-menu-rounded-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="lblNq2.Text" xml:space="preserve">
+    <value>2. Yêu cầu đồng phục
+Đối với từng vị trí công việc của quán đều có đồng phục để tăng nhận diện cũng như sự chuyên nghiệp của quán. Đặc biệt là nhân viên phục vụ – người trực tiếp làm việc với khách hàng. Chính vì thế, đồng phục phải đảm bảo mỗi nhân viên 2-3 bộ để thay đổi, đầu tóc phải buộc hoặc để gọn gàng. Nhân viên nữ có thể đánh son hoặc trang điểm nhẹ nhàng gây thiện cảm cho khách. Nhân viên nam không được để tóc quá dài qua tai hoặc chạm áo.
+Một số lưu ý khác: 
+– Không trang điểm lòe loẹt 
+– Không để móng tay quá dài, sơn màu không phù hợp 
+– Không được có mùi cơ thể quá nồng, không xịt nước hoa quá nồng 
+– Không đeo quá nhiều trang sức hay phụ kiện có giá trị lớn trong khi làm việc</value>
   </data>
-  <data name="icons8-morning-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-morning-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="label7.Text" xml:space="preserve">
+    <value>3. Tác phong trong giờ làm việc
+– Tác phong làm việc nghiêm túc, luôn niềm nở, thân thiện và tận tâm với khách hàng. Trong giờ làm việc không đùa nghịch, nói chuyện và làm việc riêng (sử dụng điện thoại chơi game, facebook, v.v…)
+– Trong bất kỳ trong hợp nào cũng không được to tiếng với khách hàng. Phải gọi ngay quản lý vào để giải quyết cho phù hợp.
+– Khi khách bước vào quán phải tươi cười chào hỏi: Quán…xin chào quý khách với tư thế hơi cúi đầu và cảm ơn quý khách khi khách về.</value>
   </data>
-  <data name="icons8-night-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-night-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="label9.Text" xml:space="preserve">
+    <value>4. Quy định nghỉ/đổi ca làm việc
+Theo nội quy nhân viên có nghĩa vụ đi làm theo đúng lịch đã được sắp xếp, kể cả dịp lễ tết, những ngày này sẽ được tính lương thưởng theo chế độ lao động. Việc nhân viên nghỉ hay đổi ca phải đảm bảo có người thay vị trí và phải được sự đồng ý của quản lý tại cửa hàng.
+Đối với trường hợp nhân viên cố ý nghỉ khi không có người làm thay sẽ có mức phạt từ 100,000 – 500,000 đồng. Tùy theo mức độ vi phạm mà mỗi cửa hàng trà sữa sẽ có những mức độ xử phạt trong quy định nhân viên.</value>
   </data>
-  <data name="icons8-partly-cloudy-day-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-partly-cloudy-day-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="label11.Text" xml:space="preserve">
+    <value>5. Quyền lợi nhân viên
+Quy định nhân viên trong quán trà sữa sẽ bao gồm những quyền lợi nhất định như: nhân viên sẽ được hưởng tháng lương thứ 13, nhân đôi lương khi tăng ca, nhân 3 lương khi làm việc vào ngày lễ tết theo quy định luật lao động. Ngoài ra nhân viên sẽ được hưởng những chế độ đãi ngộ mà mỗi quán trà sữa đặt ra.</value>
   </data>
 </root>

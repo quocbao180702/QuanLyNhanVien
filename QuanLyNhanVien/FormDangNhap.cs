@@ -33,7 +33,7 @@ namespace QuanLyNhanVien
         SqlCommand cmd;
         private void frmDangNhap_Load(object sender, EventArgs e)
         {
-            conn = new SqlConnection(@"Data Source=GeeKay;Initial Catalog=QLNV;Integrated Security=True");
+            conn = new SqlConnection(@"Data Source=BAODANG;Initial Catalog=QLNV;Integrated Security=True");
             conn.Open();
         }
 
@@ -106,7 +106,7 @@ namespace QuanLyNhanVien
     private void btnQuenMK_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FromQuenMatKhau frmQMK = new FromQuenMatKhau();
+            FormQuenMatKhau frmQMK = new FormQuenMatKhau();
             frmQMK.ShowDialog();
         }
 

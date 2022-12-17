@@ -55,7 +55,6 @@
             this.lblHo = new System.Windows.Forms.Label();
             this.txtMa = new System.Windows.Forms.TextBox();
             this.lblMa = new System.Windows.Forms.Label();
-            this.picHinhDaiDien = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblThoat = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -72,17 +71,19 @@
             this.label11 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.picHinhDaiDien = new System.Windows.Forms.PictureBox();
             this.MenuItemQuan = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuItemThongTin = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuItemDangXuat = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuItemThoat = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuItemXem = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuItemQuanLy = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.MenuItemDangKyCa = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picHinhDaiDien)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picHinhDaiDien)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -341,14 +342,6 @@
             this.lblMa.TabIndex = 1;
             this.lblMa.Text = "Mã Số Nhân Viên";
             // 
-            // picHinhDaiDien
-            // 
-            this.picHinhDaiDien.Location = new System.Drawing.Point(773, 38);
-            this.picHinhDaiDien.Name = "picHinhDaiDien";
-            this.picHinhDaiDien.Size = new System.Drawing.Size(299, 254);
-            this.picHinhDaiDien.TabIndex = 0;
-            this.picHinhDaiDien.TabStop = false;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -497,6 +490,28 @@
             this.button3.Text = "Thay đổi hình đại diện";
             this.button3.UseVisualStyleBackColor = true;
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.AutoSize = false;
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.menuStrip1.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MenuItemQuan});
+            this.menuStrip1.Location = new System.Drawing.Point(13, 9);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(38, 37);
+            this.menuStrip1.TabIndex = 2;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // picHinhDaiDien
+            // 
+            this.picHinhDaiDien.Location = new System.Drawing.Point(773, 38);
+            this.picHinhDaiDien.Name = "picHinhDaiDien";
+            this.picHinhDaiDien.Size = new System.Drawing.Size(299, 254);
+            this.picHinhDaiDien.TabIndex = 0;
+            this.picHinhDaiDien.TabStop = false;
+            // 
             // MenuItemQuan
             // 
             this.MenuItemQuan.BackgroundImage = global::QuanLyNhanVien.Properties.Resources.icons8_menu_rounded_30;
@@ -505,7 +520,8 @@
             this.MenuItemDangXuat,
             this.MenuItemThoat,
             this.MenuItemXem,
-            this.MenuItemQuanLy});
+            this.MenuItemQuanLy,
+            this.MenuItemDangKyCa});
             this.MenuItemQuan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MenuItemQuan.Name = "MenuItemQuan";
             this.MenuItemQuan.Size = new System.Drawing.Size(14, 33);
@@ -548,19 +564,12 @@
             this.MenuItemQuanLy.Text = "Quản Lý Nhân Viên";
             this.MenuItemQuanLy.Click += new System.EventHandler(this.MenuItemQuanLy_Click);
             // 
-            // menuStrip1
+            // MenuItemDangKyCa
             // 
-            this.menuStrip1.AutoSize = false;
-            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
-            this.menuStrip1.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.MenuItemQuan});
-            this.menuStrip1.Location = new System.Drawing.Point(13, 9);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(38, 37);
-            this.menuStrip1.TabIndex = 2;
-            this.menuStrip1.Text = "menuStrip1";
+            this.MenuItemDangKyCa.Name = "MenuItemDangKyCa";
+            this.MenuItemDangKyCa.Size = new System.Drawing.Size(293, 26);
+            this.MenuItemDangKyCa.Text = "Đăng Ký Ca";
+            this.MenuItemDangKyCa.Click += new System.EventHandler(this.MenuItemDangKyCa_Click);
             // 
             // FormThongTinTaiKhoan
             // 
@@ -584,9 +593,9 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picHinhDaiDien)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picHinhDaiDien)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -645,5 +654,6 @@
         private System.Windows.Forms.ToolStripMenuItem MenuItemXem;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem MenuItemQuanLy;
+        private System.Windows.Forms.ToolStripMenuItem MenuItemDangKyCa;
     }
 }
