@@ -60,12 +60,6 @@
     <Compile Include="FormBangLuong.Designer.cs">
       <DependentUpon>FormBangLuong.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormChucVu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormChucVu.Designer.cs">
-      <DependentUpon>FormChucVu.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormCuaHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,9 +127,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormBaoCao.resx">
       <DependentUpon>FormBaoCao.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormChucVu.resx">
-      <DependentUpon>FormChucVu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormCuaHang.resx">
       <DependentUpon>FormCuaHang.cs</DependentUpon>
