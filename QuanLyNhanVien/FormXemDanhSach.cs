@@ -10,12 +10,16 @@ using System.Windows.Forms;
 
 namespace QuanLyNhanVien
 {
-    public partial class FormChucVu : Form
+    public partial class FormXemDanhSach : Form
     {
-        public FormChucVu()
+        public FormXemDanhSach()
         {
             InitializeComponent();
         }
 
+        private void FormXemDanhSach_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -55,6 +56,9 @@ namespace QuanLyNhanVien
             dgQLNhanVien.Columns["tencv"].HeaderText = "Chức Vụ";
             dgQLNhanVien.Columns["tencv"].Width = 80;
             dgQLNhanVien.Columns["macv"].Visible = false;
+            dgQLNhanVien.Columns["tench"].HeaderText = "Cửa Hàng";
+            dgQLNhanVien.Columns["tench"].Width = 80;
+            dgQLNhanVien.Columns["mach"].Visible = false;
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
@@ -80,7 +84,7 @@ namespace QuanLyNhanVien
             txtMa.Text = dr.Cells["manv"].Value.ToString();
             txtHo.Text = dr.Cells["holot"].Value.ToString();
             txtTen.Text = dr.Cells["tennv"].Value.ToString();
-            if (dr.Cells["gioitinh"].Value.ToString() == "nam")
+            if (dr.Cells["gioitinh"].Value.ToString() == "Nam")
             {
                 radNam.Checked = true;
             }
@@ -95,6 +99,7 @@ namespace QuanLyNhanVien
             txtDiaChi.Text = dr.Cells["diachi"].Value.ToString();
             cboTinh.Text = dr.Cells["tinh"].Value.ToString();
             cmbChucVu.Text = dr.Cells["tencv"].Value.ToString();
+            cboCuaHang.Text = dr.Cells["tench"].Value.ToString();
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -113,11 +118,11 @@ namespace QuanLyNhanVien
             dr.Cells["tennv"].Value = txtTen.Text;
             if (radNu.Checked == true)
             {
-                dr.Cells["gioitinh"].Value = "nu";
+                dr.Cells["gioitinh"].Value = "Nữ";
             }
             else
             {
-                dr.Cells["gioitinh"].Value = "nam";
+                dr.Cells["gioitinh"].Value = "Nam";
             }
             dr.Cells["ngaysinh"].Value = dtpNgaySinh.Text;
             dr.Cells["sdt"].Value = txtSDT.Text;
@@ -128,11 +133,13 @@ namespace QuanLyNhanVien
             ds.Tables["tblDSNhanVien"].Rows.Add(dr);
             dr.Cells["macv"].Value = cmbChucVu.SelectedValue;
             dr.Cells["tencv"].Value = cmbChucVu.Text;
+            dr.Cells["mach"].Value = cboCuaHang.SelectedValue;
+            dr.Cells["tench"].Value = cboCuaHang.Text;
         }
         //them
         public void Them()
         {
-            string sThemNV = @"insert into nhanvien values(@MaNV, @HoLot, @TenNV, @Phai, @NgaySinh, @SDT, @Email, @LuongCB, @Tinh, @DiaChi, @MaCV)";
+            string sThemNV = @"insert into nhanvien values(@MaNV, @HoLot, @TenNV, @Phai, @NgaySinh, @SDT, @Email, @LuongCB, @Tinh, @DiaChi, @MaCV,@MaCH)";
             SqlCommand cmThemNV = new SqlCommand(sThemNV, conn);
             cmThemNV.Parameters.Add("@MaNV", SqlDbType.Char, 5, "manv");
             cmThemNV.Parameters.Add("@HoLot", SqlDbType.NVarChar, 50, "holot");
@@ -146,6 +153,7 @@ namespace QuanLyNhanVien
             cmThemNV.Parameters.Add("@DiaChi", SqlDbType.NVarChar, 50, "diachi");
 
             cmThemNV.Parameters.Add("@MaCV", SqlDbType.NVarChar, 5, "macv");
+            cmThemNV.Parameters.Add("@MaCH", SqlDbType.NVarChar, 6, "mach");
             daNhanVien.InsertCommand = cmThemNV;
         }
 
@@ -157,11 +165,11 @@ namespace QuanLyNhanVien
             row["tennv"] = txtTen.Text;
             if (radNu.Checked == true)
             {
-                row["gioitinh"] = "nu";
+                row["gioitinh"] = "Nữ";
             }
             else
             {
-                row["gioitinh"] = "nam";
+                row["gioitinh"] = "Nam";
             }
             row["ngaysinh"] = dtpNgaySinh.Text;
             row["sdt"] = txtSDT.Text;
@@ -170,6 +178,7 @@ namespace QuanLyNhanVien
             row["tinh"] = cboTinh.SelectedValue;
             row["diachi"] = txtDiaChi.Text;
             row["macv"] = cmbChucVu.SelectedValue;
+            row["mach"] = cboCuaHang.SelectedValue;
             ds.Tables["tblDSNhanVien"].Rows.Add(row);
         }
 
@@ -200,6 +209,7 @@ namespace QuanLyNhanVien
                 cboTinh.Text = dr.GetValue(8).ToString();
                 txtDiaChi.Text = dr.GetValue(9).ToString();
                 cmbChucVu.Text = dr.GetValue(10).ToString();
+                cboCuaHang.Text = dr.GetValue(11).ToString();
             }
             else
             {
@@ -222,6 +232,73 @@ namespace QuanLyNhanVien
             this.txtDiaChi.ResetText();
             this.cboTinh.ResetText();
             this.cmbChucVu.ResetText();
+            this.cboCuaHang.ResetText();
+        }
+
+        private void cboTimCuaHang_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            SqlDataAdapter da = new SqlDataAdapter(
+                "Select * from NhanVien where mach = '" + cboCuaHang.SelectedValue + "'",conn);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            da.Dispose();
+            dgQLNhanVien.DataSource = dt;
+            conn.Close();
+        }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+
+            for (int i = 0; i < dgQLNhanVien.Rows.Count; i++)
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("insert into information(manv,holot,tennv,gioitinh,ngaysinh,luongcb,diachi,tinh,macv,mach) 
+                   + " values(@MaNV, @HoLot, @TenNV, @Phai, @NgaySinh, @SDT, @Email, @LuongCB, @Tinh, @DiaChi, @MaCV,@MaCH)", conn);
+                cmd.Parameters.AddWithValue("@MaNV", dgQLNhanVien.Rows[i].Cells[0].Value);
+                cmd.Parameters.AddWithValue("@HoLot", dgQLNhanVien.Rows[i].Cells[1].Value);
+                cmd.Parameters.AddWithValue("@TenNV", dgQLNhanVien.Rows[i].Cells[2].Value);
+                cmd.Parameters.AddWithValue("@Phai", dgQLNhanVien.Rows[i].Cells[3].Value);
+                cmd.Parameters.AddWithValue("@NgaySinh", dgQLNhanVien.Rows[i].Cells[0].Value);
+                cmd.Parameters.AddWithValue("@SDT", dgQLNhanVien.Rows[i].Cells[0].Value);
+                cmd.Parameters.AddWithValue("@Email", dgQLNhanVien.Rows[i].Cells[0].Value);
+                cmd.Parameters.AddWithValue("@LuongCB", dgQLNhanVien.Rows[i].Cells[0].Value);
+                cmd.Parameters.AddWithValue("@Tinh", dgQLNhanVien.Rows[i].Cells[0].Value);
+                cmd.Parameters.AddWithValue("@DiaChi", dgQLNhanVien.Rows[i].Cells[0].Value);
+                cmd.Parameters.AddWithValue("@MaCV", dgQLNhanVien.Rows[i].Cells[0].Value);
+
+                cmd.ExecuteNonQuery();
+                conn.Close();
+            }
+            MessageBox.Show("Successfully Added", "VINSMOKE MJ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void btnThemCuaHang_Click(object sender, EventArgs e)
+        {
+            FormCuaHang fcuahang = new FormCuaHang();
+            fcuahang.ShowDialog();
+            cboTimCuaHang.Items.Add(fcuahang.them());
+            cboCuaHang.Items.Add(fcuahang.them());
+
+        }
+
+        private void btnXoaCuaHang_Click(object sender, EventArgs e)
+        {
+            conn.Open();
+            string xoa = cboTimCuaHang.SelectedValue.ToString();
+            string query = "DELETE FROM cuahang WHERE tench = '" + xoa + "'";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.CommandText = query;
+            if (cmd.ExecuteNonQuery() == 1)
+            {
+                MessageBox.Show("DATA UPDATED SUCCESSFULLY");
+            }
+            else
+            {
+                MessageBox.Show("DATA NOT UPDATED SUCCESSFULLY");
+            }
+            conn.Close();
+            cboTimCuaHang.Items.Remove(xoa);
+            cboCuaHang.Items.Remove(xoa);
         }
     }
 }

@@ -43,7 +43,7 @@
             this.txtMaCuaHang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaCuaHang.Location = new System.Drawing.Point(223, 86);
             this.txtMaCuaHang.Name = "txtMaCuaHang";
-            this.txtMaCuaHang.Size = new System.Drawing.Size(350, 30);
+            this.txtMaCuaHang.Size = new System.Drawing.Size(165, 30);
             this.txtMaCuaHang.TabIndex = 9;
             // 
             // txtDCCuaHang
@@ -71,6 +71,7 @@
             this.btnThem.TabIndex = 8;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // lblHsPhuCap
             // 
@@ -127,9 +128,10 @@
             this.Controls.Add(this.lblTenChucVu);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormCuaHang";
             this.Text = "FormCuaHang";
+            this.Load += new System.EventHandler(this.FormCuaHang_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

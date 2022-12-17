@@ -45,6 +45,7 @@
             this.radNam = new System.Windows.Forms.RadioButton();
             this.lblPhai = new System.Windows.Forms.Label();
             this.cmbChucVu = new System.Windows.Forms.ComboBox();
+            this.cboCuaHang = new System.Windows.Forms.ComboBox();
             this.cboTinh = new System.Windows.Forms.ComboBox();
             this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.txtLuongCoBan = new System.Windows.Forms.TextBox();
@@ -59,6 +60,7 @@
             this.txtMa = new System.Windows.Forms.TextBox();
             this.lblHo = new System.Windows.Forms.Label();
             this.lblChucVu = new System.Windows.Forms.Label();
+            this.lblCuaHang = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblTinh = new System.Windows.Forms.Label();
             this.lblTen = new System.Windows.Forms.Label();
@@ -66,14 +68,11 @@
             this.lblMa = new System.Windows.Forms.Label();
             this.dgQLNhanVien = new System.Windows.Forms.DataGridView();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.lblCuaHang = new System.Windows.Forms.Label();
-            this.cboCuaHang = new System.Windows.Forms.ComboBox();
             this.grbCuaHang = new System.Windows.Forms.GroupBox();
             this.cboTimCuaHang = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnThemCuaHang = new System.Windows.Forms.Button();
             this.btnXoaCuaHang = new System.Windows.Forms.Button();
-            this.btnLoc = new System.Windows.Forms.Button();
             this.grbChucVu.SuspendLayout();
             this.grbThongTin.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -109,6 +108,7 @@
             this.btnLuu.TabIndex = 18;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // label1
             // 
@@ -291,6 +291,79 @@
             this.cmbChucVu.Name = "cmbChucVu";
             this.cmbChucVu.Size = new System.Drawing.Size(230, 30);
             this.cmbChucVu.TabIndex = 25;
+            // 
+            // cboCuaHang
+            // 
+            this.cboCuaHang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboCuaHang.FormattingEnabled = true;
+            this.cboCuaHang.Items.AddRange(new object[] {
+            "An Giang",
+            "Bà rịa – Vũng tàu",
+            "Bắc Giang",
+            "Bắc Kạn",
+            "Bạc Liêu",
+            "Bắc Ninh",
+            "Bến Tre",
+            "Bình Định",
+            "Bình Dương",
+            "Bình Phước",
+            "Bình Thuận",
+            "Cà Mau",
+            "Cần Thơ",
+            "Cao Bằng ",
+            "Đà Nẵng",
+            "Đắk Lắk",
+            "Đắk Nông",
+            "Điện Biên",
+            "Đồng Nai",
+            "Đồng Tháp",
+            "Gia Lai",
+            "Hà Giang",
+            "Hà Nam",
+            "Hà Nội ",
+            "Hà Tĩnh",
+            "Hải Dương",
+            "Hải Phòng",
+            "Hậu Giang",
+            "Hòa Bình",
+            "Hưng Yên",
+            "Khánh Hòa",
+            "Kiên Giang",
+            "Kon Tum",
+            "Lai Châu",
+            "Lâm Đồng",
+            "Lạng Sơn",
+            "Lào Cai",
+            "Long An",
+            "Nam Định",
+            "Nghệ An",
+            "Ninh Bình",
+            "Ninh Thuận",
+            "Phú Thọ",
+            "Phú Yên",
+            "Quảng Bình",
+            "Quảng Nam",
+            "Quảng Ngãi",
+            "Quảng Ninh",
+            "Quảng Trị",
+            "Sóc Trăng",
+            "Sơn La",
+            "Tây Ninh",
+            "Thái Bình",
+            "Thái Nguyên",
+            "Thanh Hóa",
+            "Thừa Thiên Huế",
+            "Tiền Giang",
+            "Thành phố Hồ Chí Minh",
+            "Trà Vinh",
+            "Tuyên Quang",
+            "Vĩnh Long",
+            "Vĩnh Phúc",
+            "Yên Bái"});
+            this.cboCuaHang.Location = new System.Drawing.Point(518, 292);
+            this.cboCuaHang.Name = "cboCuaHang";
+            this.cboCuaHang.Size = new System.Drawing.Size(230, 30);
+            this.cboCuaHang.TabIndex = 24;
             // 
             // cboTinh
             // 
@@ -480,6 +553,16 @@
             this.lblChucVu.TabIndex = 10;
             this.lblChucVu.Text = "Chức Vụ";
             // 
+            // lblCuaHang
+            // 
+            this.lblCuaHang.AutoSize = true;
+            this.lblCuaHang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCuaHang.Location = new System.Drawing.Point(412, 295);
+            this.lblCuaHang.Name = "lblCuaHang";
+            this.lblCuaHang.Size = new System.Drawing.Size(84, 22);
+            this.lblCuaHang.TabIndex = 8;
+            this.lblCuaHang.Text = "Cửa hàng";
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -553,100 +636,16 @@
             this.lblTitle.TabIndex = 11;
             this.lblTitle.Text = "QUẢN LÝ NHÂN VIÊN BÁN HÀNG";
             // 
-            // lblCuaHang
-            // 
-            this.lblCuaHang.AutoSize = true;
-            this.lblCuaHang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCuaHang.Location = new System.Drawing.Point(412, 295);
-            this.lblCuaHang.Name = "lblCuaHang";
-            this.lblCuaHang.Size = new System.Drawing.Size(84, 22);
-            this.lblCuaHang.TabIndex = 8;
-            this.lblCuaHang.Text = "Cửa hàng";
-            // 
-            // cboCuaHang
-            // 
-            this.cboCuaHang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboCuaHang.FormattingEnabled = true;
-            this.cboCuaHang.Items.AddRange(new object[] {
-            "An Giang",
-            "Bà rịa – Vũng tàu",
-            "Bắc Giang",
-            "Bắc Kạn",
-            "Bạc Liêu",
-            "Bắc Ninh",
-            "Bến Tre",
-            "Bình Định",
-            "Bình Dương",
-            "Bình Phước",
-            "Bình Thuận",
-            "Cà Mau",
-            "Cần Thơ",
-            "Cao Bằng ",
-            "Đà Nẵng",
-            "Đắk Lắk",
-            "Đắk Nông",
-            "Điện Biên",
-            "Đồng Nai",
-            "Đồng Tháp",
-            "Gia Lai",
-            "Hà Giang",
-            "Hà Nam",
-            "Hà Nội ",
-            "Hà Tĩnh",
-            "Hải Dương",
-            "Hải Phòng",
-            "Hậu Giang",
-            "Hòa Bình",
-            "Hưng Yên",
-            "Khánh Hòa",
-            "Kiên Giang",
-            "Kon Tum",
-            "Lai Châu",
-            "Lâm Đồng",
-            "Lạng Sơn",
-            "Lào Cai",
-            "Long An",
-            "Nam Định",
-            "Nghệ An",
-            "Ninh Bình",
-            "Ninh Thuận",
-            "Phú Thọ",
-            "Phú Yên",
-            "Quảng Bình",
-            "Quảng Nam",
-            "Quảng Ngãi",
-            "Quảng Ninh",
-            "Quảng Trị",
-            "Sóc Trăng",
-            "Sơn La",
-            "Tây Ninh",
-            "Thái Bình",
-            "Thái Nguyên",
-            "Thanh Hóa",
-            "Thừa Thiên Huế",
-            "Tiền Giang",
-            "Thành phố Hồ Chí Minh",
-            "Trà Vinh",
-            "Tuyên Quang",
-            "Vĩnh Long",
-            "Vĩnh Phúc",
-            "Yên Bái"});
-            this.cboCuaHang.Location = new System.Drawing.Point(518, 292);
-            this.cboCuaHang.Name = "cboCuaHang";
-            this.cboCuaHang.Size = new System.Drawing.Size(230, 30);
-            this.cboCuaHang.TabIndex = 24;
-            // 
             // grbCuaHang
             // 
             this.grbCuaHang.Controls.Add(this.cboTimCuaHang);
             this.grbCuaHang.Controls.Add(this.label4);
             this.grbCuaHang.Controls.Add(this.btnThemCuaHang);
             this.grbCuaHang.Controls.Add(this.btnXoaCuaHang);
-            this.grbCuaHang.Controls.Add(this.btnLoc);
             this.grbCuaHang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbCuaHang.Location = new System.Drawing.Point(1228, 73);
             this.grbCuaHang.Name = "grbCuaHang";
-            this.grbCuaHang.Size = new System.Drawing.Size(291, 307);
+            this.grbCuaHang.Size = new System.Drawing.Size(291, 279);
             this.grbCuaHang.TabIndex = 15;
             this.grbCuaHang.TabStop = false;
             this.grbCuaHang.Text = "Cửa hàng";
@@ -656,73 +655,14 @@
             this.cboTimCuaHang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboTimCuaHang.FormattingEnabled = true;
             this.cboTimCuaHang.Items.AddRange(new object[] {
-            "An Giang",
-            "Bà rịa – Vũng tàu",
-            "Bắc Giang",
-            "Bắc Kạn",
-            "Bạc Liêu",
-            "Bắc Ninh",
-            "Bến Tre",
-            "Bình Định",
-            "Bình Dương",
-            "Bình Phước",
-            "Bình Thuận",
-            "Cà Mau",
-            "Cần Thơ",
-            "Cao Bằng ",
-            "Đà Nẵng",
-            "Đắk Lắk",
-            "Đắk Nông",
-            "Điện Biên",
-            "Đồng Nai",
-            "Đồng Tháp",
-            "Gia Lai",
-            "Hà Giang",
-            "Hà Nam",
-            "Hà Nội ",
-            "Hà Tĩnh",
-            "Hải Dương",
-            "Hải Phòng",
-            "Hậu Giang",
-            "Hòa Bình",
-            "Hưng Yên",
-            "Khánh Hòa",
-            "Kiên Giang",
-            "Kon Tum",
-            "Lai Châu",
-            "Lâm Đồng",
-            "Lạng Sơn",
-            "Lào Cai",
-            "Long An",
-            "Nam Định",
-            "Nghệ An",
-            "Ninh Bình",
-            "Ninh Thuận",
-            "Phú Thọ",
-            "Phú Yên",
-            "Quảng Bình",
-            "Quảng Nam",
-            "Quảng Ngãi",
-            "Quảng Ninh",
-            "Quảng Trị",
-            "Sóc Trăng",
-            "Sơn La",
-            "Tây Ninh",
-            "Thái Bình",
-            "Thái Nguyên",
-            "Thanh Hóa",
-            "Thừa Thiên Huế",
-            "Tiền Giang",
-            "Thành phố Hồ Chí Minh",
-            "Trà Vinh",
-            "Tuyên Quang",
-            "Vĩnh Long",
-            "Vĩnh Phúc",
-            "Yên Bái"});
+            "Trà Sữa Muối (chi nhánh Long Xuyên)",
+            "Trà Sữa Muối (chi nhánh Châu Đốc)",
+            "Trà Sữa Muối (chi nhánh Cần Thơ)"});
             this.cboTimCuaHang.Location = new System.Drawing.Point(28, 76);
             this.cboTimCuaHang.Name = "cboTimCuaHang";
             this.cboTimCuaHang.Size = new System.Drawing.Size(230, 30);
             this.cboTimCuaHang.TabIndex = 24;
+            this.cboTimCuaHang.SelectionChangeCommitted += new System.EventHandler(this.cboTimCuaHang_SelectionChangeCommitted);
             // 
             // label4
             // 
@@ -736,35 +676,24 @@
             // btnThemCuaHang
             // 
             this.btnThemCuaHang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThemCuaHang.Location = new System.Drawing.Point(95, 192);
+            this.btnThemCuaHang.Location = new System.Drawing.Point(91, 151);
             this.btnThemCuaHang.Name = "btnThemCuaHang";
             this.btnThemCuaHang.Size = new System.Drawing.Size(124, 46);
             this.btnThemCuaHang.TabIndex = 15;
             this.btnThemCuaHang.Text = "Thêm";
             this.btnThemCuaHang.UseVisualStyleBackColor = true;
-            this.btnThemCuaHang.Click += new System.EventHandler(this.btnThem_Click);
+            this.btnThemCuaHang.Click += new System.EventHandler(this.btnThemCuaHang_Click);
             // 
             // btnXoaCuaHang
             // 
             this.btnXoaCuaHang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoaCuaHang.Location = new System.Drawing.Point(95, 250);
+            this.btnXoaCuaHang.Location = new System.Drawing.Point(91, 209);
             this.btnXoaCuaHang.Name = "btnXoaCuaHang";
             this.btnXoaCuaHang.Size = new System.Drawing.Size(124, 46);
             this.btnXoaCuaHang.TabIndex = 14;
             this.btnXoaCuaHang.Text = "Xóa";
             this.btnXoaCuaHang.UseVisualStyleBackColor = true;
-            this.btnXoaCuaHang.Click += new System.EventHandler(this.btnXoa_Click);
-            // 
-            // btnLoc
-            // 
-            this.btnLoc.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLoc.Location = new System.Drawing.Point(95, 133);
-            this.btnLoc.Name = "btnLoc";
-            this.btnLoc.Size = new System.Drawing.Size(124, 44);
-            this.btnLoc.TabIndex = 16;
-            this.btnLoc.Text = "Lọc";
-            this.btnLoc.UseVisualStyleBackColor = true;
-            this.btnLoc.Click += new System.EventHandler(this.btnTim_Click);
+            this.btnXoaCuaHang.Click += new System.EventHandler(this.btnXoaCuaHang_Click);
             // 
             // FormQuanLyNhanVienBanHang
             // 
@@ -841,6 +770,5 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnThemCuaHang;
         private System.Windows.Forms.Button btnXoaCuaHang;
-        private System.Windows.Forms.Button btnLoc;
     }
 }
