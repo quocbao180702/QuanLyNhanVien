@@ -66,24 +66,6 @@
     <Compile Include="FormChucVu.Designer.cs">
       <DependentUpon>FormChucVu.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormCuaHangCanTho.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormCuaHangCanTho.Designer.cs">
-      <DependentUpon>FormCuaHangCanTho.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormCuaHangChauDoc.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormCuaHangChauDoc.Designer.cs">
-      <DependentUpon>FormCuaHangChauDoc.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormCuaHangLongXuyen.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormCuaHangLongXuyen.Designer.cs">
-      <DependentUpon>FormCuaHangLongXuyen.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormDangKyCa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,12 +95,6 @@
     </Compile>
     <Compile Include="FormNoiQuy.Designer.cs">
       <DependentUpon>FormNoiQuy.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormQuanLy.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormQuanLy.Designer.cs">
-      <DependentUpon>FormQuanLy.cs</DependentUpon>
     </Compile>
     <Compile Include="FormThongTinTaiKhoan.cs">
       <SubType>Form</SubType>
@@ -155,15 +131,6 @@
     <EmbeddedResource Include="FormChucVu.resx">
       <DependentUpon>FormChucVu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormCuaHangCanTho.resx">
-      <DependentUpon>FormCuaHangCanTho.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormCuaHangChauDoc.resx">
-      <DependentUpon>FormCuaHangChauDoc.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormCuaHangLongXuyen.resx">
-      <DependentUpon>FormCuaHangLongXuyen.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormDangKyCa.resx">
       <DependentUpon>FormDangKyCa.cs</DependentUpon>
     </EmbeddedResource>
@@ -178,9 +145,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormNoiQuy.resx">
       <DependentUpon>FormNoiQuy.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormQuanLy.resx">
-      <DependentUpon>FormQuanLy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormThongTinTaiKhoan.resx">
       <DependentUpon>FormThongTinTaiKhoan.cs</DependentUpon>
