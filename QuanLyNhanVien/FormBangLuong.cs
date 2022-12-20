@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 namespace QuanLyNhanVien
 {
@@ -26,7 +27,7 @@ namespace QuanLyNhanVien
         {
             SqlConnection conn = new SqlConnection();
             conn.ConnectionString = @"Data Source=GeeKay;Initial Catalog=QLNV;Integrated Security=True";
-            string sQueryNhanVien = @"select n.*, c.tencv, h.tench from nhanvien n, chucvu c, cuahang h where n.macv=c.macv and n.mach = h.mach";
+            string sQueryNhanVien = @"select  n.*, c.tencv, h.tench, l.soca from nhanvien n, chucvu c, cuahang h, lamviec l where n.macv=c.macv and n.mach = h.mach and l.manv = n.manv ";
             daNhanVien = new SqlDataAdapter(sQueryNhanVien, conn);
             daNhanVien.Fill(ds, "tblDSNhanVien");
             dgvLuong.DataSource = ds.Tables["tblDSNhanVien"];
@@ -55,6 +56,8 @@ namespace QuanLyNhanVien
             dgvLuong.Columns["tencv"].Width = 80;
             dgvLuong.Columns["tench"].HeaderText = "Cửa Hàng";
             dgvLuong.Columns["tench"].Width = 250;
+            dgvLuong.Columns["soca"].HeaderText = "Số Ca";
+            dgvLuong.Columns["soca"].Width = 50;
             dgvLuong.Columns["mach"].Visible = false;
             dgvLuong.Columns["macv"].Visible = false;
         }
@@ -62,6 +65,8 @@ namespace QuanLyNhanVien
         private void FormBangLuong_Load(object sender, EventArgs e)
         {
             LoadDataGridView();
+            txtSoCaLam.ReadOnly = true;
+            txtLuong.ReadOnly = true;
         }
 
         private void dgvLuong_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -78,12 +83,28 @@ namespace QuanLyNhanVien
             lblInTinh.Text = dr.Cells["tinh"].Value.ToString();
             lblInChucVu.Text = dr.Cells["tencv"].Value.ToString();
             lblInCuaHang.Text = dr.Cells["tench"].Value.ToString();
+            txtSoCaLam.Text = dr.Cells["soca"].Value.ToString();
         }
 
         private void btnTinhLuong_Click(object sender, EventArgs e)
         {
-            int thanhtien = int.Parse(txtSoNgayLam.Text) * int.Parse(lblInLuongCB.Text);
-            txtLuong.Text = thanhtien.ToString();
+            float calam = float.Parse(this.txtSoCaLam.Text);
+            float canghi = float.Parse(this.txtSoCaNghi.Text);
+
+            float l = float.Parse(lblInLuongCB.Text);
+            if (canghi <= calam && canghi >= 0)
+            {
+                float sum = 0;
+                sum = (l / 30) * (calam - canghi);
+                this.txtLuong.Text = sum.ToString();
+            }
+            else
+            {
+                this.txtLuong.ResetText();
+                MessageBox.Show("Nhập lại số ngày nghĩ bé hơn "+calam , "Thong Bao", MessageBoxButtons.OK);
+            }
+
+          
         }
 
         private void btnLamMoi_Click(object sender, EventArgs e)
@@ -100,8 +121,17 @@ namespace QuanLyNhanVien
             this.lblInChucVu.ResetText();
             this.lblInCuaHang.ResetText();
             this.txtLuong.ResetText();
-            this.txtSoNgayLam.ResetText();
-            this.txtSoNgayNghi.ResetText();
+            this.txtSoCaLam.ResetText();
+            this.txtSoCaNghi.ResetText();
+        }
+
+        private void txtSoCaNghi_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar)) // có phải là kí tự điều khiển không? có phải là chữ không?
+            {
+                e.Handled = true; //bỏ qua những cú pháp không hợp lệ
+                MessageBox.Show("Nhập lại số", "Thông Báo");
+            }
         }
     }
 }
