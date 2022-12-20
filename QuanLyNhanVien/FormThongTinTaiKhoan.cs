@@ -89,8 +89,8 @@ namespace QuanLyNhanVien
             if(quyen == 1)
             {
                 this.Close();
-                FormQuanLy fquanly = new FormQuanLy();
-                fquanly.ShowDialog();
+             //   FormQuanLy fquanly = new FormQuanLy();
+                //fquanly.ShowDialog();
             }
             else if(quyen == 2)
             {
@@ -103,8 +103,8 @@ namespace QuanLyNhanVien
         private void MenuItemQuanLy_Click(object sender, EventArgs e)
         {
             this.Close();
-            FormQuanLy fquanly = new FormQuanLy();
-            fquanly.ShowDialog();
+           // FormQuanLy fquanly = new FormQuanLy();
+          //  fquanly.ShowDialog();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

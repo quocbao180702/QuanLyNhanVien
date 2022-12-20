@@ -252,8 +252,7 @@ namespace QuanLyNhanVien
             for (int i = 0; i < dgQLNhanVien.Rows.Count; i++)
             {
                 conn.Open();
-                SqlCommand cmd = new SqlCommand("insert into information(manv,holot,tennv,gioitinh,ngaysinh,luongcb,diachi,tinh,macv,mach) 
-                   + " values(@MaNV, @HoLot, @TenNV, @Phai, @NgaySinh, @SDT, @Email, @LuongCB, @Tinh, @DiaChi, @MaCV,@MaCH)", conn);
+                SqlCommand cmd = new SqlCommand("insert into information(manv,holot,tennv,gioitinh,ngaysinh,luongcb,diachi,tinh,macv,mach)  values(@MaNV, @HoLot, @TenNV, @Phai, @NgaySinh, @SDT, @Email, @LuongCB, @Tinh, @DiaChi, @MaCV,@MaCH)", conn);
                 cmd.Parameters.AddWithValue("@MaNV", dgQLNhanVien.Rows[i].Cells[0].Value);
                 cmd.Parameters.AddWithValue("@HoLot", dgQLNhanVien.Rows[i].Cells[1].Value);
                 cmd.Parameters.AddWithValue("@TenNV", dgQLNhanVien.Rows[i].Cells[2].Value);
