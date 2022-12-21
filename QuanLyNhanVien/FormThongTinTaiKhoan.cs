@@ -87,16 +87,36 @@ namespace QuanLyNhanVien
 
         private void MenuItemXem_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             this.Hide();
             FormXemDanhSach fxem = new FormXemDanhSach();
             fxem.ShowDialog();
+=======
+            if(quyen == 1)
+            {
+                this.Close();
+             //   FormQuanLy fquanly = new FormQuanLy();
+                //fquanly.ShowDialog();
+            }
+            else if(quyen == 2)
+            {
+                this.Hide();
+                FormQuanLyNhanVienBanHang fquanlybh = new FormQuanLyNhanVienBanHang();
+                fquanlybh.ShowDialog();
+            }
+>>>>>>> 39d6fbf975087e3aac9b2822192568ebfb607f0d
         }
 
         private void MenuItemQuanLy_Click(object sender, EventArgs e)
         {
             this.Close();
+<<<<<<< HEAD
             FormQuanLyNhanVienBanHang fquanly = new FormQuanLyNhanVienBanHang();
             fquanly.ShowDialog();
+=======
+           // FormQuanLy fquanly = new FormQuanLy();
+          //  fquanly.ShowDialog();
+>>>>>>> 39d6fbf975087e3aac9b2822192568ebfb607f0d
         }
 
         private void MenuItemDangKyCa_Click(object sender, EventArgs e)
