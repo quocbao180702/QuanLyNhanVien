@@ -45,7 +45,7 @@ namespace QuanLyNhanVien
             conn = new SqlConnection(@"Data Source=BAODANG;Initial Catalog=QLNV;Integrated Security=True");
             conn.Open();
 
-            cmd = new SqlCommand("select n.*, c.tencv from nhanvien n, chucvu c where n.macv=c.macv and manv = '" + id + "'", conn);
+            cmd = new SqlCommand("select n.*, c.tencv, h.tench from NhanVien n, chucvu c, cuahang h where n.macv=c.macv and n.mach = h.mach and n.manv = '" + id + "'", conn);
             SqlDataReader dr;
             dr = cmd.ExecuteReader();
             if (dr.Read())
@@ -53,7 +53,7 @@ namespace QuanLyNhanVien
                 txtMa.Text = dr.GetValue(0).ToString(); ;
                 txtHo.Text = dr.GetValue(1).ToString();
                 txtTen.Text = dr.GetValue(2).ToString();
-                if (dr.GetValue(3).ToString() == "nam")
+                if (dr.GetValue(3).ToString() == "Nam")
                 {
                     radNam.Checked = true;
                 }
@@ -65,9 +65,10 @@ namespace QuanLyNhanVien
                 dtpNgaySinh.Text = dr.GetValue(4).ToString();
                 txtEmail.Text = dr.GetValue(6).ToString();
                 txtLuongCB.Text = dr.GetValue(7).ToString();
-                cmbTinh.Text = dr.GetValue(8).ToString();
-                txtDiaChi.Text = dr.GetValue(9).ToString();
-                cmbChucVu.Text = dr.GetValue(11).ToString();
+                cmbTinh.Text = dr.GetValue(9).ToString();
+                txtDiaChi.Text = dr.GetValue(8).ToString();
+                cmbChucVu.Text = dr.GetValue(12).ToString();
+                cmbCuaHang.Text = dr.GetValue(13).ToString();
             }
             conn.Close();
         }
@@ -86,30 +87,16 @@ namespace QuanLyNhanVien
 
         private void MenuItemXem_Click(object sender, EventArgs e)
         {
-            if(quyen == 1)
-            {
-                this.Close();
-                FormQuanLy fquanly = new FormQuanLy();
-                fquanly.ShowDialog();
-            }
-            else if(quyen == 2)
-            {
-                this.Hide();
-                FormQuanLyNhanVienBanHang fquanlybh = new FormQuanLyNhanVienBanHang();
-                fquanlybh.ShowDialog();
-            }
+            this.Hide();
+            FormXemDanhSach fxem = new FormXemDanhSach();
+            fxem.ShowDialog();
         }
 
         private void MenuItemQuanLy_Click(object sender, EventArgs e)
         {
             this.Close();
-            FormQuanLy fquanly = new FormQuanLy();
+            FormQuanLyNhanVienBanHang fquanly = new FormQuanLyNhanVienBanHang();
             fquanly.ShowDialog();
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-         
         }
 
         private void MenuItemDangKyCa_Click(object sender, EventArgs e)
@@ -117,6 +104,11 @@ namespace QuanLyNhanVien
             this.Hide();
             FormDangKyCa fdangkyca = new FormDangKyCa();
             fdangkyca.ShowDialog();
+        }
+
+        private void btnCapNhat_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -55,7 +55,6 @@
             this.lblHo = new System.Windows.Forms.Label();
             this.txtMa = new System.Windows.Forms.TextBox();
             this.lblMa = new System.Windows.Forms.Label();
-            this.picHinhDaiDien = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblThoat = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -73,6 +72,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.cmbCuaHang = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.picHinhDaiDien = new System.Windows.Forms.PictureBox();
             this.MenuItemQuan = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuItemThongTin = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuItemDangXuat = new System.Windows.Forms.ToolStripMenuItem();
@@ -80,12 +82,10 @@
             this.MenuItemXem = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuItemQuanLy = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuItemDangKyCa = new System.Windows.Forms.ToolStripMenuItem();
-            this.cmbCuaHang = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picHinhDaiDien)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picHinhDaiDien)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -118,12 +118,11 @@
             this.panel1.Controls.Add(this.txtMa);
             this.panel1.Controls.Add(this.lblMa);
             this.panel1.Controls.Add(this.picHinhDaiDien);
-            this.panel1.Location = new System.Drawing.Point(13, 59);
+            this.panel1.Location = new System.Drawing.Point(13, 72);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1184, 475);
+            this.panel1.Size = new System.Drawing.Size(1184, 462);
             this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // cmbChucVu
             // 
@@ -141,6 +140,7 @@
             this.btnCapNhat.TabIndex = 4;
             this.btnCapNhat.Text = "Cập Nhật";
             this.btnCapNhat.UseVisualStyleBackColor = true;
+            this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
             // 
             // cmbTinh
             // 
@@ -346,14 +346,6 @@
             this.lblMa.TabIndex = 1;
             this.lblMa.Text = "Mã Số Nhân Viên";
             // 
-            // picHinhDaiDien
-            // 
-            this.picHinhDaiDien.Location = new System.Drawing.Point(849, 47);
-            this.picHinhDaiDien.Name = "picHinhDaiDien";
-            this.picHinhDaiDien.Size = new System.Drawing.Size(284, 254);
-            this.picHinhDaiDien.TabIndex = 0;
-            this.picHinhDaiDien.TabStop = false;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -516,6 +508,31 @@
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
+            // cmbCuaHang
+            // 
+            this.cmbCuaHang.FormattingEnabled = true;
+            this.cmbCuaHang.Location = new System.Drawing.Point(529, 276);
+            this.cmbCuaHang.Name = "cmbCuaHang";
+            this.cmbCuaHang.Size = new System.Drawing.Size(265, 30);
+            this.cmbCuaHang.TabIndex = 8;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(421, 284);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(89, 22);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Cửa Hàng";
+            // 
+            // picHinhDaiDien
+            // 
+            this.picHinhDaiDien.Location = new System.Drawing.Point(849, 47);
+            this.picHinhDaiDien.Name = "picHinhDaiDien";
+            this.picHinhDaiDien.Size = new System.Drawing.Size(284, 254);
+            this.picHinhDaiDien.TabIndex = 0;
+            this.picHinhDaiDien.TabStop = false;
+            // 
             // MenuItemQuan
             // 
             this.MenuItemQuan.BackgroundImage = global::QuanLyNhanVien.Properties.Resources.icons8_menu_rounded_30;
@@ -575,23 +592,6 @@
             this.MenuItemDangKyCa.Text = "Đăng Ký Ca";
             this.MenuItemDangKyCa.Click += new System.EventHandler(this.MenuItemDangKyCa_Click);
             // 
-            // cmbCuaHang
-            // 
-            this.cmbCuaHang.FormattingEnabled = true;
-            this.cmbCuaHang.Location = new System.Drawing.Point(529, 276);
-            this.cmbCuaHang.Name = "cmbCuaHang";
-            this.cmbCuaHang.Size = new System.Drawing.Size(265, 30);
-            this.cmbCuaHang.TabIndex = 8;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(421, 284);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 22);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Cửa Hàng";
-            // 
             // FormThongTinTaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
@@ -614,9 +614,9 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picHinhDaiDien)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picHinhDaiDien)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

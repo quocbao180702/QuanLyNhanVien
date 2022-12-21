@@ -28,18 +28,20 @@ namespace QuanLyNhanVien
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            cmd = new SqlCommand("insert into dangnhap values(@username, @pass, @quyen)", conn);
+            conn.ConnectionString = @"Data Source=BAODANG;Initial Catalog=QLNV;Integrated Security=True";
+            conn.Open();
+            cmd = new SqlCommand("insert into cuahang values(@mach, @tench, @diachi)", conn);
             cmd.Parameters.AddWithValue("mach", txtMaCuaHang.Text);
             cmd.Parameters.AddWithValue("tench", txtTenCuaHang.Text);
             cmd.Parameters.AddWithValue("diachi", txtDCCuaHang.Text);
             cmd.ExecuteNonQuery();
             MessageBox.Show("Add Cửa Hàng Thành Công !!!", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            conn.Close();
         }
 
         private void FormCuaHang_Load(object sender, EventArgs e)
         {
-            conn.ConnectionString = @"Data Source=BAODANG;Initial Catalog=QLNV;Integrated Security=True";
-            conn.Open();
+ 
         }
     }
 }

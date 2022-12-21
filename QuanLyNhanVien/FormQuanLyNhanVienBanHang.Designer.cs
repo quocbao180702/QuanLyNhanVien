@@ -45,7 +45,6 @@
             this.radNam = new System.Windows.Forms.RadioButton();
             this.lblPhai = new System.Windows.Forms.Label();
             this.cmbChucVu = new System.Windows.Forms.ComboBox();
-            this.cboCuaHang = new System.Windows.Forms.ComboBox();
             this.cboTinh = new System.Windows.Forms.ComboBox();
             this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.txtLuongCoBan = new System.Windows.Forms.TextBox();
@@ -73,6 +72,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btnThemCuaHang = new System.Windows.Forms.Button();
             this.btnXoaCuaHang = new System.Windows.Forms.Button();
+            this.cboCuaHang = new System.Windows.Forms.ComboBox();
             this.grbChucVu.SuspendLayout();
             this.grbThongTin.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -291,79 +291,6 @@
             this.cmbChucVu.Name = "cmbChucVu";
             this.cmbChucVu.Size = new System.Drawing.Size(230, 30);
             this.cmbChucVu.TabIndex = 25;
-            // 
-            // cboCuaHang
-            // 
-            this.cboCuaHang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboCuaHang.FormattingEnabled = true;
-            this.cboCuaHang.Items.AddRange(new object[] {
-            "An Giang",
-            "Bà rịa – Vũng tàu",
-            "Bắc Giang",
-            "Bắc Kạn",
-            "Bạc Liêu",
-            "Bắc Ninh",
-            "Bến Tre",
-            "Bình Định",
-            "Bình Dương",
-            "Bình Phước",
-            "Bình Thuận",
-            "Cà Mau",
-            "Cần Thơ",
-            "Cao Bằng ",
-            "Đà Nẵng",
-            "Đắk Lắk",
-            "Đắk Nông",
-            "Điện Biên",
-            "Đồng Nai",
-            "Đồng Tháp",
-            "Gia Lai",
-            "Hà Giang",
-            "Hà Nam",
-            "Hà Nội ",
-            "Hà Tĩnh",
-            "Hải Dương",
-            "Hải Phòng",
-            "Hậu Giang",
-            "Hòa Bình",
-            "Hưng Yên",
-            "Khánh Hòa",
-            "Kiên Giang",
-            "Kon Tum",
-            "Lai Châu",
-            "Lâm Đồng",
-            "Lạng Sơn",
-            "Lào Cai",
-            "Long An",
-            "Nam Định",
-            "Nghệ An",
-            "Ninh Bình",
-            "Ninh Thuận",
-            "Phú Thọ",
-            "Phú Yên",
-            "Quảng Bình",
-            "Quảng Nam",
-            "Quảng Ngãi",
-            "Quảng Ninh",
-            "Quảng Trị",
-            "Sóc Trăng",
-            "Sơn La",
-            "Tây Ninh",
-            "Thái Bình",
-            "Thái Nguyên",
-            "Thanh Hóa",
-            "Thừa Thiên Huế",
-            "Tiền Giang",
-            "Thành phố Hồ Chí Minh",
-            "Trà Vinh",
-            "Tuyên Quang",
-            "Vĩnh Long",
-            "Vĩnh Phúc",
-            "Yên Bái"});
-            this.cboCuaHang.Location = new System.Drawing.Point(518, 292);
-            this.cboCuaHang.Name = "cboCuaHang";
-            this.cboCuaHang.Size = new System.Drawing.Size(230, 30);
-            this.cboCuaHang.TabIndex = 24;
             // 
             // cboTinh
             // 
@@ -695,6 +622,19 @@
             this.btnXoaCuaHang.UseVisualStyleBackColor = true;
             this.btnXoaCuaHang.Click += new System.EventHandler(this.btnXoaCuaHang_Click);
             // 
+            // cboCuaHang
+            // 
+            this.cboCuaHang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboCuaHang.FormattingEnabled = true;
+            this.cboCuaHang.Items.AddRange(new object[] {
+            "Trà Sữa Muối (chi nhánh Long Xuyên)",
+            "Trà Sữa Muối (chi nhánh Châu Đốc)",
+            "Trà Sữa Muối (chi nhánh Cần Thơ)"});
+            this.cboCuaHang.Location = new System.Drawing.Point(518, 292);
+            this.cboCuaHang.Name = "cboCuaHang";
+            this.cboCuaHang.Size = new System.Drawing.Size(230, 30);
+            this.cboCuaHang.TabIndex = 24;
+            // 
             // FormQuanLyNhanVienBanHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -763,12 +703,12 @@
         private System.Windows.Forms.TextBox txtSDT;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnLuu;
-        private System.Windows.Forms.ComboBox cboCuaHang;
         private System.Windows.Forms.Label lblCuaHang;
         private System.Windows.Forms.GroupBox grbCuaHang;
         private System.Windows.Forms.ComboBox cboTimCuaHang;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnThemCuaHang;
         private System.Windows.Forms.Button btnXoaCuaHang;
+        private System.Windows.Forms.ComboBox cboCuaHang;
     }
 }
