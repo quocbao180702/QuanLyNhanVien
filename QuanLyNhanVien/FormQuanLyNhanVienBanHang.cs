@@ -14,6 +14,7 @@ using System.Xml.Linq;
 using static System.Net.Mime.MediaTypeNames;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace QuanLyNhanVien
 {
@@ -85,6 +86,9 @@ namespace QuanLyNhanVien
             cboCuaHang.DataSource = dt;
             cboCuaHang.DisplayMember = "tench";
             cboCuaHang.ValueMember = "mach";
+            cboTimCuaHang.DataSource = dt;
+            cboTimCuaHang.DisplayMember = "tench";
+            cboTimCuaHang.ValueMember = "mach";
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
@@ -133,10 +137,29 @@ namespace QuanLyNhanVien
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
+            DataGridViewRow dr = dgQLNhanVien.SelectedRows[0];
+            SqlCommand cmThemNV = new SqlCommand("delete NhanVien where manv = @MaNV", conn);
+            conn.Open();
+            cmThemNV.Parameters.AddWithValue("@MaNV", dr.Cells["manv"].Value);
+            cmThemNV.Parameters.AddWithValue("@HoLot", dr.Cells["holot"].Value);
+            cmThemNV.Parameters.AddWithValue("@TenNV", dr.Cells["tennv"].Value);
+            cmThemNV.Parameters.AddWithValue("@GioiTinh", dr.Cells["gioitinh"].Value);
+            cmThemNV.Parameters.AddWithValue("@NgaySinh", dr.Cells["ngaysinh"].Value);
+            cmThemNV.Parameters.AddWithValue("@SDT", dr.Cells["sdt"].Value);
+            cmThemNV.Parameters.AddWithValue("@Email", dr.Cells["email"].Value);
+            cmThemNV.Parameters.AddWithValue("@LuongCB", dr.Cells["luongcb"].Value);
+            cmThemNV.Parameters.AddWithValue("@Tinh", dr.Cells["tinh"].Value);
+            cmThemNV.Parameters.AddWithValue("@DiaChi", dr.Cells["diachi"].Value);
+            cmThemNV.Parameters.AddWithValue("@MaCV", dr.Cells["macv"].Value);
+            cmThemNV.Parameters.AddWithValue("@MaCH", dr.Cells["mach"].Value);
+            cmThemNV.ExecuteNonQuery();
+            conn.Close();
+            MessageBox.Show("Record Deleted Successfully!");
             foreach (DataGridViewRow item in this.dgQLNhanVien.SelectedRows)
             {
                 dgQLNhanVien.Rows.RemoveAt(item.Index);
             }
+     
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -159,11 +182,28 @@ namespace QuanLyNhanVien
             dr.Cells["luongcb"].Value = txtLuongCoBan.Text;
             dr.Cells["diachi"].Value = txtDiaChi.Text;
             dr.Cells["tinh"].Value = cboTinh.Text;
-            ds.Tables["tblDSNhanVien"].Rows.Add(dr);
             dr.Cells["macv"].Value = cmbChucVu.SelectedValue;
             dr.Cells["tencv"].Value = cmbChucVu.Text;
             dr.Cells["mach"].Value = cboCuaHang.SelectedValue;
             dr.Cells["tench"].Value = cboCuaHang.Text;
+            conn.Open();
+            string sThemNV = @"update nhanvien set manv = @MaNV, holot = @HoLot, tennv = @TenNV, gioitinh = @GioiTinh, ngaysinh = @NgaySinh,sdt =  @SDT, email =  @Email, luongcb = @LuongCB, tinh = @Tinh, diachi = @DiaChi, macv =  @MaCV, mach = @MaCH  where manv = @MaNV";
+            SqlCommand cmThemNV = new SqlCommand(sThemNV, conn);
+            cmThemNV.Parameters.AddWithValue("@MaNV", dr.Cells["manv"].Value);
+            cmThemNV.Parameters.AddWithValue("@HoLot", dr.Cells["holot"].Value);
+            cmThemNV.Parameters.AddWithValue("@TenNV", dr.Cells["tennv"].Value);
+            cmThemNV.Parameters.AddWithValue("@GioiTinh", dr.Cells["gioitinh"].Value);
+            cmThemNV.Parameters.AddWithValue("@NgaySinh", dr.Cells["ngaysinh"].Value);
+            cmThemNV.Parameters.AddWithValue("@SDT", dr.Cells["sdt"].Value);
+            cmThemNV.Parameters.AddWithValue("@Email", dr.Cells["email"].Value);
+            cmThemNV.Parameters.AddWithValue("@LuongCB", dr.Cells["luongcb"].Value);
+            cmThemNV.Parameters.AddWithValue("@Tinh", dr.Cells["tinh"].Value);
+            cmThemNV.Parameters.AddWithValue("@DiaChi", dr.Cells["diachi"].Value);
+            cmThemNV.Parameters.AddWithValue("@MaCV", dr.Cells["macv"].Value);
+            cmThemNV.Parameters.AddWithValue("@MaCH", dr.Cells["mach"].Value);
+            cmThemNV.ExecuteReader();
+            conn.Close();
+            
         }
 
 
@@ -254,21 +294,6 @@ namespace QuanLyNhanVien
             this.cboCuaHang.ResetText();
         }
 
-        private void cboTimCuaHang_SelectionChangeCommitted(object sender, EventArgs e)
-        {
-            SqlDataAdapter da = new SqlDataAdapter(
-                "Select * from NhanVien where mach = '" + cboCuaHang.SelectedValue + "'",conn);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            da.Dispose();
-            dgQLNhanVien.DataSource = dt;
-            conn.Close();
-        }
-
-        private void btnLuu_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Successfully Added", "VINSMOKE MJ", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
 
         private void btnThemCuaHang_Click(object sender, EventArgs e)
         {
@@ -283,7 +308,7 @@ namespace QuanLyNhanVien
         {
             conn.Open();
             string xoa = cboTimCuaHang.SelectedValue.ToString();
-            string query = "DELETE FROM cuahang WHERE tench = '" + xoa + "'";
+            string query = "DELETE FROM cuahang WHERE mach = '" + xoa + "'";
             SqlCommand cmd = new SqlCommand(query, conn);
             cmd.CommandText = query;
             if (cmd.ExecuteNonQuery() == 1)
@@ -295,8 +320,29 @@ namespace QuanLyNhanVien
                 MessageBox.Show("DATA NOT UPDATED SUCCESSFULLY");
             }
             conn.Close();
-            cboTimCuaHang.Items.Remove(xoa);
-            cboCuaHang.Items.Remove(xoa);
+        }
+
+        private void quayLạiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormThongTinTaiKhoan frmquanly = new FormThongTinTaiKhoan();
+            frmquanly.ShowDialog();
+        }
+
+        private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnLoc_Click(object sender, EventArgs e)
+        {
+            SqlDataAdapter da = new SqlDataAdapter(
+                "select n.*, c.tencv, h.tench from nhanvien n, chucvu c, cuahang h where n.macv = c.macv and h.mach = n.mach and h.mach= '" + cboTimCuaHang.SelectedValue + "'", conn);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            da.Dispose();
+            dgQLNhanVien.DataSource = dt;
+            conn.Close();
         }
     }
 }
