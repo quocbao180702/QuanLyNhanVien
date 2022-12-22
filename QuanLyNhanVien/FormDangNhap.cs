@@ -57,21 +57,25 @@ namespace QuanLyNhanVien
             {
                 string id = txtUsername.Text;
                 int quyen = int.Parse(dr.GetValue(2).ToString());
-         
-               if (int.Parse(dr.GetValue(2).ToString()) == 1)
-                {
-                    dr.Close();
-                    this.Hide();
-                    FormThongTinTaiKhoan fquanly = new FormThongTinTaiKhoan(id, quyen);
-                    fquanly.ShowDialog();
-                }
-                else if(int.Parse(dr.GetValue(2).ToString()) == 2)
-                {
-                    dr.Close();
-                    this.Hide();
-                    FormThongTinTaiKhoan fquanly = new FormThongTinTaiKhoan(id, quyen);
-                    fquanly.ShowDialog();
-                }
+                dr.Close();
+                this.Hide();
+                FormThongTinTaiKhoan fquanly = new FormThongTinTaiKhoan(id, quyen);
+                fquanly.ShowDialog();
+
+                /*if (int.Parse(dr.GetValue(2).ToString()) == 1)
+                 {
+                     dr.Close();
+                     this.Hide();
+                     FormThongTinTaiKhoan fquanly = new FormThongTinTaiKhoan(id, quyen);
+                     fquanly.ShowDialog();
+                 }
+                 else if(int.Parse(dr.GetValue(2).ToString()) == 2)
+                 {
+                     dr.Close();
+                     this.Hide();
+                     FormThongTinTaiKhoan fquanly = new FormThongTinTaiKhoan(id, quyen);
+                     fquanly.ShowDialog();
+                 }*/
             }
             else
             {

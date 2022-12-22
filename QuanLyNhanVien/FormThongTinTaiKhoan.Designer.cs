@@ -82,7 +82,7 @@
             this.MenuItemXem = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuItemQuanLy = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuItemDangKyCa = new System.Windows.Forms.ToolStripMenuItem();
-            this.quảnLyLuongToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuQuanLyLuong = new System.Windows.Forms.ToolStripMenuItem();
             this.nộiQuyToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -545,7 +545,7 @@
             this.MenuItemXem,
             this.MenuItemQuanLy,
             this.MenuItemDangKyCa,
-            this.quảnLyLuongToolStripMenuItem,
+            this.MenuQuanLyLuong,
             this.nộiQuyToolStripMenuItem1});
             this.MenuItemQuan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MenuItemQuan.Name = "MenuItemQuan";
@@ -596,12 +596,12 @@
             this.MenuItemDangKyCa.Text = "Đăng Ký Ca";
             this.MenuItemDangKyCa.Click += new System.EventHandler(this.MenuItemDangKyCa_Click);
             // 
-            // quảnLyLuongToolStripMenuItem
+            // MenuQuanLyLuong
             // 
-            this.quảnLyLuongToolStripMenuItem.Name = "quảnLyLuongToolStripMenuItem";
-            this.quảnLyLuongToolStripMenuItem.Size = new System.Drawing.Size(293, 26);
-            this.quảnLyLuongToolStripMenuItem.Text = "Quản Lý Lương";
-            this.quảnLyLuongToolStripMenuItem.Click += new System.EventHandler(this.quảnLyLuongToolStripMenuItem_Click);
+            this.MenuQuanLyLuong.Name = "MenuQuanLyLuong";
+            this.MenuQuanLyLuong.Size = new System.Drawing.Size(293, 26);
+            this.MenuQuanLyLuong.Text = "Quản Lý Lương";
+            this.MenuQuanLyLuong.Click += new System.EventHandler(this.quảnLyLuongToolStripMenuItem_Click);
             // 
             // nộiQuyToolStripMenuItem1
             // 
@@ -696,7 +696,7 @@
         private System.Windows.Forms.ToolStripMenuItem MenuItemDangKyCa;
         private System.Windows.Forms.ComboBox cmbCuaHang;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ToolStripMenuItem quảnLyLuongToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem MenuQuanLyLuong;
         private System.Windows.Forms.ToolStripMenuItem nộiQuyToolStripMenuItem1;
     }
 }

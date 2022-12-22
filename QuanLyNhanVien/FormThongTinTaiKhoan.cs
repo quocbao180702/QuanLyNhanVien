@@ -38,10 +38,16 @@ namespace QuanLyNhanVien
         
         private void FormThongTinTaiKhoan_Load(object sender, EventArgs e)
         {
-            if (quyen == 2)
+            if (quyen == 3)
+            {
+                MenuItemQuanLy.Visible = false;
+                MenuQuanLyLuong.Visible = false;
+            }
+            else if(quyen == 2)
             {
                 MenuItemQuanLy.Visible = false;
             }
+            
             conn = new SqlConnection(@"Data Source=BAODANG;Initial Catalog=QLNV;Integrated Security=True");
             conn.Open();
 
