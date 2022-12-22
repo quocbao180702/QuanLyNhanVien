@@ -252,10 +252,10 @@
             this.radNu.AutoSize = true;
             this.radNu.Location = new System.Drawing.Point(137, 5);
             this.radNu.Name = "radNu";
-            this.radNu.Size = new System.Drawing.Size(54, 26);
+            this.radNu.Size = new System.Drawing.Size(56, 26);
             this.radNu.TabIndex = 0;
             this.radNu.TabStop = true;
-            this.radNu.Text = "Nu";
+            this.radNu.Text = "Nữ";
             this.radNu.UseVisualStyleBackColor = true;
             // 
             // radNam
@@ -562,11 +562,11 @@
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.Blue;
-            this.lblTitle.Location = new System.Drawing.Point(289, 9);
+            this.lblTitle.Location = new System.Drawing.Point(531, 9);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(667, 45);
+            this.lblTitle.Size = new System.Drawing.Size(442, 45);
             this.lblTitle.TabIndex = 11;
-            this.lblTitle.Text = "QUẢN LÝ NHÂN VIÊN BÁN HÀNG";
+            this.lblTitle.Text = "QUẢN LÝ NHÂN VIÊN";
             // 
             // grbCuaHang
             // 
