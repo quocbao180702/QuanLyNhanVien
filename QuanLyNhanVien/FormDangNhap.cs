@@ -33,7 +33,7 @@ namespace QuanLyNhanVien
         SqlCommand cmd;
         private void frmDangNhap_Load(object sender, EventArgs e)
         {
-            conn = new SqlConnection(@"Data Source=BAODANG;Initial Catalog=QLNV;Integrated Security=True");
+            conn = new SqlConnection(@"Data Source=GeeKay;Initial Catalog=QLNV;Integrated Security=True");
             conn.Open();
         }
 
@@ -57,25 +57,23 @@ namespace QuanLyNhanVien
             {
                 string id = txtUsername.Text;
                 int quyen = int.Parse(dr.GetValue(2).ToString());
-                dr.Close();
-                this.Hide();
-                FormThongTinTaiKhoan fquanly = new FormThongTinTaiKhoan(id, quyen);
-                fquanly.ShowDialog();
-
-                /*if (int.Parse(dr.GetValue(2).ToString()) == 1)
-                 {
-                     dr.Close();
-                     this.Hide();
-                     FormThongTinTaiKhoan fquanly = new FormThongTinTaiKhoan(id, quyen);
-                     fquanly.ShowDialog();
-                 }
-                 else if(int.Parse(dr.GetValue(2).ToString()) == 2)
-                 {
-                     dr.Close();
-                     this.Hide();
-                     FormThongTinTaiKhoan fquanly = new FormThongTinTaiKhoan(id, quyen);
-                     fquanly.ShowDialog();
-                 }*/
+         
+               if (int.Parse(dr.GetValue(2).ToString()) == 1)
+                {
+                    dr.Close();
+                    this.Hide();
+                    FormThongTinTaiKhoan fquanly = new FormThongTinTaiKhoan(id, quyen);
+                    fquanly.ShowDialog();
+                    this.Close();
+                }
+                else if(int.Parse(dr.GetValue(2).ToString()) == 2)
+                {
+                    dr.Close();
+                    this.Hide();
+                    FormThongTinTaiKhoan fquanly = new FormThongTinTaiKhoan(id, quyen);
+                    fquanly.ShowDialog();
+                    this.Close();
+                }
             }
             else
             {
@@ -112,6 +110,7 @@ namespace QuanLyNhanVien
             this.Hide();
             FormQuenMatKhau frmQMK = new FormQuenMatKhau();
             frmQMK.ShowDialog();
+            this.Close();
         }
 
         // thoat
