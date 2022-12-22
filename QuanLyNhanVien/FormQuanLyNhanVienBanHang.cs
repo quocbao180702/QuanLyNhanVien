@@ -350,6 +350,7 @@ namespace QuanLyNhanVien
             this.Hide();
             FormNoiQuy fnoiquy = new FormNoiQuy();
             fnoiquy.ShowDialog();
+            this.Close();
         }
 
         private void bảngLươngToolStripMenuItem_Click(object sender, EventArgs e)
@@ -357,6 +358,7 @@ namespace QuanLyNhanVien
             this.Hide();
             FormBangLuong fbangluong = new FormBangLuong();
             fbangluong.ShowDialog();
+            this.Close();
         }
     }
 }
