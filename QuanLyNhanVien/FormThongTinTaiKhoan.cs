@@ -76,7 +76,7 @@ namespace QuanLyNhanVien
                 MenuItemQuanLy.Visible = false;
                 MenuQuanLyLuong.Visible = false;
             }
-            conn = new SqlConnection(@"Data Source=BAODANG;Initial Catalog=QLNV;Integrated Security=True");
+            conn = new SqlConnection(@"Data Source=GeeKay;Initial Catalog=QLNV;Integrated Security=True");
             conn.Open();
 
             loadcombox_chucvu();
