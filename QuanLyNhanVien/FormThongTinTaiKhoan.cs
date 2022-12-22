@@ -22,6 +22,9 @@ namespace QuanLyNhanVien
         string id = "";
         SqlConnection conn;
         SqlCommand cmd;
+        SqlDataAdapter dachucvu;
+        SqlDataAdapter daCuaHang;
+
 
         public FormThongTinTaiKhoan(string id, int q)
         {
@@ -35,7 +38,28 @@ namespace QuanLyNhanVien
             Application.Exit();
         }
 
-        
+        public void loadcombox_chucvu()
+        {
+            string sQueryChucVu = @"select * from chucvu";
+            DataTable dt = new DataTable();
+            dachucvu = new SqlDataAdapter(sQueryChucVu, conn);
+            dachucvu.Fill(dt);
+            cmbChucVu.DataSource = dt;
+            cmbChucVu.DisplayMember = "tencv";
+            cmbChucVu.ValueMember = "macv";
+
+        }
+        public void loadcombox_cuahang()
+        {
+            string sQueryChucVu = @"select * from cuahang";
+            DataTable dt = new DataTable();
+            daCuaHang = new SqlDataAdapter(sQueryChucVu, conn);
+            daCuaHang.Fill(dt);
+            cmbCuaHang.DataSource = dt;
+            cmbCuaHang.DisplayMember = "tench";
+            cmbCuaHang.ValueMember = "mach";
+        }
+
         private void FormThongTinTaiKhoan_Load(object sender, EventArgs e)
         {
             if (quyen == 2)
@@ -50,6 +74,8 @@ namespace QuanLyNhanVien
             conn = new SqlConnection(@"Data Source=BAODANG;Initial Catalog=QLNV;Integrated Security=True");
             conn.Open();
 
+            loadcombox_chucvu();
+            loadcombox_cuahang();
             cmd = new SqlCommand("select n.*, c.tencv, h.tench from NhanVien n, chucvu c, cuahang h where n.macv=c.macv and n.mach = h.mach and n.manv = '" + id + "'", conn);
             SqlDataReader dr;
             dr = cmd.ExecuteReader();
@@ -116,7 +142,39 @@ namespace QuanLyNhanVien
 
         private void btnCapNhat_Click(object sender, EventArgs e)
         {
+            try
+            {
+                string gioitinh = "";
+                if (radNam.Checked == true)
+                {
+                    gioitinh = "Nam";
+                }
+                else
+                {
+                    gioitinh = "Nữ";
+                }
 
+                conn.Open();
+                string sThemNV = @"update nhanvien set manv = @MaNV, holot = @HoLot, tennv = @TenNV, gioitinh = @GioiTinh, ngaysinh = @NgaySinh,sdt =  @SDT, email =  @Email, luongcb = @LuongCB, tinh = @Tinh, diachi = @DiaChi, macv =  @MaCV, mach = @MaCH  where manv = @MaNV";
+                SqlCommand cmThemNV = new SqlCommand(sThemNV, conn);
+                cmThemNV.Parameters.AddWithValue("@MaNV", txtMa.Text);
+                cmThemNV.Parameters.AddWithValue("@HoLot", txtHo.Text);
+                cmThemNV.Parameters.AddWithValue("@TenNV", txtTen.Text);
+                cmThemNV.Parameters.AddWithValue("@GioiTinh", gioitinh);
+                cmThemNV.Parameters.AddWithValue("@NgaySinh", dtpNgaySinh.Text);
+                cmThemNV.Parameters.AddWithValue("@SDT", txtSDT.Text);
+                cmThemNV.Parameters.AddWithValue("@Email", txtEmail.Text);
+                cmThemNV.Parameters.AddWithValue("@LuongCB", txtLuongCB.Text);
+                cmThemNV.Parameters.AddWithValue("@Tinh", cmbTinh.SelectedItem);
+                cmThemNV.Parameters.AddWithValue("@DiaChi", txtDiaChi.Text);
+                cmThemNV.Parameters.AddWithValue("@MaCV", cmbChucVu.SelectedValue);
+                cmThemNV.Parameters.AddWithValue("@MaCH", cmbCuaHang.SelectedValue);
+                cmThemNV.ExecuteReader();
+                conn.Close();
+                MessageBox.Show("Cập Nhật Thành Công");
+            }
+            catch { MessageBox.Show("Cập Nhật Không Thành Công"); }
+            
         }
 
         private void nộiQuyToolStripMenuItem1_Click(object sender, EventArgs e)
