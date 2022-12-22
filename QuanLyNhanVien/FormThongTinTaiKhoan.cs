@@ -42,7 +42,7 @@ namespace QuanLyNhanVien
             {
                 MenuItemQuanLy.Visible = false;
             }
-            conn = new SqlConnection(@"Data Source=GeeKay;Initial Catalog=QLNV;Integrated Security=True");
+            conn = new SqlConnection(@"Data Source=BAODANG;Initial Catalog=QLNV;Integrated Security=True");
             conn.Open();
 
             cmd = new SqlCommand("select n.*, c.tencv, h.tench from NhanVien n, chucvu c, cuahang h where n.macv=c.macv and n.mach = h.mach and n.manv = '" + id + "'", conn);
@@ -95,7 +95,7 @@ namespace QuanLyNhanVien
 
         private void MenuItemQuanLy_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
             FormQuanLyNhanVienBanHang fquanly = new FormQuanLyNhanVienBanHang();
             fquanly.ShowDialog();
             this.Close();
@@ -119,6 +119,7 @@ namespace QuanLyNhanVien
             this.Hide();
             FormNoiQuy fnoiquy = new FormNoiQuy();
             fnoiquy.ShowDialog();
+            this.Close();
         }
 
         private void quảnLyLuongToolStripMenuItem_Click(object sender, EventArgs e)
@@ -126,6 +127,7 @@ namespace QuanLyNhanVien
             this.Hide();
             FormBangLuong fbangluong = new FormBangLuong();
             fbangluong.ShowDialog();
+            this.Close();
         }
     }
 }
