@@ -90,6 +90,7 @@ namespace QuanLyNhanVien
             this.Hide();
             FormXemDanhSach fxem = new FormXemDanhSach();
             fxem.ShowDialog();
+            this.Close();
         }
 
         private void MenuItemQuanLy_Click(object sender, EventArgs e)
@@ -97,6 +98,7 @@ namespace QuanLyNhanVien
             this.Close();
             FormQuanLyNhanVienBanHang fquanly = new FormQuanLyNhanVienBanHang();
             fquanly.ShowDialog();
+            this.Close();
         }
 
         private void MenuItemDangKyCa_Click(object sender, EventArgs e)
@@ -104,6 +106,7 @@ namespace QuanLyNhanVien
             this.Hide();
             FormDangKyCa fdangkyca = new FormDangKyCa();
             fdangkyca.ShowDialog();
+            this.Close();
         }
 
         private void btnCapNhat_Click(object sender, EventArgs e)
