@@ -344,5 +344,19 @@ namespace QuanLyNhanVien
             dgQLNhanVien.DataSource = dt;
             conn.Close();
         }
+
+        private void nộiQuyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormNoiQuy fnoiquy = new FormNoiQuy();
+            fnoiquy.ShowDialog();
+        }
+
+        private void bảngLươngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormBangLuong fbangluong = new FormBangLuong();
+            fbangluong.ShowDialog();
+        }
     }
 }
