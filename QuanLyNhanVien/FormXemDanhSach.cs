@@ -17,6 +17,8 @@ namespace QuanLyNhanVien
         {
             InitializeComponent();
         }
+     
+
         SqlConnection conn = new SqlConnection(@"Data Source=GeeKay;Initial Catalog=QLNV;Integrated Security=True");
         DataSet ds = new DataSet("dsQLNV");
         SqlDataAdapter dachucvu;

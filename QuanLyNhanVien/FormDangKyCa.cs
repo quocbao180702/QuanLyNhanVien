@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -16,11 +17,16 @@ namespace QuanLyNhanVien
         {
             InitializeComponent();
         }
-
+        public FormDangKyCa(string ma)
+        {
+            InitializeComponent();
+            this.id = ma;
+        }
+        string id;
         private void btnQuayLai_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormThongTinTaiKhoan fthongtin = new FormThongTinTaiKhoan();
+            FormThongTinTaiKhoan fthongtin = new FormThongTinTaiKhoan(id);
             fthongtin.ShowDialog();
             this.Close();
         }
@@ -46,6 +52,32 @@ namespace QuanLyNhanVien
             {
                 MessageBox.Show("Số Ca bằng 2,  Mỗi tháng bạn phải làm 60 ca \n Hãy làm siêng năng nhé");
             }
+        }
+
+        private void FormDangKyCa_Load(object sender, EventArgs e)
+        {
+            SqlConnection conn = new SqlConnection(@"Data Source=BAODANG;Initial Catalog=QLNV;Integrated Security=True");
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("select n.*, c.tencv, h.tench from NhanVien n, chucvu c, cuahang h where n.macv=c.macv and n.mach = h.mach and n.manv = '" + id + "'", conn);
+            SqlDataReader dr;
+            dr = cmd.ExecuteReader();
+            if (dr.Read())
+            {
+                txtMa.Text = dr.GetValue(0).ToString(); ;
+                txtHo.Text = dr.GetValue(1).ToString();
+                txtTen.Text = dr.GetValue(2).ToString();
+                if (dr.GetValue(3).ToString() == "Nam")
+                {
+                    radNam.Checked = true;
+                }
+                else
+                {
+                    radNu.Checked = true;
+                }
+                txtChucVu.Text = dr.GetValue(12).ToString();
+                txtCuaHang.Text = dr.GetValue(13).ToString();
+            }
+            conn.Close();
         }
     }
 }

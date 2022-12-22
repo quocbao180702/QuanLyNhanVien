@@ -59,7 +59,6 @@
             this.lblMa = new System.Windows.Forms.Label();
             this.picHinhDaiDien = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.lblThoat = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -84,6 +83,12 @@
             this.MenuItemDangKyCa = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuQuanLyLuong = new System.Windows.Forms.ToolStripMenuItem();
             this.nộiQuyToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblSoCaLam = new System.Windows.Forms.Label();
+            this.txtSoNgay = new System.Windows.Forms.TextBox();
+            this.lblSoCaNghi = new System.Windows.Forms.Label();
+            this.txtCaNghi = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txtLuong = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picHinhDaiDien)).BeginInit();
@@ -112,8 +117,14 @@
             this.panel1.Controls.Add(this.txtLuongCB);
             this.panel1.Controls.Add(this.lblLuongCB);
             this.panel1.Controls.Add(this.lblNgaySinh);
+            this.panel1.Controls.Add(this.txtLuong);
+            this.panel1.Controls.Add(this.txtCaNghi);
+            this.panel1.Controls.Add(this.txtSoNgay);
+            this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.txtEmail);
+            this.panel1.Controls.Add(this.lblSoCaNghi);
             this.panel1.Controls.Add(this.lblGioiTinh);
+            this.panel1.Controls.Add(this.lblSoCaLam);
             this.panel1.Controls.Add(this.lblEmail);
             this.panel1.Controls.Add(this.txtHo);
             this.panel1.Controls.Add(this.lblHo);
@@ -123,7 +134,7 @@
             this.panel1.Location = new System.Drawing.Point(13, 72);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1184, 462);
+            this.panel1.Size = new System.Drawing.Size(1184, 562);
             this.panel1.TabIndex = 0;
             // 
             // cmbCuaHang
@@ -153,7 +164,7 @@
             // 
             // btnCapNhat
             // 
-            this.btnCapNhat.Location = new System.Drawing.Point(321, 395);
+            this.btnCapNhat.Location = new System.Drawing.Point(321, 477);
             this.btnCapNhat.Name = "btnCapNhat";
             this.btnCapNhat.Size = new System.Drawing.Size(268, 55);
             this.btnCapNhat.TabIndex = 4;
@@ -447,23 +458,11 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "label1";
             // 
-            // lblThoat
-            // 
-            this.lblThoat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblThoat.AutoSize = true;
-            this.lblThoat.BackColor = System.Drawing.Color.Red;
-            this.lblThoat.Location = new System.Drawing.Point(1173, 9);
-            this.lblThoat.Name = "lblThoat";
-            this.lblThoat.Size = new System.Drawing.Size(24, 22);
-            this.lblThoat.TabIndex = 3;
-            this.lblThoat.Text = "X";
-            this.lblThoat.Click += new System.EventHandler(this.btnThoat_Click);
-            // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(388, 9);
+            this.label13.Location = new System.Drawing.Point(412, 9);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(367, 46);
             this.label13.TabIndex = 1;
@@ -674,20 +673,67 @@
             this.nộiQuyToolStripMenuItem1.Text = "Nội Quy";
             this.nộiQuyToolStripMenuItem1.Click += new System.EventHandler(this.nộiQuyToolStripMenuItem1_Click);
             // 
+            // lblSoCaLam
+            // 
+            this.lblSoCaLam.AutoSize = true;
+            this.lblSoCaLam.Location = new System.Drawing.Point(70, 408);
+            this.lblSoCaLam.Name = "lblSoCaLam";
+            this.lblSoCaLam.Size = new System.Drawing.Size(116, 22);
+            this.lblSoCaLam.TabIndex = 1;
+            this.lblSoCaLam.Text = "Số Ngày Làm";
+            // 
+            // txtSoNgay
+            // 
+            this.txtSoNgay.Location = new System.Drawing.Point(192, 408);
+            this.txtSoNgay.Name = "txtSoNgay";
+            this.txtSoNgay.Size = new System.Drawing.Size(103, 30);
+            this.txtSoNgay.TabIndex = 2;
+            // 
+            // lblSoCaNghi
+            // 
+            this.lblSoCaNghi.AutoSize = true;
+            this.lblSoCaNghi.Location = new System.Drawing.Point(307, 408);
+            this.lblSoCaNghi.Name = "lblSoCaNghi";
+            this.lblSoCaNghi.Size = new System.Drawing.Size(101, 22);
+            this.lblSoCaNghi.TabIndex = 1;
+            this.lblSoCaNghi.Text = "Số Ca Nghĩ";
+            // 
+            // txtCaNghi
+            // 
+            this.txtCaNghi.Location = new System.Drawing.Point(414, 408);
+            this.txtCaNghi.Name = "txtCaNghi";
+            this.txtCaNghi.Size = new System.Drawing.Size(105, 30);
+            this.txtCaNghi.TabIndex = 2;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(544, 411);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(61, 22);
+            this.label14.TabIndex = 1;
+            this.label14.Text = "Lương";
+            // 
+            // txtLuong
+            // 
+            this.txtLuong.Location = new System.Drawing.Point(615, 405);
+            this.txtLuong.Name = "txtLuong";
+            this.txtLuong.Size = new System.Drawing.Size(179, 30);
+            this.txtLuong.TabIndex = 2;
+            // 
             // FormThongTinTaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.ClientSize = new System.Drawing.Size(1210, 551);
-            this.Controls.Add(this.lblThoat);
+            this.ClientSize = new System.Drawing.Size(1210, 647);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.label13);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormThongTinTaiKhoan";
             this.Text = "FormQuanLyNhanVien";
@@ -725,7 +771,6 @@
         private System.Windows.Forms.TextBox txtMa;
         private System.Windows.Forms.Label lblMa;
         private System.Windows.Forms.PictureBox picHinhDaiDien;
-        private System.Windows.Forms.Label lblThoat;
         private System.Windows.Forms.ComboBox cmbTinh;
         private System.Windows.Forms.DateTimePicker dtpNgaySinh;
         private System.Windows.Forms.Panel panel2;
@@ -762,5 +807,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ToolStripMenuItem MenuQuanLyLuong;
         private System.Windows.Forms.ToolStripMenuItem nộiQuyToolStripMenuItem1;
+        private System.Windows.Forms.TextBox txtLuong;
+        private System.Windows.Forms.TextBox txtCaNghi;
+        private System.Windows.Forms.TextBox txtSoNgay;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label lblSoCaNghi;
+        private System.Windows.Forms.Label lblSoCaLam;
     }
 }

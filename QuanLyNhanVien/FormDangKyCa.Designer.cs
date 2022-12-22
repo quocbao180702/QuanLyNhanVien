@@ -33,10 +33,16 @@
             this.lblTen = new System.Windows.Forms.Label();
             this.lblChucVu = new System.Windows.Forms.Label();
             this.grbCa = new System.Windows.Forms.GroupBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.radC = new System.Windows.Forms.RadioButton();
+            this.radB = new System.Windows.Forms.RadioButton();
+            this.radA = new System.Windows.Forms.RadioButton();
+            this.lblChon = new System.Windows.Forms.Label();
             this.txtTen = new System.Windows.Forms.TextBox();
             this.lblMa = new System.Windows.Forms.Label();
             this.txtMa = new System.Windows.Forms.TextBox();
-            this.lblChon = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.radNu = new System.Windows.Forms.RadioButton();
             this.radNam = new System.Windows.Forms.RadioButton();
@@ -45,19 +51,13 @@
             this.btnQuayLai = new System.Windows.Forms.Button();
             this.btnChon = new System.Windows.Forms.Button();
             this.btnBoChon = new System.Windows.Forms.Button();
-            this.radA = new System.Windows.Forms.RadioButton();
-            this.radB = new System.Windows.Forms.RadioButton();
-            this.radC = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtCuaHang = new System.Windows.Forms.TextBox();
             this.grbCa.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblHo
@@ -116,6 +116,81 @@
             this.grbCa.TabStop = false;
             this.grbCa.Text = "Chọn Ca";
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox3.Image = global::QuanLyNhanVien.Properties.Resources.icons8_partly_cloudy_day_48;
+            this.pictureBox3.Location = new System.Drawing.Point(85, 268);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox3.TabIndex = 8;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::QuanLyNhanVien.Properties.Resources.icons8_night_48;
+            this.pictureBox2.Location = new System.Drawing.Point(85, 168);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox2.TabIndex = 8;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::QuanLyNhanVien.Properties.Resources.icons8_morning_48;
+            this.pictureBox1.Location = new System.Drawing.Point(85, 78);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
+            // 
+            // radC
+            // 
+            this.radC.AutoSize = true;
+            this.radC.Location = new System.Drawing.Point(152, 277);
+            this.radC.Name = "radC";
+            this.radC.Size = new System.Drawing.Size(336, 26);
+            this.radC.TabIndex = 7;
+            this.radC.TabStop = true;
+            this.radC.Text = "Ca C: 8:00 – 17:00 (nghỉ trưa 1 tiếng) ";
+            this.radC.UseVisualStyleBackColor = true;
+            // 
+            // radB
+            // 
+            this.radB.AutoSize = true;
+            this.radB.Location = new System.Drawing.Point(153, 180);
+            this.radB.Name = "radB";
+            this.radB.Size = new System.Drawing.Size(199, 26);
+            this.radB.TabIndex = 6;
+            this.radB.TabStop = true;
+            this.radB.Text = "Ca B: 14:30 – 22:30 ";
+            this.radB.UseVisualStyleBackColor = true;
+            // 
+            // radA
+            // 
+            this.radA.AutoSize = true;
+            this.radA.Location = new System.Drawing.Point(152, 88);
+            this.radA.Name = "radA";
+            this.radA.Size = new System.Drawing.Size(189, 26);
+            this.radA.TabIndex = 6;
+            this.radA.TabStop = true;
+            this.radA.Text = "Ca A: 6:30 – 14:30 ";
+            this.radA.UseVisualStyleBackColor = true;
+            // 
+            // lblChon
+            // 
+            this.lblChon.AutoSize = true;
+            this.lblChon.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblChon.Location = new System.Drawing.Point(15, 44);
+            this.lblChon.Name = "lblChon";
+            this.lblChon.Size = new System.Drawing.Size(164, 22);
+            this.lblChon.TabIndex = 0;
+            this.lblChon.Text = "Chọn Ca Làm Việc:";
+            // 
             // txtTen
             // 
             this.txtTen.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -141,16 +216,6 @@
             this.txtMa.Name = "txtMa";
             this.txtMa.Size = new System.Drawing.Size(154, 30);
             this.txtMa.TabIndex = 1;
-            // 
-            // lblChon
-            // 
-            this.lblChon.AutoSize = true;
-            this.lblChon.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblChon.Location = new System.Drawing.Point(15, 44);
-            this.lblChon.Name = "lblChon";
-            this.lblChon.Size = new System.Drawing.Size(164, 22);
-            this.lblChon.TabIndex = 0;
-            this.lblChon.Text = "Chọn Ca Làm Việc:";
             // 
             // panel2
             // 
@@ -238,39 +303,6 @@
             this.btnBoChon.UseVisualStyleBackColor = false;
             this.btnBoChon.Click += new System.EventHandler(this.btnBoChon_Click);
             // 
-            // radA
-            // 
-            this.radA.AutoSize = true;
-            this.radA.Location = new System.Drawing.Point(152, 88);
-            this.radA.Name = "radA";
-            this.radA.Size = new System.Drawing.Size(189, 26);
-            this.radA.TabIndex = 6;
-            this.radA.TabStop = true;
-            this.radA.Text = "Ca A: 6:30 – 14:30 ";
-            this.radA.UseVisualStyleBackColor = true;
-            // 
-            // radB
-            // 
-            this.radB.AutoSize = true;
-            this.radB.Location = new System.Drawing.Point(153, 180);
-            this.radB.Name = "radB";
-            this.radB.Size = new System.Drawing.Size(199, 26);
-            this.radB.TabIndex = 6;
-            this.radB.TabStop = true;
-            this.radB.Text = "Ca B: 14:30 – 22:30 ";
-            this.radB.UseVisualStyleBackColor = true;
-            // 
-            // radC
-            // 
-            this.radC.AutoSize = true;
-            this.radC.Location = new System.Drawing.Point(152, 277);
-            this.radC.Name = "radC";
-            this.radC.Size = new System.Drawing.Size(336, 26);
-            this.radC.TabIndex = 7;
-            this.radC.TabStop = true;
-            this.radC.Text = "Ca C: 8:00 – 17:00 (nghỉ trưa 1 tiếng) ";
-            this.radC.UseVisualStyleBackColor = true;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -281,45 +313,13 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Tên cửa hàng";
             // 
-            // textBox1
+            // txtCuaHang
             // 
-            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(538, 34);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(175, 30);
-            this.textBox1.TabIndex = 1;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox3.Image = global::QuanLyNhanVien.Properties.Resources.icons8_partly_cloudy_day_48;
-            this.pictureBox3.Location = new System.Drawing.Point(85, 268);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(0);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(48, 48);
-            this.pictureBox3.TabIndex = 8;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::QuanLyNhanVien.Properties.Resources.icons8_night_48;
-            this.pictureBox2.Location = new System.Drawing.Point(85, 168);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(48, 48);
-            this.pictureBox2.TabIndex = 8;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::QuanLyNhanVien.Properties.Resources.icons8_morning_48;
-            this.pictureBox1.Location = new System.Drawing.Point(85, 78);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(48, 48);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
+            this.txtCuaHang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCuaHang.Location = new System.Drawing.Point(538, 34);
+            this.txtCuaHang.Name = "txtCuaHang";
+            this.txtCuaHang.Size = new System.Drawing.Size(175, 30);
+            this.txtCuaHang.TabIndex = 1;
             // 
             // FormDangKyCa
             // 
@@ -334,7 +334,7 @@
             this.Controls.Add(this.lblGioiTinh);
             this.Controls.Add(this.grbCa);
             this.Controls.Add(this.lblChucVu);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtCuaHang);
             this.Controls.Add(this.txtTen);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblTen);
@@ -345,13 +345,14 @@
             this.Controls.Add(this.lblHo);
             this.Name = "FormDangKyCa";
             this.Text = "FormDangKyCa";
+            this.Load += new System.EventHandler(this.FormDangKyCa_Load);
             this.grbCa.ResumeLayout(false);
             this.grbCa.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -383,6 +384,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtCuaHang;
     }
 }

@@ -18,16 +18,18 @@ namespace QuanLyNhanVien
         {
             InitializeComponent();
         }
-        SqlConnection conn = new SqlConnection(@"Data Source=GeeKay;Initial Catalog=QLNV;Integrated Security=True");
+        SqlConnection conn = new SqlConnection(@"Data Source=BAODANG;Initial Catalog=QLNV;Integrated Security=True");
         DataSet ds = new DataSet("dsQLNV");
         SqlDataAdapter dachucvu;
         SqlDataAdapter daNhanVien;
+        string id;
+        float tongluong = 0;
 
         private void LoadDataGridView()
         {
             SqlConnection conn = new SqlConnection();
-            conn.ConnectionString = @"Data Source=GeeKay;Initial Catalog=QLNV;Integrated Security=True";
-            string sQueryNhanVien = @"select  n.*, c.tencv, h.tench, l.soca from nhanvien n, chucvu c, cuahang h, lamviec l where n.macv=c.macv and n.mach = h.mach and l.manv = n.manv ";
+            conn.ConnectionString = @"Data Source=BAODANG;Initial Catalog=QLNV;Integrated Security=True";
+            string sQueryNhanVien = @"select  n.*, c.tencv, h.tench, l.soca, l.socanghi, l.luong from nhanvien n, chucvu c, cuahang h, lamviec l where n.macv=c.macv and n.mach = h.mach and l.manv = n.manv";
             daNhanVien = new SqlDataAdapter(sQueryNhanVien, conn);
             daNhanVien.Fill(ds, "tblDSNhanVien");
             dgvLuong.DataSource = ds.Tables["tblDSNhanVien"];
@@ -58,6 +60,10 @@ namespace QuanLyNhanVien
             dgvLuong.Columns["tench"].Width = 250;
             dgvLuong.Columns["soca"].HeaderText = "Số Ca";
             dgvLuong.Columns["soca"].Width = 50;
+            dgvLuong.Columns["socanghi"].HeaderText = "Số Ca Nghĩ";
+            dgvLuong.Columns["socanghi"].Width = 50;
+            dgvLuong.Columns["luong"].HeaderText = "Lương";
+            dgvLuong.Columns["luong"].Width = 50;
             dgvLuong.Columns["mach"].Visible = false;
             dgvLuong.Columns["macv"].Visible = false;
         }
@@ -73,6 +79,7 @@ namespace QuanLyNhanVien
         {
             DataGridViewRow dr = dgvLuong.SelectedRows[0];
             lblInMa.Text = dr.Cells["manv"].Value.ToString();
+            id = dr.Cells["manv"].Value.ToString();
             lblInHovaTen.Text = dr.Cells["holot"].Value.ToString() + " " +dr.Cells["tennv"].Value.ToString();
             lblInPhai.Text = dr.Cells["gioitinh"].Value.ToString();
             lblInNgaySinh.Text = dr.Cells["ngaysinh"].Value.ToString();
@@ -84,27 +91,36 @@ namespace QuanLyNhanVien
             lblInChucVu.Text = dr.Cells["tencv"].Value.ToString();
             lblInCuaHang.Text = dr.Cells["tench"].Value.ToString();
             txtSoCaLam.Text = dr.Cells["soca"].Value.ToString();
+            txtSoCaNghi.Text = dr.Cells["socanghi"].Value.ToString();
+            txtLuong.Text = dr.Cells["luong"].Value.ToString();
         }
-
         private void btnTinhLuong_Click(object sender, EventArgs e)
         {
             float calam = float.Parse(this.txtSoCaLam.Text);
             float canghi = float.Parse(this.txtSoCaNghi.Text);
-
             float l = float.Parse(lblInLuongCB.Text);
             if (canghi <= calam && canghi >= 0)
             {
                 float sum = 0;
                 sum = (l / 30) * (calam - canghi);
+                tongluong = sum;
                 this.txtLuong.Text = sum.ToString();
             }
             else
             {
                 this.txtLuong.ResetText();
-                MessageBox.Show("Nhập lại số ngày nghĩ bé hơn "+calam , "Thong Bao", MessageBoxButtons.OK);
+                MessageBox.Show("Nhập lại số ngày nghĩ bé hơn " + calam, "Thong Bao", MessageBoxButtons.OK);
             }
+            float luong = float.Parse(tongluong.ToString());
+            conn.Open();
+            string truyvan = @"update lamviec set socanghi = @SoCaNghi,  luong = @Luong where manv = @MaNV";
+            SqlCommand cmd = new SqlCommand(truyvan, conn);
+            cmd.Parameters.AddWithValue("@MaNV", id);
+            cmd.Parameters.AddWithValue("@SoCaNghi", txtSoCaNghi.Text);
+            cmd.Parameters.AddWithValue("Luong", luong.ToString());
+            cmd.ExecuteReader();
+            conn.Close();
 
-          
         }
 
         private void btnLamMoi_Click(object sender, EventArgs e)
@@ -156,6 +172,20 @@ namespace QuanLyNhanVien
         private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnCapNhat_Click(object sender, EventArgs e)
+        {
+
+            float luong = float.Parse(tongluong.ToString());
+            conn.Open();
+            string truyvan = @"update lamviec set socanghi = @SoCaNghi,  luong = @Luong where manv = @MaNV";
+            SqlCommand cmd = new SqlCommand(truyvan, conn);
+            cmd.Parameters.AddWithValue("@MaNV", id);
+            cmd.Parameters.AddWithValue("@SoCaNghi", txtSoCaNghi.Text);
+            cmd.Parameters.AddWithValue("Luong", luong.ToString());
+            cmd.ExecuteReader();
+            conn.Close();
         }
     }
 }

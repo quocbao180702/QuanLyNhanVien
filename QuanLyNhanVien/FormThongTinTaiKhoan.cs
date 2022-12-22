@@ -32,6 +32,11 @@ namespace QuanLyNhanVien
             this.id = id;
             this.quyen = q;
         }
+        public FormThongTinTaiKhoan(string id)
+        {
+            InitializeComponent();
+            this.id = id;
+        }
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
@@ -76,7 +81,7 @@ namespace QuanLyNhanVien
 
             loadcombox_chucvu();
             loadcombox_cuahang();
-            cmd = new SqlCommand("select n.*, c.tencv, h.tench from NhanVien n, chucvu c, cuahang h where n.macv=c.macv and n.mach = h.mach and n.manv = '" + id + "'", conn);
+            cmd = new SqlCommand("select n.*, c.tencv, h.tench, l.* from NhanVien n, chucvu c, cuahang h, lamviec l where n.macv=c.macv and n.mach = h.mach and l.manv= n.manv and n.manv = '" + id + "'", conn);
             SqlDataReader dr;
             dr = cmd.ExecuteReader();
             if (dr.Read())
@@ -100,6 +105,9 @@ namespace QuanLyNhanVien
                 txtDiaChi.Text = dr.GetValue(8).ToString();
                 cmbChucVu.Text = dr.GetValue(12).ToString();
                 cmbCuaHang.Text = dr.GetValue(13).ToString();
+                txtCaNghi.Text = dr.GetValue(17).ToString();
+                txtSoNgay.Text = dr.GetValue(15).ToString();
+                txtLuong.Text =  dr.GetValue(18).ToString();
             }
             conn.Close();
         }
@@ -135,7 +143,7 @@ namespace QuanLyNhanVien
         private void MenuItemDangKyCa_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormDangKyCa fdangkyca = new FormDangKyCa();
+            FormDangKyCa fdangkyca = new FormDangKyCa(id);
             fdangkyca.ShowDialog();
             this.Close();
         }

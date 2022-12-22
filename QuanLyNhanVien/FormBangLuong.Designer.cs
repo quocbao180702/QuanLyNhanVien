@@ -68,6 +68,7 @@
             this.làmMớiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quayLạiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thoátToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnCapNhat = new System.Windows.Forms.Button();
             this.grbThongTin.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLuong)).BeginInit();
@@ -339,6 +340,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnCapNhat);
             this.groupBox1.Controls.Add(this.btnLamMoi);
             this.groupBox1.Controls.Add(this.btnTinhLuong);
             this.groupBox1.Controls.Add(this.txtLuong);
@@ -349,7 +351,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Location = new System.Drawing.Point(12, 340);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1238, 100);
+            this.groupBox1.Size = new System.Drawing.Size(1238, 159);
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông Tin Lương";
@@ -358,7 +360,7 @@
             // 
             this.btnLamMoi.BackColor = System.Drawing.Color.Yellow;
             this.btnLamMoi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLamMoi.Location = new System.Drawing.Point(1108, 36);
+            this.btnLamMoi.Location = new System.Drawing.Point(742, 107);
             this.btnLamMoi.Name = "btnLamMoi";
             this.btnLamMoi.Size = new System.Drawing.Size(113, 46);
             this.btnLamMoi.TabIndex = 17;
@@ -370,7 +372,7 @@
             // 
             this.btnTinhLuong.BackColor = System.Drawing.Color.Yellow;
             this.btnTinhLuong.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTinhLuong.Location = new System.Drawing.Point(627, 36);
+            this.btnTinhLuong.Location = new System.Drawing.Point(179, 107);
             this.btnTinhLuong.Name = "btnTinhLuong";
             this.btnTinhLuong.Size = new System.Drawing.Size(113, 46);
             this.btnTinhLuong.TabIndex = 17;
@@ -381,15 +383,15 @@
             // txtLuong
             // 
             this.txtLuong.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLuong.Location = new System.Drawing.Point(818, 45);
+            this.txtLuong.Location = new System.Drawing.Point(986, 48);
             this.txtLuong.Name = "txtLuong";
-            this.txtLuong.Size = new System.Drawing.Size(276, 30);
+            this.txtLuong.Size = new System.Drawing.Size(199, 30);
             this.txtLuong.TabIndex = 18;
             // 
             // txtSoCaNghi
             // 
             this.txtSoCaNghi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSoCaNghi.Location = new System.Drawing.Point(424, 45);
+            this.txtSoCaNghi.Location = new System.Drawing.Point(580, 48);
             this.txtSoCaNghi.Name = "txtSoCaNghi";
             this.txtSoCaNghi.Size = new System.Drawing.Size(178, 30);
             this.txtSoCaNghi.TabIndex = 18;
@@ -399,7 +401,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(746, 48);
+            this.label5.Location = new System.Drawing.Point(873, 51);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(66, 22);
             this.label5.TabIndex = 17;
@@ -409,7 +411,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(317, 48);
+            this.label4.Location = new System.Drawing.Point(454, 51);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(101, 22);
             this.label4.TabIndex = 17;
@@ -418,7 +420,7 @@
             // txtSoCaLam
             // 
             this.txtSoCaLam.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSoCaLam.Location = new System.Drawing.Point(146, 45);
+            this.txtSoCaLam.Location = new System.Drawing.Point(214, 48);
             this.txtSoCaLam.Name = "txtSoCaLam";
             this.txtSoCaLam.Size = new System.Drawing.Size(165, 30);
             this.txtSoCaLam.TabIndex = 18;
@@ -427,7 +429,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(14, 48);
+            this.label3.Location = new System.Drawing.Point(65, 51);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(125, 22);
             this.label3.TabIndex = 17;
@@ -436,7 +438,7 @@
             // dgvLuong
             // 
             this.dgvLuong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLuong.Location = new System.Drawing.Point(12, 447);
+            this.dgvLuong.Location = new System.Drawing.Point(12, 533);
             this.dgvLuong.Name = "dgvLuong";
             this.dgvLuong.RowHeadersWidth = 51;
             this.dgvLuong.RowTemplate.Height = 24;
@@ -470,14 +472,14 @@
             // tínhLươngToolStripMenuItem
             // 
             this.tínhLươngToolStripMenuItem.Name = "tínhLươngToolStripMenuItem";
-            this.tínhLươngToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.tínhLươngToolStripMenuItem.Size = new System.Drawing.Size(166, 26);
             this.tínhLươngToolStripMenuItem.Text = "Tính Lương";
             this.tínhLươngToolStripMenuItem.Click += new System.EventHandler(this.tínhLươngToolStripMenuItem_Click);
             // 
             // làmMớiToolStripMenuItem
             // 
             this.làmMớiToolStripMenuItem.Name = "làmMớiToolStripMenuItem";
-            this.làmMớiToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.làmMớiToolStripMenuItem.Size = new System.Drawing.Size(166, 26);
             this.làmMớiToolStripMenuItem.Text = "Làm Mới";
             this.làmMớiToolStripMenuItem.Click += new System.EventHandler(this.làmMớiToolStripMenuItem_Click);
             // 
@@ -495,11 +497,23 @@
             this.thoátToolStripMenuItem.Text = "Thoát";
             this.thoátToolStripMenuItem.Click += new System.EventHandler(this.thoátToolStripMenuItem_Click);
             // 
+            // btnCapNhat
+            // 
+            this.btnCapNhat.BackColor = System.Drawing.Color.Yellow;
+            this.btnCapNhat.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCapNhat.Location = new System.Drawing.Point(507, 107);
+            this.btnCapNhat.Name = "btnCapNhat";
+            this.btnCapNhat.Size = new System.Drawing.Size(113, 46);
+            this.btnCapNhat.TabIndex = 17;
+            this.btnCapNhat.Text = "Cập Nhật";
+            this.btnCapNhat.UseVisualStyleBackColor = false;
+            this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
+            // 
             // FormBangLuong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1262, 685);
+            this.ClientSize = new System.Drawing.Size(1262, 754);
             this.Controls.Add(this.dgvLuong);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
@@ -565,5 +579,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ToolStripMenuItem quayLạiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thoátToolStripMenuItem;
+        private System.Windows.Forms.Button btnCapNhat;
     }
 }
