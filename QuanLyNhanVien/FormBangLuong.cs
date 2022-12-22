@@ -133,5 +133,29 @@ namespace QuanLyNhanVien
                 MessageBox.Show("Nhập lại số", "Thông Báo");
             }
         }
+
+        private void tínhLươngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            btnTinhLuong_Click(sender, e);
+        }
+
+        private void làmMớiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            btnLamMoi_Click(sender, e);
+        }
+
+        private void quayLạiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormThongTinTaiKhoan fthongtin = new FormThongTinTaiKhoan();
+            fthongtin.ShowDialog();
+            this.Close();
+        }
+
+        private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
