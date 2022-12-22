@@ -10,7 +10,9 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 using static System.Net.Mime.MediaTypeNames;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace QuanLyNhanVien
@@ -25,6 +27,7 @@ namespace QuanLyNhanVien
         DataSet ds = new DataSet("dsQLNV");
         SqlDataAdapter dachucvu;
         SqlDataAdapter daNhanVien;
+        SqlDataAdapter daCuaHang;
 
         private void LoadDataGridView()
         {
@@ -57,10 +60,31 @@ namespace QuanLyNhanVien
             dgQLNhanVien.Columns["tinh"].Width = 90;
             dgQLNhanVien.Columns["tencv"].HeaderText = "Chức Vụ";
             dgQLNhanVien.Columns["tencv"].Width = 80;
-            dgQLNhanVien.Columns["macv"].Visible = false;
+            dgQLNhanVien.Columns["macv"].Visible = true;
             dgQLNhanVien.Columns["tench"].HeaderText = "Cửa Hàng";
             dgQLNhanVien.Columns["tench"].Width = 80;
             dgQLNhanVien.Columns["mach"].Visible = false;
+        }
+        public void loadcombox_chucvu()
+        {
+            string sQueryChucVu = @"select * from chucvu";
+            DataTable dt = new DataTable();
+            dachucvu = new SqlDataAdapter(sQueryChucVu, conn);
+            dachucvu.Fill(dt);
+            cmbChucVu.DataSource = dt;
+            cmbChucVu.DisplayMember = "tencv";
+            cmbChucVu.ValueMember = "macv";
+         
+        }
+        public void loadcombox_cuahang()
+        {
+            string sQueryChucVu = @"select * from cuahang";
+            DataTable dt = new DataTable();
+            daCuaHang = new SqlDataAdapter(sQueryChucVu, conn);
+            daCuaHang.Fill(dt);
+            cboCuaHang.DataSource = dt;
+            cboCuaHang.DisplayMember = "tench";
+            cboCuaHang.ValueMember = "mach";
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
@@ -71,13 +95,16 @@ namespace QuanLyNhanVien
         private void btnQuayLai_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormThongTinTaiKhoan  frmquanly = new FormThongTinTaiKhoan();
+            FormThongTinTaiKhoan frmquanly = new FormThongTinTaiKhoan();
             frmquanly.ShowDialog();
         }
-       
+
         private void FormQuanLyNhanVienBanHang_Load(object sender, EventArgs e)
         {
+            loadcombox_chucvu();
+            loadcombox_cuahang();
             LoadDataGridView();
+           
         }
 
         private void dgQLNhanVien_Click(object sender, EventArgs e)
@@ -138,73 +165,42 @@ namespace QuanLyNhanVien
             dr.Cells["mach"].Value = cboCuaHang.SelectedValue;
             dr.Cells["tench"].Value = cboCuaHang.Text;
         }
-        //them
 
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            DataRow row = ds.Tables["tblDSNhanVien"].NewRow();
-           
-            row["manv"] = txtMa.Text;
-            row["holot"] = txtHo.Text;
-            row["tennv"] = txtTen.Text;
-            string phai = "";
-            if (radNu.Checked == true)
-            {
-                row["gioitinh"] = "Nữ";
-                phai = "Nữ";
-                
-            }
-            else
-            {
-                row["gioitinh"] = "Nam";
-                phai = "Nam";
-            }
-            row["ngaysinh"] = dtpNgaySinh.Text;
-            row["sdt"] = txtSDT.Text;
-            row["email"] = txtEmail.Text;
-            row["luongcb"] = txtLuongCoBan.Text;
-            row["tinh"] = cboTinh.Text;
-            row["diachi"] = txtDiaChi.Text;
-            row["macv"] = cmbChucVu.SelectedValue;
-            row["tencv"] = cmbChucVu.Text;
-            row["mach"] = cboCuaHang.SelectedValue;
-            row["tench"] = cboCuaHang.Text;
-            ds.Tables["tblDSNhanVien"].Rows.Add(row);
-            conn.Open();
-            SqlCommand cmd = new SqlCommand(@"insert into nhanvien values(N'" + txtMa.Text + "',N' "+ txtHo.Text + "',N'"+ txtTen.Text +  "',N'" + phai + " ','"+ dtpNgaySinh.Text + "','" + txtSDT.Text + "','" + txtEmail.Text +" '," +txtLuongCoBan.Text + ",N'"  + txtDiaChi.Text + " ',N'" + cboTinh.SelectedValue.ToString() + "',N' " + cmbChucVu.SelectedValue.ToString() + "','" + cboCuaHang.SelectedValue.ToString() + "')",conn);
-            daNhanVien.InsertCommand = cmd;
-            conn.Close();
-        }
-        public void Them()
-        {
-            /*string sThemNV = @"insert into nhanvien values(@MaNV, @HoLot, @TenNV, @Phai, @NgaySinh, @SDT, @Email, @LuongCB, @Tinh, @DiaChi, @MaCV,@MaCH)";
-            SqlCommand cmThemNV = new SqlCommand(sThemNV, conn);
-            cmThemNV.Parameters.Add("@MaNV", SqlDbType.Char, 5, "manv");
-            cmThemNV.Parameters.Add("@HoLot", SqlDbType.NVarChar, 50, "holot");
-            cmThemNV.Parameters.Add("@TenNV", SqlDbType.NVarChar, 10, "tennv");
-            cmThemNV.Parameters.Add("@Phai", SqlDbType.NVarChar, 3, "gioitinh");
-            cmThemNV.Parameters.Add("@NgaySinh", SqlDbType.SmallDateTime, 10, "ngaysinh");
-            cmThemNV.Parameters.Add("@SDT", SqlDbType.NVarChar, 10, "sdt");
-            cmThemNV.Parameters.Add("@Email", SqlDbType.VarChar, 30, "email");
-            cmThemNV.Parameters.Add("@LuongCB", SqlDbType.Float, 6, "luongcb");
-            cmThemNV.Parameters.Add("@Tinh", SqlDbType.NVarChar, 15, "tinh");
-            cmThemNV.Parameters.Add("@DiaChi", SqlDbType.NVarChar, 50, "diachi");
-            cmThemNV.Parameters.Add("@MaCV", SqlDbType.NVarChar, 5, "macv");
-            cmThemNV.Parameters.Add("@MaCH", SqlDbType.NVarChar, 6, "mach");
-            daNhanVien.InsertCommand = cmThemNV;*/
-           /* conn.Open();
-            string sql = @"Insert Into tblkhachhang(manv,holot,tennv,gioitinh,ngaysinh, sdt,email, luongcb,diachi,tinh,macv,mach)    VALUES  (N'" + txtMa.Text + @"',N'" + txtHo.Text + @"',N'" + txtTen.Text + @"',N'" + radNam.Text + @"',N'" + txtCmnd.Text + @"',N'" + txtDiachi.Text + @"',N'" + txtSodt.Text + @"',N'" + txtGhichu.Text + @"')";
-            SqlCommand cmd = new SqlCommand(sql, conn);
-            try
-            {
+                DataRow row = ds.Tables["tblDSNhanVien"].NewRow();
+                row["manv"] = txtMa.Text;
+                row["holot"] = txtHo.Text;
+                row["tennv"] = txtTen.Text;
+                if (radNu.Checked == true)
+                {
+                    row["gioitinh"] = "Nữ";
 
+                }
+                else
+                {
+                    row["gioitinh"] = "Nam";
+
+                }
+                row["ngaysinh"] = dtpNgaySinh.Text;
+                row["sdt"] = txtSDT.Text;
+                row["email"] = txtEmail.Text;
+                row["luongcb"] = txtLuongCoBan.Text;
+                row["diachi"] = txtDiaChi.Text;
+                row["tinh"] = cboTinh.Text;
+                row["macv"] = cmbChucVu.SelectedValue;
+                row["tencv"] = cmbChucVu.Text;
+                row["mach"] = cboCuaHang.SelectedValue;
+                row["tench"] = cboCuaHang.Text;
+                ds.Tables["tblDSNhanVien"].Rows.Add(row);
+                conn.Open();
+                string truyvan = @"Insert Into NhanVien VALUES  (N'" + row["manv"].ToString() + @"',N'" + row["holot"].ToString() + "',N'" + row["tennv"].ToString() + "',N'" + row["gioitinh"].ToString() + "',N'" + row["ngaysinh"].ToString() + "',N'" + row["sdt"].ToString() + "',N'" + row["email"].ToString() + "',N'" + row["luongcb"].ToString() + "',N'" + row["diachi"].ToString() + "',N'" + row["tinh"].ToString() + "',N'" + row["macv"].ToString() + "',N'" + row["mach"].ToString() + "')";
+                SqlCommand cmd = new SqlCommand(truyvan, conn);
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Thành công", "Thêm Khách Hàng", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            catch { }*/
+                conn.Close();
+        
         }
-
         private void btnTim_Click(object sender, EventArgs e)
         {
             conn.Open();
@@ -271,46 +267,6 @@ namespace QuanLyNhanVien
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-
-<<<<<<< HEAD
-            /*  for (int i = 0; i < dgQLNhanVien.Rows.Count; i++)
-              {
-                  conn.Open();
-                  SqlCommand cmd = new SqlCommand("insert into nhanvien(manv,holot,tennv,gioitinh,ngaysinh, sdt,email, luongcb,diachi,tinh,macv,mach) values(@MaNV, @HoLot, @TenNV, @GioiTinh, @NgaySinh, @SDT, @Email, @LuongCB, @Tinh, @DiaChi, @MaCV,@MaCH)", conn);
-                  cmd.Parameters.AddWithValue("@MaNV", dgQLNhanVien.Rows[i].Cells[0].Value);
-                  cmd.Parameters.AddWithValue("@HoLot", dgQLNhanVien.Rows[i].Cells[1].Value);
-                  cmd.Parameters.AddWithValue("@TenNV", dgQLNhanVien.Rows[i].Cells[2].Value);
-                  cmd.Parameters.AddWithValue("@GioiTinh", dgQLNhanVien.Rows[i].Cells[3].Value);
-                  cmd.Parameters.AddWithValue("@NgaySinh", dgQLNhanVien.Rows[i].Cells[4].Value);
-                  cmd.Parameters.AddWithValue("@SDT", dgQLNhanVien.Rows[i].Cells[5].Value);
-                  cmd.Parameters.AddWithValue("@Email", dgQLNhanVien.Rows[i].Cells[6].Value);
-                  cmd.Parameters.AddWithValue("@LuongCB", dgQLNhanVien.Rows[i].Cells[7].Value);
-                  cmd.Parameters.AddWithValue("@Tinh", dgQLNhanVien.Rows[i].Cells[8].Value);
-                  cmd.Parameters.AddWithValue("@DiaChi", dgQLNhanVien.Rows[i].Cells[9].Value);
-                  cmd.Parameters.AddWithValue("@MaCV", dgQLNhanVien.Rows[i].Cells[10].Value);
-                  cmd.Parameters.AddWithValue("@MaCH", dgQLNhanVien.Rows[i].Cells[11].Value);
-=======
-            for (int i = 0; i < dgQLNhanVien.Rows.Count; i++)
-            {
-                conn.Open();
-                SqlCommand cmd = new SqlCommand("insert into information(manv,holot,tennv,gioitinh,ngaysinh,luongcb,diachi,tinh,macv,mach)  values(@MaNV, @HoLot, @TenNV, @Phai, @NgaySinh, @SDT, @Email, @LuongCB, @Tinh, @DiaChi, @MaCV,@MaCH)", conn);
-                cmd.Parameters.AddWithValue("@MaNV", dgQLNhanVien.Rows[i].Cells[0].Value);
-                cmd.Parameters.AddWithValue("@HoLot", dgQLNhanVien.Rows[i].Cells[1].Value);
-                cmd.Parameters.AddWithValue("@TenNV", dgQLNhanVien.Rows[i].Cells[2].Value);
-                cmd.Parameters.AddWithValue("@Phai", dgQLNhanVien.Rows[i].Cells[3].Value);
-                cmd.Parameters.AddWithValue("@NgaySinh", dgQLNhanVien.Rows[i].Cells[0].Value);
-                cmd.Parameters.AddWithValue("@SDT", dgQLNhanVien.Rows[i].Cells[0].Value);
-                cmd.Parameters.AddWithValue("@Email", dgQLNhanVien.Rows[i].Cells[0].Value);
-                cmd.Parameters.AddWithValue("@LuongCB", dgQLNhanVien.Rows[i].Cells[0].Value);
-                cmd.Parameters.AddWithValue("@Tinh", dgQLNhanVien.Rows[i].Cells[0].Value);
-                cmd.Parameters.AddWithValue("@DiaChi", dgQLNhanVien.Rows[i].Cells[0].Value);
-                cmd.Parameters.AddWithValue("@MaCV", dgQLNhanVien.Rows[i].Cells[0].Value);
->>>>>>> 39d6fbf975087e3aac9b2822192568ebfb607f0d
-
-                  cmd.ExecuteNonQuery();
-                  conn.Close();
-              }*/
-            Them();
             MessageBox.Show("Successfully Added", "VINSMOKE MJ", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 

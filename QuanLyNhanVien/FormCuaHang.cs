@@ -17,8 +17,8 @@ namespace QuanLyNhanVien
         {
             InitializeComponent();
         }
-        SqlConnection conn;
-        SqlCommand cmd;
+        /*SqlConnection conn;
+        SqlCommand cmd;*/
 
 
         public string them()
@@ -28,7 +28,7 @@ namespace QuanLyNhanVien
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            conn.ConnectionString = @"Data Source=BAODANG;Initial Catalog=QLNV;Integrated Security=True";
+           /* conn.ConnectionString = @"Data Source=BAODANG;Initial Catalog=QLNV;Integrated Security=True";
             conn.Open();
             cmd = new SqlCommand("insert into cuahang values(@mach, @tench, @diachi)", conn);
             cmd.Parameters.AddWithValue("mach", txtMaCuaHang.Text);
@@ -36,7 +36,7 @@ namespace QuanLyNhanVien
             cmd.Parameters.AddWithValue("diachi", txtDCCuaHang.Text);
             cmd.ExecuteNonQuery();
             MessageBox.Show("Add Cửa Hàng Thành Công !!!", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            conn.Close();
+            conn.Close();*/
         }
 
         private void FormCuaHang_Load(object sender, EventArgs e)

@@ -45,6 +45,7 @@
             this.radNam = new System.Windows.Forms.RadioButton();
             this.lblPhai = new System.Windows.Forms.Label();
             this.cmbChucVu = new System.Windows.Forms.ComboBox();
+            this.cboCuaHang = new System.Windows.Forms.ComboBox();
             this.cboTinh = new System.Windows.Forms.ComboBox();
             this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.txtLuongCoBan = new System.Windows.Forms.TextBox();
@@ -72,7 +73,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btnThemCuaHang = new System.Windows.Forms.Button();
             this.btnXoaCuaHang = new System.Windows.Forms.Button();
-            this.cboCuaHang = new System.Windows.Forms.ComboBox();
             this.grbChucVu.SuspendLayout();
             this.grbThongTin.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -283,14 +283,19 @@
             // 
             this.cmbChucVu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbChucVu.FormattingEnabled = true;
-            this.cmbChucVu.Items.AddRange(new object[] {
-            "Trưởng Kho",
-            "Phó Kho",
-            "Nhân viên Kho"});
             this.cmbChucVu.Location = new System.Drawing.Point(518, 201);
             this.cmbChucVu.Name = "cmbChucVu";
             this.cmbChucVu.Size = new System.Drawing.Size(230, 30);
             this.cmbChucVu.TabIndex = 25;
+            // 
+            // cboCuaHang
+            // 
+            this.cboCuaHang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboCuaHang.FormattingEnabled = true;
+            this.cboCuaHang.Location = new System.Drawing.Point(518, 292);
+            this.cboCuaHang.Name = "cboCuaHang";
+            this.cboCuaHang.Size = new System.Drawing.Size(230, 30);
+            this.cboCuaHang.TabIndex = 24;
             // 
             // cboTinh
             // 
@@ -621,19 +626,6 @@
             this.btnXoaCuaHang.Text = "Xóa";
             this.btnXoaCuaHang.UseVisualStyleBackColor = true;
             this.btnXoaCuaHang.Click += new System.EventHandler(this.btnXoaCuaHang_Click);
-            // 
-            // cboCuaHang
-            // 
-            this.cboCuaHang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboCuaHang.FormattingEnabled = true;
-            this.cboCuaHang.Items.AddRange(new object[] {
-            "Trà Sữa Muối (chi nhánh Long Xuyên)",
-            "Trà Sữa Muối (chi nhánh Châu Đốc)",
-            "Trà Sữa Muối (chi nhánh Cần Thơ)"});
-            this.cboCuaHang.Location = new System.Drawing.Point(518, 292);
-            this.cboCuaHang.Name = "cboCuaHang";
-            this.cboCuaHang.Size = new System.Drawing.Size(230, 30);
-            this.cboCuaHang.TabIndex = 24;
             // 
             // FormQuanLyNhanVienBanHang
             // 
