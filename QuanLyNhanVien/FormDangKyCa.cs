@@ -23,40 +23,10 @@ namespace QuanLyNhanVien
             this.id = ma;
         }
         string id;
-        private void btnQuayLai_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            FormThongTinTaiKhoan fthongtin = new FormThongTinTaiKhoan(id);
-            fthongtin.ShowDialog();
-            this.Close();
-        }
-
-        private void btnBoChon_Click(object sender, EventArgs e)
-        {
-            radA.Checked = false;
-            radB.Checked = false;
-            radC.Checked = false;
-        }
-
-        private void btnChon_Click(object sender, EventArgs e)
-        {
-            if(radA.Checked)
-            {
-                MessageBox.Show("Số Ca bằng 1, Mỗi tháng bạn phải làm 30 ca \n Hãy làm siêng năng nhé");
-            }
-            else if(radB.Checked)
-            {
-                MessageBox.Show("Số Ca bằng 1,  Mỗi tháng bạn phải làm 30 ca \n Hãy làm siêng năng nhé");
-            }
-            else
-            {
-                MessageBox.Show("Số Ca bằng 2,  Mỗi tháng bạn phải làm 60 ca \n Hãy làm siêng năng nhé");
-            }
-        }
-
+        SqlConnection conn;
         private void FormDangKyCa_Load(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection(@"Data Source=BAODANG;Initial Catalog=QLNV;Integrated Security=True");
+            conn = new SqlConnection(@"Data Source=BAODANG;Initial Catalog=QLNV;Integrated Security=True");
             conn.Open();
             SqlCommand cmd = new SqlCommand("select n.*, c.tencv, h.tench from NhanVien n, chucvu c, cuahang h where n.macv=c.macv and n.mach = h.mach and n.manv = '" + id + "'", conn);
             SqlDataReader dr;
@@ -79,5 +49,76 @@ namespace QuanLyNhanVien
             }
             conn.Close();
         }
+        private void btnQuayLai_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormThongTinTaiKhoan fthongtin = new FormThongTinTaiKhoan(id);
+            fthongtin.ShowDialog();
+            this.Close();
+        }
+
+        private void btnBoChon_Click(object sender, EventArgs e)
+        {
+            radA.Checked = false;
+            radB.Checked = false;
+            radC.Checked = false;
+        }
+
+        private void btnChon_Click(object sender, EventArgs e)
+        {
+            int soca = 0;
+           // conn.Open();
+            if(radA.Checked)
+            {
+                try
+                {
+                    soca = 30;
+                    conn.Open();
+                    string sThemNV = @"update lamviec set soca = @SoCa where manv = @MaNV";
+                    SqlCommand cmThemNV = new SqlCommand(sThemNV, conn);
+                    cmThemNV.Parameters.AddWithValue("@MaNV", txtMa.Text);
+                    cmThemNV.Parameters.AddWithValue("@SoCa", soca.ToString());
+
+                    cmThemNV.ExecuteReader();
+                    conn.Close();
+                    MessageBox.Show("Bạn Đã Chọn Ca Thành Công");
+                }
+                catch { MessageBox.Show("Không Đăng Ký Ca Thành Công"); }
+            }
+            else if(radB.Checked)
+            {
+                try { 
+                soca = 30;
+                conn.Open();
+                string sThemNV = @"update lamviec set soca = @SoCa where manv = @MaNV";
+                SqlCommand cmThemNV = new SqlCommand(sThemNV, conn);
+                cmThemNV.Parameters.AddWithValue("@MaNV", txtMa.Text);
+                cmThemNV.Parameters.AddWithValue("@SoCa", soca.ToString());
+
+                cmThemNV.ExecuteReader();
+                conn.Close();
+                MessageBox.Show("Bạn Đã Chọn Ca Thành Công");
+                }
+                catch { MessageBox.Show("Không Đăng Ký Ca Thành Công"); }
+            }
+            else
+            {
+                try { 
+                soca = 60;
+                conn.Open();
+                string sThemNV = @"update lamviec set soca = @SoCa where manv = @MaNV";
+                SqlCommand cmThemNV = new SqlCommand(sThemNV, conn);
+                cmThemNV.Parameters.AddWithValue("@MaNV", txtMa.Text);
+                cmThemNV.Parameters.AddWithValue("@SoCa", soca.ToString());
+
+                cmThemNV.ExecuteReader();
+                conn.Close();
+                MessageBox.Show("Bạn Đã Chọn Ca Thành Công");
+                }
+                catch { MessageBox.Show("Không Đăng Ký Ca Thành Công"); }
+            }
+        }
+
+       
     }
 }

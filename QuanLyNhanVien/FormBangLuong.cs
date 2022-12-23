@@ -73,6 +73,7 @@ namespace QuanLyNhanVien
             LoadDataGridView();
             txtSoCaLam.ReadOnly = true;
             txtLuong.ReadOnly = true;
+            btnCapNhat.Enabled = false;
         }
 
         private void dgvLuong_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -111,15 +112,7 @@ namespace QuanLyNhanVien
                 this.txtLuong.ResetText();
                 MessageBox.Show("Nhập lại số ngày nghĩ bé hơn " + calam, "Thong Bao", MessageBoxButtons.OK);
             }
-            float luong = float.Parse(tongluong.ToString());
-            conn.Open();
-            string truyvan = @"update lamviec set socanghi = @SoCaNghi,  luong = @Luong where manv = @MaNV";
-            SqlCommand cmd = new SqlCommand(truyvan, conn);
-            cmd.Parameters.AddWithValue("@MaNV", id);
-            cmd.Parameters.AddWithValue("@SoCaNghi", txtSoCaNghi.Text);
-            cmd.Parameters.AddWithValue("Luong", luong.ToString());
-            cmd.ExecuteReader();
-            conn.Close();
+            btnCapNhat.Enabled = true;
 
         }
 
@@ -176,16 +169,19 @@ namespace QuanLyNhanVien
 
         private void btnCapNhat_Click(object sender, EventArgs e)
         {
-
-            float luong = float.Parse(tongluong.ToString());
-            conn.Open();
-            string truyvan = @"update lamviec set socanghi = @SoCaNghi,  luong = @Luong where manv = @MaNV";
-            SqlCommand cmd = new SqlCommand(truyvan, conn);
-            cmd.Parameters.AddWithValue("@MaNV", id);
-            cmd.Parameters.AddWithValue("@SoCaNghi", txtSoCaNghi.Text);
-            cmd.Parameters.AddWithValue("Luong", luong.ToString());
-            cmd.ExecuteReader();
-            conn.Close();
+            try
+            {
+                float luong = float.Parse(tongluong.ToString());
+                conn.Open();
+                string truyvan = @"update lamviec set socanghi = @SoCaNghi,  luong = @Luong where manv = @MaNV";
+                SqlCommand cmd = new SqlCommand(truyvan, conn);
+                cmd.Parameters.AddWithValue("@MaNV", id);
+                cmd.Parameters.AddWithValue("@SoCaNghi", txtSoCaNghi.Text);
+                cmd.Parameters.AddWithValue("Luong", luong.ToString());
+                cmd.ExecuteReader();
+                conn.Close();
+                MessageBox.Show("Cập Nhật Thành Công");
+            } catch { MessageBox.Show("Cập Nhật Không Thành Công"); }
         }
 
         private void btnQuayLai_Click(object sender, EventArgs e)

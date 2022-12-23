@@ -55,9 +55,8 @@ namespace QuanLyNhanVien
             SqlDataReader dr =  cmd.ExecuteReader();
             if (dr.Read())
             {
-                string id = txtUsername.Text;
-                int quyen = int.Parse(dr.GetValue(2).ToString());
-         
+                    string id = txtUsername.Text;
+                    int quyen = int.Parse(dr.GetValue(2).ToString());
                     dr.Close();
                     this.Hide();
                     FormThongTinTaiKhoan fquanly = new FormThongTinTaiKhoan(id, quyen);

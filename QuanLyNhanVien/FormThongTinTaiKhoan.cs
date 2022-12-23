@@ -76,6 +76,11 @@ namespace QuanLyNhanVien
                 MenuItemQuanLy.Visible = false;
                 MenuQuanLyLuong.Visible = false;
             }
+            if(quyen == 1)
+            {
+                MenuItemQuanLy.Visible = true;
+                MenuQuanLyLuong.Visible = true;
+            }
             conn = new SqlConnection(@"Data Source=BAODANG;Initial Catalog=QLNV;Integrated Security=True");
             conn.Open();
 
@@ -86,7 +91,7 @@ namespace QuanLyNhanVien
             dr = cmd.ExecuteReader();
             if (dr.Read())
             {
-                txtMa.Text = dr.GetValue(0).ToString(); ;
+                txtMa.Text = dr.GetValue(0).ToString(); 
                 txtHo.Text = dr.GetValue(1).ToString();
                 txtTen.Text = dr.GetValue(2).ToString();
                 if (dr.GetValue(3).ToString() == "Nam")
@@ -105,9 +110,9 @@ namespace QuanLyNhanVien
                 txtDiaChi.Text = dr.GetValue(8).ToString();
                 cmbChucVu.Text = dr.GetValue(12).ToString();
                 cmbCuaHang.Text = dr.GetValue(13).ToString();
-                txtCaNghi.Text = dr.GetValue(17).ToString();
+                txtCaNghi.Text = dr.GetValue(16).ToString();
                 txtSoNgay.Text = dr.GetValue(15).ToString();
-                txtLuong.Text =  dr.GetValue(18).ToString();
+                txtLuong.Text =  dr.GetValue(17).ToString();
             }
             conn.Close();
         }
@@ -117,6 +122,7 @@ namespace QuanLyNhanVien
             this.Hide();
             frmDangNhap fdangnhap = new frmDangNhap();
             fdangnhap.ShowDialog();
+            this.Close();
         }
 
         private void MenuItemThoat_Click(object sender, EventArgs e)

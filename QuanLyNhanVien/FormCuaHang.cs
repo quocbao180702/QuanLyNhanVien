@@ -30,12 +30,12 @@ namespace QuanLyNhanVien
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            conn.Open();
-            string truyvan = @"Insert Into cuahang (mach, tench, diachi) VALUES  (N'" + txtMaCuaHang.Text + @"',N'" + txtTenCuaHang.Text + @"',N'" + txtDCCuaHang.Text + @"')";
-            SqlCommand cmd = new SqlCommand(truyvan, conn);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Add Cửa Hàng Thành Công !!!", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            conn.Close();
+                conn.Open();
+                string truyvan = @"Insert Into cuahang (mach, tench, diachi) VALUES  (N'" + txtMaCuaHang.Text + @"',N'" + txtTenCuaHang.Text + @"',N'" + txtDCCuaHang.Text + @"')";
+                cmd = new SqlCommand(truyvan, conn);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Add Cửa Hàng Thành Công !!!", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                conn.Close();
         }
 
         private void FormCuaHang_Load(object sender, EventArgs e)
