@@ -42,7 +42,7 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label1.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label1.ForeColor = System.Drawing.Color.Blue;
             this.label1.Location = new System.Drawing.Point(242, 23);
@@ -54,6 +54,7 @@
             // 
             // lblMaNhanVien
             // 
+            this.lblMaNhanVien.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lblMaNhanVien.AutoSize = true;
             this.lblMaNhanVien.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblMaNhanVien.Location = new System.Drawing.Point(59, 114);
@@ -64,20 +65,25 @@
             // 
             // txtMaNV
             // 
+            this.txtMaNV.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtMaNV.Location = new System.Drawing.Point(219, 112);
+            this.txtMaNV.MaximumSize = new System.Drawing.Size(300, 60);
             this.txtMaNV.Name = "txtMaNV";
             this.txtMaNV.Size = new System.Drawing.Size(210, 30);
             this.txtMaNV.TabIndex = 3;
             // 
             // txtMatKhau
             // 
+            this.txtMatKhau.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtMatKhau.Location = new System.Drawing.Point(219, 161);
+            this.txtMatKhau.MaximumSize = new System.Drawing.Size(600, 60);
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.Size = new System.Drawing.Size(423, 30);
             this.txtMatKhau.TabIndex = 3;
             // 
             // lblMatKhau
             // 
+            this.lblMatKhau.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lblMatKhau.AutoSize = true;
             this.lblMatKhau.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblMatKhau.Location = new System.Drawing.Point(94, 163);
@@ -88,7 +94,9 @@
             // 
             // btnTaoTK
             // 
+            this.btnTaoTK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.btnTaoTK.Location = new System.Drawing.Point(251, 345);
+            this.btnTaoTK.MaximumSize = new System.Drawing.Size(250, 70);
             this.btnTaoTK.Name = "btnTaoTK";
             this.btnTaoTK.Size = new System.Drawing.Size(210, 65);
             this.btnTaoTK.TabIndex = 6;
@@ -98,6 +106,7 @@
             // 
             // lblNhapLaiMatKhau
             // 
+            this.lblNhapLaiMatKhau.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lblNhapLaiMatKhau.AutoSize = true;
             this.lblNhapLaiMatKhau.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblNhapLaiMatKhau.Location = new System.Drawing.Point(12, 219);
@@ -108,13 +117,16 @@
             // 
             // txtNhapLaiMatKhau
             // 
+            this.txtNhapLaiMatKhau.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtNhapLaiMatKhau.Location = new System.Drawing.Point(219, 217);
+            this.txtNhapLaiMatKhau.MaximumSize = new System.Drawing.Size(600, 60);
             this.txtNhapLaiMatKhau.Name = "txtNhapLaiMatKhau";
             this.txtNhapLaiMatKhau.Size = new System.Drawing.Size(423, 30);
             this.txtNhapLaiMatKhau.TabIndex = 3;
             // 
             // lblQuyen
             // 
+            this.lblQuyen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lblQuyen.AutoSize = true;
             this.lblQuyen.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblQuyen.Location = new System.Drawing.Point(117, 278);
@@ -125,11 +137,13 @@
             // 
             // cboQuyen
             // 
+            this.cboQuyen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.cboQuyen.FormattingEnabled = true;
             this.cboQuyen.Items.AddRange(new object[] {
             "1",
             "2"});
             this.cboQuyen.Location = new System.Drawing.Point(219, 278);
+            this.cboQuyen.MaximumSize = new System.Drawing.Size(200, 0);
             this.cboQuyen.Name = "cboQuyen";
             this.cboQuyen.Size = new System.Drawing.Size(121, 30);
             this.cboQuyen.TabIndex = 7;
@@ -138,6 +152,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(700, 431);
             this.Controls.Add(this.cboQuyen);
@@ -153,6 +168,7 @@
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormTaoTaiKhoan";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormTaoTaiKhoan";
             this.Load += new System.EventHandler(this.FromTaoTaiKhoan_Load);
             this.ResumeLayout(false);

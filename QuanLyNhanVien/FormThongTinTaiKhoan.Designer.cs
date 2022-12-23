@@ -50,8 +50,14 @@
             this.txtLuongCB = new System.Windows.Forms.TextBox();
             this.lblLuongCB = new System.Windows.Forms.Label();
             this.lblNgaySinh = new System.Windows.Forms.Label();
+            this.txtLuong = new System.Windows.Forms.TextBox();
+            this.txtCaNghi = new System.Windows.Forms.TextBox();
+            this.txtSoNgay = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
+            this.lblSoCaNghi = new System.Windows.Forms.Label();
             this.lblGioiTinh = new System.Windows.Forms.Label();
+            this.lblSoCaLam = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.txtHo = new System.Windows.Forms.TextBox();
             this.lblHo = new System.Windows.Forms.Label();
@@ -83,12 +89,6 @@
             this.MenuItemDangKyCa = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuQuanLyLuong = new System.Windows.Forms.ToolStripMenuItem();
             this.nộiQuyToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.lblSoCaLam = new System.Windows.Forms.Label();
-            this.txtSoNgay = new System.Windows.Forms.TextBox();
-            this.lblSoCaNghi = new System.Windows.Forms.Label();
-            this.txtCaNghi = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.txtLuong = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picHinhDaiDien)).BeginInit();
@@ -97,7 +97,12 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.AutoSize = true;
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.cmbCuaHang);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.cmbChucVu);
@@ -134,21 +139,25 @@
             this.panel1.Location = new System.Drawing.Point(13, 72);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1184, 562);
+            this.panel1.Size = new System.Drawing.Size(1184, 564);
             this.panel1.TabIndex = 0;
             // 
             // cmbCuaHang
             // 
+            this.cmbCuaHang.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.cmbCuaHang.FormattingEnabled = true;
-            this.cmbCuaHang.Location = new System.Drawing.Point(529, 276);
+            this.cmbCuaHang.Location = new System.Drawing.Point(528, 276);
+            this.cmbCuaHang.MaximumSize = new System.Drawing.Size(300, 0);
             this.cmbCuaHang.Name = "cmbCuaHang";
             this.cmbCuaHang.Size = new System.Drawing.Size(265, 30);
             this.cmbCuaHang.TabIndex = 8;
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(421, 284);
+            this.label2.Location = new System.Drawing.Point(420, 284);
+            this.label2.MaximumSize = new System.Drawing.Size(300, 100);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(89, 22);
             this.label2.TabIndex = 7;
@@ -156,15 +165,19 @@
             // 
             // cmbChucVu
             // 
+            this.cmbChucVu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.cmbChucVu.FormattingEnabled = true;
-            this.cmbChucVu.Location = new System.Drawing.Point(573, 23);
+            this.cmbChucVu.Location = new System.Drawing.Point(572, 23);
+            this.cmbChucVu.MaximumSize = new System.Drawing.Size(300, 0);
             this.cmbChucVu.Name = "cmbChucVu";
             this.cmbChucVu.Size = new System.Drawing.Size(221, 30);
             this.cmbChucVu.TabIndex = 6;
             // 
             // btnCapNhat
             // 
-            this.btnCapNhat.Location = new System.Drawing.Point(321, 477);
+            this.btnCapNhat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.btnCapNhat.Location = new System.Drawing.Point(320, 477);
+            this.btnCapNhat.MaximumSize = new System.Drawing.Size(300, 100);
             this.btnCapNhat.Name = "btnCapNhat";
             this.btnCapNhat.Size = new System.Drawing.Size(268, 55);
             this.btnCapNhat.TabIndex = 4;
@@ -174,6 +187,7 @@
             // 
             // cmbTinh
             // 
+            this.cmbTinh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.cmbTinh.FormattingEnabled = true;
             this.cmbTinh.Items.AddRange(new object[] {
             "An Giang",
@@ -239,24 +253,30 @@
             "Vĩnh Long",
             "Vĩnh Phúc",
             "Yên Bái"});
-            this.cmbTinh.Location = new System.Drawing.Point(632, 340);
+            this.cmbTinh.Location = new System.Drawing.Point(631, 340);
+            this.cmbTinh.MaximumSize = new System.Drawing.Size(300, 0);
             this.cmbTinh.Name = "cmbTinh";
             this.cmbTinh.Size = new System.Drawing.Size(162, 30);
             this.cmbTinh.TabIndex = 6;
             // 
             // dtpNgaySinh
             // 
+            this.dtpNgaySinh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.dtpNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpNgaySinh.Location = new System.Drawing.Point(557, 139);
+            this.dtpNgaySinh.Location = new System.Drawing.Point(556, 139);
+            this.dtpNgaySinh.MaximumSize = new System.Drawing.Size(300, 100);
             this.dtpNgaySinh.Name = "dtpNgaySinh";
             this.dtpNgaySinh.Size = new System.Drawing.Size(237, 30);
             this.dtpNgaySinh.TabIndex = 5;
             // 
             // panel2
             // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.radNu);
             this.panel2.Controls.Add(this.radNam);
-            this.panel2.Location = new System.Drawing.Point(178, 144);
+            this.panel2.Location = new System.Drawing.Point(177, 144);
+            this.panel2.MaximumSize = new System.Drawing.Size(214, 33);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(214, 33);
             this.panel2.TabIndex = 4;
@@ -285,7 +305,9 @@
             // 
             // btnThayDoiAnh
             // 
-            this.btnThayDoiAnh.Location = new System.Drawing.Point(889, 344);
+            this.btnThayDoiAnh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.btnThayDoiAnh.Location = new System.Drawing.Point(888, 344);
+            this.btnThayDoiAnh.MaximumSize = new System.Drawing.Size(300, 100);
             this.btnThayDoiAnh.Name = "btnThayDoiAnh";
             this.btnThayDoiAnh.Size = new System.Drawing.Size(184, 32);
             this.btnThayDoiAnh.TabIndex = 3;
@@ -294,15 +316,19 @@
             // 
             // txtDiaChi
             // 
-            this.txtDiaChi.Location = new System.Drawing.Point(178, 340);
+            this.txtDiaChi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.txtDiaChi.Location = new System.Drawing.Point(177, 340);
+            this.txtDiaChi.MaximumSize = new System.Drawing.Size(300, 100);
             this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(303, 30);
+            this.txtDiaChi.Size = new System.Drawing.Size(300, 30);
             this.txtDiaChi.TabIndex = 2;
             // 
             // lblChucVu
             // 
+            this.lblChucVu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lblChucVu.AutoSize = true;
-            this.lblChucVu.Location = new System.Drawing.Point(453, 31);
+            this.lblChucVu.Location = new System.Drawing.Point(452, 31);
+            this.lblChucVu.MaximumSize = new System.Drawing.Size(300, 100);
             this.lblChucVu.Name = "lblChucVu";
             this.lblChucVu.Size = new System.Drawing.Size(79, 22);
             this.lblChucVu.TabIndex = 1;
@@ -310,8 +336,10 @@
             // 
             // lblDiaChi
             // 
+            this.lblDiaChi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lblDiaChi.AutoSize = true;
-            this.lblDiaChi.Location = new System.Drawing.Point(73, 340);
+            this.lblDiaChi.Location = new System.Drawing.Point(72, 340);
+            this.lblDiaChi.MaximumSize = new System.Drawing.Size(300, 100);
             this.lblDiaChi.Name = "lblDiaChi";
             this.lblDiaChi.Size = new System.Drawing.Size(68, 22);
             this.lblDiaChi.TabIndex = 1;
@@ -319,8 +347,10 @@
             // 
             // lblTinh
             // 
+            this.lblTinh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lblTinh.AutoSize = true;
-            this.lblTinh.Location = new System.Drawing.Point(512, 348);
+            this.lblTinh.Location = new System.Drawing.Point(511, 348);
+            this.lblTinh.MaximumSize = new System.Drawing.Size(300, 100);
             this.lblTinh.Name = "lblTinh";
             this.lblTinh.Size = new System.Drawing.Size(93, 22);
             this.lblTinh.TabIndex = 1;
@@ -328,15 +358,19 @@
             // 
             // txtSDT
             // 
-            this.txtSDT.Location = new System.Drawing.Point(529, 214);
+            this.txtSDT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.txtSDT.Location = new System.Drawing.Point(528, 214);
+            this.txtSDT.MaximumSize = new System.Drawing.Size(300, 100);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(265, 30);
             this.txtSDT.TabIndex = 2;
             // 
             // lblSDT
             // 
+            this.lblSDT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lblSDT.AutoSize = true;
-            this.lblSDT.Location = new System.Drawing.Point(451, 217);
+            this.lblSDT.Location = new System.Drawing.Point(450, 217);
+            this.lblSDT.MaximumSize = new System.Drawing.Size(300, 100);
             this.lblSDT.Name = "lblSDT";
             this.lblSDT.Size = new System.Drawing.Size(47, 22);
             this.lblSDT.TabIndex = 1;
@@ -344,15 +378,19 @@
             // 
             // txtTen
             // 
-            this.txtTen.Location = new System.Drawing.Point(531, 80);
+            this.txtTen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.txtTen.Location = new System.Drawing.Point(530, 80);
+            this.txtTen.MaximumSize = new System.Drawing.Size(300, 100);
             this.txtTen.Name = "txtTen";
             this.txtTen.Size = new System.Drawing.Size(263, 30);
             this.txtTen.TabIndex = 2;
             // 
             // lblTen
             // 
+            this.lblTen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lblTen.AutoSize = true;
-            this.lblTen.Location = new System.Drawing.Point(460, 88);
+            this.lblTen.Location = new System.Drawing.Point(459, 88);
+            this.lblTen.MaximumSize = new System.Drawing.Size(300, 100);
             this.lblTen.Name = "lblTen";
             this.lblTen.Size = new System.Drawing.Size(40, 22);
             this.lblTen.TabIndex = 1;
@@ -360,15 +398,19 @@
             // 
             // txtLuongCB
             // 
-            this.txtLuongCB.Location = new System.Drawing.Point(200, 276);
+            this.txtLuongCB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.txtLuongCB.Location = new System.Drawing.Point(199, 276);
+            this.txtLuongCB.MaximumSize = new System.Drawing.Size(300, 100);
             this.txtLuongCB.Name = "txtLuongCB";
             this.txtLuongCB.Size = new System.Drawing.Size(169, 30);
             this.txtLuongCB.TabIndex = 2;
             // 
             // lblLuongCB
             // 
+            this.lblLuongCB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lblLuongCB.AutoSize = true;
-            this.lblLuongCB.Location = new System.Drawing.Point(71, 279);
+            this.lblLuongCB.Location = new System.Drawing.Point(70, 279);
+            this.lblLuongCB.MaximumSize = new System.Drawing.Size(300, 100);
             this.lblLuongCB.Name = "lblLuongCB";
             this.lblLuongCB.Size = new System.Drawing.Size(119, 22);
             this.lblLuongCB.TabIndex = 1;
@@ -376,33 +418,101 @@
             // 
             // lblNgaySinh
             // 
+            this.lblNgaySinh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lblNgaySinh.AutoSize = true;
-            this.lblNgaySinh.Location = new System.Drawing.Point(460, 142);
+            this.lblNgaySinh.Location = new System.Drawing.Point(459, 142);
+            this.lblNgaySinh.MaximumSize = new System.Drawing.Size(300, 100);
             this.lblNgaySinh.Name = "lblNgaySinh";
             this.lblNgaySinh.Size = new System.Drawing.Size(91, 22);
             this.lblNgaySinh.TabIndex = 1;
             this.lblNgaySinh.Text = "Ngày Sinh";
             // 
+            // txtLuong
+            // 
+            this.txtLuong.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.txtLuong.Location = new System.Drawing.Point(614, 405);
+            this.txtLuong.MaximumSize = new System.Drawing.Size(300, 100);
+            this.txtLuong.Name = "txtLuong";
+            this.txtLuong.Size = new System.Drawing.Size(179, 30);
+            this.txtLuong.TabIndex = 2;
+            // 
+            // txtCaNghi
+            // 
+            this.txtCaNghi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.txtCaNghi.Location = new System.Drawing.Point(413, 408);
+            this.txtCaNghi.MaximumSize = new System.Drawing.Size(300, 100);
+            this.txtCaNghi.Name = "txtCaNghi";
+            this.txtCaNghi.Size = new System.Drawing.Size(105, 30);
+            this.txtCaNghi.TabIndex = 2;
+            // 
+            // txtSoNgay
+            // 
+            this.txtSoNgay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.txtSoNgay.Location = new System.Drawing.Point(191, 408);
+            this.txtSoNgay.MaximumSize = new System.Drawing.Size(300, 100);
+            this.txtSoNgay.Name = "txtSoNgay";
+            this.txtSoNgay.Size = new System.Drawing.Size(103, 30);
+            this.txtSoNgay.TabIndex = 2;
+            // 
+            // label14
+            // 
+            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(543, 411);
+            this.label14.MaximumSize = new System.Drawing.Size(300, 100);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(61, 22);
+            this.label14.TabIndex = 1;
+            this.label14.Text = "Lương";
+            // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(165, 219);
+            this.txtEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.txtEmail.Location = new System.Drawing.Point(164, 219);
+            this.txtEmail.MaximumSize = new System.Drawing.Size(300, 100);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(243, 30);
             this.txtEmail.TabIndex = 2;
             // 
+            // lblSoCaNghi
+            // 
+            this.lblSoCaNghi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.lblSoCaNghi.AutoSize = true;
+            this.lblSoCaNghi.Location = new System.Drawing.Point(306, 408);
+            this.lblSoCaNghi.MaximumSize = new System.Drawing.Size(300, 100);
+            this.lblSoCaNghi.Name = "lblSoCaNghi";
+            this.lblSoCaNghi.Size = new System.Drawing.Size(101, 22);
+            this.lblSoCaNghi.TabIndex = 1;
+            this.lblSoCaNghi.Text = "Số Ca Nghĩ";
+            // 
             // lblGioiTinh
             // 
+            this.lblGioiTinh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lblGioiTinh.AutoSize = true;
-            this.lblGioiTinh.Location = new System.Drawing.Point(73, 155);
+            this.lblGioiTinh.Location = new System.Drawing.Point(72, 155);
+            this.lblGioiTinh.MaximumSize = new System.Drawing.Size(300, 100);
             this.lblGioiTinh.Name = "lblGioiTinh";
             this.lblGioiTinh.Size = new System.Drawing.Size(81, 22);
             this.lblGioiTinh.TabIndex = 1;
             this.lblGioiTinh.Text = "Giới tính";
             // 
+            // lblSoCaLam
+            // 
+            this.lblSoCaLam.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.lblSoCaLam.AutoSize = true;
+            this.lblSoCaLam.Location = new System.Drawing.Point(69, 408);
+            this.lblSoCaLam.MaximumSize = new System.Drawing.Size(300, 100);
+            this.lblSoCaLam.Name = "lblSoCaLam";
+            this.lblSoCaLam.Size = new System.Drawing.Size(116, 22);
+            this.lblSoCaLam.TabIndex = 1;
+            this.lblSoCaLam.Text = "Số Ngày Làm";
+            // 
             // lblEmail
             // 
+            this.lblEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(70, 219);
+            this.lblEmail.Location = new System.Drawing.Point(69, 219);
+            this.lblEmail.MaximumSize = new System.Drawing.Size(300, 100);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(57, 22);
             this.lblEmail.TabIndex = 1;
@@ -410,15 +520,19 @@
             // 
             // txtHo
             // 
-            this.txtHo.Location = new System.Drawing.Point(165, 85);
+            this.txtHo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.txtHo.Location = new System.Drawing.Point(164, 85);
+            this.txtHo.MaximumSize = new System.Drawing.Size(300, 100);
             this.txtHo.Name = "txtHo";
             this.txtHo.Size = new System.Drawing.Size(247, 30);
             this.txtHo.TabIndex = 2;
             // 
             // lblHo
             // 
+            this.lblHo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lblHo.AutoSize = true;
-            this.lblHo.Location = new System.Drawing.Point(72, 93);
+            this.lblHo.Location = new System.Drawing.Point(71, 93);
+            this.lblHo.MaximumSize = new System.Drawing.Size(300, 100);
             this.lblHo.Name = "lblHo";
             this.lblHo.Size = new System.Drawing.Size(34, 22);
             this.lblHo.TabIndex = 1;
@@ -426,15 +540,19 @@
             // 
             // txtMa
             // 
-            this.txtMa.Location = new System.Drawing.Point(243, 23);
+            this.txtMa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.txtMa.Location = new System.Drawing.Point(242, 23);
+            this.txtMa.MaximumSize = new System.Drawing.Size(300, 100);
             this.txtMa.Name = "txtMa";
             this.txtMa.Size = new System.Drawing.Size(169, 30);
             this.txtMa.TabIndex = 2;
             // 
             // lblMa
             // 
+            this.lblMa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lblMa.AutoSize = true;
-            this.lblMa.Location = new System.Drawing.Point(72, 31);
+            this.lblMa.Location = new System.Drawing.Point(71, 31);
+            this.lblMa.MaximumSize = new System.Drawing.Size(300, 100);
             this.lblMa.Name = "lblMa";
             this.lblMa.Size = new System.Drawing.Size(149, 22);
             this.lblMa.TabIndex = 1;
@@ -442,7 +560,8 @@
             // 
             // picHinhDaiDien
             // 
-            this.picHinhDaiDien.Location = new System.Drawing.Point(849, 47);
+            this.picHinhDaiDien.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.picHinhDaiDien.Location = new System.Drawing.Point(848, 47);
             this.picHinhDaiDien.Name = "picHinhDaiDien";
             this.picHinhDaiDien.Size = new System.Drawing.Size(284, 254);
             this.picHinhDaiDien.TabIndex = 0;
@@ -460,6 +579,9 @@
             // 
             // label13
             // 
+            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(412, 9);
@@ -589,11 +711,13 @@
             this.menuStrip1.AutoSize = false;
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.menuStrip1.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.MenuItemQuan});
             this.menuStrip1.Location = new System.Drawing.Point(13, 9);
             this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
             this.menuStrip1.Size = new System.Drawing.Size(38, 37);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
@@ -672,54 +796,6 @@
             this.nộiQuyToolStripMenuItem1.Size = new System.Drawing.Size(293, 26);
             this.nộiQuyToolStripMenuItem1.Text = "Nội Quy";
             this.nộiQuyToolStripMenuItem1.Click += new System.EventHandler(this.nộiQuyToolStripMenuItem1_Click);
-            // 
-            // lblSoCaLam
-            // 
-            this.lblSoCaLam.AutoSize = true;
-            this.lblSoCaLam.Location = new System.Drawing.Point(70, 408);
-            this.lblSoCaLam.Name = "lblSoCaLam";
-            this.lblSoCaLam.Size = new System.Drawing.Size(116, 22);
-            this.lblSoCaLam.TabIndex = 1;
-            this.lblSoCaLam.Text = "Số Ngày Làm";
-            // 
-            // txtSoNgay
-            // 
-            this.txtSoNgay.Location = new System.Drawing.Point(192, 408);
-            this.txtSoNgay.Name = "txtSoNgay";
-            this.txtSoNgay.Size = new System.Drawing.Size(103, 30);
-            this.txtSoNgay.TabIndex = 2;
-            // 
-            // lblSoCaNghi
-            // 
-            this.lblSoCaNghi.AutoSize = true;
-            this.lblSoCaNghi.Location = new System.Drawing.Point(307, 408);
-            this.lblSoCaNghi.Name = "lblSoCaNghi";
-            this.lblSoCaNghi.Size = new System.Drawing.Size(101, 22);
-            this.lblSoCaNghi.TabIndex = 1;
-            this.lblSoCaNghi.Text = "Số Ca Nghĩ";
-            // 
-            // txtCaNghi
-            // 
-            this.txtCaNghi.Location = new System.Drawing.Point(414, 408);
-            this.txtCaNghi.Name = "txtCaNghi";
-            this.txtCaNghi.Size = new System.Drawing.Size(105, 30);
-            this.txtCaNghi.TabIndex = 2;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(544, 411);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(61, 22);
-            this.label14.TabIndex = 1;
-            this.label14.Text = "Lương";
-            // 
-            // txtLuong
-            // 
-            this.txtLuong.Location = new System.Drawing.Point(615, 405);
-            this.txtLuong.Name = "txtLuong";
-            this.txtLuong.Size = new System.Drawing.Size(179, 30);
-            this.txtLuong.TabIndex = 2;
             // 
             // FormThongTinTaiKhoan
             // 

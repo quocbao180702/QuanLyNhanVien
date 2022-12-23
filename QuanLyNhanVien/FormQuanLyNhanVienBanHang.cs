@@ -24,7 +24,7 @@ namespace QuanLyNhanVien
         {
             InitializeComponent();
         }
-        SqlConnection conn = new SqlConnection(@"Data Source=GeeKay;Initial Catalog=QLNV;Integrated Security=True");
+        SqlConnection conn = new SqlConnection(@"Data Source=BAODANG;Initial Catalog=QLNV;Integrated Security=True");
         DataSet ds = new DataSet("dsQLNV");
         SqlDataAdapter dachucvu;
         SqlDataAdapter daNhanVien;
@@ -33,7 +33,7 @@ namespace QuanLyNhanVien
         private void LoadDataGridView()
         {
             SqlConnection conn = new SqlConnection();
-            conn.ConnectionString = @"Data Source=GeeKay;Initial Catalog=QLNV;Integrated Security=True";
+            conn.ConnectionString = @"Data Source=BAODANG;Initial Catalog=QLNV;Integrated Security=True";
             string sQueryNhanVien = @"select n.*, c.tencv, h.tench from nhanvien n, chucvu c, cuahang h where n.macv=c.macv and h.mach = n.mach";
             daNhanVien = new SqlDataAdapter(sQueryNhanVien, conn);
             daNhanVien.Fill(ds, "tblDSNhanVien");
@@ -41,29 +41,52 @@ namespace QuanLyNhanVien
 
             dgQLNhanVien.Columns["manv"].HeaderText = "Mã Nhân Viên";
             dgQLNhanVien.Columns["manv"].Width = 80;
+            //dgQLNhanVien.Columns["manv"].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+
             dgQLNhanVien.Columns["holot"].HeaderText = "Họ Lót";
-            dgQLNhanVien.Columns["holot"].Width = 100;
+            //dgQLNhanVien.Columns["holot"].Width = 100;
+            dgQLNhanVien.Columns["holot"].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+
             dgQLNhanVien.Columns["tennv"].HeaderText = "Tên";
-            dgQLNhanVien.Columns["tennv"].Width = 50;
+            // dgQLNhanVien.Columns["tennv"].Width = 50;
+            dgQLNhanVien.Columns["tennv"].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+
             dgQLNhanVien.Columns["gioitinh"].HeaderText = "Giới Tính";
             dgQLNhanVien.Columns["gioitinh"].Width = 40;
+           // dgQLNhanVien.Columns["giotinh"].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+
             dgQLNhanVien.Columns["ngaysinh"].HeaderText = "Ngày Sinh";
-            dgQLNhanVien.Columns["ngaysinh"].Width = 80;
+            //dgQLNhanVien.Columns["ngaysinh"].Width = 80;
+            dgQLNhanVien.Columns["ngaysinh"].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+
             dgQLNhanVien.Columns["sdt"].HeaderText = "Số Điện Thoại";
-            dgQLNhanVien.Columns["sdt"].Width = 90;
+            //dgQLNhanVien.Columns["sdt"].Width = 90;
+            dgQLNhanVien.Columns["sdt"].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+
             dgQLNhanVien.Columns["email"].HeaderText = "Email";
-            dgQLNhanVien.Columns["email"].Width = 140;
+            //dgQLNhanVien.Columns["email"].Width = 140;
+            dgQLNhanVien.Columns["email"].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+
             dgQLNhanVien.Columns["luongcb"].HeaderText = "Lương Cơ Bản";
-            dgQLNhanVien.Columns["luongcb"].Width = 100;
+            //dgQLNhanVien.Columns["luongcb"].Width = 100;
+            dgQLNhanVien.Columns["luongcb"].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+
             dgQLNhanVien.Columns["diachi"].HeaderText = "Địa Chỉ";
-            dgQLNhanVien.Columns["diachi"].Width = 150;
+            //dgQLNhanVien.Columns["diachi"].Width = 150;
+            dgQLNhanVien.Columns["diachi"].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+
             dgQLNhanVien.Columns["tinh"].HeaderText = "Tỉnh";
-            dgQLNhanVien.Columns["tinh"].Width = 90;
+            //dgQLNhanVien.Columns["tinh"].Width = 90;
+            dgQLNhanVien.Columns["tinh"].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+
             dgQLNhanVien.Columns["tencv"].HeaderText = "Chức Vụ";
-            dgQLNhanVien.Columns["tencv"].Width = 80;
-            dgQLNhanVien.Columns["macv"].Visible = true;
+            //dgQLNhanVien.Columns["tencv"].Width = 80;
+            dgQLNhanVien.Columns["tencv"].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+
+            dgQLNhanVien.Columns["macv"].Visible = false;
             dgQLNhanVien.Columns["tench"].HeaderText = "Cửa Hàng";
-            dgQLNhanVien.Columns["tench"].Width = 80;
+            //dgQLNhanVien.Columns["tench"].Width = 80;
+            dgQLNhanVien.Columns["tench"].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             dgQLNhanVien.Columns["mach"].Visible = false;
         }
         public void loadcombox_chucvu()

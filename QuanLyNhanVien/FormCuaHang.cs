@@ -19,7 +19,7 @@ namespace QuanLyNhanVien
         }
        // SqlConnection conn;
         SqlCommand cmd;
-        SqlConnection conn = new SqlConnection(@"Data Source=GeeKay;Initial Catalog=QLNV;Integrated Security=True");
+        SqlConnection conn = new SqlConnection(@"Data Source=BAODANG;Initial Catalog=QLNV;Integrated Security=True");
         DataSet ds = new DataSet("dsQLNV");
 
 

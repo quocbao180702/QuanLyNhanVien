@@ -22,7 +22,7 @@ namespace QuanLyNhanVien
 
         private void FormDoiMatKhau_Load(object sender, EventArgs e)
         {
-            conn = new SqlConnection(@"Data Source=GeeKay;Initial Catalog=QLNV;Integrated Security=True");
+            conn = new SqlConnection(@"Data Source=BAODANG;Initial Catalog=QLNV;Integrated Security=True");
             conn.Open();
         }
 
@@ -62,6 +62,7 @@ namespace QuanLyNhanVien
             this.Hide();
             FormQuenMatKhau fquen = new FormQuenMatKhau();
             fquen.ShowDialog();
+            this.Close();
         }
     }
 }

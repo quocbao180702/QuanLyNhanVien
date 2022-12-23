@@ -187,5 +187,18 @@ namespace QuanLyNhanVien
             cmd.ExecuteReader();
             conn.Close();
         }
+
+        private void btnQuayLai_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormThongTinTaiKhoan fthongtin = new FormThongTinTaiKhoan(id);
+            fthongtin.ShowDialog();
+            this.Close();
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

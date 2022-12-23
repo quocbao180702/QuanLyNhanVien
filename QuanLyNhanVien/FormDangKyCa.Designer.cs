@@ -39,7 +39,6 @@
             this.radC = new System.Windows.Forms.RadioButton();
             this.radB = new System.Windows.Forms.RadioButton();
             this.radA = new System.Windows.Forms.RadioButton();
-            this.lblChon = new System.Windows.Forms.Label();
             this.txtTen = new System.Windows.Forms.TextBox();
             this.lblMa = new System.Windows.Forms.Label();
             this.txtMa = new System.Windows.Forms.TextBox();
@@ -62,6 +61,7 @@
             // 
             // lblHo
             // 
+            this.lblHo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lblHo.AutoSize = true;
             this.lblHo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHo.Location = new System.Drawing.Point(38, 94);
@@ -72,6 +72,7 @@
             // 
             // txtHo
             // 
+            this.txtHo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtHo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHo.Location = new System.Drawing.Point(195, 91);
             this.txtHo.Name = "txtHo";
@@ -80,6 +81,7 @@
             // 
             // lblTen
             // 
+            this.lblTen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lblTen.AutoSize = true;
             this.lblTen.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTen.Location = new System.Drawing.Point(385, 94);
@@ -90,6 +92,7 @@
             // 
             // lblChucVu
             // 
+            this.lblChucVu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lblChucVu.AutoSize = true;
             this.lblChucVu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblChucVu.Location = new System.Drawing.Point(38, 158);
@@ -100,18 +103,19 @@
             // 
             // grbCa
             // 
-            this.grbCa.BackColor = System.Drawing.Color.PeachPuff;
+            this.grbCa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.grbCa.BackColor = System.Drawing.Color.SeaShell;
             this.grbCa.Controls.Add(this.pictureBox3);
             this.grbCa.Controls.Add(this.pictureBox2);
             this.grbCa.Controls.Add(this.pictureBox1);
             this.grbCa.Controls.Add(this.radC);
             this.grbCa.Controls.Add(this.radB);
             this.grbCa.Controls.Add(this.radA);
-            this.grbCa.Controls.Add(this.lblChon);
             this.grbCa.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbCa.Location = new System.Drawing.Point(42, 226);
+            this.grbCa.MaximumSize = new System.Drawing.Size(671, 361);
             this.grbCa.Name = "grbCa";
-            this.grbCa.Size = new System.Drawing.Size(671, 361);
+            this.grbCa.Size = new System.Drawing.Size(671, 335);
             this.grbCa.TabIndex = 4;
             this.grbCa.TabStop = false;
             this.grbCa.Text = "Chọn Ca";
@@ -120,7 +124,7 @@
             // 
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox3.Image = global::QuanLyNhanVien.Properties.Resources.icons8_partly_cloudy_day_48;
-            this.pictureBox3.Location = new System.Drawing.Point(85, 268);
+            this.pictureBox3.Location = new System.Drawing.Point(85, 255);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(48, 48);
@@ -130,7 +134,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::QuanLyNhanVien.Properties.Resources.icons8_night_48;
-            this.pictureBox2.Location = new System.Drawing.Point(85, 168);
+            this.pictureBox2.Location = new System.Drawing.Point(85, 155);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(48, 48);
@@ -140,7 +144,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::QuanLyNhanVien.Properties.Resources.icons8_morning_48;
-            this.pictureBox1.Location = new System.Drawing.Point(85, 78);
+            this.pictureBox1.Location = new System.Drawing.Point(85, 65);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(48, 48);
@@ -151,7 +155,7 @@
             // radC
             // 
             this.radC.AutoSize = true;
-            this.radC.Location = new System.Drawing.Point(152, 277);
+            this.radC.Location = new System.Drawing.Point(152, 264);
             this.radC.Name = "radC";
             this.radC.Size = new System.Drawing.Size(336, 26);
             this.radC.TabIndex = 7;
@@ -162,7 +166,7 @@
             // radB
             // 
             this.radB.AutoSize = true;
-            this.radB.Location = new System.Drawing.Point(153, 180);
+            this.radB.Location = new System.Drawing.Point(153, 167);
             this.radB.Name = "radB";
             this.radB.Size = new System.Drawing.Size(199, 26);
             this.radB.TabIndex = 6;
@@ -173,7 +177,7 @@
             // radA
             // 
             this.radA.AutoSize = true;
-            this.radA.Location = new System.Drawing.Point(152, 88);
+            this.radA.Location = new System.Drawing.Point(152, 75);
             this.radA.Name = "radA";
             this.radA.Size = new System.Drawing.Size(189, 26);
             this.radA.TabIndex = 6;
@@ -181,18 +185,9 @@
             this.radA.Text = "Ca A: 6:30 – 14:30 ";
             this.radA.UseVisualStyleBackColor = true;
             // 
-            // lblChon
-            // 
-            this.lblChon.AutoSize = true;
-            this.lblChon.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblChon.Location = new System.Drawing.Point(15, 44);
-            this.lblChon.Name = "lblChon";
-            this.lblChon.Size = new System.Drawing.Size(164, 22);
-            this.lblChon.TabIndex = 0;
-            this.lblChon.Text = "Chọn Ca Làm Việc:";
-            // 
             // txtTen
             // 
+            this.txtTen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtTen.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTen.Location = new System.Drawing.Point(538, 91);
             this.txtTen.Name = "txtTen";
@@ -201,6 +196,7 @@
             // 
             // lblMa
             // 
+            this.lblMa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lblMa.AutoSize = true;
             this.lblMa.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMa.Location = new System.Drawing.Point(37, 37);
@@ -211,6 +207,7 @@
             // 
             // txtMa
             // 
+            this.txtMa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtMa.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMa.Location = new System.Drawing.Point(194, 34);
             this.txtMa.Name = "txtMa";
@@ -219,10 +216,13 @@
             // 
             // panel2
             // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.radNu);
             this.panel2.Controls.Add(this.radNam);
             this.panel2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(499, 152);
+            this.panel2.MaximumSize = new System.Drawing.Size(214, 33);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(214, 33);
             this.panel2.TabIndex = 6;
@@ -251,9 +251,10 @@
             // 
             // lblGioiTinh
             // 
+            this.lblGioiTinh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lblGioiTinh.AutoSize = true;
             this.lblGioiTinh.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGioiTinh.Location = new System.Drawing.Point(394, 163);
+            this.lblGioiTinh.Location = new System.Drawing.Point(385, 159);
             this.lblGioiTinh.Name = "lblGioiTinh";
             this.lblGioiTinh.Size = new System.Drawing.Size(81, 22);
             this.lblGioiTinh.TabIndex = 5;
@@ -261,6 +262,7 @@
             // 
             // txtChucVu
             // 
+            this.txtChucVu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtChucVu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtChucVu.Location = new System.Drawing.Point(194, 155);
             this.txtChucVu.Name = "txtChucVu";
@@ -269,9 +271,12 @@
             // 
             // btnQuayLai
             // 
+            this.btnQuayLai.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.btnQuayLai.AutoSize = true;
             this.btnQuayLai.BackColor = System.Drawing.Color.AliceBlue;
             this.btnQuayLai.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuayLai.Location = new System.Drawing.Point(43, 593);
+            this.btnQuayLai.MaximumSize = new System.Drawing.Size(132, 46);
             this.btnQuayLai.Name = "btnQuayLai";
             this.btnQuayLai.Size = new System.Drawing.Size(132, 46);
             this.btnQuayLai.TabIndex = 7;
@@ -281,9 +286,11 @@
             // 
             // btnChon
             // 
+            this.btnChon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.btnChon.BackColor = System.Drawing.Color.AliceBlue;
             this.btnChon.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChon.Location = new System.Drawing.Point(583, 593);
+            this.btnChon.MaximumSize = new System.Drawing.Size(132, 46);
             this.btnChon.Name = "btnChon";
             this.btnChon.Size = new System.Drawing.Size(132, 46);
             this.btnChon.TabIndex = 7;
@@ -293,9 +300,12 @@
             // 
             // btnBoChon
             // 
+            this.btnBoChon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.btnBoChon.AutoSize = true;
             this.btnBoChon.BackColor = System.Drawing.Color.AliceBlue;
             this.btnBoChon.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBoChon.Location = new System.Drawing.Point(445, 593);
+            this.btnBoChon.MaximumSize = new System.Drawing.Size(132, 46);
             this.btnBoChon.Name = "btnBoChon";
             this.btnBoChon.Size = new System.Drawing.Size(132, 46);
             this.btnBoChon.TabIndex = 7;
@@ -305,6 +315,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(385, 37);
@@ -315,6 +326,7 @@
             // 
             // txtCuaHang
             // 
+            this.txtCuaHang.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtCuaHang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCuaHang.Location = new System.Drawing.Point(538, 34);
             this.txtCuaHang.Name = "txtCuaHang";
@@ -368,7 +380,6 @@
         private System.Windows.Forms.TextBox txtTen;
         private System.Windows.Forms.Label lblMa;
         private System.Windows.Forms.TextBox txtMa;
-        private System.Windows.Forms.Label lblChon;
         private System.Windows.Forms.RadioButton radC;
         private System.Windows.Forms.RadioButton radB;
         private System.Windows.Forms.RadioButton radA;
