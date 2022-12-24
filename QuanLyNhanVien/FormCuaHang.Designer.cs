@@ -53,6 +53,7 @@
             this.txtDCCuaHang.Name = "txtDCCuaHang";
             this.txtDCCuaHang.Size = new System.Drawing.Size(350, 30);
             this.txtDCCuaHang.TabIndex = 10;
+            this.txtDCCuaHang.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtDCCuaHang_KeyDown);
             // 
             // txtTenCuaHang
             // 

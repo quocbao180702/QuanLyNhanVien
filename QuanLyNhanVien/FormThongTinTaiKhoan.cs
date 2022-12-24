@@ -81,6 +81,12 @@ namespace QuanLyNhanVien
                 MenuItemQuanLy.Visible = true;
                 MenuQuanLyLuong.Visible = true;
             }
+            txtMa.Enabled = false;
+            txtLuong.Enabled = false;
+            txtSoNgay.Enabled = false;
+            txtCaNghi.Enabled = false;
+            cmbChucVu.Enabled = false;
+            cmbCuaHang.Enabled = false;
             conn = new SqlConnection(@"Data Source=BAODANG;Initial Catalog=QLNV;Integrated Security=True");
             conn.Open();
 

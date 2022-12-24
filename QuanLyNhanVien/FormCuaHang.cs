@@ -30,17 +30,39 @@ namespace QuanLyNhanVien
 
         private void btnThem_Click(object sender, EventArgs e)
         {
+           
+            conn.Open();    
+            SqlCommand cmd1 = new SqlCommand("select * from cuahang where mach =  '" +txtMaCuaHang.Text+ "'",conn);
+            SqlDataReader dr =  cmd1.ExecuteReader();
+            if (dr.Read())
+            {
+                MessageBox.Show("Mã đã tồn  tại ");
+                conn.Close();
+            }
+            else 
+            {
+                conn.Close();
                 conn.Open();
                 string truyvan = @"Insert Into cuahang (mach, tench, diachi) VALUES  (N'" + txtMaCuaHang.Text + @"',N'" + txtTenCuaHang.Text + @"',N'" + txtDCCuaHang.Text + @"')";
                 cmd = new SqlCommand(truyvan, conn);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Add Cửa Hàng Thành Công !!!", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 conn.Close();
+            }
         }
 
         private void FormCuaHang_Load(object sender, EventArgs e)
         {
  
+        }
+
+
+        private void txtDCCuaHang_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnThem_Click(sender, e);
+            }
         }
     }
 }

@@ -122,5 +122,13 @@ namespace QuanLyNhanVien
         {
             Move_Form(Handle, e);
         }
+
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+               btnDangNhap_Click(sender, e);
+            }
+        }
     }
 }

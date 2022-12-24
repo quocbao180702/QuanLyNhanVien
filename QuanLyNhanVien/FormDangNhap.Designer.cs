@@ -58,6 +58,7 @@
             this.ckbShow.Text = "Show";
             this.ckbShow.UseVisualStyleBackColor = false;
             this.ckbShow.CheckedChanged += new System.EventHandler(this.ckbShow_CheckedChanged);
+            this.ckbShow.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyDown);
             // 
             // txtPassword
             // 
@@ -70,6 +71,7 @@
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(255, 30);
             this.txtPassword.TabIndex = 17;
+            this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyDown);
             // 
             // txtUsername
             // 
