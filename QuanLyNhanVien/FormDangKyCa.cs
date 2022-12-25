@@ -17,18 +17,21 @@ namespace QuanLyNhanVien
         {
             InitializeComponent();
         }
-        public FormDangKyCa(string ma)
+        public FormDangKyCa(string id, int quyen)
         {
             InitializeComponent();
-            this.id = ma;
+            this.ma = id;
+            this.quyen = quyen;
         }
-        string id;
+        string ma = "";
+        int quyen = 0;
+
         SqlConnection conn;
         private void FormDangKyCa_Load(object sender, EventArgs e)
         {
             conn = new SqlConnection(@"Data Source=BAODANG;Initial Catalog=QLNV;Integrated Security=True");
             conn.Open();
-            SqlCommand cmd = new SqlCommand("select n.*, c.tencv, h.tench from NhanVien n, chucvu c, cuahang h where n.macv=c.macv and n.mach = h.mach and n.manv = '" + id + "'", conn);
+            SqlCommand cmd = new SqlCommand("select n.*, c.tencv, h.tench from NhanVien n, chucvu c, cuahang h where n.macv=c.macv and n.mach = h.mach and n.manv = '" + ma + "'", conn);
             SqlDataReader dr;
             dr = cmd.ExecuteReader();
             if (dr.Read())
@@ -52,7 +55,7 @@ namespace QuanLyNhanVien
         private void btnQuayLai_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormThongTinTaiKhoan fthongtin = new FormThongTinTaiKhoan(id);
+            FormThongTinTaiKhoan fthongtin = new FormThongTinTaiKhoan(ma,quyen);
             fthongtin.ShowDialog();
             this.Close();
         }

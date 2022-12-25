@@ -16,12 +16,14 @@ namespace QuanLyNhanVien
         {
             InitializeComponent();
         }
-        public FormNoiQuy(string ma)
+        public FormNoiQuy(string id, int quyen)
         {
             InitializeComponent();
-            this.id = ma;
+            this.ma = id;
+            this.quyen = quyen;
         }
-        string id;
+        string ma = "";
+        int quyen = 0;
 
 
         private void button1_Click(object sender, EventArgs e)
@@ -29,7 +31,7 @@ namespace QuanLyNhanVien
             if(ckbDaHieu.Checked == true)
             {
                 this.Hide();
-                FormThongTinTaiKhoan fthongtin = new FormThongTinTaiKhoan(id);
+                FormThongTinTaiKhoan fthongtin = new FormThongTinTaiKhoan(ma,quyen);
                 fthongtin.ShowDialog();
                 this.Close();
             }

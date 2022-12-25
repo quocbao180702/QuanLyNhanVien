@@ -18,11 +18,20 @@ namespace QuanLyNhanVien
         {
             InitializeComponent();
         }
+        public FormBangLuong(string id, int quyen)
+        {
+            InitializeComponent();
+            this.ma = id;
+            this.quyen = quyen;
+        }
+        string ma = "";
+        int quyen = 0;
+
         SqlConnection conn = new SqlConnection(@"Data Source=BAODANG;Initial Catalog=QLNV;Integrated Security=True");
         DataSet ds = new DataSet("dsQLNV");
         SqlDataAdapter dachucvu;
         SqlDataAdapter daNhanVien;
-        string id;
+        string manv;
         float tongluong = 0;
 
         private void LoadDataGridView()
@@ -80,7 +89,7 @@ namespace QuanLyNhanVien
         {
             DataGridViewRow dr = dgvLuong.SelectedRows[0];
             lblInMa.Text = dr.Cells["manv"].Value.ToString();
-            id = dr.Cells["manv"].Value.ToString();
+            manv = dr.Cells["manv"].Value.ToString();
             lblInHovaTen.Text = dr.Cells["holot"].Value.ToString() + " " +dr.Cells["tennv"].Value.ToString();
             lblInPhai.Text = dr.Cells["gioitinh"].Value.ToString();
             lblInNgaySinh.Text = dr.Cells["ngaysinh"].Value.ToString();
@@ -157,7 +166,7 @@ namespace QuanLyNhanVien
         private void quayLạiToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormThongTinTaiKhoan fthongtin = new FormThongTinTaiKhoan();
+            FormThongTinTaiKhoan fthongtin = new FormThongTinTaiKhoan(ma,quyen);
             fthongtin.ShowDialog();
             this.Close();
         }
@@ -175,7 +184,7 @@ namespace QuanLyNhanVien
                 conn.Open();
                 string truyvan = @"update lamviec set socanghi = @SoCaNghi,  luong = @Luong where manv = @MaNV";
                 SqlCommand cmd = new SqlCommand(truyvan, conn);
-                cmd.Parameters.AddWithValue("@MaNV", id);
+                cmd.Parameters.AddWithValue("@MaNV", manv);
                 cmd.Parameters.AddWithValue("@SoCaNghi", txtSoCaNghi.Text);
                 cmd.Parameters.AddWithValue("Luong", luong.ToString());
                 cmd.ExecuteReader();
@@ -187,7 +196,7 @@ namespace QuanLyNhanVien
         private void btnQuayLai_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormThongTinTaiKhoan fthongtin = new FormThongTinTaiKhoan(id);
+            FormThongTinTaiKhoan fthongtin = new FormThongTinTaiKhoan(ma,quyen);
             fthongtin.ShowDialog();
             this.Close();
         }

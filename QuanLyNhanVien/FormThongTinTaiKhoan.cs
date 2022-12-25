@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.DirectoryServices.ActiveDirectory;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -43,7 +44,7 @@ namespace QuanLyNhanVien
             Application.Exit();
         }
 
-        public void loadcombox_chucvu()
+        /*public void loadcombox_chucvu()
         {
             string sQueryChucVu = @"select * from chucvu";
             DataTable dt = new DataTable();
@@ -64,34 +65,37 @@ namespace QuanLyNhanVien
             cmbCuaHang.DisplayMember = "tench";
             cmbCuaHang.ValueMember = "mach";
         }
-
+        */
         private void FormThongTinTaiKhoan_Load(object sender, EventArgs e)
         {
             if (quyen == 2)
             {
                 MenuItemQuanLy.Visible = false;
+                MenuItemThongKe.Visible = false;
             }
             if (quyen == 3)
             {
                 MenuItemQuanLy.Visible = false;
                 MenuQuanLyLuong.Visible = false;
+                MenuItemThongKe.Visible = false;
             }
             if(quyen == 1)
             {
                 MenuItemQuanLy.Visible = true;
                 MenuQuanLyLuong.Visible = true;
+                MenuItemThongKe.Visible = true;
             }
-            txtMa.Enabled = false;
-            txtLuong.Enabled = false;
-            txtSoNgay.Enabled = false;
-            txtCaNghi.Enabled = false;
-            cmbChucVu.Enabled = false;
-            cmbCuaHang.Enabled = false;
+            txtMa.ReadOnly = true;
+            txtLuong.ReadOnly = true;
+            txtSoNgay.ReadOnly = true;
+            txtCaNghi.ReadOnly = true;
+            txtChucVu.ReadOnly =true;
+            txtCuaHang.ReadOnly = true;
             conn = new SqlConnection(@"Data Source=BAODANG;Initial Catalog=QLNV;Integrated Security=True");
             conn.Open();
 
-            loadcombox_chucvu();
-            loadcombox_cuahang();
+            //loadcombox_chucvu();
+            //loadcombox_cuahang();
             cmd = new SqlCommand("select n.*, c.tencv, h.tench, l.* from NhanVien n, chucvu c, cuahang h, lamviec l where n.macv=c.macv and n.mach = h.mach and l.manv= n.manv and n.manv = '" + id + "'", conn);
             SqlDataReader dr;
             dr = cmd.ExecuteReader();
@@ -114,8 +118,8 @@ namespace QuanLyNhanVien
                 txtLuongCB.Text = dr.GetValue(7).ToString();
                 cmbTinh.Text = dr.GetValue(9).ToString();
                 txtDiaChi.Text = dr.GetValue(8).ToString();
-                cmbChucVu.Text = dr.GetValue(12).ToString();
-                cmbCuaHang.Text = dr.GetValue(13).ToString();
+                txtChucVu.Text = dr.GetValue(12).ToString();
+                txtCuaHang.Text = dr.GetValue(13).ToString();
                 txtCaNghi.Text = dr.GetValue(16).ToString();
                 txtSoNgay.Text = dr.GetValue(15).ToString();
                 txtLuong.Text =  dr.GetValue(17).ToString();
@@ -139,7 +143,7 @@ namespace QuanLyNhanVien
         private void MenuItemXem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormXemDanhSach fxem = new FormXemDanhSach();
+            FormXemDanhSach fxem = new FormXemDanhSach(id,quyen);
             fxem.ShowDialog();
             this.Close();
         }
@@ -147,7 +151,7 @@ namespace QuanLyNhanVien
         private void MenuItemQuanLy_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormQuanLyNhanVienBanHang fquanly = new FormQuanLyNhanVienBanHang();
+            FormQuanLyNhanVienBanHang fquanly = new FormQuanLyNhanVienBanHang(id,quyen);
             fquanly.ShowDialog();
             this.Close();
         }
@@ -155,7 +159,7 @@ namespace QuanLyNhanVien
         private void MenuItemDangKyCa_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormDangKyCa fdangkyca = new FormDangKyCa(id);
+            FormDangKyCa fdangkyca = new FormDangKyCa(id, quyen);
             fdangkyca.ShowDialog();
             this.Close();
         }
@@ -187,8 +191,8 @@ namespace QuanLyNhanVien
                 cmThemNV.Parameters.AddWithValue("@LuongCB", txtLuongCB.Text);
                 cmThemNV.Parameters.AddWithValue("@Tinh", cmbTinh.SelectedItem);
                 cmThemNV.Parameters.AddWithValue("@DiaChi", txtDiaChi.Text);
-                cmThemNV.Parameters.AddWithValue("@MaCV", cmbChucVu.SelectedValue);
-                cmThemNV.Parameters.AddWithValue("@MaCH", cmbCuaHang.SelectedValue);
+                cmThemNV.Parameters.AddWithValue("@MaCV", txtChucVu.Text);
+                cmThemNV.Parameters.AddWithValue("@MaCH", txtCuaHang.Text);
                 cmThemNV.ExecuteReader();
                 conn.Close();
                 MessageBox.Show("Cập Nhật Thành Công");
@@ -200,7 +204,7 @@ namespace QuanLyNhanVien
         private void nộiQuyToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormNoiQuy fnoiquy = new FormNoiQuy(id);
+            FormNoiQuy fnoiquy = new FormNoiQuy(id,quyen);
             fnoiquy.ShowDialog();
             this.Close();
         }
@@ -208,8 +212,16 @@ namespace QuanLyNhanVien
         private void quảnLyLuongToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormBangLuong fbangluong = new FormBangLuong();
+            FormBangLuong fbangluong = new FormBangLuong(id,quyen);
             fbangluong.ShowDialog();
+            this.Close();
+        }
+
+        private void MenuItemThongKe_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormThongKe fthongke = new FormThongKe(id,quyen);
+            fthongke.ShowDialog();
             this.Close();
         }
     }

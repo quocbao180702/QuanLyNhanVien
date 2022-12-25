@@ -29,9 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.cmbCuaHang = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.cmbChucVu = new System.Windows.Forms.ComboBox();
             this.btnCapNhat = new System.Windows.Forms.Button();
             this.cmbTinh = new System.Windows.Forms.ComboBox();
             this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
@@ -87,6 +85,9 @@
             this.MenuItemDangKyCa = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuQuanLyLuong = new System.Windows.Forms.ToolStripMenuItem();
             this.nộiQuyToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuItemThongKe = new System.Windows.Forms.ToolStripMenuItem();
+            this.txtChucVu = new System.Windows.Forms.TextBox();
+            this.txtCuaHang = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -100,9 +101,7 @@
             this.panel1.AutoSize = true;
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.cmbCuaHang);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.cmbChucVu);
             this.panel1.Controls.Add(this.btnCapNhat);
             this.panel1.Controls.Add(this.cmbTinh);
             this.panel1.Controls.Add(this.dtpNgaySinh);
@@ -111,8 +110,10 @@
             this.panel1.Controls.Add(this.lblChucVu);
             this.panel1.Controls.Add(this.lblDiaChi);
             this.panel1.Controls.Add(this.lblTinh);
+            this.panel1.Controls.Add(this.txtCuaHang);
             this.panel1.Controls.Add(this.txtSDT);
             this.panel1.Controls.Add(this.lblSDT);
+            this.panel1.Controls.Add(this.txtChucVu);
             this.panel1.Controls.Add(this.txtTen);
             this.panel1.Controls.Add(this.lblTen);
             this.panel1.Controls.Add(this.txtLuongCB);
@@ -137,16 +138,6 @@
             this.panel1.Size = new System.Drawing.Size(1184, 564);
             this.panel1.TabIndex = 0;
             // 
-            // cmbCuaHang
-            // 
-            this.cmbCuaHang.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.cmbCuaHang.FormattingEnabled = true;
-            this.cmbCuaHang.Location = new System.Drawing.Point(805, 283);
-            this.cmbCuaHang.MaximumSize = new System.Drawing.Size(300, 0);
-            this.cmbCuaHang.Name = "cmbCuaHang";
-            this.cmbCuaHang.Size = new System.Drawing.Size(265, 30);
-            this.cmbCuaHang.TabIndex = 8;
-            // 
             // label2
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
@@ -157,16 +148,6 @@
             this.label2.Size = new System.Drawing.Size(89, 22);
             this.label2.TabIndex = 7;
             this.label2.Text = "Cửa Hàng";
-            // 
-            // cmbChucVu
-            // 
-            this.cmbChucVu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.cmbChucVu.FormattingEnabled = true;
-            this.cmbChucVu.Location = new System.Drawing.Point(805, 30);
-            this.cmbChucVu.MaximumSize = new System.Drawing.Size(300, 0);
-            this.cmbChucVu.Name = "cmbChucVu";
-            this.cmbChucVu.Size = new System.Drawing.Size(265, 30);
-            this.cmbChucVu.TabIndex = 6;
             // 
             // btnCapNhat
             // 
@@ -702,13 +683,14 @@
             this.MenuItemQuan.BackgroundImage = global::QuanLyNhanVien.Properties.Resources.icons8_menu_rounded_30;
             this.MenuItemQuan.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.MenuItemThongTin,
-            this.MenuItemDangXuat,
-            this.MenuItemThoat,
             this.MenuItemXem,
             this.MenuItemQuanLy,
-            this.MenuItemDangKyCa,
             this.MenuQuanLyLuong,
-            this.nộiQuyToolStripMenuItem1});
+            this.MenuItemDangKyCa,
+            this.MenuItemThongKe,
+            this.nộiQuyToolStripMenuItem1,
+            this.MenuItemDangXuat,
+            this.MenuItemThoat});
             this.MenuItemQuan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MenuItemQuan.Name = "MenuItemQuan";
             this.MenuItemQuan.Size = new System.Drawing.Size(14, 33);
@@ -771,6 +753,31 @@
             this.nộiQuyToolStripMenuItem1.Size = new System.Drawing.Size(293, 26);
             this.nộiQuyToolStripMenuItem1.Text = "Nội Quy";
             this.nộiQuyToolStripMenuItem1.Click += new System.EventHandler(this.nộiQuyToolStripMenuItem1_Click);
+            // 
+            // MenuItemThongKe
+            // 
+            this.MenuItemThongKe.Name = "MenuItemThongKe";
+            this.MenuItemThongKe.Size = new System.Drawing.Size(293, 26);
+            this.MenuItemThongKe.Text = "Thống Kê";
+            this.MenuItemThongKe.Click += new System.EventHandler(this.MenuItemThongKe_Click);
+            // 
+            // txtChucVu
+            // 
+            this.txtChucVu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.txtChucVu.Location = new System.Drawing.Point(805, 24);
+            this.txtChucVu.MaximumSize = new System.Drawing.Size(300, 100);
+            this.txtChucVu.Name = "txtChucVu";
+            this.txtChucVu.Size = new System.Drawing.Size(263, 30);
+            this.txtChucVu.TabIndex = 2;
+            // 
+            // txtCuaHang
+            // 
+            this.txtCuaHang.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.txtCuaHang.Location = new System.Drawing.Point(805, 283);
+            this.txtCuaHang.MaximumSize = new System.Drawing.Size(300, 100);
+            this.txtCuaHang.Name = "txtCuaHang";
+            this.txtCuaHang.Size = new System.Drawing.Size(265, 30);
+            this.txtCuaHang.TabIndex = 2;
             // 
             // FormThongTinTaiKhoan
             // 
@@ -840,7 +847,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.ComboBox cmbChucVu;
         private System.Windows.Forms.Label lblChucVu;
         private System.Windows.Forms.Button btnCapNhat;
         private System.Windows.Forms.ToolStripMenuItem MenuItemQuan;
@@ -851,7 +857,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem MenuItemQuanLy;
         private System.Windows.Forms.ToolStripMenuItem MenuItemDangKyCa;
-        private System.Windows.Forms.ComboBox cmbCuaHang;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ToolStripMenuItem MenuQuanLyLuong;
         private System.Windows.Forms.ToolStripMenuItem nộiQuyToolStripMenuItem1;
@@ -861,5 +866,8 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label lblSoCaNghi;
         private System.Windows.Forms.Label lblSoCaLam;
+        private System.Windows.Forms.ToolStripMenuItem MenuItemThongKe;
+        private System.Windows.Forms.TextBox txtChucVu;
+        private System.Windows.Forms.TextBox txtCuaHang;
     }
 }

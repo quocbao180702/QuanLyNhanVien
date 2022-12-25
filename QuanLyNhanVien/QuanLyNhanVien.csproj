@@ -37,6 +37,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Messaging" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -48,11 +49,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormBaoCao.cs">
+    <Compile Include="FormThongKe.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormBaoCao.Designer.cs">
-      <DependentUpon>FormBaoCao.cs</DependentUpon>
+    <Compile Include="FormThongKe.Designer.cs">
+      <DependentUpon>FormThongKe.cs</DependentUpon>
     </Compile>
     <Compile Include="FormBangLuong.cs">
       <SubType>Form</SubType>
@@ -125,8 +126,8 @@
     <EmbeddedResource Include="FormBangLuong.resx">
       <DependentUpon>FormBangLuong.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormBaoCao.resx">
-      <DependentUpon>FormBaoCao.cs</DependentUpon>
+    <EmbeddedResource Include="FormThongKe.resx">
+      <DependentUpon>FormThongKe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormCuaHang.resx">
       <DependentUpon>FormCuaHang.cs</DependentUpon>

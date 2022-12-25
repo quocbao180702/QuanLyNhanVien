@@ -24,6 +24,16 @@ namespace QuanLyNhanVien
         {
             InitializeComponent();
         }
+        public FormQuanLyNhanVienBanHang(string id, int quyen)
+        {
+            InitializeComponent();
+            this.ma = id;
+            this.quyen = quyen;
+        }
+        string ma = "";
+        int quyen = 0;
+
+
         SqlConnection conn = new SqlConnection(@"Data Source=BAODANG;Initial Catalog=QLNV;Integrated Security=True");
         DataSet ds = new DataSet("dsQLNV");
         SqlDataAdapter dachucvu;
@@ -370,7 +380,7 @@ namespace QuanLyNhanVien
         private void quayLạiToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormThongTinTaiKhoan frmquanly = new FormThongTinTaiKhoan();
+            FormThongTinTaiKhoan frmquanly = new FormThongTinTaiKhoan(ma,quyen);
             frmquanly.ShowDialog();
         }
 
