@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDoiMatKhau));
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnThayDoi = new System.Windows.Forms.Button();
             this.btnQuayLai = new System.Windows.Forms.Button();
@@ -253,6 +254,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtTenDangNhap);
             this.Controls.Add(this.label2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormDoiMatKhau";
             this.Text = "FormDoiMatKhau";
             this.Load += new System.EventHandler(this.FormDoiMatKhau_Load);
