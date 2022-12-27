@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,7 +18,17 @@ namespace QuanLyNhanVien
         {
             InitializeComponent();
         }
-       // SqlConnection conn;
+        public FormCuaHang(string id, int quyen)
+        {
+            InitializeComponent();
+            this.id = id;
+            this.quyen = quyen;
+        }
+        string id = "";
+        int quyen = 0;
+
+
+        // SqlConnection conn;
         SqlCommand cmd;
         SqlConnection conn = new SqlConnection(@"Data Source=GeeKay;Initial Catalog=QLNV;Integrated Security=True");
         DataSet ds = new DataSet("dsQLNV");
@@ -49,11 +60,13 @@ namespace QuanLyNhanVien
                 MessageBox.Show("Add Cửa Hàng Thành Công !!!", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 conn.Close();
             }
+            
+            
         }
 
         private void FormCuaHang_Load(object sender, EventArgs e)
         {
- 
+               
         }
 
 
@@ -63,6 +76,14 @@ namespace QuanLyNhanVien
             {
                 btnThem_Click(sender, e);
             }
+        }
+
+        private void MenuItemQuayLai_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormQuanLyNhanVienBanHang fquanly = new FormQuanLyNhanVienBanHang(id,quyen);
+            fquanly.ShowDialog();
+            fquanly.Close();
         }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormXemDanhSach));
             this.grbThongTin = new System.Windows.Forms.GroupBox();
             this.lblInPhai = new System.Windows.Forms.Label();
             this.lblPhai = new System.Windows.Forms.Label();
@@ -406,14 +407,14 @@
             // quayLạiToolStripMenuItem
             // 
             this.quayLạiToolStripMenuItem.Name = "quayLạiToolStripMenuItem";
-            this.quayLạiToolStripMenuItem.Size = new System.Drawing.Size(80, 26);
+            this.quayLạiToolStripMenuItem.Size = new System.Drawing.Size(80, 24);
             this.quayLạiToolStripMenuItem.Text = "Quay Lại";
             this.quayLạiToolStripMenuItem.Click += new System.EventHandler(this.quayLạiToolStripMenuItem_Click);
             // 
             // thoátToolStripMenuItem
             // 
             this.thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
-            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(61, 26);
+            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(61, 24);
             this.thoátToolStripMenuItem.Text = "Thoát";
             this.thoátToolStripMenuItem.Click += new System.EventHandler(this.thoátToolStripMenuItem_Click);
             // 
@@ -427,6 +428,7 @@
             this.Controls.Add(this.dgvDSNhanVien);
             this.Controls.Add(this.grbThongTin);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormXemDanhSach";
             this.Text = "FormXemDanhSach";

@@ -88,5 +88,13 @@ namespace QuanLyNhanVien
         {
             this.Close();
         }
+
+        private void cboQuyen_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnTaoTK_Click(sender, e);
+            }
+        }
     }
 }

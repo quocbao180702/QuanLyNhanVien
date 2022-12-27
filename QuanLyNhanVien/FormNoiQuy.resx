@@ -149,29 +149,28 @@ Quy định nhân viên trong quán trà sữa sẽ bao gồm những quyền l�
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnQuayLai.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAACxIAAAsSAdLdfvwAAATESURBVGhD7VldaFxFFI7aqm2pWNQXH0qR1j/UZvduSu1L
-        nhWkgSYqaA2VWIT076XQl9K+CgoNlTZzd0Mx2FLSFgqttko0ofiiNsYHIxY00ND0L3FnbkLbiNXrd+6e
-        bO5vcu/dvXc34AeHkD0z53xn5szMmbkN/yMAzcfMRxt7pp7SxNSTGz8ZW8Y/1yfWH5Vrsnm1XRPy86xQ
-        P2V1dVfTlemSacgQ9J9l8nKbJoqruXtt8ErvjRUg3JHV5Q8uouFEyH81oS5RMGu7zEfYbPKg1ADpPZou
-        b/kSiyfXMGudzQfMJewmGWS6jVezQv7mQ8ApQt7G6F4GqUES/DaEoCc97VyC9BrOdKscu6siTPMBENoP
-        8vf9HcubIP1pprv4RtNh4wnu5QEtaLRrwewdCQxIyL9ohsknd6sMlJ8w3OdxBMGI/YIRfvPFPvNhbh4a
-        1CeTN95FMCN+tiH5tj7zIW4eD+QEI3LObRykDdp1Gg6YD3LT2CCSmjB2kU2PH6FOVRQETbXHKO06CWyB
-        mbxaC/tDbn9IXcFNosOTp0KdSfJQ0sT4cqynLxw+IZidTm4SDTSFNiOnNWEuZVViIB8YuC/tASATZpp0
-        2chNwoP2fKRLe07ILVXbFULAOiR19bM9CMzM99VYc6mhSTeeBXEqP8pBYCDfZ/XiAFJprz0ApPQfsU7r
-        nDBeQx4etxZTiqlE6wF+f7cHgd3qLVaHA00bjPwT20CFwCx8YA8AXC6wamG4yVsi1D5Wp4LS1qqmZv0j
-        oL+pJGF1MHzJ6/J6pjDxNDdJDSDd6+AhVBur/BFEHpE/z01SBdbgVgcXFI6s8qLeyBNyPeoZOx+k1ACr
-        nAginysYz3GT2gAHGA6ye2VOQo2zZg7YIt/xkrdOQOpYrFQwasOY+iy7iww6A2CHeckZ/rkEOhzsKz0p
-        wWB8xy4jwxoAmy3HPdqqyUsj5XBYbcEsD7LLyEB/R23kuURpenGztcfaGrEomr5KBXa+zeSnXmB3kQEb
-        o3OcXCk0Cyha3UHg/8lYpWwVQSlOd+UyJ6HGWOVFPQbBlWmZD6SfVf6otyBK27sjgEOsCkZQELUoJZA+
-        J+088H8Lq+ZHQBB7WZ0KNhUmVsLvnTIHrIX1x+TjrF4YniDyxuusSgXwubPsG4IFfJZV4aHl1QYE0pX2
-        XcB6h8WOYw8gdPrUA0D2oIv8r4vmYk87nqOAg+SEepvV4bCha/KxrCjuRuQdiT992/DyEbUK5K/YySOV
-        BiLfx5H35+eMyK8oJ1mVGOjlD+XyJTt5yHSskh6kJ+yGMCpf06ywuuqgkfchj9QxtnKTaEDnj93GENRI
-        JUVZEDjnHWlDggr2I24SHVRmw+gJj1FaXELtq8a3rdLzpTxo2fT4UYWK36FK7/dKuI2zXIV8SKclNw8N
-        SkX03enZ51mska/mIxqC2IGRKpe0LplGah3HneI9euf3+yhBu1jjUWOdVZihtgFBv0+xlq3YOb8QcoU/
-        XwLRH32cukTOYGTpIjPMMjpP8GVBu4HEHxBKKVVst0j5kIglOGGtQyrFd9fZh9dWOL+IBej79XJeoa+R
-        KMzwt6Xm5QHv322oWg/j7zeQceeuYqUULdZ+yCEiHakkrhVKXzmT/yy1iNHQ8B8yE+h4QxD7egAAAABJ
-        RU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        EQAACxEBf2RfkQAABMRJREFUaEPtWV1oXEUUjtqqbalY1BcfSpHWP9Rm925K7UueFaSBJipoDZVYhPTv
+        pdCX0r4KCg2VNnN3QzHYUtIWCq22SjSh+KI2xgcjFjTQ0PQvcWduQtuI1et37p5s7m9y7929dzfgB4eQ
+        PTPnfGfmzMyZuQ3/IwDNx8xHG3umntLE1JMbPxlbxj/XJ9YflWuyebVdE/LzrFA/ZXV1V9OV6ZJpyBD0
+        n2Xycpsmiqu5e23wSu+NFSDckdXlDy6i4UTIfzWhLlEwa7vMR9hs8qDUAOk9mi5v+RKLJ9cwa53NB8wl
+        7CYZZLqNV7NC/uZDwClC3sboXgapQRL8NoSgJz3tXIL0Gs50qxy7qyJM8wEQ2g/y9/0dy5sg/Wmmu/hG
+        02HjCe7lAS1otGvB7B0JDEjIv2iGySd3qwyUnzDc53EEwYj9ghF+88U+82FuHhrUJ5M33kUwI362Ifm2
+        PvMhbh4P5AQjcs5tHKQN2nUaDpgPctPYIJKaMHaRTY8foU5VFARNtcco7ToJbIGZvFoL+0Nuf0hdwU2i
+        w5OnQp1J8lDSxPhyrKcvHD4hmJ1ObhINNIU2I6c1YS5lVWIgHxi4L+0BIBNmmnTZyE3Cg/Z8pEt7Tsgt
+        VdsVQsA6JHX1sz0IzMz31VhzqaFJN54FcSo/ykFgIN9n9eIAUmmvPQCk9B+xTuucMF5DHh63FlOKqUTr
+        AX5/tweB3eotVocDTRuM/BPbQIXALHxgDwBcLrBqYbjJWyLUPlangtLWqqZm/SOgv6kkYXUwfMnr8nqm
+        MPE0N0kNIN3r4CFUG6v8EUQekT/PTVIF1uBWBxcUjqzyot7IE3I96hk7H6TUAKucCCKfKxjPcZPaAAcY
+        DrJ7ZU5CjbNmDtgi3/GSt05A6lisVDBqw5j6LLuLDDoDYId5yRn+uQQ6HOwrPSnBYHzHLiPDGgCbLcc9
+        2qrJSyPlcFhtwSwPssvIQH9HbeS5RGl6cbO1x9oasSiavkoFdr7N5KdeYHeRARujc5xcKTQLKFrdQeD/
+        yVilbBVBKU535TInocZY5UU9BsGVaZkPpJ9V/qi3IErbuyOAQ6wKRlAQtSglkD4n7Tzwfwur5kdAEHtZ
+        nQo2FSZWwu+dMgeshfXH5OOsXhieIPLG66xKBfC5s+wbggV8llXhoeXVBgTSlfZdwHqHxY5jDyB0+tQD
+        QPagi/yvi+ZiTzueo4CD5IR6m9XhsKFr8rGsKO5G5B2JP33b8PIRtQrkr9jJI5UGIt/Hkffn54zIrygn
+        WZUY6OUP5fIlO3nIdKySHqQn7IYwKl/TrLC66qCR9yGP1DG2cpNoQOeP3cYQ1EglRVkQOOcdaUOCCvYj
+        bhIdVGbD6AmPUVpcQu2rxret0vOlPGjZ9PhRhYrfoUrv90q4jbNchXxIpyU3Dw1KRfTd6dnnWayRr+Yj
+        GoLYgZEql7QumUZqHced4j165/f7KEG7WONRY51VmKG2AUG/T7GWrdg5vxByhT9fAtEffZy6RM5gZOki
+        M8wyOk/wZUG7gcQfEEopVWy3SPmQiCU4Ya1DKsV319mH11Y4v4gF6Pv1cl6hr5EozPC3peblAe/fbaha
+        D+PvN5Bx565ipRQt1n7IISIdqSSuFUpfOZP/LLWI0dDwHzIT6HhDEPt6AAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

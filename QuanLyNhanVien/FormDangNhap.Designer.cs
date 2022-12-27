@@ -70,7 +70,7 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(255, 30);
-            this.txtPassword.TabIndex = 17;
+            this.txtPassword.TabIndex = 2;
             this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyDown);
             // 
             // txtUsername
@@ -82,7 +82,7 @@
             this.txtUsername.Location = new System.Drawing.Point(176, 229);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(255, 30);
-            this.txtUsername.TabIndex = 18;
+            this.txtUsername.TabIndex = 1;
             // 
             // btnQuenMK
             // 
@@ -149,7 +149,7 @@
             this.btnDangNhap.Location = new System.Drawing.Point(104, 435);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(259, 56);
-            this.btnDangNhap.TabIndex = 13;
+            this.btnDangNhap.TabIndex = 3;
             this.btnDangNhap.Text = "Đăng Nhập";
             this.btnDangNhap.UseVisualStyleBackColor = true;
             this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);

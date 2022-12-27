@@ -106,6 +106,7 @@
             this.ckbDaHieu.TabIndex = 4;
             this.ckbDaHieu.Text = "Đã hiểu rõ nội quy định của cửa hàng";
             this.ckbDaHieu.UseVisualStyleBackColor = true;
+            this.ckbDaHieu.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ckbDaHieu_KeyDown);
             // 
             // btnQuayLai
             // 
@@ -120,7 +121,7 @@
             this.btnQuayLai.Text = "Quay lại";
             this.btnQuayLai.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnQuayLai.UseVisualStyleBackColor = false;
-            this.btnQuayLai.Click += new System.EventHandler(this.button1_Click);
+            this.btnQuayLai.Click += new System.EventHandler(this.btnQuayLai_Click);
             // 
             // FormNoiQuy
             // 

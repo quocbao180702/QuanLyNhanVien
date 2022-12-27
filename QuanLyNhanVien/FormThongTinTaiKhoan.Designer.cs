@@ -84,13 +84,13 @@
             this.MenuItemXem = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuItemQuanLy = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuQuanLyLuong = new System.Windows.Forms.ToolStripMenuItem();
-            this.MenuItemDangKyCa = new System.Windows.Forms.ToolStripMenuItem();
-            this.MenuItemThongKe = new System.Windows.Forms.ToolStripMenuItem();
-            this.nộiQuyToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.MenuItemDangXuat = new System.Windows.Forms.ToolStripMenuItem();
-            this.MenuItemThoat = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuItemDoiMatKhau = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuItemTaoTaiKhoan = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuItemDangKyCa = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuItemDangXuat = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuItemThongKe = new System.Windows.Forms.ToolStripMenuItem();
+            this.nộiQuyToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuItemThoat = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -750,12 +750,34 @@
             this.MenuQuanLyLuong.Text = "Quản Lý Lương";
             this.MenuQuanLyLuong.Click += new System.EventHandler(this.quảnLyLuongToolStripMenuItem_Click);
             // 
+            // MenuItemDoiMatKhau
+            // 
+            this.MenuItemDoiMatKhau.Name = "MenuItemDoiMatKhau";
+            this.MenuItemDoiMatKhau.Size = new System.Drawing.Size(293, 26);
+            this.MenuItemDoiMatKhau.Text = "Đổi Mật Khẩu";
+            this.MenuItemDoiMatKhau.Click += new System.EventHandler(this.MenuItemDoiMatKhau_Click);
+            // 
+            // MenuItemTaoTaiKhoan
+            // 
+            this.MenuItemTaoTaiKhoan.Name = "MenuItemTaoTaiKhoan";
+            this.MenuItemTaoTaiKhoan.Size = new System.Drawing.Size(293, 26);
+            this.MenuItemTaoTaiKhoan.Text = "Tạo tài khoản";
+            this.MenuItemTaoTaiKhoan.Click += new System.EventHandler(this.MenuItemTaoTaiKhoan_Click);
+            // 
             // MenuItemDangKyCa
             // 
             this.MenuItemDangKyCa.Name = "MenuItemDangKyCa";
             this.MenuItemDangKyCa.Size = new System.Drawing.Size(293, 26);
             this.MenuItemDangKyCa.Text = "Đăng Ký Ca";
             this.MenuItemDangKyCa.Click += new System.EventHandler(this.MenuItemDangKyCa_Click);
+            // 
+            // MenuItemDangXuat
+            // 
+            this.MenuItemDangXuat.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MenuItemDangXuat.Name = "MenuItemDangXuat";
+            this.MenuItemDangXuat.Size = new System.Drawing.Size(293, 26);
+            this.MenuItemDangXuat.Text = "Đăng xuất";
+            this.MenuItemDangXuat.Click += new System.EventHandler(this.MenuItemDangXuat_Click);
             // 
             // MenuItemThongKe
             // 
@@ -771,14 +793,6 @@
             this.nộiQuyToolStripMenuItem1.Text = "Nội Quy";
             this.nộiQuyToolStripMenuItem1.Click += new System.EventHandler(this.nộiQuyToolStripMenuItem1_Click);
             // 
-            // MenuItemDangXuat
-            // 
-            this.MenuItemDangXuat.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MenuItemDangXuat.Name = "MenuItemDangXuat";
-            this.MenuItemDangXuat.Size = new System.Drawing.Size(293, 26);
-            this.MenuItemDangXuat.Text = "Đăng xuất";
-            this.MenuItemDangXuat.Click += new System.EventHandler(this.MenuItemDangXuat_Click);
-            // 
             // MenuItemThoat
             // 
             this.MenuItemThoat.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -786,20 +800,6 @@
             this.MenuItemThoat.Size = new System.Drawing.Size(293, 26);
             this.MenuItemThoat.Text = "Thoát";
             this.MenuItemThoat.Click += new System.EventHandler(this.MenuItemThoat_Click);
-            // 
-            // MenuItemDoiMatKhau
-            // 
-            this.MenuItemDoiMatKhau.Name = "MenuItemDoiMatKhau";
-            this.MenuItemDoiMatKhau.Size = new System.Drawing.Size(293, 26);
-            this.MenuItemDoiMatKhau.Text = "Đổi Mật Khẩu";
-            this.MenuItemDoiMatKhau.Click += new System.EventHandler(this.MenuItemDoiMatKhau_Click);
-            // 
-            // MenuItemTaoTaiKhoan
-            // 
-            this.MenuItemTaoTaiKhoan.Name = "MenuItemTaoTaiKhoan";
-            this.MenuItemTaoTaiKhoan.Size = new System.Drawing.Size(293, 26);
-            this.MenuItemTaoTaiKhoan.Text = "Tạo tài khoản";
-            this.MenuItemTaoTaiKhoan.Click += new System.EventHandler(this.MenuItemTaoTaiKhoan_Click);
             // 
             // FormThongTinTaiKhoan
             // 
@@ -814,6 +814,7 @@
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormThongTinTaiKhoan";
             this.Text = "FormQuanLyNhanVien";

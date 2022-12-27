@@ -26,18 +26,27 @@ namespace QuanLyNhanVien
         int quyen = 0;
 
 
-        private void button1_Click(object sender, EventArgs e)
+
+        private void ckbDaHieu_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnQuayLai_Click(sender, e);
+            }
+        }
+
+        private void btnQuayLai_Click(object sender, EventArgs e)
         {
             if(ckbDaHieu.Checked == true)
             {
                 this.Hide();
-                FormThongTinTaiKhoan fthongtin = new FormThongTinTaiKhoan(ma,quyen);
+                FormThongTinTaiKhoan fthongtin = new FormThongTinTaiKhoan(ma, quyen);
                 fthongtin.ShowDialog();
-                this.Close();
+                fthongtin.Close();
             }
             else
             {
-                MessageBox.Show("Vui lòng đọc rõ nội quy và check và đã hiểu");
+                MessageBox.Show("Bạn hãy đọc và check đã hiểu", "Thông Báo");
             }
         }
     }

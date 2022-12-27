@@ -62,5 +62,13 @@ namespace QuanLyNhanVien
 
 
         }
+
+        private void cboQuyen_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnThayDoi_Click(sender, e);
+            }
+        }
     }
 }

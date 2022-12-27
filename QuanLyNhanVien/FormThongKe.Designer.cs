@@ -34,6 +34,7 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormThongKe));
             this.lblTitle = new System.Windows.Forms.Label();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -98,27 +99,27 @@
             this.MenuItemThoat});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1537, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(1537, 28);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // thốngKêToolStripMenuItem
             // 
             this.thốngKêToolStripMenuItem.Name = "thốngKêToolStripMenuItem";
-            this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(86, 26);
+            this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(86, 24);
             this.thốngKêToolStripMenuItem.Text = "Thống Kê";
             // 
             // MenuItemQuayLai
             // 
             this.MenuItemQuayLai.Name = "MenuItemQuayLai";
-            this.MenuItemQuayLai.Size = new System.Drawing.Size(80, 26);
+            this.MenuItemQuayLai.Size = new System.Drawing.Size(80, 24);
             this.MenuItemQuayLai.Text = "Quay Lại";
             this.MenuItemQuayLai.Click += new System.EventHandler(this.MenuItemQuayLai_Click);
             // 
             // MenuItemThoat
             // 
             this.MenuItemThoat.Name = "MenuItemThoat";
-            this.MenuItemThoat.Size = new System.Drawing.Size(61, 26);
+            this.MenuItemThoat.Size = new System.Drawing.Size(61, 24);
             this.MenuItemThoat.Text = "Thoát";
             this.MenuItemThoat.Click += new System.EventHandler(this.MenuItemThoat_Click);
             // 
@@ -132,6 +133,7 @@
             this.Controls.Add(this.chart1);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormThongKe";

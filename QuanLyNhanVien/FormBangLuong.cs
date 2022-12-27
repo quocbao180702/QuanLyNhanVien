@@ -115,7 +115,7 @@ namespace QuanLyNhanVien
             if (canghi <= calam && canghi >= 0)
             {
                 float sum = 0;
-                sum = (l / 30) * (calam - canghi);
+                sum = (l / 60) * (calam - canghi);
                 tongluong = sum;
                 this.txtLuong.Text = sum.ToString();
             }

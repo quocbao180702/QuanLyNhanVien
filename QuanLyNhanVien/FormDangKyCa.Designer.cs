@@ -362,6 +362,7 @@
             this.Controls.Add(this.txtHo);
             this.Controls.Add(this.lblMa);
             this.Controls.Add(this.lblHo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormDangKyCa";
             this.Text = "FormDangKyCa";
             this.Load += new System.EventHandler(this.FormDangKyCa_Load);

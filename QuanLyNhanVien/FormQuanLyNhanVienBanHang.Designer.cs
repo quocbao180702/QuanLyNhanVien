@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormQuanLyNhanVienBanHang));
             this.grbChucVu = new System.Windows.Forms.GroupBox();
+            this.btnXoa = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
@@ -77,7 +78,6 @@
             this.thoátToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bảngLươngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nộiQuyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnXoa = new System.Windows.Forms.Button();
             this.grbChucVu.SuspendLayout();
             this.grbThongTin.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -104,6 +104,19 @@
             this.grbChucVu.TabIndex = 14;
             this.grbChucVu.TabStop = false;
             this.grbChucVu.Text = "Chức năng";
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
+            this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnXoa.Location = new System.Drawing.Point(195, 189);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(124, 54);
+            this.btnXoa.TabIndex = 18;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // label1
             // 
@@ -569,10 +582,6 @@
             // 
             this.cboTimCuaHang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboTimCuaHang.FormattingEnabled = true;
-            this.cboTimCuaHang.Items.AddRange(new object[] {
-            "Trà Sữa Muối (chi nhánh Long Xuyên)",
-            "Trà Sữa Muối (chi nhánh Châu Đốc)",
-            "Trà Sữa Muối (chi nhánh Cần Thơ)"});
             this.cboTimCuaHang.Location = new System.Drawing.Point(42, 76);
             this.cboTimCuaHang.Name = "cboTimCuaHang";
             this.cboTimCuaHang.Size = new System.Drawing.Size(230, 30);
@@ -678,19 +687,6 @@
             this.nộiQuyToolStripMenuItem.Size = new System.Drawing.Size(77, 24);
             this.nộiQuyToolStripMenuItem.Text = "Nội Quy";
             this.nộiQuyToolStripMenuItem.Click += new System.EventHandler(this.nộiQuyToolStripMenuItem_Click);
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
-            this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXoa.Location = new System.Drawing.Point(195, 189);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(124, 54);
-            this.btnXoa.TabIndex = 18;
-            this.btnXoa.Text = "Xóa";
-            this.btnXoa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnXoa.UseVisualStyleBackColor = true;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // FormQuanLyNhanVienBanHang
             // 

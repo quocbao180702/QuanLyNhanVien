@@ -196,7 +196,6 @@ namespace QuanLyNhanVien
             {
                 dgQLNhanVien.Rows.RemoveAt(item.Index);
             }
-     
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -356,10 +355,10 @@ namespace QuanLyNhanVien
 
         private void btnThemCuaHang_Click(object sender, EventArgs e)
         {
-            FormCuaHang fcuahang = new FormCuaHang();
+            this.Hide();
+            FormCuaHang fcuahang = new FormCuaHang(ma,quyen);
             fcuahang.ShowDialog();
-            cboTimCuaHang.Items.Add(fcuahang.them());
-            cboCuaHang.Items.Add(fcuahang.them());
+            this.Close();
 
         }
 
@@ -379,6 +378,7 @@ namespace QuanLyNhanVien
                 MessageBox.Show("DATA NOT UPDATED SUCCESSFULLY");
             }
             conn.Close();
+            loadcombox_cuahang();
         }
 
         private void quayLạiToolStripMenuItem_Click(object sender, EventArgs e)
@@ -407,7 +407,7 @@ namespace QuanLyNhanVien
         private void nộiQuyToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormNoiQuy fnoiquy = new FormNoiQuy();
+            FormNoiQuy fnoiquy = new FormNoiQuy(ma, quyen);
             fnoiquy.ShowDialog();
             this.Close();
         }
@@ -415,7 +415,7 @@ namespace QuanLyNhanVien
         private void bảngLươngToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormBangLuong fbangluong = new FormBangLuong();
+            FormBangLuong fbangluong = new FormBangLuong(ma, quyen);
             fbangluong.ShowDialog();
             this.Close();
         }

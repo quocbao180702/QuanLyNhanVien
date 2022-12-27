@@ -74,7 +74,7 @@
             this.btnThayDoi.Margin = new System.Windows.Forms.Padding(4);
             this.btnThayDoi.Name = "btnThayDoi";
             this.btnThayDoi.Size = new System.Drawing.Size(140, 60);
-            this.btnThayDoi.TabIndex = 2;
+            this.btnThayDoi.TabIndex = 4;
             this.btnThayDoi.Text = "Cập Nhật";
             this.btnThayDoi.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThayDoi.UseVisualStyleBackColor = true;
@@ -116,7 +116,7 @@
             this.txtEmail.MaximumSize = new System.Drawing.Size(380, 50);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(361, 30);
-            this.txtEmail.TabIndex = 1;
+            this.txtEmail.TabIndex = 2;
             // 
             // lblTieuDe
             // 
@@ -165,12 +165,14 @@
             this.cboQuyen.FormattingEnabled = true;
             this.cboQuyen.Items.AddRange(new object[] {
             "1",
-            "2"});
+            "2",
+            "3"});
             this.cboQuyen.Location = new System.Drawing.Point(323, 206);
             this.cboQuyen.MaximumSize = new System.Drawing.Size(140, 0);
             this.cboQuyen.Name = "cboQuyen";
             this.cboQuyen.Size = new System.Drawing.Size(121, 30);
-            this.cboQuyen.TabIndex = 4;
+            this.cboQuyen.TabIndex = 3;
+            this.cboQuyen.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cboQuyen_KeyDown);
             // 
             // FormQuenMatKhau
             // 

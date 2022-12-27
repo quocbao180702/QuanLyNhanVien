@@ -76,7 +76,7 @@
             this.txtMaNV.MaximumSize = new System.Drawing.Size(300, 60);
             this.txtMaNV.Name = "txtMaNV";
             this.txtMaNV.Size = new System.Drawing.Size(210, 30);
-            this.txtMaNV.TabIndex = 3;
+            this.txtMaNV.TabIndex = 1;
             // 
             // txtMatKhau
             // 
@@ -85,7 +85,7 @@
             this.txtMatKhau.MaximumSize = new System.Drawing.Size(600, 60);
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.Size = new System.Drawing.Size(423, 30);
-            this.txtMatKhau.TabIndex = 3;
+            this.txtMatKhau.TabIndex = 2;
             // 
             // lblMatKhau
             // 
@@ -150,12 +150,14 @@
             this.cboQuyen.FormattingEnabled = true;
             this.cboQuyen.Items.AddRange(new object[] {
             "1",
-            "2"});
+            "2",
+            "3"});
             this.cboQuyen.Location = new System.Drawing.Point(214, 325);
             this.cboQuyen.MaximumSize = new System.Drawing.Size(200, 0);
             this.cboQuyen.Name = "cboQuyen";
             this.cboQuyen.Size = new System.Drawing.Size(121, 30);
-            this.cboQuyen.TabIndex = 7;
+            this.cboQuyen.TabIndex = 4;
+            this.cboQuyen.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cboQuyen_KeyDown);
             // 
             // menuStrip1
             // 
