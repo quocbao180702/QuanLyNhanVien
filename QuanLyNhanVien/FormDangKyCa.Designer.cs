@@ -311,9 +311,9 @@
             this.btnBoChon.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBoChon.Image = ((System.Drawing.Image)(resources.GetObject("btnBoChon.Image")));
             this.btnBoChon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBoChon.Location = new System.Drawing.Point(426, 608);
+            this.btnBoChon.Location = new System.Drawing.Point(417, 608);
             this.btnBoChon.Name = "btnBoChon";
-            this.btnBoChon.Size = new System.Drawing.Size(139, 54);
+            this.btnBoChon.Size = new System.Drawing.Size(148, 54);
             this.btnBoChon.TabIndex = 7;
             this.btnBoChon.Text = "Bỏ chọn";
             this.btnBoChon.TextAlign = System.Drawing.ContentAlignment.MiddleRight;

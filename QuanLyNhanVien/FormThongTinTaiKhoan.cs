@@ -73,7 +73,6 @@ namespace QuanLyNhanVien
                 MenuItemQuanLy.Visible = false;
                 MenuItemThongKe.Visible = false;
                 MenuItemTaoTaiKhoan.Visible = false;
-                MenuItemDoiMatKhau.Visible = false;
 
             }
             if (quyen == 3)
@@ -82,7 +81,6 @@ namespace QuanLyNhanVien
                 MenuQuanLyLuong.Visible = false;
                 MenuItemThongKe.Visible = false;
                 MenuItemTaoTaiKhoan.Visible = false;
-                MenuItemDoiMatKhau.Visible = false;
             }
             if(quyen == 1)
             {
@@ -90,7 +88,6 @@ namespace QuanLyNhanVien
                 MenuQuanLyLuong.Visible = true;
                 MenuItemThongKe.Visible = true;
                 MenuItemTaoTaiKhoan.Visible = true;
-                MenuItemDoiMatKhau.Visible = true;
             }
             txtMa.ReadOnly = true;
             txtLuong.ReadOnly = true;
@@ -98,7 +95,7 @@ namespace QuanLyNhanVien
             txtCaNghi.ReadOnly = true;
             txtChucVu.ReadOnly =true;
             txtCuaHang.ReadOnly = true;
-            conn = new SqlConnection(@"Data Source=BAODANG;Initial Catalog=QLNV;Integrated Security=True");
+            conn = new SqlConnection(@"Data Source=GeeKay;Initial Catalog=QLNV;Integrated Security=True");
             conn.Open();
 
             //loadcombox_chucvu();

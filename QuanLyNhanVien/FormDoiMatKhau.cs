@@ -20,6 +20,8 @@ namespace QuanLyNhanVien
         public FormDoiMatKhau(string id, int quyen)
         {
             InitializeComponent();
+            this.id = id;
+            this.quyen = quyen;
         }
         string id = "";
         int quyen = 0;
@@ -29,7 +31,7 @@ namespace QuanLyNhanVien
 
         private void FormDoiMatKhau_Load(object sender, EventArgs e)
         {
-            conn = new SqlConnection(@"Data Source=BAODANG;Initial Catalog=QLNV;Integrated Security=True");
+            conn = new SqlConnection(@"Data Source=GeeKay;Initial Catalog=QLNV;Integrated Security=True");
             conn.Open();
         }
 
