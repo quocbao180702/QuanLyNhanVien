@@ -51,6 +51,12 @@ namespace QuanLyNhanVien
                 txtCuaHang.Text = dr.GetValue(13).ToString();
             }
             conn.Close();
+            txtChucVu.ReadOnly = true;
+            txtCuaHang.ReadOnly = true;
+            txtHo.ReadOnly =true;
+            txtMa.ReadOnly = true;
+            txtTen.ReadOnly = true;
+
         }
         private void btnQuayLai_Click(object sender, EventArgs e)
         {

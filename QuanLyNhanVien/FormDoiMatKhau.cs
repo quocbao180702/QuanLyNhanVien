@@ -17,6 +17,13 @@ namespace QuanLyNhanVien
         {
             InitializeComponent();
         }
+        public FormDoiMatKhau(string id, int quyen)
+        {
+            InitializeComponent();
+        }
+        string id = "";
+        int quyen = 0;
+
         SqlConnection conn;
         SqlCommand cmd;
 
@@ -63,6 +70,14 @@ namespace QuanLyNhanVien
             FormQuenMatKhau fquen = new FormQuenMatKhau();
             fquen.ShowDialog();
             this.Close();
+        }
+
+        private void btnQuayLai_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormThongTinTaiKhoan fthongtin = new FormThongTinTaiKhoan(id, quyen);
+            fthongtin.ShowDialog();
+            fthongtin.Close();
         }
     }
 }

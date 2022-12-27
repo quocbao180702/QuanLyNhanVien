@@ -75,6 +75,9 @@ namespace QuanLyNhanVien
             dgvLuong.Columns["luong"].Width = 50;
             dgvLuong.Columns["mach"].Visible = false;
             dgvLuong.Columns["macv"].Visible = false;
+
+            dgvLuong.RowsDefaultCellStyle.BackColor = Color.Pink;
+            dgvLuong.AlternatingRowsDefaultCellStyle.BackColor = Color.White;
         }
 
         private void FormBangLuong_Load(object sender, EventArgs e)

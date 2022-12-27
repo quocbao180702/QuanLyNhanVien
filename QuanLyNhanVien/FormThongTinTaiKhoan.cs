@@ -72,18 +72,25 @@ namespace QuanLyNhanVien
             {
                 MenuItemQuanLy.Visible = false;
                 MenuItemThongKe.Visible = false;
+                MenuItemTaoTaiKhoan.Visible = false;
+                MenuItemDoiMatKhau.Visible = false;
+
             }
             if (quyen == 3)
             {
                 MenuItemQuanLy.Visible = false;
                 MenuQuanLyLuong.Visible = false;
                 MenuItemThongKe.Visible = false;
+                MenuItemTaoTaiKhoan.Visible = false;
+                MenuItemDoiMatKhau.Visible = false;
             }
             if(quyen == 1)
             {
                 MenuItemQuanLy.Visible = true;
                 MenuQuanLyLuong.Visible = true;
                 MenuItemThongKe.Visible = true;
+                MenuItemTaoTaiKhoan.Visible = true;
+                MenuItemDoiMatKhau.Visible = true;
             }
             txtMa.ReadOnly = true;
             txtLuong.ReadOnly = true;
@@ -223,6 +230,22 @@ namespace QuanLyNhanVien
             FormThongKe fthongke = new FormThongKe(id,quyen);
             fthongke.ShowDialog();
             this.Close();
+        }
+
+        private void MenuItemTaoTaiKhoan_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormTaoTaiKhoan fdoi = new FormTaoTaiKhoan(id, quyen);
+            fdoi.ShowDialog();
+            fdoi.Close();
+        }
+
+        private void MenuItemDoiMatKhau_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormDoiMatKhau fdoi = new FormDoiMatKhau(id, quyen);
+            fdoi.ShowDialog();
+            fdoi.Close();
         }
     }
 }

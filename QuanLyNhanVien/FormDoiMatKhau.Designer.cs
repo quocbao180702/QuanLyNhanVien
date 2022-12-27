@@ -51,26 +51,30 @@
             // 
             this.btnThoat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.btnThoat.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoat.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.Image")));
+            this.btnThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThoat.Location = new System.Drawing.Point(579, 475);
             this.btnThoat.Margin = new System.Windows.Forms.Padding(4);
-            this.btnThoat.MaximumSize = new System.Drawing.Size(140, 70);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(112, 50);
+            this.btnThoat.Size = new System.Drawing.Size(140, 55);
             this.btnThoat.TabIndex = 10;
             this.btnThoat.Text = "Thoát";
+            this.btnThoat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThoat.UseVisualStyleBackColor = true;
             // 
             // btnThayDoi
             // 
             this.btnThayDoi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.btnThayDoi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThayDoi.Location = new System.Drawing.Point(457, 475);
+            this.btnThayDoi.Image = ((System.Drawing.Image)(resources.GetObject("btnThayDoi.Image")));
+            this.btnThayDoi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThayDoi.Location = new System.Drawing.Point(431, 475);
             this.btnThayDoi.Margin = new System.Windows.Forms.Padding(4);
-            this.btnThayDoi.MaximumSize = new System.Drawing.Size(140, 70);
             this.btnThayDoi.Name = "btnThayDoi";
-            this.btnThayDoi.Size = new System.Drawing.Size(112, 50);
+            this.btnThayDoi.Size = new System.Drawing.Size(140, 55);
             this.btnThayDoi.TabIndex = 12;
             this.btnThayDoi.Text = "Cập Nhật";
+            this.btnThayDoi.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThayDoi.UseVisualStyleBackColor = true;
             this.btnThayDoi.Click += new System.EventHandler(this.btnThayDoi_Click);
             // 
@@ -78,14 +82,17 @@
             // 
             this.btnQuayLai.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.btnQuayLai.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuayLai.Image = ((System.Drawing.Image)(resources.GetObject("btnQuayLai.Image")));
+            this.btnQuayLai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnQuayLai.Location = new System.Drawing.Point(114, 475);
             this.btnQuayLai.Margin = new System.Windows.Forms.Padding(4);
-            this.btnQuayLai.MaximumSize = new System.Drawing.Size(140, 70);
             this.btnQuayLai.Name = "btnQuayLai";
-            this.btnQuayLai.Size = new System.Drawing.Size(112, 50);
+            this.btnQuayLai.Size = new System.Drawing.Size(140, 55);
             this.btnQuayLai.TabIndex = 11;
             this.btnQuayLai.Text = "Quay Lại";
+            this.btnQuayLai.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnQuayLai.UseVisualStyleBackColor = true;
+            this.btnQuayLai.Click += new System.EventHandler(this.btnQuayLai_Click);
             // 
             // btnQuenMatKhau
             // 
@@ -216,12 +223,12 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(110, 124);
+            this.label2.Location = new System.Drawing.Point(115, 124);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(139, 22);
+            this.label2.Size = new System.Drawing.Size(130, 22);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Tên Đăng Nhập:";
+            this.label2.Text = "Tên đăng nhập:";
             // 
             // txtTenDangNhap
             // 

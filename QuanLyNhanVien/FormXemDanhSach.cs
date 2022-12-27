@@ -67,6 +67,8 @@ namespace QuanLyNhanVien
             dgvDSNhanVien.Columns["tench"].Width = 250;
             dgvDSNhanVien.Columns["mach"].Visible = false;
             dgvDSNhanVien.Columns["macv"].Visible = false;
+            dgvDSNhanVien.RowsDefaultCellStyle.BackColor = Color.Pink;
+            dgvDSNhanVien.AlternatingRowsDefaultCellStyle.BackColor = Color.White;
         }
 
         private void FormXemDanhSach_Load(object sender, EventArgs e)

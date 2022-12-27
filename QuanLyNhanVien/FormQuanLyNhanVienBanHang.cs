@@ -98,6 +98,10 @@ namespace QuanLyNhanVien
             //dgQLNhanVien.Columns["tench"].Width = 80;
             dgQLNhanVien.Columns["tench"].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             dgQLNhanVien.Columns["mach"].Visible = false;
+
+            dgQLNhanVien.RowsDefaultCellStyle.BackColor = Color.Pink;
+            dgQLNhanVien.AlternatingRowsDefaultCellStyle.BackColor = Color.White;
+
         }
         public void loadcombox_chucvu()
         {

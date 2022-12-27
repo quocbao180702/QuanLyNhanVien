@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,6 +18,14 @@ namespace QuanLyNhanVien
         {
             InitializeComponent();
         }
+        public FormTaoTaiKhoan(string id, int quyen)
+        {
+            InitializeComponent();
+            this.id = id;
+            this.quyen = quyen;
+        }
+        string id = "";
+        int quyen = 0;
 
         SqlConnection conn;
         SqlCommand cmd;
@@ -65,6 +74,19 @@ namespace QuanLyNhanVien
         {
             TaoTaiKhoan();
             conn.Close();
+        }
+
+        private void MenuItemQuayLai_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormThongTinTaiKhoan fthongtin = new FormThongTinTaiKhoan(id, quyen);
+            fthongtin.ShowDialog();
+            fthongtin.Close();
+        }
+
+        private void MenuItemThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

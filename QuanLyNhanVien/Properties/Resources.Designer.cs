@@ -73,6 +73,26 @@ namespace QuanLyNhanVien.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_find_user_male_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-find-user-male-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_find_user_male_481 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-find-user-male-481", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_menu_rounded_30 {
             get {
                 object obj = ResourceManager.GetObject("icons8-menu-rounded-30", resourceCulture);
@@ -106,6 +126,26 @@ namespace QuanLyNhanVien.Properties {
         internal static System.Drawing.Bitmap icons8_partly_cloudy_day_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8-partly-cloudy-day-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_update_user_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-update-user-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_update_user_481 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-update-user-481", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

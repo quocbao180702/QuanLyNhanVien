@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDangKyCa));
             this.lblHo = new System.Windows.Forms.Label();
             this.txtHo = new System.Windows.Forms.TextBox();
             this.lblTen = new System.Windows.Forms.Label();
@@ -66,9 +67,9 @@
             this.lblHo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHo.Location = new System.Drawing.Point(38, 94);
             this.lblHo.Name = "lblHo";
-            this.lblHo.Size = new System.Drawing.Size(114, 22);
+            this.lblHo.Size = new System.Drawing.Size(121, 22);
             this.lblHo.TabIndex = 0;
-            this.lblHo.Text = "Họ nhân viên";
+            this.lblHo.Text = "Họ Nhân Viên";
             // 
             // txtHo
             // 
@@ -86,9 +87,9 @@
             this.lblTen.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTen.Location = new System.Drawing.Point(385, 94);
             this.lblTen.Name = "lblTen";
-            this.lblTen.Size = new System.Drawing.Size(120, 22);
+            this.lblTen.Size = new System.Drawing.Size(127, 22);
             this.lblTen.TabIndex = 0;
-            this.lblTen.Text = "Tên nhân viên";
+            this.lblTen.Text = "Tên Nhân Viên";
             // 
             // lblChucVu
             // 
@@ -97,9 +98,9 @@
             this.lblChucVu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblChucVu.Location = new System.Drawing.Point(38, 158);
             this.lblChucVu.Name = "lblChucVu";
-            this.lblChucVu.Size = new System.Drawing.Size(76, 22);
+            this.lblChucVu.Size = new System.Drawing.Size(79, 22);
             this.lblChucVu.TabIndex = 2;
-            this.lblChucVu.Text = "Chức vụ";
+            this.lblChucVu.Text = "Chức Vụ";
             // 
             // grbCa
             // 
@@ -115,7 +116,7 @@
             this.grbCa.Location = new System.Drawing.Point(42, 226);
             this.grbCa.MaximumSize = new System.Drawing.Size(671, 361);
             this.grbCa.Name = "grbCa";
-            this.grbCa.Size = new System.Drawing.Size(671, 335);
+            this.grbCa.Size = new System.Drawing.Size(671, 361);
             this.grbCa.TabIndex = 4;
             this.grbCa.TabStop = false;
             this.grbCa.Text = "Chọn Ca";
@@ -256,9 +257,9 @@
             this.lblGioiTinh.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGioiTinh.Location = new System.Drawing.Point(385, 159);
             this.lblGioiTinh.Name = "lblGioiTinh";
-            this.lblGioiTinh.Size = new System.Drawing.Size(81, 22);
+            this.lblGioiTinh.Size = new System.Drawing.Size(88, 22);
             this.lblGioiTinh.TabIndex = 5;
-            this.lblGioiTinh.Text = "Giới tính";
+            this.lblGioiTinh.Text = "Giới Tính";
             // 
             // txtChucVu
             // 
@@ -275,12 +276,14 @@
             this.btnQuayLai.AutoSize = true;
             this.btnQuayLai.BackColor = System.Drawing.Color.AliceBlue;
             this.btnQuayLai.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuayLai.Location = new System.Drawing.Point(43, 593);
-            this.btnQuayLai.MaximumSize = new System.Drawing.Size(132, 46);
+            this.btnQuayLai.Image = ((System.Drawing.Image)(resources.GetObject("btnQuayLai.Image")));
+            this.btnQuayLai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnQuayLai.Location = new System.Drawing.Point(43, 608);
             this.btnQuayLai.Name = "btnQuayLai";
-            this.btnQuayLai.Size = new System.Drawing.Size(132, 46);
+            this.btnQuayLai.Size = new System.Drawing.Size(153, 54);
             this.btnQuayLai.TabIndex = 7;
             this.btnQuayLai.Text = "Quay Lại";
+            this.btnQuayLai.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnQuayLai.UseVisualStyleBackColor = false;
             this.btnQuayLai.Click += new System.EventHandler(this.btnQuayLai_Click);
             // 
@@ -289,12 +292,14 @@
             this.btnChon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.btnChon.BackColor = System.Drawing.Color.AliceBlue;
             this.btnChon.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChon.Location = new System.Drawing.Point(583, 593);
-            this.btnChon.MaximumSize = new System.Drawing.Size(132, 46);
+            this.btnChon.Image = ((System.Drawing.Image)(resources.GetObject("btnChon.Image")));
+            this.btnChon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnChon.Location = new System.Drawing.Point(584, 608);
             this.btnChon.Name = "btnChon";
-            this.btnChon.Size = new System.Drawing.Size(132, 46);
+            this.btnChon.Size = new System.Drawing.Size(129, 54);
             this.btnChon.TabIndex = 7;
             this.btnChon.Text = "Chọn";
+            this.btnChon.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnChon.UseVisualStyleBackColor = false;
             this.btnChon.Click += new System.EventHandler(this.btnChon_Click);
             // 
@@ -304,12 +309,14 @@
             this.btnBoChon.AutoSize = true;
             this.btnBoChon.BackColor = System.Drawing.Color.AliceBlue;
             this.btnBoChon.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBoChon.Location = new System.Drawing.Point(445, 593);
-            this.btnBoChon.MaximumSize = new System.Drawing.Size(132, 46);
+            this.btnBoChon.Image = ((System.Drawing.Image)(resources.GetObject("btnBoChon.Image")));
+            this.btnBoChon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBoChon.Location = new System.Drawing.Point(426, 608);
             this.btnBoChon.Name = "btnBoChon";
-            this.btnBoChon.Size = new System.Drawing.Size(132, 46);
+            this.btnBoChon.Size = new System.Drawing.Size(139, 54);
             this.btnBoChon.TabIndex = 7;
             this.btnBoChon.Text = "Bỏ chọn";
+            this.btnBoChon.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBoChon.UseVisualStyleBackColor = false;
             this.btnBoChon.Click += new System.EventHandler(this.btnBoChon_Click);
             // 
@@ -320,9 +327,9 @@
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(385, 37);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 22);
+            this.label1.Size = new System.Drawing.Size(124, 22);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Tên cửa hàng";
+            this.label1.Text = "Tên Cửa Hàng";
             // 
             // txtCuaHang
             // 
@@ -338,7 +345,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PeachPuff;
-            this.ClientSize = new System.Drawing.Size(738, 664);
+            this.ClientSize = new System.Drawing.Size(738, 706);
             this.Controls.Add(this.btnBoChon);
             this.Controls.Add(this.btnChon);
             this.Controls.Add(this.btnQuayLai);

@@ -46,7 +46,7 @@
             this.label1.ForeColor = System.Drawing.Color.Blue;
             this.label1.Location = new System.Drawing.Point(455, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(179, 51);
+            this.label1.Size = new System.Drawing.Size(177, 49);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nội Quy";
             // 
@@ -111,11 +111,14 @@
             // 
             this.btnQuayLai.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.btnQuayLai.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuayLai.Location = new System.Drawing.Point(381, 806);
+            this.btnQuayLai.Image = ((System.Drawing.Image)(resources.GetObject("btnQuayLai.Image")));
+            this.btnQuayLai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnQuayLai.Location = new System.Drawing.Point(410, 798);
             this.btnQuayLai.Name = "btnQuayLai";
-            this.btnQuayLai.Size = new System.Drawing.Size(311, 55);
+            this.btnQuayLai.Size = new System.Drawing.Size(201, 63);
             this.btnQuayLai.TabIndex = 5;
             this.btnQuayLai.Text = "Quay lại";
+            this.btnQuayLai.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnQuayLai.UseVisualStyleBackColor = false;
             this.btnQuayLai.Click += new System.EventHandler(this.button1_Click);
             // 

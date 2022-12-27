@@ -33,7 +33,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
-            this.btnXoa = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnTim = new System.Windows.Forms.Button();
             this.txtTim = new System.Windows.Forms.TextBox();
@@ -78,6 +77,7 @@
             this.thoátToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bảngLươngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nộiQuyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnXoa = new System.Windows.Forms.Button();
             this.grbChucVu.SuspendLayout();
             this.grbThongTin.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -89,10 +89,10 @@
             // grbChucVu
             // 
             this.grbChucVu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.grbChucVu.Controls.Add(this.btnXoa);
             this.grbChucVu.Controls.Add(this.label1);
             this.grbChucVu.Controls.Add(this.btnHuy);
             this.grbChucVu.Controls.Add(this.btnSua);
-            this.grbChucVu.Controls.Add(this.btnXoa);
             this.grbChucVu.Controls.Add(this.btnThem);
             this.grbChucVu.Controls.Add(this.btnTim);
             this.grbChucVu.Controls.Add(this.txtTim);
@@ -117,56 +117,56 @@
             // btnHuy
             // 
             this.btnHuy.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHuy.Location = new System.Drawing.Point(120, 241);
+            this.btnHuy.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy.Image")));
+            this.btnHuy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHuy.Location = new System.Drawing.Point(91, 249);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(124, 46);
+            this.btnHuy.Size = new System.Drawing.Size(172, 54);
             this.btnHuy.TabIndex = 11;
             this.btnHuy.Text = "Làm Mới";
+            this.btnHuy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnHuy.UseVisualStyleBackColor = true;
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnSua
             // 
             this.btnSua.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
+            this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSua.Location = new System.Drawing.Point(31, 185);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(124, 46);
+            this.btnSua.Size = new System.Drawing.Size(124, 54);
             this.btnSua.TabIndex = 13;
             this.btnSua.Text = "Sửa";
+            this.btnSua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSua.UseVisualStyleBackColor = true;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.ImageKey = "(none)";
-            this.btnXoa.Location = new System.Drawing.Point(195, 185);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(124, 46);
-            this.btnXoa.TabIndex = 14;
-            this.btnXoa.Text = "Xóa";
-            this.btnXoa.UseVisualStyleBackColor = true;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnThem
             // 
             this.btnThem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.Location = new System.Drawing.Point(31, 129);
+            this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
+            this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThem.Location = new System.Drawing.Point(31, 124);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(124, 46);
+            this.btnThem.Size = new System.Drawing.Size(124, 54);
             this.btnThem.TabIndex = 15;
             this.btnThem.Text = "Thêm";
+            this.btnThem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThem.UseVisualStyleBackColor = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnTim
             // 
             this.btnTim.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTim.Location = new System.Drawing.Point(195, 129);
+            this.btnTim.Image = ((System.Drawing.Image)(resources.GetObject("btnTim.Image")));
+            this.btnTim.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTim.Location = new System.Drawing.Point(195, 124);
             this.btnTim.Name = "btnTim";
-            this.btnTim.Size = new System.Drawing.Size(124, 44);
+            this.btnTim.Size = new System.Drawing.Size(124, 54);
             this.btnTim.TabIndex = 16;
             this.btnTim.Text = "Tìm";
+            this.btnTim.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnTim.UseVisualStyleBackColor = true;
             this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
             // 
@@ -590,33 +590,43 @@
             // btnThemCuaHang
             // 
             this.btnThemCuaHang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemCuaHang.Image = ((System.Drawing.Image)(resources.GetObject("btnThemCuaHang.Image")));
+            this.btnThemCuaHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThemCuaHang.Location = new System.Drawing.Point(78, 240);
             this.btnThemCuaHang.Name = "btnThemCuaHang";
-            this.btnThemCuaHang.Size = new System.Drawing.Size(153, 46);
+            this.btnThemCuaHang.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnThemCuaHang.Size = new System.Drawing.Size(153, 39);
             this.btnThemCuaHang.TabIndex = 15;
-            this.btnThemCuaHang.Text = "Thêm Cửa Hàng";
+            this.btnThemCuaHang.Text = "Thêm";
+            this.btnThemCuaHang.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThemCuaHang.UseVisualStyleBackColor = true;
             this.btnThemCuaHang.Click += new System.EventHandler(this.btnThemCuaHang_Click);
             // 
             // btnXoaCuaHang
             // 
             this.btnXoaCuaHang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoaCuaHang.Image = ((System.Drawing.Image)(resources.GetObject("btnXoaCuaHang.Image")));
+            this.btnXoaCuaHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnXoaCuaHang.Location = new System.Drawing.Point(78, 185);
             this.btnXoaCuaHang.Name = "btnXoaCuaHang";
             this.btnXoaCuaHang.Size = new System.Drawing.Size(153, 46);
             this.btnXoaCuaHang.TabIndex = 14;
-            this.btnXoaCuaHang.Text = "Xóa Cửa Hàng";
+            this.btnXoaCuaHang.Text = "Xóa";
+            this.btnXoaCuaHang.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnXoaCuaHang.UseVisualStyleBackColor = true;
             this.btnXoaCuaHang.Click += new System.EventHandler(this.btnXoaCuaHang_Click);
             // 
             // btnLoc
             // 
             this.btnLoc.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLoc.Image = ((System.Drawing.Image)(resources.GetObject("btnLoc.Image")));
+            this.btnLoc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLoc.Location = new System.Drawing.Point(78, 129);
             this.btnLoc.Name = "btnLoc";
             this.btnLoc.Size = new System.Drawing.Size(153, 44);
             this.btnLoc.TabIndex = 16;
-            this.btnLoc.Text = "Lọc Cửa Hàng";
+            this.btnLoc.Text = "Lọc";
+            this.btnLoc.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLoc.UseVisualStyleBackColor = true;
             this.btnLoc.Click += new System.EventHandler(this.btnLoc_Click);
             // 
@@ -669,6 +679,19 @@
             this.nộiQuyToolStripMenuItem.Text = "Nội Quy";
             this.nộiQuyToolStripMenuItem.Click += new System.EventHandler(this.nộiQuyToolStripMenuItem_Click);
             // 
+            // btnXoa
+            // 
+            this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
+            this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnXoa.Location = new System.Drawing.Point(195, 189);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(124, 54);
+            this.btnXoa.TabIndex = 18;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
             // FormQuanLyNhanVienBanHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -707,7 +730,6 @@
         private System.Windows.Forms.GroupBox grbChucVu;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSua;
-        private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnTim;
         private System.Windows.Forms.TextBox txtTim;
@@ -753,5 +775,6 @@
         private System.Windows.Forms.ToolStripMenuItem thoátToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bảngLươngToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nộiQuyToolStripMenuItem;
+        private System.Windows.Forms.Button btnXoa;
     }
 }
