@@ -174,81 +174,93 @@ namespace QuanLyNhanVien
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            DataGridViewRow dr = dgQLNhanVien.SelectedRows[0];
-            SqlCommand cmThemNV = new SqlCommand("delete NhanVien where manv = @MaNV", conn);
-            conn.Open();
-            cmThemNV.Parameters.AddWithValue("@MaNV", dr.Cells["manv"].Value);
-            cmThemNV.Parameters.AddWithValue("@HoLot", dr.Cells["holot"].Value);
-            cmThemNV.Parameters.AddWithValue("@TenNV", dr.Cells["tennv"].Value);
-            cmThemNV.Parameters.AddWithValue("@GioiTinh", dr.Cells["gioitinh"].Value);
-            cmThemNV.Parameters.AddWithValue("@NgaySinh", dr.Cells["ngaysinh"].Value);
-            cmThemNV.Parameters.AddWithValue("@SDT", dr.Cells["sdt"].Value);
-            cmThemNV.Parameters.AddWithValue("@Email", dr.Cells["email"].Value);
-            cmThemNV.Parameters.AddWithValue("@LuongCB", dr.Cells["luongcb"].Value);
-            cmThemNV.Parameters.AddWithValue("@Tinh", dr.Cells["tinh"].Value);
-            cmThemNV.Parameters.AddWithValue("@DiaChi", dr.Cells["diachi"].Value);
-            cmThemNV.Parameters.AddWithValue("@MaCV", dr.Cells["macv"].Value);
-            cmThemNV.Parameters.AddWithValue("@MaCH", dr.Cells["mach"].Value);
-            cmThemNV.ExecuteNonQuery();
-            conn.Close();
-            MessageBox.Show("Record Deleted Successfully!");
-            foreach (DataGridViewRow item in this.dgQLNhanVien.SelectedRows)
+            DialogResult traloixoa;
+            traloixoa = MessageBox.Show("Bạn có muốn xóa nhân viên không?", "Thông báo",
+            MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (traloixoa == DialogResult.OK)
             {
-                dgQLNhanVien.Rows.RemoveAt(item.Index);
+                DataGridViewRow dr = dgQLNhanVien.SelectedRows[0];
+                SqlCommand cmXoaNV = new SqlCommand("delete from dangnhap\r\nwhere username = @MaNV;\r\ndelete from lamviec\r\nwhere manv = @MaNV;\r\ndelete from NhanVien\r\nwhere manv = @MaNV;", conn);
+                conn.Open();
+                cmXoaNV.Parameters.AddWithValue("@MaNV", dr.Cells["manv"].Value);
+                cmXoaNV.Parameters.AddWithValue("@HoLot", dr.Cells["holot"].Value);
+                cmXoaNV.Parameters.AddWithValue("@TenNV", dr.Cells["tennv"].Value);
+                cmXoaNV.Parameters.AddWithValue("@GioiTinh", dr.Cells["gioitinh"].Value);
+                cmXoaNV.Parameters.AddWithValue("@NgaySinh", dr.Cells["ngaysinh"].Value);
+                cmXoaNV.Parameters.AddWithValue("@SDT", dr.Cells["sdt"].Value);
+                cmXoaNV.Parameters.AddWithValue("@Email", dr.Cells["email"].Value);
+                cmXoaNV.Parameters.AddWithValue("@LuongCB", dr.Cells["luongcb"].Value);
+                cmXoaNV.Parameters.AddWithValue("@Tinh", dr.Cells["tinh"].Value);
+                cmXoaNV.Parameters.AddWithValue("@DiaChi", dr.Cells["diachi"].Value);
+                cmXoaNV.Parameters.AddWithValue("@MaCV", dr.Cells["macv"].Value);
+                cmXoaNV.Parameters.AddWithValue("@MaCH", dr.Cells["mach"].Value);
+                cmXoaNV.ExecuteNonQuery();
+                conn.Close();
+                MessageBox.Show("Record Deleted Successfully!");
+                foreach (DataGridViewRow item in this.dgQLNhanVien.SelectedRows)
+                {
+                    dgQLNhanVien.Rows.RemoveAt(item.Index);
+                }
             }
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            conn.Open();
-            SqlCommand cmd1 = new SqlCommand("select * from nhanvien where manv =  '" + txtMa.Text + "'", conn);
-            SqlDataReader dr1 = cmd1.ExecuteReader();
-            if (dr1.Read())
+            DialogResult traloisua;
+            traloisua = MessageBox.Show("Bạn có muốn sửa nhân viên không không?", "Thông báo",
+            MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (traloisua == DialogResult.OK)
             {
-                MessageBox.Show("Mã đã tồn  tại ");
-                conn.Close();
-            }
-            else
-            {
-                DataGridViewRow dr = dgQLNhanVien.SelectedRows[0];
-                dr.Cells["manv"].Value = txtMa.Text;
-                dr.Cells["holot"].Value = txtHo.Text;
-                dr.Cells["tennv"].Value = txtTen.Text;
-                if (radNu.Checked == true)
+                conn.Open();
+                SqlCommand cmd1 = new SqlCommand("select * from nhanvien where manv =  '" + txtMa.Text + "'", conn);
+                SqlDataReader dr1 = cmd1.ExecuteReader();
+                if (dr1.Read())
                 {
-                    dr.Cells["gioitinh"].Value = "Nữ";
+                    MessageBox.Show("Mã đã tồn  tại ");
+                    conn.Close();
                 }
                 else
                 {
-                    dr.Cells["gioitinh"].Value = "Nam";
+                    DataGridViewRow dr = dgQLNhanVien.SelectedRows[0];
+                    dr.Cells["manv"].Value = txtMa.Text;
+                    dr.Cells["holot"].Value = txtHo.Text;
+                    dr.Cells["tennv"].Value = txtTen.Text;
+                    if (radNu.Checked == true)
+                    {
+                        dr.Cells["gioitinh"].Value = "Nữ";
+                    }
+                    else
+                    {
+                        dr.Cells["gioitinh"].Value = "Nam";
+                    }
+                    dr.Cells["ngaysinh"].Value = dtpNgaySinh.Text;
+                    dr.Cells["sdt"].Value = txtSDT.Text;
+                    dr.Cells["email"].Value = txtEmail.Text;
+                    dr.Cells["luongcb"].Value = txtLuongCoBan.Text;
+                    dr.Cells["diachi"].Value = txtDiaChi.Text;
+                    dr.Cells["tinh"].Value = cboTinh.Text;
+                    dr.Cells["macv"].Value = cmbChucVu.SelectedValue;
+                    dr.Cells["tencv"].Value = cmbChucVu.Text;
+                    dr.Cells["mach"].Value = cboCuaHang.SelectedValue;
+                    dr.Cells["tench"].Value = cboCuaHang.Text;
+                    conn.Open();
+                    string sThemNV = @"update nhanvien set manv = @MaNV, holot = @HoLot, tennv = @TenNV, gioitinh = @GioiTinh, ngaysinh = @NgaySinh,sdt =  @SDT, email =  @Email, luongcb = @LuongCB, tinh = @Tinh, diachi = @DiaChi, macv =  @MaCV, mach = @MaCH  where manv = @MaNV";
+                    SqlCommand cmThemNV = new SqlCommand(sThemNV, conn);
+                    cmThemNV.Parameters.AddWithValue("@MaNV", dr.Cells["manv"].Value);
+                    cmThemNV.Parameters.AddWithValue("@HoLot", dr.Cells["holot"].Value);
+                    cmThemNV.Parameters.AddWithValue("@TenNV", dr.Cells["tennv"].Value);
+                    cmThemNV.Parameters.AddWithValue("@GioiTinh", dr.Cells["gioitinh"].Value);
+                    cmThemNV.Parameters.AddWithValue("@NgaySinh", dr.Cells["ngaysinh"].Value);
+                    cmThemNV.Parameters.AddWithValue("@SDT", dr.Cells["sdt"].Value);
+                    cmThemNV.Parameters.AddWithValue("@Email", dr.Cells["email"].Value);
+                    cmThemNV.Parameters.AddWithValue("@LuongCB", dr.Cells["luongcb"].Value);
+                    cmThemNV.Parameters.AddWithValue("@Tinh", dr.Cells["tinh"].Value);
+                    cmThemNV.Parameters.AddWithValue("@DiaChi", dr.Cells["diachi"].Value);
+                    cmThemNV.Parameters.AddWithValue("@MaCV", dr.Cells["macv"].Value);
+                    cmThemNV.Parameters.AddWithValue("@MaCH", dr.Cells["mach"].Value);
+                    cmThemNV.ExecuteReader();
+                    conn.Close();
                 }
-                dr.Cells["ngaysinh"].Value = dtpNgaySinh.Text;
-                dr.Cells["sdt"].Value = txtSDT.Text;
-                dr.Cells["email"].Value = txtEmail.Text;
-                dr.Cells["luongcb"].Value = txtLuongCoBan.Text;
-                dr.Cells["diachi"].Value = txtDiaChi.Text;
-                dr.Cells["tinh"].Value = cboTinh.Text;
-                dr.Cells["macv"].Value = cmbChucVu.SelectedValue;
-                dr.Cells["tencv"].Value = cmbChucVu.Text;
-                dr.Cells["mach"].Value = cboCuaHang.SelectedValue;
-                dr.Cells["tench"].Value = cboCuaHang.Text;
-                conn.Open();
-                string sThemNV = @"update nhanvien set manv = @MaNV, holot = @HoLot, tennv = @TenNV, gioitinh = @GioiTinh, ngaysinh = @NgaySinh,sdt =  @SDT, email =  @Email, luongcb = @LuongCB, tinh = @Tinh, diachi = @DiaChi, macv =  @MaCV, mach = @MaCH  where manv = @MaNV";
-                SqlCommand cmThemNV = new SqlCommand(sThemNV, conn);
-                cmThemNV.Parameters.AddWithValue("@MaNV", dr.Cells["manv"].Value);
-                cmThemNV.Parameters.AddWithValue("@HoLot", dr.Cells["holot"].Value);
-                cmThemNV.Parameters.AddWithValue("@TenNV", dr.Cells["tennv"].Value);
-                cmThemNV.Parameters.AddWithValue("@GioiTinh", dr.Cells["gioitinh"].Value);
-                cmThemNV.Parameters.AddWithValue("@NgaySinh", dr.Cells["ngaysinh"].Value);
-                cmThemNV.Parameters.AddWithValue("@SDT", dr.Cells["sdt"].Value);
-                cmThemNV.Parameters.AddWithValue("@Email", dr.Cells["email"].Value);
-                cmThemNV.Parameters.AddWithValue("@LuongCB", dr.Cells["luongcb"].Value);
-                cmThemNV.Parameters.AddWithValue("@Tinh", dr.Cells["tinh"].Value);
-                cmThemNV.Parameters.AddWithValue("@DiaChi", dr.Cells["diachi"].Value);
-                cmThemNV.Parameters.AddWithValue("@MaCV", dr.Cells["macv"].Value);
-                cmThemNV.Parameters.AddWithValue("@MaCH", dr.Cells["mach"].Value);
-                cmThemNV.ExecuteReader();
-                conn.Close();
             }
         }
 
@@ -296,6 +308,11 @@ namespace QuanLyNhanVien
                 SqlCommand cmd = new SqlCommand(truyvan, conn);
                 cmd.ExecuteNonQuery();
                 conn.Close();
+                conn.Open();
+                string truyvan2 = @"Insert into lamviec values('" + row["manv"].ToString() + "'," + 30+ "," + 0 + "," + row["luongcb"].ToString() + ",N'" + row["mach"].ToString() + "')";
+                SqlCommand cmd2 = new SqlCommand(truyvan2, conn);
+                cmd2.ExecuteNonQuery();
+                conn.Close();
             }
         
         }
@@ -337,19 +354,25 @@ namespace QuanLyNhanVien
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
-            this.txtMa.ResetText();
-            this.txtHo.ResetText();
-            this.txtTen.ResetText();
-            this.radNam.Checked = false;
-            this.radNu.Checked = false;
-            this.dtpNgaySinh.ResetText();
-            this.txtSDT.ResetText();
-            this.txtEmail.ResetText();
-            this.txtLuongCoBan.ResetText();
-            this.txtDiaChi.ResetText();
-            this.cboTinh.ResetText();
-            this.cmbChucVu.ResetText();
-            this.cboCuaHang.ResetText();
+            DialogResult traloi;
+            traloi = MessageBox.Show("Bạn có muốn reset không?", "Thông báo",
+            MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (traloi == DialogResult.OK)
+            {
+                this.txtMa.ResetText();
+                this.txtHo.ResetText();
+                this.txtTen.ResetText();
+                this.radNam.Checked = false;
+                this.radNu.Checked = false;
+                this.dtpNgaySinh.ResetText();
+                this.txtSDT.ResetText();
+                this.txtEmail.ResetText();
+                this.txtLuongCoBan.ResetText();
+                this.txtDiaChi.ResetText();
+                this.cboTinh.ResetText();
+                this.cmbChucVu.ResetText();
+                this.cboCuaHang.ResetText();
+            }
         }
 
 
@@ -364,21 +387,27 @@ namespace QuanLyNhanVien
 
         private void btnXoaCuaHang_Click(object sender, EventArgs e)
         {
-            conn.Open();
-            string xoa = cboTimCuaHang.SelectedValue.ToString();
-            string query = "DELETE FROM cuahang WHERE mach = '" + xoa + "'";
-            SqlCommand cmd = new SqlCommand(query, conn);
-            cmd.CommandText = query;
-            if (cmd.ExecuteNonQuery() == 1)
+            DialogResult traloixoach;
+            traloixoach = MessageBox.Show("Bạn có muốn xóa cửa hàng không?", "Thông báo",
+            MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (traloixoach == DialogResult.OK)
             {
-                MessageBox.Show("DATA UPDATED SUCCESSFULLY");
+                conn.Open();
+                string xoa = cboTimCuaHang.SelectedValue.ToString();
+                string query = "DELETE FROM cuahang WHERE mach = '" + xoa + "'";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.CommandText = query;
+                if (cmd.ExecuteNonQuery() == 1)
+                {
+                    MessageBox.Show("DATA UPDATED SUCCESSFULLY");
+                }
+                else
+                {
+                    MessageBox.Show("DATA NOT UPDATED SUCCESSFULLY");
+                }
+                conn.Close();
+                loadcombox_cuahang();
             }
-            else
-            {
-                MessageBox.Show("DATA NOT UPDATED SUCCESSFULLY");
-            }
-            conn.Close();
-            loadcombox_cuahang();
         }
 
         private void quayLạiToolStripMenuItem_Click(object sender, EventArgs e)

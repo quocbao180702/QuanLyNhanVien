@@ -37,30 +37,43 @@ namespace QuanLyNhanVien
 
         private void btnThayDoi_Click(object sender, EventArgs e)
         {
-            cmd = new SqlCommand("select n.*, d.* from NhanVien n, dangnhap d where n.manv = d.username and d.username ='" + txtTenDangNhap.Text + "'", conn);
-            SqlDataReader dr;
-            dr = cmd.ExecuteReader();
-            if (dr.Read())
+            DialogResult traloisua;
+            traloisua = MessageBox.Show("Bạn có muốn đổi mật khẩu không?", "Thông báo",
+            MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (traloisua == DialogResult.OK)
             {
-                string email = dr.GetValue(6).ToString();
-                if (txtEmail.Text != email || txtMatKhau.Text != dr.GetValue(12).ToString())
+                if (conn.State == ConnectionState.Closed)
                 {
-                    MessageBox.Show("Email hoặc mật khẩu không đúng");
-                    MessageBox.Show(dr.GetValue(12).ToString());
+                    conn.Open();
                 }
-                if(txtEmail.Text == email && txtMatKhau.Text == dr.GetValue(12).ToString())
+                cmd = new SqlCommand("select n.*, d.* from NhanVien n, dangnhap d where n.manv = d.username and d.username ='" + txtTenDangNhap.Text + "'", conn);
+                SqlDataReader dr;
+                dr = cmd.ExecuteReader();
+                if (dr.Read())
                 {
+                    string email = dr.GetValue(6).ToString();
+                    string matkhau = dr.GetValue(12).ToString();
                     conn.Close();
-                    if (txtMatKhauMoi.Text == txtNhapLai.Text) {
-                        conn.Open();
-                        SqlCommand cmd2 = new SqlCommand("UPDATE dangnhap SET pass  = '" + txtMatKhauMoi.Text + "' WHERE username = '" + txtTenDangNhap.Text + "'", conn);
-                        cmd2.ExecuteReader();
-                        conn.Close();
-                        MessageBox.Show("Cập Nhập Thành Công Mật Khẩu Mới");
+                    if (email != txtEmail.Text || matkhau != txtMatKhau.Text)
+                    {
+                        MessageBox.Show("Email hoặc mật khẩu không đúng");
+                        MessageBox.Show(matkhau);
+                        MessageBox.Show(email);
                     }
                     else
                     {
-                        MessageBox.Show("Nhập lại mật khẩu không đúng");
+                        if (txtMatKhauMoi.Text == txtNhapLai.Text)
+                        {
+                            conn.Open();
+                            SqlCommand cmd2 = new SqlCommand("UPDATE dangnhap SET pass  = '" + txtMatKhauMoi.Text + "' WHERE username = '" + txtTenDangNhap.Text + "'", conn);
+                            cmd2.ExecuteReader();
+                            conn.Close();
+                            MessageBox.Show("Cập Nhập Thành Công Mật Khẩu Mới");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Nhập lại mật khẩu không đúng");
+                        }
                     }
                 }
             }

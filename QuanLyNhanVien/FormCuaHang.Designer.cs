@@ -77,6 +77,7 @@
             this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
             this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThem.Location = new System.Drawing.Point(257, 292);
+            this.btnThem.MaximumSize = new System.Drawing.Size(177, 79);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(157, 59);
             this.btnThem.TabIndex = 8;
