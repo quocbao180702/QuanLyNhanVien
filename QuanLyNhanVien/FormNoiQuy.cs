@@ -49,5 +49,10 @@ namespace QuanLyNhanVien
                 MessageBox.Show("Bạn hãy đọc và check đã hiểu", "Thông Báo");
             }
         }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

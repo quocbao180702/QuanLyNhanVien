@@ -44,6 +44,7 @@
             // 
             // txtMaCuaHang
             // 
+            this.txtMaCuaHang.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtMaCuaHang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaCuaHang.Location = new System.Drawing.Point(224, 113);
             this.txtMaCuaHang.Name = "txtMaCuaHang";
@@ -52,6 +53,7 @@
             // 
             // txtDCCuaHang
             // 
+            this.txtDCCuaHang.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtDCCuaHang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDCCuaHang.Location = new System.Drawing.Point(224, 235);
             this.txtDCCuaHang.Name = "txtDCCuaHang";
@@ -61,6 +63,7 @@
             // 
             // txtTenCuaHang
             // 
+            this.txtTenCuaHang.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtTenCuaHang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenCuaHang.Location = new System.Drawing.Point(224, 172);
             this.txtTenCuaHang.Name = "txtTenCuaHang";
@@ -69,6 +72,7 @@
             // 
             // btnThem
             // 
+            this.btnThem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.btnThem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
             this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -83,6 +87,7 @@
             // 
             // lblHsPhuCap
             // 
+            this.lblHsPhuCap.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lblHsPhuCap.AutoSize = true;
             this.lblHsPhuCap.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHsPhuCap.Location = new System.Drawing.Point(57, 235);
@@ -93,6 +98,7 @@
             // 
             // lblMa
             // 
+            this.lblMa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lblMa.AutoSize = true;
             this.lblMa.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMa.Location = new System.Drawing.Point(57, 116);
@@ -103,6 +109,7 @@
             // 
             // lblTenChucVu
             // 
+            this.lblTenChucVu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lblTenChucVu.AutoSize = true;
             this.lblTenChucVu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTenChucVu.Location = new System.Drawing.Point(57, 175);
@@ -113,6 +120,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Cornsilk;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -130,14 +138,14 @@
             this.MenuItemQuayLai});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(651, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(651, 30);
             this.menuStrip1.TabIndex = 9;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // MenuItemQuayLai
             // 
             this.MenuItemQuayLai.Name = "MenuItemQuayLai";
-            this.MenuItemQuayLai.Size = new System.Drawing.Size(80, 24);
+            this.MenuItemQuayLai.Size = new System.Drawing.Size(80, 26);
             this.MenuItemQuayLai.Text = "Quay Lại";
             this.MenuItemQuayLai.Click += new System.EventHandler(this.MenuItemQuayLai_Click);
             // 

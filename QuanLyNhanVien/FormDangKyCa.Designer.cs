@@ -279,6 +279,8 @@
             this.btnQuayLai.Image = ((System.Drawing.Image)(resources.GetObject("btnQuayLai.Image")));
             this.btnQuayLai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnQuayLai.Location = new System.Drawing.Point(43, 608);
+            this.btnQuayLai.MaximumSize = new System.Drawing.Size(173, 74);
+            this.btnQuayLai.MinimumSize = new System.Drawing.Size(153, 54);
             this.btnQuayLai.Name = "btnQuayLai";
             this.btnQuayLai.Size = new System.Drawing.Size(153, 54);
             this.btnQuayLai.TabIndex = 7;
@@ -295,6 +297,8 @@
             this.btnChon.Image = ((System.Drawing.Image)(resources.GetObject("btnChon.Image")));
             this.btnChon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnChon.Location = new System.Drawing.Point(584, 608);
+            this.btnChon.MaximumSize = new System.Drawing.Size(149, 74);
+            this.btnChon.MinimumSize = new System.Drawing.Size(129, 54);
             this.btnChon.Name = "btnChon";
             this.btnChon.Size = new System.Drawing.Size(129, 54);
             this.btnChon.TabIndex = 7;
@@ -312,6 +316,8 @@
             this.btnBoChon.Image = ((System.Drawing.Image)(resources.GetObject("btnBoChon.Image")));
             this.btnBoChon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBoChon.Location = new System.Drawing.Point(417, 608);
+            this.btnBoChon.MaximumSize = new System.Drawing.Size(168, 74);
+            this.btnBoChon.MinimumSize = new System.Drawing.Size(148, 54);
             this.btnBoChon.Name = "btnBoChon";
             this.btnBoChon.Size = new System.Drawing.Size(148, 54);
             this.btnBoChon.TabIndex = 7;

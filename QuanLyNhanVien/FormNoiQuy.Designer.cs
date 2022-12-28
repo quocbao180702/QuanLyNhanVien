@@ -30,17 +30,19 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormNoiQuy));
             this.label1 = new System.Windows.Forms.Label();
-            this.lblNq1 = new System.Windows.Forms.Label();
-            this.lblNq2 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.ckbDaHieu = new System.Windows.Forms.CheckBox();
             this.btnQuayLai = new System.Windows.Forms.Button();
+            this.lblNq2 = new System.Windows.Forms.Label();
+            this.lblNq1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Blue;
@@ -50,26 +52,11 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nội Quy";
             // 
-            // lblNq1
-            // 
-            this.lblNq1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNq1.Location = new System.Drawing.Point(42, 75);
-            this.lblNq1.Name = "lblNq1";
-            this.lblNq1.Size = new System.Drawing.Size(1056, 96);
-            this.lblNq1.TabIndex = 1;
-            this.lblNq1.Text = resources.GetString("lblNq1.Text");
-            // 
-            // lblNq2
-            // 
-            this.lblNq2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNq2.Location = new System.Drawing.Point(43, 180);
-            this.lblNq2.Name = "lblNq2";
-            this.lblNq2.Size = new System.Drawing.Size(1055, 159);
-            this.lblNq2.TabIndex = 1;
-            this.lblNq2.Text = resources.GetString("lblNq2.Text");
-            // 
             // label7
             // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(42, 362);
             this.label7.Name = "label7";
@@ -79,6 +66,9 @@
             // 
             // label9
             // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(42, 499);
             this.label9.Name = "label9";
@@ -88,6 +78,9 @@
             // 
             // label11
             // 
+            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label11.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(43, 656);
             this.label11.Name = "label11";
@@ -97,6 +90,9 @@
             // 
             // ckbDaHieu
             // 
+            this.ckbDaHieu.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.ckbDaHieu.AutoSize = true;
             this.ckbDaHieu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ckbDaHieu.ForeColor = System.Drawing.Color.MediumBlue;
@@ -110,11 +106,13 @@
             // 
             // btnQuayLai
             // 
+            this.btnQuayLai.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.btnQuayLai.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.btnQuayLai.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuayLai.Image = ((System.Drawing.Image)(resources.GetObject("btnQuayLai.Image")));
             this.btnQuayLai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnQuayLai.Location = new System.Drawing.Point(410, 798);
+            this.btnQuayLai.MaximumSize = new System.Drawing.Size(221, 83);
             this.btnQuayLai.Name = "btnQuayLai";
             this.btnQuayLai.Size = new System.Drawing.Size(201, 63);
             this.btnQuayLai.TabIndex = 5;
@@ -123,11 +121,35 @@
             this.btnQuayLai.UseVisualStyleBackColor = false;
             this.btnQuayLai.Click += new System.EventHandler(this.btnQuayLai_Click);
             // 
+            // lblNq2
+            // 
+            this.lblNq2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblNq2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNq2.Location = new System.Drawing.Point(43, 180);
+            this.lblNq2.MaximumSize = new System.Drawing.Size(1055, 180);
+            this.lblNq2.Name = "lblNq2";
+            this.lblNq2.Size = new System.Drawing.Size(1055, 159);
+            this.lblNq2.TabIndex = 1;
+            this.lblNq2.Text = resources.GetString("lblNq2.Text");
+            // 
+            // lblNq1
+            // 
+            this.lblNq1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblNq1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNq1.Location = new System.Drawing.Point(42, 75);
+            this.lblNq1.Name = "lblNq1";
+            this.lblNq1.Size = new System.Drawing.Size(1056, 96);
+            this.lblNq1.TabIndex = 1;
+            this.lblNq1.Text = resources.GetString("lblNq1.Text");
+            // 
             // FormNoiQuy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.Cornsilk;
             this.ClientSize = new System.Drawing.Size(1110, 873);
             this.Controls.Add(this.btnQuayLai);
@@ -149,12 +171,12 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblNq1;
-        private System.Windows.Forms.Label lblNq2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.CheckBox ckbDaHieu;
         private System.Windows.Forms.Button btnQuayLai;
+        private System.Windows.Forms.Label lblNq2;
+        private System.Windows.Forms.Label lblNq1;
     }
 }

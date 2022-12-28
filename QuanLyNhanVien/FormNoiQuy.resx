@@ -117,20 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="lblNq1.Text" xml:space="preserve">
-    <value>1. Thời gian làm việc 
-Mỗi ca sẽ được nghỉ ăn trưa 30p/ca. Giờ cụ thể thì do quản lý quy định cụ thể từng người. Không thể cùng một lúc tất cả nhân viên đều nghỉ ăn trưa mà không có ai trực và phục vụ khách hàng được. 
-Trong trường hợp nhân viên ốm đau cần báo cho quản lý hoặc Trưởng ca ít nhất 3 tiếng để quản lý điều phối nhân viên thay thế.</value>
-  </data>
-  <data name="lblNq2.Text" xml:space="preserve">
-    <value>2. Yêu cầu đồng phục
-Đối với từng vị trí công việc của quán đều có đồng phục để tăng nhận diện cũng như sự chuyên nghiệp của quán. Đặc biệt là nhân viên phục vụ – người trực tiếp làm việc với khách hàng. Chính vì thế, đồng phục phải đảm bảo mỗi nhân viên 2-3 bộ để thay đổi, đầu tóc phải buộc hoặc để gọn gàng. Nhân viên nữ có thể đánh son hoặc trang điểm nhẹ nhàng gây thiện cảm cho khách. Nhân viên nam không được để tóc quá dài qua tai hoặc chạm áo.
-Một số lưu ý khác: 
-– Không trang điểm lòe loẹt 
-– Không để móng tay quá dài, sơn màu không phù hợp 
-– Không được có mùi cơ thể quá nồng, không xịt nước hoa quá nồng 
-– Không đeo quá nhiều trang sức hay phụ kiện có giá trị lớn trong khi làm việc</value>
-  </data>
   <data name="label7.Text" xml:space="preserve">
     <value>3. Tác phong trong giờ làm việc
 – Tác phong làm việc nghiêm túc, luôn niềm nở, thân thiện và tận tâm với khách hàng. Trong giờ làm việc không đùa nghịch, nói chuyện và làm việc riêng (sử dụng điện thoại chơi game, facebook, v.v…)
@@ -150,7 +136,7 @@ Quy định nhân viên trong quán trà sữa sẽ bao gồm những quyền l�
   <data name="btnQuayLai.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EQAACxEBf2RfkQAABMRJREFUaEPtWV1oXEUUjtqqbalY1BcfSpHWP9Rm925K7UueFaSBJipoDZVYhPTv
+        EAAACxABrSO9dQAABMRJREFUaEPtWV1oXEUUjtqqbalY1BcfSpHWP9Rm925K7UueFaSBJipoDZVYhPTv
         pdCX0r4KCg2VNnN3QzHYUtIWCq22SjSh+KI2xgcjFjTQ0PQvcWduQtuI1et37p5s7m9y7929dzfgB4eQ
         PTPnfGfmzMyZuQ3/IwDNx8xHG3umntLE1JMbPxlbxj/XJ9YflWuyebVdE/LzrFA/ZXV1V9OV6ZJpyBD0
         n2Xycpsmiqu5e23wSu+NFSDckdXlDy6i4UTIfzWhLlEwa7vMR9hs8qDUAOk9mi5v+RKLJ9cwa53NB8wl
@@ -172,6 +158,20 @@ Quy định nhân viên trong quán trà sữa sẽ bao gồm những quyền l�
         M8wyOk/wZUG7gcQfEEopVWy3SPmQiCU4Ya1DKsV319mH11Y4v4gF6Pv1cl6hr5EozPC3peblAe/fbaha
         D+PvN5Bx565ipRQt1n7IISIdqSSuFUpfOZP/LLWI0dDwHzIT6HhDEPt6AAAAAElFTkSuQmCC
 </value>
+  </data>
+  <data name="lblNq2.Text" xml:space="preserve">
+    <value>2. Yêu cầu đồng phục
+Đối với từng vị trí công việc của quán đều có đồng phục để tăng nhận diện cũng như sự chuyên nghiệp của quán. Đặc biệt là nhân viên phục vụ – người trực tiếp làm việc với khách hàng. Chính vì thế, đồng phục phải đảm bảo mỗi nhân viên 2-3 bộ để thay đổi, đầu tóc phải buộc hoặc để gọn gàng. Nhân viên nữ có thể đánh son hoặc trang điểm nhẹ nhàng gây thiện cảm cho khách. Nhân viên nam không được để tóc quá dài qua tai hoặc chạm áo.
+Một số lưu ý khác: 
+– Không trang điểm lòe loẹt 
+– Không để móng tay quá dài, sơn màu không phù hợp 
+– Không được có mùi cơ thể quá nồng, không xịt nước hoa quá nồng 
+– Không đeo quá nhiều trang sức hay phụ kiện có giá trị lớn trong khi làm việc</value>
+  </data>
+  <data name="lblNq1.Text" xml:space="preserve">
+    <value>1. Thời gian làm việc 
+Mỗi ca sẽ được nghỉ ăn trưa 30p/ca. Giờ cụ thể thì do quản lý quy định cụ thể từng người. Không thể cùng một lúc tất cả nhân viên đều nghỉ ăn trưa mà không có ai trực và phục vụ khách hàng được. 
+Trong trường hợp nhân viên ốm đau cần báo cho quản lý hoặc Trưởng ca ít nhất 3 tiếng để quản lý điều phối nhân viên thay thế.</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

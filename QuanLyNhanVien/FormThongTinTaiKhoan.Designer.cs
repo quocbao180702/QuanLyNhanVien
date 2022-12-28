@@ -158,7 +158,8 @@
             this.btnCapNhat.Image = ((System.Drawing.Image)(resources.GetObject("btnCapNhat.Image")));
             this.btnCapNhat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCapNhat.Location = new System.Drawing.Point(496, 481);
-            this.btnCapNhat.MaximumSize = new System.Drawing.Size(300, 100);
+            this.btnCapNhat.MaximumSize = new System.Drawing.Size(200, 70);
+            this.btnCapNhat.MinimumSize = new System.Drawing.Size(188, 55);
             this.btnCapNhat.Name = "btnCapNhat";
             this.btnCapNhat.Size = new System.Drawing.Size(188, 55);
             this.btnCapNhat.TabIndex = 4;

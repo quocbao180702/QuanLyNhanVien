@@ -29,7 +29,7 @@ namespace QuanLyNhanVien
         SqlConnection conn;
         private void FormDangKyCa_Load(object sender, EventArgs e)
         {
-            conn = new SqlConnection(@"Data Source=GeeKay;Initial Catalog=QLNV;Integrated Security=True");
+            conn = new SqlConnection(@"Data Source=BAODANG;Initial Catalog=QLNV;Integrated Security=True");
             conn.Open();
             SqlCommand cmd = new SqlCommand("select n.*, c.tencv, h.tench from NhanVien n, chucvu c, cuahang h where n.macv=c.macv and n.mach = h.mach and n.manv = '" + ma + "'", conn);
             SqlDataReader dr;

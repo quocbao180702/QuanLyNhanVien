@@ -55,6 +55,8 @@
             this.btnThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThoat.Location = new System.Drawing.Point(579, 475);
             this.btnThoat.Margin = new System.Windows.Forms.Padding(4);
+            this.btnThoat.MaximumSize = new System.Drawing.Size(160, 75);
+            this.btnThoat.MinimumSize = new System.Drawing.Size(140, 55);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(140, 55);
             this.btnThoat.TabIndex = 10;
@@ -70,6 +72,8 @@
             this.btnThayDoi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThayDoi.Location = new System.Drawing.Point(431, 475);
             this.btnThayDoi.Margin = new System.Windows.Forms.Padding(4);
+            this.btnThayDoi.MaximumSize = new System.Drawing.Size(160, 75);
+            this.btnThayDoi.MinimumSize = new System.Drawing.Size(140, 55);
             this.btnThayDoi.Name = "btnThayDoi";
             this.btnThayDoi.Size = new System.Drawing.Size(140, 55);
             this.btnThayDoi.TabIndex = 12;
@@ -86,6 +90,8 @@
             this.btnQuayLai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnQuayLai.Location = new System.Drawing.Point(114, 475);
             this.btnQuayLai.Margin = new System.Windows.Forms.Padding(4);
+            this.btnQuayLai.MaximumSize = new System.Drawing.Size(160, 75);
+            this.btnQuayLai.MinimumSize = new System.Drawing.Size(140, 55);
             this.btnQuayLai.Name = "btnQuayLai";
             this.btnQuayLai.Size = new System.Drawing.Size(140, 55);
             this.btnQuayLai.TabIndex = 11;

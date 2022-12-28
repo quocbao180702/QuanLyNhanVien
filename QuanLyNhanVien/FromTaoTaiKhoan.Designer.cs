@@ -53,6 +53,8 @@
             this.label1.ForeColor = System.Drawing.Color.Blue;
             this.label1.Location = new System.Drawing.Point(237, 70);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.MaximumSize = new System.Drawing.Size(303, 50);
+            this.label1.MinimumSize = new System.Drawing.Size(303, 50);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(303, 50);
             this.label1.TabIndex = 0;
@@ -167,21 +169,21 @@
             this.MenuItemThoat});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(700, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(700, 30);
             this.menuStrip1.TabIndex = 8;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // MenuItemQuayLai
             // 
             this.MenuItemQuayLai.Name = "MenuItemQuayLai";
-            this.MenuItemQuayLai.Size = new System.Drawing.Size(80, 24);
+            this.MenuItemQuayLai.Size = new System.Drawing.Size(80, 26);
             this.MenuItemQuayLai.Text = "Quay Lại";
             this.MenuItemQuayLai.Click += new System.EventHandler(this.MenuItemQuayLai_Click);
             // 
             // MenuItemThoat
             // 
             this.MenuItemThoat.Name = "MenuItemThoat";
-            this.MenuItemThoat.Size = new System.Drawing.Size(61, 24);
+            this.MenuItemThoat.Size = new System.Drawing.Size(61, 26);
             this.MenuItemThoat.Text = "Thoát";
             this.MenuItemThoat.Click += new System.EventHandler(this.MenuItemThoat_Click);
             // 

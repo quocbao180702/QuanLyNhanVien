@@ -27,7 +27,7 @@ namespace QuanLyNhanVien
         string ma = "";
         int quyen = 0;
 
-        SqlConnection conn = new SqlConnection(@"Data Source=GeeKay;Initial Catalog=QLNV;Integrated Security=True");
+        SqlConnection conn = new SqlConnection(@"Data Source=BAODANG;Initial Catalog=QLNV;Integrated Security=True");
         void Fillchart()
         {
             DataTable dt = new DataTable();

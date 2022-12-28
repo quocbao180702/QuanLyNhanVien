@@ -49,6 +49,7 @@
             // 
             // lblTitle
             // 
+            this.lblTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lblTitle.AutoSize = true;
             this.lblTitle.BackColor = System.Drawing.SystemColors.Control;
             this.lblTitle.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -61,11 +62,13 @@
             // 
             // chart1
             // 
+            this.chart1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             chartArea1.Name = "ChartArea1";
             this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(12, 134);
+            this.chart1.MaximumSize = new System.Drawing.Size(667, 600);
             this.chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
@@ -76,11 +79,13 @@
             // 
             // chart2
             // 
+            this.chart2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             chartArea2.Name = "ChartArea1";
             this.chart2.ChartAreas.Add(chartArea2);
             legend2.Name = "Legend1";
             this.chart2.Legends.Add(legend2);
             this.chart2.Location = new System.Drawing.Point(857, 134);
+            this.chart2.MaximumSize = new System.Drawing.Size(667, 510);
             this.chart2.Name = "chart2";
             series2.ChartArea = "ChartArea1";
             series2.Legend = "Legend1";
@@ -99,27 +104,27 @@
             this.MenuItemThoat});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1537, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1537, 30);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // thốngKêToolStripMenuItem
             // 
             this.thốngKêToolStripMenuItem.Name = "thốngKêToolStripMenuItem";
-            this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(86, 24);
+            this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(86, 26);
             this.thốngKêToolStripMenuItem.Text = "Thống Kê";
             // 
             // MenuItemQuayLai
             // 
             this.MenuItemQuayLai.Name = "MenuItemQuayLai";
-            this.MenuItemQuayLai.Size = new System.Drawing.Size(80, 24);
+            this.MenuItemQuayLai.Size = new System.Drawing.Size(80, 26);
             this.MenuItemQuayLai.Text = "Quay Lại";
             this.MenuItemQuayLai.Click += new System.EventHandler(this.MenuItemQuayLai_Click);
             // 
             // MenuItemThoat
             // 
             this.MenuItemThoat.Name = "MenuItemThoat";
-            this.MenuItemThoat.Size = new System.Drawing.Size(61, 24);
+            this.MenuItemThoat.Size = new System.Drawing.Size(61, 26);
             this.MenuItemThoat.Text = "Thoát";
             this.MenuItemThoat.Click += new System.EventHandler(this.MenuItemThoat_Click);
             // 

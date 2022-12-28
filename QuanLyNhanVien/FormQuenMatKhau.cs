@@ -32,7 +32,7 @@ namespace QuanLyNhanVien
 
         private void FormQuenMatKhau_Load(object sender, EventArgs e)
         {
-            conn = new SqlConnection(@"Data Source=GeeKay;Initial Catalog=QLNV;Integrated Security=True");
+            conn = new SqlConnection(@"Data Source=BAODANG;Initial Catalog=QLNV;Integrated Security=True");
             conn.Open();
         }
 
